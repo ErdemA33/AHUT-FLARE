@@ -1,0 +1,230 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  14
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 14-a4867fc914c1
+Exec   : decomposePar -allRegions
+Date   : Nov 08 2026
+Time   : 18:24:09
+Host   : "user"
+PID    : 126154
+I/O    : uncollated
+Case   : /path/to/ahut-flare/ofm_test/vaka
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+fluid Calculating distribution of cells
+fluid 
+fluid 
+fluid Selecting decomposer scotch
+fluid 
+fluid Finished decomposition in 0.007697 s
+fluid 
+fluid Calculating original mesh data
+fluid 
+fluid Distributing cells to processors
+fluid 
+fluid Distributing faces to processors
+fluid 
+fluid Distributing points to processors
+fluid 
+fluid Constructing processor meshes
+fluid 
+fluid Processor 0
+fluid     Number of cells = 3841
+fluid     Number of faces shared with processor 1 = 56
+fluid     Number of faces shared with processor 2 = 55
+fluid     Number of processor patches = 2
+fluid     Number of processor faces = 111
+fluid     Number of boundary faces = 7821
+fluid 
+fluid Processor 1
+fluid     Number of cells = 3815
+fluid     Number of faces shared with processor 0 = 56
+fluid     Number of processor patches = 1
+fluid     Number of processor faces = 56
+fluid     Number of boundary faces = 7858
+fluid 
+fluid Processor 2
+fluid     Number of cells = 3891
+fluid     Number of faces shared with processor 0 = 55
+fluid     Number of faces shared with processor 3 = 56
+fluid     Number of processor patches = 2
+fluid     Number of processor faces = 111
+fluid     Number of boundary faces = 7923
+fluid 
+fluid Processor 3
+fluid     Number of cells = 3864
+fluid     Number of faces shared with processor 2 = 56
+fluid     Number of processor patches = 1
+fluid     Number of processor faces = 56
+fluid     Number of boundary faces = 7924
+fluid 
+fluid Number of processor faces = 167
+fluid Max number of cells = 3891 (0.9927973525% above average 3852.75)
+fluid Max number of processor patches = 2 (33.33333333% above average 1.5)
+fluid Max number of faces between processors = 111 (32.93413174% above average 83.5)
+      
+sibal Calculating distribution of cells
+sibal 
+sibal 
+sibal Selecting decomposer scotch
+sibal 
+sibal Finished decomposition in 0.000508 s
+sibal 
+sibal Calculating original mesh data
+sibal 
+sibal Distributing cells to processors
+sibal 
+sibal Distributing faces to processors
+sibal 
+sibal Distributing points to processors
+sibal 
+sibal Constructing processor meshes
+sibal 
+sibal Processor 0
+sibal     Number of cells = 240
+sibal     Number of faces shared with processor 1 = 4
+sibal     Number of faces shared with processor 3 = 4
+sibal     Number of processor patches = 2
+sibal     Number of processor faces = 8
+sibal     Number of boundary faces = 600
+sibal 
+sibal Processor 1
+sibal     Number of cells = 236
+sibal     Number of faces shared with processor 0 = 4
+sibal     Number of processor patches = 1
+sibal     Number of processor faces = 4
+sibal     Number of boundary faces = 594
+sibal 
+sibal Processor 2
+sibal     Number of cells = 240
+sibal     Number of faces shared with processor 3 = 4
+sibal     Number of processor patches = 1
+sibal     Number of processor faces = 4
+sibal     Number of boundary faces = 604
+sibal 
+sibal Processor 3
+sibal     Number of cells = 236
+sibal     Number of faces shared with processor 0 = 4
+sibal     Number of faces shared with processor 2 = 4
+sibal     Number of processor patches = 2
+sibal     Number of processor faces = 8
+sibal     Number of boundary faces = 590
+sibal 
+sibal Number of processor faces = 12
+sibal Max number of cells = 240 (0.8403361345% above average 238)
+sibal Max number of processor patches = 2 (33.33333333% above average 1.5)
+sibal Max number of faces between processors = 8 (33.33333333% above average 6)
+      
+tel   Calculating distribution of cells
+tel   
+tel   
+tel   Selecting decomposer scotch
+tel   
+tel   Finished decomposition in 0.000167 s
+tel   
+tel   Calculating original mesh data
+tel   
+tel   Distributing cells to processors
+tel   
+tel   Distributing faces to processors
+tel   
+tel   Distributing points to processors
+tel   
+tel   Constructing processor meshes
+tel   
+tel   Processor 0
+tel       Number of cells = 32
+tel       Number of faces shared with processor 1 = 7
+tel       Number of faces shared with processor 2 = 6
+tel       Number of faces shared with processor 3 = 1
+tel       Number of processor patches = 3
+tel       Number of processor faces = 14
+tel       Number of boundary faces = 70
+tel   
+tel   Processor 1
+tel       Number of cells = 33
+tel       Number of faces shared with processor 0 = 7
+tel       Number of faces shared with processor 3 = 7
+tel       Number of processor patches = 2
+tel       Number of processor faces = 14
+tel       Number of boundary faces = 72
+tel   
+tel   Processor 2
+tel       Number of cells = 33
+tel       Number of faces shared with processor 0 = 6
+tel       Number of faces shared with processor 3 = 8
+tel       Number of processor patches = 2
+tel       Number of processor faces = 14
+tel       Number of boundary faces = 72
+tel   
+tel   Processor 3
+tel       Number of cells = 33
+tel       Number of faces shared with processor 0 = 1
+tel       Number of faces shared with processor 1 = 7
+tel       Number of faces shared with processor 2 = 8
+tel       Number of processor patches = 3
+tel       Number of processor faces = 16
+tel       Number of boundary faces = 72
+tel   
+tel   Number of processor faces = 29
+tel   Max number of cells = 33 (0.7633587786% above average 32.75)
+tel   Max number of processor patches = 3 (20% above average 2.5)
+tel   Max number of faces between processors = 16 (10.34482759% above average 14.5)
+      
+      Time = 0s
+      
+fluid Decomposing FV fields
+fluid 
+fluid     Decomposing volScalarFields
+fluid 
+fluid         CO
+fluid         N2
+fluid         O2
+fluid         CO2
+fluid         G
+fluid         p
+fluid         CH4
+fluid         T
+fluid         Ydefault
+fluid         H2O
+fluid 
+fluid     Decomposing volVectorFields
+fluid 
+fluid         U
+fluid 
+fluid Decomposing point fields
+fluid 
+fluid     (no point fields)
+      
+sibal Decomposing FV fields
+sibal 
+sibal     Decomposing volScalarFields
+sibal 
+sibal         T
+sibal 
+sibal Decomposing point fields
+sibal 
+sibal     (no point fields)
+      
+tel   Decomposing FV fields
+tel   
+tel       Decomposing volScalarFields
+tel   
+tel           T
+tel   
+tel   Decomposing point fields
+tel   
+tel       (no point fields)
+      
+      End
+      

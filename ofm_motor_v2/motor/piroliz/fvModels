@@ -1,0 +1,17 @@
+FoamFile { format ascii; class dictionary; location "constant/sibal"; object fvModels; }
+
+piroliz
+{
+    type            sibalPyrolysis;
+    interfacePatch  sibal_to_fluid;
+    // Zhao vd. 2017 Tablo 1 (GPYRO bicimi): w = A rho0 (rho/rho0)^n exp(-E/RT)
+    A1      1.626e11;   E1  1.6144e5;   n1  1.035;  rho01  426.5625;   // 0.1365 kg/m2 / 0.32 mm
+    A2      2.113e13;   E2  2.4589e5;   n2  2.357;  rho02  76.209375;  // 0.024387 kg/m2 / 0.32 mm
+    nu      0.178659;   // ara kati verimi = 2.4387/13.65
+    rhoInert 142.1875;  // 0.0455 kg/m2 / 0.32 mm (cam elyaf)
+    cpInert  700;       // Olson vd.
+    cpComb   1260;      // Olson vd. (pamuk; char icin ayni deger - varsayim)
+    XL0      7.530000e+05;     // Li & Liao 2018 Tablo 2, TL = 300 K
+    TL       300;
+    cpF      1380;      // Li & Liao 2018 Tablo 2
+}

@@ -1,0 +1,106 @@
+{
+  "vektor": [
+    12.891114977571341,
+    10342.21111754027,
+    2.775055849018543,
+    792.3819414708224,
+    22.27139536409976,
+    23257.68157789788,
+    4.605170185988092,
+    632.8377701228839,
+    20.913135196412536,
+    23742.586423543606,
+    1.066660554989181,
+    550.0,
+    12.435973201754518,
+    5812.286945950163,
+    3.3960806275518256,
+    0.7908696114549746,
+    4.329576719514444,
+    0.13327348946065376,
+    761.0856304095345,
+    524.2882423473295,
+    712.4630860748384,
+    349.94208254595765,
+    778.0948649116422
+  ],
+  "adlar": [
+    "ince_kati.lnA",
+    "ince_kati.Ta",
+    "ince_kati.lnRk",
+    "ince_kati.Tv",
+    "kumas.lnA",
+    "kumas.Ta",
+    "kumas.lnRk",
+    "kumas.Tv",
+    "kalin_kati.lnA",
+    "kalin_kati.Ta",
+    "kalin_kati.lnRk",
+    "kalin_kati.Tv",
+    "sivi_damla.lnA",
+    "sivi_damla.Ta",
+    "sivi_damla.lnRk",
+    "s",
+    "tau_esik_mm",
+    "kappa_seyreltici",
+    "zorluk.nomex",
+    "zorluk.silicone",
+    "zorluk.methanol",
+    "zorluk.n-heptane",
+    "zorluk.1-propanol"
+  ],
+  "parametreler": {
+    "ince_kati": {
+      "lnA": 12.891114977571341,
+      "Ta": 10342.21111754027,
+      "lnRk": 2.775055849018543,
+      "Tv": 792.3819414708224
+    },
+    "kumas": {
+      "lnA": 22.27139536409976,
+      "Ta": 23257.68157789788,
+      "lnRk": 4.605170185988092,
+      "Tv": 632.8377701228839
+    },
+    "kalin_kati": {
+      "lnA": 20.913135196412536,
+      "Ta": 23742.586423543606,
+      "lnRk": 1.066660554989181,
+      "Tv": 550.0
+    },
+    "sivi_damla": {
+      "lnA": 12.435973201754518,
+      "Ta": 5812.286945950163,
+      "lnRk": 3.3960806275518256
+    },
+    "gaz": {
+      "lnA": 12.435973201754518,
+      "Ta": 5812.286945950163,
+      "lnRk": 3.3960806275518256
+    },
+    "s": 0.7908696114549746,
+    "tau_esik_mm": 4.329576719514444,
+    "kappa_seyreltici": 0.13327348946065376,
+    "zorluk": {
+      "nomex": 761.0856304095345,
+      "silicone": 524.2882423473295,
+      "methanol": 712.4630860748384,
+      "n-heptane": 349.94208254595765,
+      "1-propanol": 778.0948649116422
+    }
+  },
+  "kayip": 284.8590810798264,
+  "nokta": 890,
+  "yayilma_olcumu": 8,
+  "veri": "psi_etiketli*.csv (etiket_kaynagi psi + makale_elle), Gemma verisi kullanılmadı",
+  "sabitler": {
+    "T_INF": 300.0,
+    "ALPHA0": 0.0001,
+    "EPS_YUZEY": 0.9,
+    "EPS_ALEV": 0.2,
+    "L_LEVHA": 0.05,
+    "G_ALT": 1e-06,
+    "HIZ_AGIRLIGI": 5.0
+  },
+  "not": "gaz grubu için veri yok: sivi_damla parametreleri kopyalandı (kalibre edilmedi)"
+}

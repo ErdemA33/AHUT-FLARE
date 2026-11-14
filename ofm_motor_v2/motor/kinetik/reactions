@@ -1,0 +1,30 @@
+// OTOMATIK URETILDI - kod/motor/kinetik/olustur_reactions.py
+// Kaynak kinetik: ikiBasamak_CH4
+
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "constant";
+    object      reactions;
+}
+
+reactions
+{
+    CH4oxReaction
+    {
+        type     irreversibleArrhenius;
+        reaction "CH4^1 + 1.5O2^1 = CO + 2H2O";
+        A        7.751166e+14;
+        beta     0;
+        Ta       24358.00;
+    }
+    COoxReaction
+    {
+        type     irreversibleArrhenius;
+        reaction "CO^1 + 0.5O2^1 = CO2";
+        A        5e13;
+        beta     0;
+        Ta       20100;
+    }
+}

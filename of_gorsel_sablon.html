@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenFOAM Koşu Görüntüleyici</title>
+<style>
+:root{
+  --bg:#0d1117; --panel:#151b23; --card:#1a2230; --line:#2a3445; --text:#e6edf3; --muted:#8b98a9;
+  --accent:#4FC3F7; --mars:#EF5350; --warn:#ffb74d; --bad:#ef5350; --ok:#66bb6a;
+}
+:root[data-theme="light"]{
+  --bg:#f5f7fa; --panel:#ffffff; --card:#ffffff; --line:#d5dbe3; --text:#17202b; --muted:#5a6878;
+  --accent:#0277bd; --mars:#c62828; --warn:#b26a00; --bad:#c62828; --ok:#2e7d32;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,"DejaVu Sans",sans-serif}
+header{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;padding:14px 20px;background:var(--panel);border-bottom:1px solid var(--line)}
+header h1{font-size:17px;margin:0;font-weight:650;letter-spacing:.2px}
+header .alt{color:var(--muted);font-size:12px}
+.sag{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+select,button{font:inherit;color:var(--text);background:var(--card);border:1px solid var(--line);border-radius:7px;padding:5px 10px;cursor:pointer}
+button:hover,select:hover{border-color:var(--accent)}
+button.aktif{background:var(--accent);color:#06121c;border-color:var(--accent);font-weight:600}
+nav{display:flex;gap:2px;padding:0 16px;background:var(--panel);border-bottom:1px solid var(--line);overflow-x:auto}
+nav button{border:none;border-bottom:2px solid transparent;border-radius:0;background:none;padding:10px 14px;color:var(--muted);white-space:nowrap}
+nav button.aktif{color:var(--text);border-bottom-color:var(--accent);background:none;font-weight:600}
+main{padding:16px 20px 30px;max-width:1500px;margin:0 auto}
+.sekme{display:none}.sekme.aktif{display:block}
+.izgara{display:grid;gap:14px}
+.k2{grid-template-columns:minmax(0,2.2fr) minmax(260px,1fr)}
+.k3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.e2{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media (max-width:980px){.k2,.k3,.e2{grid-template-columns:minmax(0,1fr)}}
+.kart{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;min-width:0}
+.kart h3{margin:0 0 8px;font-size:13.5px;font-weight:650;color:var(--muted);letter-spacing:.2px}
+.arac{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-bottom:8px}
+.arac label{display:flex;gap:5px;align-items:center;color:var(--muted);cursor:pointer;user-select:none}
+.grup{display:flex;gap:0}.grup button{border-radius:0;margin-left:-1px}.grup button:first-child{border-radius:7px 0 0 7px}.grup button:last-child{border-radius:0 7px 7px 0}
+.harita{position:relative;width:100%;aspect-ratio:1/1;max-height:72vh;background:#05080c;border-radius:8px;overflow:hidden;cursor:grab;touch-action:none}
+.harita.kucuk{aspect-ratio:1/1}
+.harita canvas{position:absolute;inset:0;width:100%;height:100%}
+.ipucu{position:fixed;pointer-events:none;background:rgba(10,14,20,.94);color:#e6edf3;border:1px solid #3a4658;border-radius:7px;padding:6px 9px;font-size:12px;line-height:1.5;display:none;z-index:9;white-space:nowrap}
+.kaydirici{display:flex;gap:10px;align-items:center;margin:8px 0 2px}
+.kaydirici input{flex:1;accent-color:var(--accent)}
+.zaman{font-variant-numeric:tabular-nums;min-width:96px;text-align:right;font-weight:600}
+.altyazi{color:var(--muted);font-size:12px;margin-top:6px}
+.lejant canvas{width:100%;height:16px;border-radius:3px;display:block}
+.lejant .uclar{display:flex;justify-content:space-between;color:var(--muted);font-size:12px;margin-top:2px}
+.bilgi dl{display:grid;grid-template-columns:auto 1fr;gap:3px 10px;margin:0}
+.bilgi dt{color:var(--muted)}.bilgi dd{margin:0;font-variant-numeric:tabular-nums}
+.grafik{position:relative;width:100%;height:290px}
+.grafik canvas{position:absolute;inset:0;width:100%;height:100%}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{border-bottom:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:12px}
+td.say{text-align:right;font-variant-numeric:tabular-nums}
+.rozet{display:inline-block;padding:1px 8px;border-radius:20px;font-size:11.5px;font-weight:600;border:1px solid}
+.rozet.ok{color:var(--ok);border-color:var(--ok)}.rozet.uyari{color:var(--warn);border-color:var(--warn)}.rozet.kotu{color:var(--bad);border-color:var(--bad)}
+.kutu{border:1px solid var(--warn);background:color-mix(in srgb,var(--warn) 10%,transparent);border-radius:9px;padding:10px 12px;margin-top:10px}
+.kutu.kirmizi{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 10%,transparent)}
+.kutu.mavi{border-color:var(--accent);background:color-mix(in srgb,var(--accent) 9%,transparent)}
+.sonuc{font-size:16px;font-weight:650}
+.dar{max-width:900px}
+.yok{color:var(--muted);font-style:italic}
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1 data-t="baslik">OpenFOAM koşuları · kabin yangını</h1>
+    <div class="alt" data-t="altbaslik">n-heptan tek damla (FLEX doğrulaması) ve kabin sızıntısı · mevcut sonuçlardan, çevrimdışı</div>
+  </div>
+  <div class="sag">
+    <span class="alt" data-t="kosu_sec">Koşu:</span>
+    <select id="kosuSec"></select>
+    <div class="grup"><button id="dilTR" class="aktif">TR</button><button id="dilEN">EN</button></div>
+    <button id="tema" title="tema">◐</button>
+  </div>
+</header>
+<nav id="sekmeler">
+  <button data-s="0" class="aktif" data-t="s0">Ağ ve alanlar</button>
+  <button data-s="1" data-t="s1">Uzay vs Mars</button>
+  <button data-s="2" data-t="s2">Eğriler</button>
+  <button data-s="3" data-t="s3">FLEX karşılaştırması</button>
+  <button data-s="4" data-t="s4">Koşular</button>
+</nav>
+<main>
+<!-- 1) Ağ ve alanlar -->
+<section class="sekme aktif" id="sekme0">
+  <div class="izgara k2">
+    <div class="kart">
+      <div class="arac">
+        <div class="grup" id="alanSec"></div>
+        <label><input type="checkbox" id="kenar"> <span data-t="kenar">Hücre kenarları</span></label>
+        <label><input type="checkbox" id="damlaGoster" checked> <span data-t="damla_goster">Damlalar</span></label>
+      </div>
+      <div class="arac">
+        <span class="alt" data-t="gorunum">Görünüm:</span>
+        <button data-g="tum" data-t="g_tum">Tüm alan</button>
+        <button data-g="alev" data-t="g_alev">Alev yakını</button>
+        <button data-g="damla" data-t="g_damla">Damla / enjektör yakını</button>
+      </div>
+      <div class="harita" id="harita1"><canvas></canvas></div>
+      <div class="kaydirici">
+        <button id="oynat1" data-t="oynat">▶ Oynat</button>
+        <input type="range" id="kayd1" min="0" max="0" value="0">
+        <span class="zaman" id="zaman1"></span>
+      </div>
+      <div class="altyazi" id="altyazi1"></div>
+    </div>
+    <div class="izgara" style="align-content:start">
+      <div class="kart lejant"><h3 data-t="renk_olcegi">Renk ölçeği</h3><canvas id="lej1" width="512" height="16"></canvas><div class="uclar"><span id="lej1a"></span><span id="lej1b"></span><span id="lej1c"></span></div></div>
+      <div class="kart bilgi"><h3 data-t="kosu_ozeti">Koşu özeti</h3><dl id="ozet1"></dl></div>
+      <div class="kart"><h3 data-t="yardim">Kullanım</h3><div class="alt" data-t="yardim_metin">Fare tekerleği: yakınlaştır · sürükle: kaydır · çift tık: tüm alan · fare üstünde: hücre bilgisi</div></div>
+      <div class="kart" id="uyari1"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2) Uzay vs Mars -->
+<section class="sekme" id="sekme1">
+  <div class="kart" style="margin-bottom:14px">
+    <div class="arac">
+      <div class="grup" id="alanSec2"></div>
+      <label><input type="checkbox" id="damlaGoster2" checked> <span data-t="damla_goster">Damlalar</span></label>
+      <span class="rozet uyari" data-t="gosterim_rozet">GÖSTERİM — deney verisiyle doğrulanmadı</span>
+    </div>
+    <div class="kaydirici">
+      <button id="oynat2" data-t="oynat">▶ Oynat</button>
+      <input type="range" id="kayd2" min="0" max="0" value="0">
+      <span class="zaman" id="zaman2"></span>
+    </div>
+  </div>
+  <div class="izgara k3">
+    <div class="kart"><h3 data-t="uzay_b">Uzay (g = 0)</h3><div class="harita kucuk" id="harita2u"><canvas></canvas></div><div class="lejant" style="margin-top:6px"><canvas id="lej2" width="512" height="16"></canvas><div class="uclar"><span id="lej2a"></span><span id="lej2b"></span><span id="lej2c"></span></div></div></div>
+    <div class="kart"><h3 data-t="mars_b">Mars (g = 3,73 m/s²)</h3><div class="harita kucuk" id="harita2m"><canvas></canvas></div><div class="altyazi" data-t="ortak_olcek">Aynı renk ölçeği (soldaki).</div></div>
+    <div class="kart"><h3 data-t="fark_b">Fark: Mars − uzay (T)</h3><div class="harita kucuk" id="harita2f"><canvas></canvas></div><div class="lejant" style="margin-top:6px"><canvas id="lej3" width="512" height="16"></canvas><div class="uclar"><span id="lej3a"></span><span id="lej3b"></span><span id="lej3c"></span></div></div><div class="altyazi" data-t="fark_not">Renk sınırı her karede yeniden ayarlanır: o karedeki |ΔT|'nin %99'luk dilimi (kırpılır). Kırmızı: Mars daha sıcak.</div></div>
+  </div>
+  <div class="izgara k2" style="margin-top:14px">
+    <div class="kart"><h3 data-t="h_b">Alev merkezinin yüksekliği – zaman</h3><div class="grafik" id="gH"><canvas></canvas></div></div>
+    <div class="kart"><h3 data-t="yercekimi">Yerçekiminin etkisi</h3><div id="hOzet"></div></div>
+  </div>
+</section>
+
+<!-- 3) Eğriler -->
+<section class="sekme" id="sekme2">
+  <div class="izgara e2">
+    <div class="kart"><h3 data-t="c_tmax">Sızıntı: en yüksek sıcaklık – zaman</h3><div class="grafik" id="gT"><canvas></canvas></div></div>
+    <div class="kart"><h3 data-t="c_q">Sızıntı: ısı salım hızı – zaman</h3><div class="grafik" id="gQ"><canvas></canvas></div></div>
+    <div class="kart"><h3 data-t="c_d2">Tek damla: d² – zaman</h3><div class="grafik" id="gD"><canvas></canvas></div></div>
+    <div class="kart"><h3 data-t="c_rf">Tek damla: alev yarıçapı – zaman</h3><div class="grafik" id="gR"><canvas></canvas></div><div class="altyazi" data-t="rf_not">Basamaklar: ızgara 2,42 mm (alev yarıçapı hücre merkezleri arasında atlar).</div></div>
+  </div>
+</section>
+
+<!-- 4) FLEX -->
+<section class="sekme" id="sekme3">
+  <div class="izgara k2">
+    <div class="kart"><h3 data-t="f_d2">d² – zaman: OpenFOAM, damla_motoru ve FLEX benzer testler</h3><div class="grafik" id="gF" style="height:400px"><canvas></canvas></div><div class="altyazi" id="flexAlt"></div></div>
+    <div class="izgara" style="align-content:start">
+      <div class="kart"><h3 data-t="f_tablo">Yanma hızı sabiti K</h3><div id="kTablo"></div></div>
+      <div class="kart"><div id="kSonuc"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 5) Koşular -->
+<section class="sekme" id="sekme4">
+  <div class="kart"><h3 data-t="k_tablo">Koşular</h3><div id="kosuTablo" style="overflow-x:auto"></div></div>
+  <div class="kutu kirmizi dar" id="p1Not"></div>
+  <div class="kutu dar" id="genelNot"></div>
+</section>
+</main>
+<div class="ipucu" id="ipucu"></div>
+
+<script>
+"use strict";
+const VERI = /*__VERI__*/null;
+
+// ---------------------------------------------------------------- metinler
+const S = {
+ tr:{baslik:"OpenFOAM koşuları · kabin yangını",altbaslik:"n-heptan tek damla (FLEX doğrulaması) ve kabin sızıntısı · mevcut sonuçlardan, çevrimdışı",
+  kosu_sec:"Koşu:",s0:"Ağ ve alanlar",s1:"Uzay vs Mars",s2:"Eğriler",s3:"FLEX karşılaştırması",s4:"Koşular",
+  kenar:"Hücre kenarları",damla_goster:"Damlalar",gorunum:"Görünüm:",g_tum:"Tüm alan",g_alev:"Alev yakını",g_damla:"Damla / enjektör yakını",
+  oynat:"▶ Oynat",durdur:"❚❚ Durdur",renk_olcegi:"Renk ölçeği",kosu_ozeti:"Koşu özeti",yardim:"Kullanım",
+  yardim_metin:"Fare tekerleği: yakınlaştır · sürükle: kaydır · çift tık: tüm alan · fare üstünde: hücre bilgisi",
+  gosterim_rozet:"GÖSTERİM — deney verisiyle doğrulanmadı",uzay_b:"Uzay (g = 0)",mars_b:"Mars (g = 3,73 m/s²)",fark_b:"Fark: Mars − uzay (T)",
+  ortak_olcek:"Aynı renk ölçeği (soldaki). Haritalar birlikte yakınlaşır.",fark_not:"Renk sınırı her karede yeniden ayarlanır: o karedeki |ΔT|'nin %99'luk dilimi (kırpılır). Kırmızı: Mars daha sıcak.",h_b:"Alev merkezinin yüksekliği – zaman",yercekimi:"Yerçekiminin etkisi",
+  c_tmax:"Sızıntı: en yüksek sıcaklık – zaman",c_q:"Sızıntı: ısı salım hızı – zaman",c_d2:"Tek damla: d² – zaman",c_rf:"Tek damla: alev yarıçapı – zaman",
+  rf_not:"Basamaklar: ızgara 2,42 mm (alev yarıçapı hücre merkezleri arasında atlar).",
+  f_d2:"d² – zaman: OpenFOAM, damla_motoru ve FLEX benzer testler",f_tablo:"Yanma hızı sabiti K",k_tablo:"Koşular",
+  alan:{T:"Sıcaklık",O2:"O₂",C7H16:"Yakıt (n-heptan)",Qdot:"Isı salımı",U:"Hız"},
+  alan_uzun:{T:"sıcaklık",O2:"O₂ kütle kesri",C7H16:"n-heptan buharı kütle kesri",Qdot:"ısı salım hızı",U:"hız büyüklüğü"},
+  hucre_no:"hücre no",hucre_boyu:"hücre boyutu",deger:"değer",darbe:"tutuşturucu darbesi",uzay:"uzay (g = 0)",mars:"Mars (g = 3,73)",
+  of:"OpenFOAM (ışınımsız)",dm:"damla_motoru (hızlı)",flex_benzer:"FLEX benzer testler (d₀² − K t)",
+  ekx:"t (s)",tmax:"en yüksek T (K)",q:"ısı salımı (kW)",d2:"d² (mm²)",rf:"alev yarıçapı (mm)",hy:"y_alev (mm)",
+  kesit_damla:"merkezden geçen z = 0 kesiti",kesit_3b:"z = {z} mm hücre katmanı (z = 0 düzlemine en yakın)",
+  altyazi:"{n} kare gösteriliyor (yazılmış {m} zamandan) · eksenler mm · ızgara {nx}×{ny} kesitte, hücre {h} mm · {kesit}",
+  oz:{hucre:"Hücre sayısı",izgara:"Kesit ızgarası",h:"Hücre boyutu",zaman:"Zaman aralığı",kare:"Kare",parsel:"Damla (bu karede)",q:"Isı salımı kaynağı"},
+  q_alan:"OpenFOAM Qdot alanı",q_hesap:"tek adım hız ifadesinden hesaplandı (Qdot alanı yazılmamış)",
+  uyari_siz:"<b>GÖSTERİM — deney verisiyle doğrulanmadı.</b> Kaba ızgara (5 mm), tek adım kimya, k-ε. Tutuşturucu darbesi (t < 0,01 s) sırasında T ~5000 K'ye fırlar; fiziksel değildir.",
+  uyari_ince:"<b>GÖSTERİM — deney verisiyle doğrulanmadı.</b> İnce ızgara: püskürme ve alev kutusunda 2,5 mm, dışarıda 5 mm; 3B yarım alan (z = 0 simetri düzlemi, püskürme ve ateşleyicinin yarısı). Harita simetri düzlemine bitişik hücre katmanıdır; damlalar tüm z değerlerinden izdüşümdür. Tek adım kimya, k-ε. Tutuşturucu darbesi (t < 0,01 s) sırasında T ~5000 K'ye fırlar; fiziksel değildir.",
+  uyari_damla:"<b>Nokta damla:</b> 2 mm damla 2,42 mm'lik hücrenin içinde, gazdan hacim çıkarılmıyor; buharlaşma hücre ortalamasıyla hesaplanıyor → K FLEX'in ~1,8 katı. Damla gerçek boyutunda çizilir. Isı salımı alanı bu koşuda yazılmadığı için tek adım hız ifadesinden hesaplandı.",
+  h_ozet:"<b>Ana sonuç (t = 0,40–0,65 s):</b> alev merkezi Mars'ta uzaya göre <b>{fm} mm</b> {wyon} (t = {tm} s; uzay {wu} mm, Mars {wm} mm).<br>Tavanda havalandırma çıkışı (açık basınç sınırı); Mars'ta sıcak gaz 0,65 s sonrası buradan tahliye oluyor, uzayda kaldırma olmadığı için kabinde kalıyor.<br><span class='alt'>Son an (t = {t} s, tahliye sonrası; ana sonuç değil): uzay {u} mm, Mars {m} mm. Mars koşusunda gaz fazı kaldırması açık (p_rgh, hidrostatik başlatma); uzayda g = 0.</span>",yukari:"daha yukarıda",asagi:"daha aşağıda",
+  kt:{kaynak:"Kaynak",K:"K (mm²/s)",d0:"d₀ (mm)",not:"Not"},flex_alt:"FLEX benzer testler: n-heptan, %19–23 O₂, 90–110 kPa, d₀ 1,5–2,5 mm, seyreltici N₂ · kaynak: {f}",
+  k_sonuc:"OpenFOAM <b>×{oran} hızlı</b> (K {of} mm²/s); damla_motoru <b>FLEX aralığında</b> (K {dm} mm²/s; FLEX {f1}–{f2}).",
+  k_sonuc2:"OpenFOAM'daki fark nokta-damla yaklaşımından: buharlaşma damlanın yanındaki sıcak hücrenin ortalamasıyla hesaplanıyor. Nicel karşılaştırmada damla_motoru kullanılmalı.",
+  kh:{kosu:"Koşu",hucre:"Hücre",izgara:"Izgara",sim:"Simülasyon süresi",gercek:"Gerçek süre",cekirdek:"Çekirdek",kimya:"Kimya / akış",isinim:"Işınım",durum:"Durum"},
+  isinim_yok:"yok",durum_damla:"tamamlandı (damla bitti)",durum_tamam:"tamamlandı",durum_durdu:"bekçi durdurdu",
+  p1_bas:"Gösterilmeyen koşular",genel:"Tüm koşular OpenFOAM 14 multicomponentFluid, aachenBomb örneğinden türetildi, 15 çekirdek. Haritalar hücre değerleridir (enterpolasyon yok). Sayfa {u} tarihinde üretildi.",
+  dk:"dk",sa:"sa",yok:"yok"},
+ en:{baslik:"OpenFOAM runs · cabin fire",altbaslik:"n-heptane single droplet (FLEX validation) and cabin leak · from existing results, offline",
+  kosu_sec:"Run:",s0:"Mesh & fields",s1:"Space vs Mars",s2:"Curves",s3:"FLEX comparison",s4:"Runs",
+  kenar:"Cell edges",damla_goster:"Droplets",gorunum:"View:",g_tum:"Whole domain",g_alev:"Near flame",g_damla:"Near droplet / injector",
+  oynat:"▶ Play",durdur:"❚❚ Pause",renk_olcegi:"Colour scale",kosu_ozeti:"Run summary",yardim:"Usage",
+  yardim_metin:"Mouse wheel: zoom · drag: pan · double-click: whole domain · hover: cell info",
+  gosterim_rozet:"DEMONSTRATION — not validated against experimental data",uzay_b:"Space (g = 0)",mars_b:"Mars (g = 3.73 m/s²)",fark_b:"Difference: Mars − space (T)",
+  ortak_olcek:"Same colour scale (left). Maps zoom together.",fark_not:"Colour limit is reset for each frame: 99th percentile of |ΔT| in that frame (clipped). Red: Mars hotter.",h_b:"Flame centre height vs time",yercekimi:"Effect of gravity",
+  c_tmax:"Leak: maximum temperature vs time",c_q:"Leak: heat release rate vs time",c_d2:"Single droplet: d² vs time",c_rf:"Single droplet: flame radius vs time",
+  rf_not:"Steps: grid 2.42 mm (the flame radius jumps between cell centres).",
+  f_d2:"d² vs time: OpenFOAM, droplet engine and similar FLEX tests",f_tablo:"Burning rate constant K",k_tablo:"Runs",
+  alan:{T:"Temperature",O2:"O₂",C7H16:"Fuel (n-heptane)",Qdot:"Heat release",U:"Velocity"},
+  alan_uzun:{T:"temperature",O2:"O₂ mass fraction",C7H16:"n-heptane vapour mass fraction",Qdot:"heat release rate",U:"velocity magnitude"},
+  hucre_no:"cell no",hucre_boyu:"cell size",deger:"value",darbe:"igniter pulse",uzay:"space (g = 0)",mars:"Mars (g = 3.73)",
+  of:"OpenFOAM (no radiation)",dm:"droplet engine (fast)",flex_benzer:"similar FLEX tests (d₀² − K t)",
+  ekx:"t (s)",tmax:"max T (K)",q:"heat release (kW)",d2:"d² (mm²)",rf:"flame radius (mm)",hy:"y_flame (mm)",
+  kesit_damla:"z = 0 slice through the centre",kesit_3b:"cell layer at z = {z} mm (closest to z = 0)",
+  altyazi:"{n} frames shown (of {m} written times) · axes in mm · slice grid {nx}×{ny}, cell {h} mm · {kesit}",
+  oz:{hucre:"Cells",izgara:"Slice grid",h:"Cell size",zaman:"Time range",kare:"Frames",parsel:"Droplets (this frame)",q:"Heat release source"},
+  q_alan:"OpenFOAM Qdot field",q_hesap:"computed from the single-step rate (Qdot field not written)",
+  uyari_siz:"<b>DEMONSTRATION — not validated against experimental data.</b> Coarse grid (5 mm), single-step chemistry, k-ε. During the igniter pulse (t < 0.01 s) T spikes to ~5000 K; not physical.",
+  uyari_ince:"<b>DEMONSTRATION — not validated against experimental data.</b> Fine grid: 2.5 mm in the spray and flame box, 5 mm outside; 3D half domain (z = 0 symmetry plane, half of the spray and igniter). The map is the cell layer next to the symmetry plane; droplets are projected from all z. Single-step chemistry, k-ε. During the igniter pulse (t < 0.01 s) T jumps to ~5000 K; not physical.",
+  uyari_damla:"<b>Point droplet:</b> the 2 mm droplet sits inside a 2.42 mm cell, its volume is not removed from the gas; evaporation uses the cell average → K ≈ 1.8× FLEX. The droplet is drawn at true size. The heat release field was not written in this run, so it is computed from the single-step rate.",
+  h_ozet:"<b>Main result (t = 0.40–0.65 s):</b> the flame centre on Mars is <b>{fm} mm</b> {wyon} than in space (t = {tm} s; space {wu} mm, Mars {wm} mm).<br>Ventilation outlet in the ceiling (open pressure boundary); on Mars the hot gas is vented through it after 0.65 s, in space it stays in the cabin because there is no buoyancy.<br><span class='alt'>Last time (t = {t} s, after venting; not the main result): space {u} mm, Mars {m} mm. Gas-phase buoyancy is on in the Mars run (p_rgh, hydrostatic initialisation); space has g = 0.</span>",yukari:"higher",asagi:"lower",
+  kt:{kaynak:"Source",K:"K (mm²/s)",d0:"d₀ (mm)",not:"Note"},flex_alt:"Similar FLEX tests: n-heptane, 19–23% O₂, 90–110 kPa, d₀ 1.5–2.5 mm, N₂ diluent · source: {f}",
+  k_sonuc:"OpenFOAM <b>×{oran} faster</b> (K {of} mm²/s); droplet engine <b>within the FLEX range</b> (K {dm} mm²/s; FLEX {f1}–{f2}).",
+  k_sonuc2:"The OpenFOAM difference comes from the point-droplet approach: evaporation uses the average of the hot cell around the droplet. Use the droplet engine for quantitative comparison.",
+  kh:{kosu:"Run",hucre:"Cells",izgara:"Grid",sim:"Simulated time",gercek:"Wall time",cekirdek:"Cores",kimya:"Chemistry / flow",isinim:"Radiation",durum:"Status"},
+  isinim_yok:"none",durum_damla:"completed (droplet gone)",durum_tamam:"completed",durum_durdu:"stopped by watchdog",
+  p1_bas:"Runs not shown",genel:"All runs: OpenFOAM 14 multicomponentFluid, derived from the aachenBomb tutorial, 15 cores. Maps show cell values (no interpolation). Page generated {u}.",
+  dk:"min",sa:"h",yok:"none"}
+};
+let DIL = "tr";
+const T_ = k => k.split(".").reduce((o, p) => o && o[p], S[DIL]);
+const fmt = (v, n = 2) => (v === null || v === undefined || !isFinite(v)) ? "–" :
+  (DIL === "tr" ? Number(v).toFixed(n).replace(".", ",") : Number(v).toFixed(n));
+const fmtG = v => { if (!isFinite(v)) return "–"; const a = Math.abs(v);
+  let s = (a !== 0 && (a < 1e-3 || a >= 1e5)) ? v.toExponential(2) : v.toPrecision(4);
+  if (s.includes(".") && !s.includes("e")) s = s.replace(/0+$/, "").replace(/\.$/, "");
+  return DIL === "tr" ? s.replace(".", ",") : s; };
+const sablon = (s, o) => s.replace(/\{(\w+)\}/g, (_, k) => o[k]);
+
+// ---------------------------------------------------------------- veri çözme
+function b64dizi(s, Tip) { const b = atob(s), u = new Uint8Array(b.length);
+  for (let i = 0; i < b.length; i++) u[i] = b.charCodeAt(i); return new Tip(u.buffer); }
+const LUT = {};
+for (const [k, s] of Object.entries(VERI.lut)) { const a = new Uint8Array(768);
+  for (let i = 0; i < 768; i++) a[i] = parseInt(s.substr(2 * i, 2), 16); LUT[k] = a; }
+const ALAN_SIRA = ["T", "O2", "C7H16", "Qdot", "U"];
+const K = {};   // çözülmüş koşular
+for (const [ad, k] of Object.entries(VERI.kosu)) {
+  const n = k.nx * k.ny, nf = k.zaman.length, al = {};
+  for (const [f, a] of Object.entries(k.alan)) {
+    const q = b64dizi(a.v, Uint16Array), v = new Float32Array(q.length), s = (a.max - a.min) / 65535;
+    for (let i = 0; i < q.length; i++) v[i] = a.min + q[i] * s;
+    al[f] = {v, min: a.min, max: a.max, birim: a.birim, cmap: a.cmap};
+  }
+  const par = k.parsel.map(p => p.n ? {n: p.n, x: b64dizi(p.x, Int16Array), y: b64dizi(p.y, Int16Array), d: b64dizi(p.d, Uint16Array)} : {n: 0});
+  const h = k.h, x0 = k.x[0] - h / 2, y0 = k.y[0] - h / 2;
+  K[ad] = {...k, n, nf, al, par, hucreNo: b64dizi(k.hucre, Int32Array), hBoy: k.hb ? b64dizi(k.hb, Uint16Array) : null,
+           x0, y0, x1: x0 + k.nx * h, y1: y0 + k.ny * h,
+           tur: VERI.bilgi[ad].tur};
+}
+const alanKare = (ad, f, j) => K[ad].al[f].v.subarray(j * K[ad].n, (j + 1) * K[ad].n);
+
+// ---------------------------------------------------------------- harita görünümü
+class Harita {
+  constructor(kap, kamera, kaynak) {
+    this.kap = kap; this.cv = kap.querySelector("canvas"); this.ctx = this.cv.getContext("2d");
+    this.kam = kamera; this.kaynak = kaynak; this.fare = null;
+    kamera.izleyenler.push(this);
+    new ResizeObserver(() => this.ciz()).observe(kap);
+    let sur = null;
+    this.cv.addEventListener("wheel", e => { e.preventDefault(); const r = this.cv.getBoundingClientRect();
+      const [wx, wy] = this.ekran2dunya(e.clientX - r.left, e.clientY - r.top);
+      const c = Math.exp(-e.deltaY * 0.0015); kamera.s = Math.min(Math.max(kamera.s * c, kamera.smin * 0.5), kamera.smin * 80);
+      kamera.cx = wx - (wx - kamera.cx) / c; kamera.cy = wy - (wy - kamera.cy) / c; kamera.ciz(); }, {passive: false});
+    this.cv.addEventListener("pointerdown", e => { sur = {x: e.clientX, y: e.clientY, cx: kamera.cx, cy: kamera.cy};
+      this.cv.setPointerCapture(e.pointerId); this.kap.style.cursor = "grabbing"; });
+    this.cv.addEventListener("pointermove", e => {
+      if (sur) { const s = this.olcek(); kamera.cx = sur.cx - (e.clientX - sur.x) / s; kamera.cy = sur.cy + (e.clientY - sur.y) / s; kamera.ciz(); }
+      this.ipucu(e); });
+    const birak = () => { sur = null; this.kap.style.cursor = ""; };
+    this.cv.addEventListener("pointerup", birak); this.cv.addEventListener("pointercancel", birak);
+    this.cv.addEventListener("pointerleave", () => { IPUCU.style.display = "none"; });
+    this.cv.addEventListener("dblclick", () => kamera.sigdir());
+  }
+  olcek() { return this.kam.s * Math.min(this.cv.clientWidth, this.cv.clientHeight) / 600; }
+  ekran2dunya(px, py) { const s = this.olcek(), w = this.cv.clientWidth, h = this.cv.clientHeight;
+    return [this.kam.cx + (px - w / 2) / s, this.kam.cy - (py - h / 2) / s]; }
+  dunya2ekran(x, y) { const s = this.olcek(), w = this.cv.clientWidth, h = this.cv.clientHeight;
+    return [w / 2 + (x - this.kam.cx) * s, h / 2 - (y - this.kam.cy) * s]; }
+  ciz() {
+    const dpr = window.devicePixelRatio || 1, w = this.cv.clientWidth, h = this.cv.clientHeight;
+    if (!w) return;
+    if (this.cv.width !== Math.round(w * dpr)) { this.cv.width = Math.round(w * dpr); this.cv.height = Math.round(h * dpr); }
+    const c = this.ctx; c.setTransform(dpr, 0, 0, dpr, 0, 0); c.fillStyle = "#05080c"; c.fillRect(0, 0, w, h);
+    const q = this.kaynak(); if (!q) return;
+    const k = K[q.ad], s = this.olcek(), hh = k.h * s, lut = LUT[q.cmap];
+    const [ex0, ey1] = this.dunya2ekran(k.x0, k.y0);
+    for (let iy = 0; iy < k.ny; iy++) for (let ix = 0; ix < k.nx; ix++) {
+      const px = ex0 + ix * hh, py = ey1 - (iy + 1) * hh;
+      if (px > w || py > h || px + hh < 0 || py + hh < 0) continue;
+      let t = (q.v[iy * k.nx + ix] - q.lo) / (q.hi - q.lo); t = t < 0 ? 0 : t > 1 ? 1 : t; const i = Math.round(t * 255) * 3;
+      c.fillStyle = `rgb(${lut[i]},${lut[i + 1]},${lut[i + 2]})`;
+      c.fillRect(Math.floor(px), Math.floor(py), Math.ceil(hh) + 1, Math.ceil(hh) + 1);
+    }
+    if (q.kenar && hh > 3) { c.strokeStyle = "rgba(255,255,255,.28)"; c.lineWidth = 1; c.beginPath();
+      if (!k.hBoy) {
+        for (let ix = 0; ix <= k.nx; ix++) { const px = Math.round(ex0 + ix * hh) + .5; c.moveTo(px, ey1 - k.ny * hh); c.lineTo(px, ey1); }
+        for (let iy = 0; iy <= k.ny; iy++) { const py = Math.round(ey1 - iy * hh) + .5; c.moveTo(ex0, py); c.lineTo(ex0 + k.nx * hh, py); }
+      } else {   // karışık boyut: kenar yalnız farklı hücreler arasında (büyük hücre birkaç piksel kaplar)
+        const H = k.hucreNo, nx = k.nx, ny = k.ny;
+        for (let iy = 0; iy < ny; iy++) for (let ix = 0; ix <= nx; ix++)
+          if (ix === 0 || ix === nx || H[iy * nx + ix] !== H[iy * nx + ix - 1]) { const px = Math.round(ex0 + ix * hh) + .5; c.moveTo(px, ey1 - iy * hh); c.lineTo(px, ey1 - (iy + 1) * hh); }
+        for (let iy = 0; iy <= ny; iy++) for (let ix = 0; ix < nx; ix++)
+          if (iy === 0 || iy === ny || H[iy * nx + ix] !== H[(iy - 1) * nx + ix]) { const py = Math.round(ey1 - iy * hh) + .5; c.moveTo(ex0 + ix * hh, py); c.lineTo(ex0 + (ix + 1) * hh, py); }
+      }
+      c.stroke(); }
+    if (q.isaret && k.tur === "sizinti") {   // enjektör ve tutuşturucu
+      const [ix, iy] = this.dunya2ekran(-80, 0); c.fillStyle = "#4FC3F7"; c.beginPath(); c.moveTo(ix + 9, iy); c.lineTo(ix - 5, iy - 7); c.lineTo(ix - 5, iy + 7); c.fill();
+      const [ax, ay] = this.dunya2ekran(0, 20); c.setLineDash([4, 4]); c.strokeStyle = "#4FC3F7"; c.lineWidth = 1.3; c.beginPath(); c.arc(ax, ay, 10 * s, 0, 7); c.stroke(); c.setLineDash([]); }
+    if (q.damla) { const p = k.par[q.j];
+      if (p.n) { c.fillStyle = k.tur === "damla" ? "rgba(79,195,247,.95)" : "rgba(130,220,255,.85)"; c.strokeStyle = "#000"; c.lineWidth = .6;
+        for (let i = 0; i < p.n; i++) { const [px, py] = this.dunya2ekran(p.x[i] / 10, p.y[i] / 10); const d = p.d[i] / 10;  // µm
+          const r = k.tur === "damla" ? Math.max(2, d / 1000 / 2 * s) : 0.8 + 3.2 * Math.min(1, d / 100);
+          if (px < -5 || py < -5 || px > w + 5 || py > h + 5) continue;
+          c.beginPath(); c.arc(px, py, r, 0, 7); c.fill(); if (k.tur === "damla") c.stroke(); } } }
+    this.eksen(c, w, h, s);
+    if (q.etiket) { c.font = "600 12px system-ui,sans-serif"; c.fillStyle = "rgba(255,255,255,.85)"; c.fillText(q.etiket, 10, 18); }
+  }
+  eksen(c, w, h, s) {   // mm çentikleri (kenarlarda)
+    const adim = [1, 2, 5, 10, 20, 25, 50, 100].find(a => a * s > 55) || 100;
+    c.font = "11px system-ui,sans-serif"; c.fillStyle = "rgba(220,230,240,.85)"; c.strokeStyle = "rgba(220,230,240,.6)"; c.lineWidth = 1;
+    const [xa] = this.ekran2dunya(0, 0), [xb] = this.ekran2dunya(w, 0), ya = this.ekran2dunya(0, h)[1], yb = this.ekran2dunya(0, 0)[1];
+    c.beginPath();
+    c.lineJoin = "round"; c.miterLimit = 2;
+    const yaz = (t, x, y) => { c.lineWidth = 2.5; c.strokeStyle = "rgba(0,0,0,.7)"; c.strokeText(t, x, y); c.fillStyle = "rgba(235,242,250,.95)"; c.fillText(t, x, y); };
+    const ent = [];
+    for (let x = Math.ceil(xa / adim) * adim; x <= xb; x += adim) { const [px] = this.dunya2ekran(x, 0); ent.push([px, h, px, h - 6]); yaz(fmtG(x), px + 2, h - 8); }
+    for (let y = Math.ceil(ya / adim) * adim; y <= yb; y += adim) { const py = this.dunya2ekran(0, y)[1]; ent.push([0, py, 6, py]); yaz(fmtG(y), 8, py - 2); }
+    c.beginPath(); ent.forEach(([a, b, d, e]) => { c.moveTo(a, b); c.lineTo(d, e); }); c.lineWidth = 1; c.strokeStyle = "rgba(220,230,240,.7)"; c.stroke();
+    yaz("mm", w - 24, h - 20);
+  }
+  ipucu(e) {
+    const q = this.kaynak(); if (!q) return; const k = K[q.ad], r = this.cv.getBoundingClientRect();
+    const [x, y] = this.ekran2dunya(e.clientX - r.left, e.clientY - r.top);
+    const ix = Math.floor((x - k.x0) / k.h), iy = Math.floor((y - k.y0) / k.h);
+    if (ix < 0 || iy < 0 || ix >= k.nx || iy >= k.ny) { IPUCU.style.display = "none"; return; }
+    const i = iy * k.nx + ix;
+    IPUCU.innerHTML = `<b>${q.baslik}</b><br>${T_("hucre_no")}: ${k.hucreNo[i]}<br>x = ${fmt(k.x[ix], 2)} mm, y = ${fmt(k.y[iy], 2)} mm, z = ${fmt(k.z, 2)} mm` +
+      `<br>${T_("hucre_boyu")}: ${fmt(k.hBoy ? k.hBoy[i] / 100 : k.h, 2)} mm<br>${q.ad_alan}: <b>${fmtG(q.v[i])} ${q.birim}</b>`;
+    IPUCU.style.display = "block";
+    const ww = IPUCU.offsetWidth; IPUCU.style.left = Math.min(e.clientX + 14, innerWidth - ww - 8) + "px"; IPUCU.style.top = (e.clientY + 14) + "px";
+  }
+}
+class Kamera {
+  constructor(adFn) { this.adFn = adFn; this.izleyenler = []; this.s = 1; this.smin = 1; this.cx = 0; this.cy = 0; }
+  kutu(x0, x1, y0, y1) { const k = K[this.adFn()]; const gen = Math.max(x1 - x0, y1 - y0) * 1.04;
+    this.cx = (x0 + x1) / 2; this.cy = (y0 + y1) / 2; this.s = 600 / gen; this.ciz(); }
+  sigdir() { const k = K[this.adFn()]; this.smin = 600 / ((k.x1 - k.x0) * 1.04); this.kutu(k.x0, k.x1, k.y0, k.y1); }
+  ciz() { this.izleyenler.forEach(h => h.ciz()); }
+}
+const IPUCU = document.getElementById("ipucu");
+
+// ---------------------------------------------------------------- renk ölçeği
+function lejant(id, cmap, lo, hi, birim, ortaSifir) {
+  const cv = document.getElementById(id), c = cv.getContext("2d"), lut = LUT[cmap];
+  for (let i = 0; i < 512; i++) { const j = Math.round(i / 511 * 255) * 3; c.fillStyle = `rgb(${lut[j]},${lut[j + 1]},${lut[j + 2]})`; c.fillRect(i, 0, 1, 16); }
+  document.getElementById(id + "a").textContent = fmtG(lo);
+  document.getElementById(id + "b").textContent = ortaSifir ? "0 " + birim : fmtG((lo + hi) / 2) + " " + birim;
+  document.getElementById(id + "c").textContent = fmtG(hi);
+}
+
+// ---------------------------------------------------------------- 1) Ağ ve alanlar
+const D1 = {ad: Object.keys(K)[0], alan: "T", j: 0, oyna: null};
+const kam1 = new Kamera(() => D1.ad);
+const h1 = new Harita(document.getElementById("harita1"), kam1, () => {
+  const k = K[D1.ad], a = k.al[D1.alan];
+  return {ad: D1.ad, v: alanKare(D1.ad, D1.alan, D1.j), lo: a.min, hi: a.max, cmap: a.cmap, j: D1.j, birim: a.birim,
+          kenar: document.getElementById("kenar").checked, damla: document.getElementById("damlaGoster").checked, isaret: true,
+          baslik: VERI.bilgi[D1.ad][DIL], ad_alan: alanEtiket(D1.ad, D1.alan, true)};
+});
+function alanEtiket(ad, f, uzun) {   // koşuya özel alan adı (ör. gaz sızıntısında yakıt = metan), yoksa genel
+  const b = ad && VERI.bilgi[ad], o = b && b[(uzun ? "alan_uzun_" : "alan_") + DIL];
+  return (o && o[f]) || T_(uzun ? "alan_uzun" : "alan")[f];
+}
+function alanDugmeleri(kapId, dur, ciz) {
+  const kap = document.getElementById(kapId); kap.innerHTML = "";
+  for (const f of ALAN_SIRA) { const b = document.createElement("button"); b.textContent = alanEtiket(dur.ad, f, false);
+    if (f === dur.alan) b.classList.add("aktif");
+    b.onclick = () => { dur.alan = f; alanDugmeleri(kapId, dur, ciz); ciz(); }; kap.appendChild(b); }
+}
+function guncelle1() {
+  const k = K[D1.ad], a = k.al[D1.alan], kay = document.getElementById("kayd1");
+  kay.max = k.nf - 1; kay.value = D1.j;
+  document.getElementById("zaman1").textContent = "t = " + fmt(k.zaman[D1.j], k.tur === "damla" ? 2 : 3) + " s";
+  lejant("lej1", a.cmap, a.min, a.max, a.birim);
+  const kesit = k.tur === "damla" ? T_("kesit_damla") : sablon(T_("kesit_3b"), {z: fmt(k.z, 1)});
+  document.getElementById("altyazi1").textContent = sablon(T_("altyazi"), {n: k.nf, m: k.tum, nx: k.nx, ny: k.ny, h: k.hBoy ? fmt(k.h, 2) + "–" + fmt(k.h_maks, 2) : fmt(k.h, 2), kesit}) +
+    (D1.alan === "Qdot" && k.qkaynak === "hesap" ? " · Qdot: " + T_("q_hesap") : "") +
+    (D1.alan === "Qdot" ? (DIL === "tr" ? " · renk üst sınırı %99,7'lik dilim" : " · colour max = 99.7th percentile") : "");
+  const oz = T_("oz"), p = k.par[D1.j];
+  document.getElementById("ozet1").innerHTML = [
+    [oz.hucre, k.hucre_sayisi.toLocaleString(DIL === "tr" ? "tr-TR" : "en-US")], [oz.izgara, `${k.nx} × ${k.ny}`],
+    [oz.h, (k.hBoy ? fmt(k.h, 2) + "–" + fmt(k.h_maks, 2) : fmt(k.h, 2)) + " mm"], [oz.zaman, `${fmt(k.zaman[0], 2)} – ${fmt(k.zaman[k.nf - 1], 2)} s`], [oz.kare, `${k.nf} / ${k.tum}`],
+    [oz.parsel, p.n], [oz.q, k.qkaynak === "hesap" ? T_("q_hesap") : T_("q_alan")]].map(([a, b]) => `<dt>${a}</dt><dd>${b}</dd>`).join("");
+  const u = document.getElementById("uyari1"); u.className = "kart " + (k.tur === "sizinti" || k.tur === "gaz" ? "kutu kirmizi" : "kutu");
+  u.innerHTML = k.tur === "gaz" ? VERI.bilgi[D1.ad]["uyari_" + DIL] :
+    k.tur === "sizinti" ? T_(D1.ad.startsWith("ince_") ? "uyari_ince" : "uyari_siz") : T_("uyari_damla");
+  h1.ciz();
+}
+document.getElementById("kayd1").oninput = e => { D1.j = +e.target.value; guncelle1(); };
+document.getElementById("kenar").onchange = () => h1.ciz();
+document.getElementById("damlaGoster").onchange = () => h1.ciz();
+function oynatici(btnId, dur, nf, guncelle) {
+  const b = document.getElementById(btnId);
+  b.onclick = () => { if (dur.oyna) { clearInterval(dur.oyna); dur.oyna = null; b.textContent = T_("oynat"); return; }
+    b.textContent = T_("durdur"); dur.oyna = setInterval(() => { dur.j = (dur.j + 1) % nf(); guncelle(); }, 380); };
+}
+oynatici("oynat1", D1, () => K[D1.ad].nf, guncelle1);
+document.querySelectorAll("[data-g]").forEach(b => b.onclick = () => {
+  const k = K[D1.ad], g = b.dataset.g;
+  if (g === "tum") return kam1.sigdir();
+  if (g === "damla") return k.tur === "damla" ? kam1.kutu(-7, 7, -7, 7) : kam1.kutu(-100, -20, -40, 40);
+  const T = alanKare(D1.ad, "T", D1.j); let x0 = 1e9, x1 = -1e9, y0 = 1e9, y1 = -1e9;
+  for (let iy = 0; iy < k.ny; iy++) for (let ix = 0; ix < k.nx; ix++) if (T[iy * k.nx + ix] > 1500) {
+    x0 = Math.min(x0, k.x[ix]); x1 = Math.max(x1, k.x[ix]); y0 = Math.min(y0, k.y[iy]); y1 = Math.max(y1, k.y[iy]); }
+  if (x0 > x1) return kam1.sigdir();
+  const p = 3 * k.h; kam1.kutu(x0 - p, x1 + p, y0 - p, y1 + p);
+});
+const kosuSec = document.getElementById("kosuSec");
+kosuSec.onchange = () => { D1.ad = kosuSec.value; D1.j = Math.min(D1.j, K[D1.ad].nf - 1); kam1.sigdir();
+  alanDugmeleri("alanSec", D1, guncelle1); guncelle1(); };
+
+// ---------------------------------------------------------------- 2) Uzay vs Mars
+const D2 = {alan: "T", j: 0, oyna: null};
+const kam2 = new Kamera(() => "sizinti_uzay");
+const ortak = f => { const a = K.sizinti_uzay.al[f], b = K.sizinti_mars.al[f]; return [Math.min(a.min, b.min), Math.max(a.max, b.max)]; };
+const hk = ad => () => { const a = K[ad].al[D2.alan], [lo, hi] = ortak(D2.alan);
+  return {ad, v: alanKare(ad, D2.alan, D2.j), lo, hi, cmap: a.cmap, j: D2.j, birim: a.birim, kenar: false,
+          damla: document.getElementById("damlaGoster2").checked, isaret: true, baslik: VERI.bilgi[ad][DIL], ad_alan: T_("alan_uzun")[D2.alan]}; };
+const h2u = new Harita(document.getElementById("harita2u"), kam2, hk("sizinti_uzay"));
+const h2m = new Harita(document.getElementById("harita2m"), kam2, hk("sizinti_mars"));
+// fark ölçeği her kare için: o karedeki |ΔT|'nin %99'luk dilimi (en az 20 K), simetrik
+let FARK_LIM = 20;
+function farkSiniri(j) { const a = alanKare("sizinti_uzay", "T", j), b = alanKare("sizinti_mars", "T", j), d = [];
+  for (let i = 0; i < a.length; i++) d.push(Math.abs(b[i] - a[i])); d.sort((x, y) => x - y);
+  return Math.max(20, Math.ceil(d[Math.floor(d.length * 0.99)] / 10) * 10); }
+const h2f = new Harita(document.getElementById("harita2f"), kam2, () => {
+  const a = alanKare("sizinti_uzay", "T", D2.j), b = alanKare("sizinti_mars", "T", D2.j), v = new Float32Array(a.length);
+  for (let i = 0; i < a.length; i++) v[i] = b[i] - a[i];
+  return {ad: "sizinti_mars", v, lo: -FARK_LIM, hi: FARK_LIM, cmap: "RdBu_r", j: D2.j, birim: "K", kenar: false, damla: false, isaret: true,
+          baslik: T_("fark_b"), ad_alan: "ΔT"}; });
+function guncelle2() {
+  const k = K.sizinti_uzay, a = k.al[D2.alan], [lo, hi] = ortak(D2.alan), kay = document.getElementById("kayd2");
+  kay.max = k.nf - 1; kay.value = D2.j; FARK_LIM = farkSiniri(D2.j);
+  document.getElementById("zaman2").textContent = "t = " + fmt(k.zaman[D2.j], 3) + " s";
+  lejant("lej2", a.cmap, lo, hi, a.birim); lejant("lej3", "RdBu_r", -FARK_LIM, FARK_LIM, "K", true);
+  kam2.ciz(); grafikH();
+}
+document.getElementById("kayd2").oninput = e => { D2.j = +e.target.value; guncelle2(); };
+document.getElementById("damlaGoster2").onchange = () => kam2.ciz();
+oynatici("oynat2", D2, () => K.sizinti_uzay.nf, guncelle2);
+
+// ---------------------------------------------------------------- çizgi grafik
+const RENK = {uzay: "#4FC3F7", mars: "#EF5350", of: "#4FC3F7", dm: "#e6edf3", flex: "#9aa7b8"};
+function grafik(id, ayar) {
+  const kap = document.getElementById(id), cv = kap.querySelector("canvas"), dpr = window.devicePixelRatio || 1;
+  const W = cv.clientWidth, H = cv.clientHeight; if (!W) return;
+  cv.width = Math.round(W * dpr); cv.height = Math.round(H * dpr);
+  const c = cv.getContext("2d"); c.setTransform(dpr, 0, 0, dpr, 0, 0);
+  const st = getComputedStyle(document.documentElement), yazi = st.getPropertyValue("--text").trim(), sil = st.getPropertyValue("--muted").trim(), cizgi = st.getPropertyValue("--line").trim();
+  if (ayar.seriler.some(s => s.renk === "#e6edf3") && document.documentElement.dataset.theme === "light") ayar.seriler.forEach(s => { if (s.renk === "#e6edf3") s.renk = "#17202b"; });
+  const m = {l: 58, r: 14, t: 12, b: 40}, pw = W - m.l - m.r, ph = H - m.t - m.b;
+  let [x0, x1] = ayar.xlim || [Infinity, -Infinity], [y0, y1] = ayar.ylim || [Infinity, -Infinity];
+  if (!ayar.xlim) ayar.seriler.forEach(s => s.x.forEach(v => { x0 = Math.min(x0, v); x1 = Math.max(x1, v); }));
+  if (!ayar.ylim) { ayar.seriler.forEach(s => s.y.forEach(v => { if (isFinite(v)) { y0 = Math.min(y0, v); y1 = Math.max(y1, v); } }));
+    const p = (y1 - y0) * 0.06 || 1; y0 -= p; y1 += p; if (ayar.y0sifir) y0 = 0; }
+  const X = v => m.l + (v - x0) / (x1 - x0) * pw, Y = v => m.t + ph - (v - y0) / (y1 - y0) * ph;
+  const adim = (a, b, n) => { const r = (b - a) / n, p = Math.pow(10, Math.floor(Math.log10(r))); return [1, 2, 2.5, 5, 10].map(k => k * p).find(k => r <= k); };
+  c.font = "11.5px system-ui,sans-serif"; c.strokeStyle = cizgi; c.fillStyle = sil; c.lineWidth = 1;
+  const dx = adim(x0, x1, 6), dy = adim(y0, y1, 5);
+  c.beginPath();
+  for (let v = Math.ceil(x0 / dx) * dx; v <= x1 + 1e-9; v += dx) { c.moveTo(X(v), m.t); c.lineTo(X(v), m.t + ph); c.textAlign = "center"; c.fillText(fmtG(+v.toFixed(6)), X(v), H - m.b + 15); }
+  for (let v = Math.ceil(y0 / dy) * dy; v <= y1 + 1e-9; v += dy) { c.moveTo(m.l, Y(v)); c.lineTo(m.l + pw, Y(v)); c.textAlign = "right"; c.fillText(fmtG(+v.toFixed(6)), m.l - 6, Y(v) + 4); }
+  c.stroke();
+  c.textAlign = "center"; c.fillText(ayar.xad, m.l + pw / 2, H - 6);
+  c.save(); c.translate(13, m.t + ph / 2); c.rotate(-Math.PI / 2); c.fillText(ayar.yad, 0, 0); c.restore();
+  c.save(); c.beginPath(); c.rect(m.l, m.t, pw, ph); c.clip();
+  if (ayar.bant) { c.fillStyle = "rgba(150,150,150,.28)"; c.fillRect(X(ayar.bant[0]), m.t, X(ayar.bant[1]) - X(ayar.bant[0]), ph); }
+  if (ayar.dikey !== undefined) { c.strokeStyle = sil; c.setLineDash([3, 3]); c.beginPath(); c.moveTo(X(ayar.dikey), m.t); c.lineTo(X(ayar.dikey), m.t + ph); c.stroke(); c.setLineDash([]); }
+  for (const s of ayar.seriler) { c.strokeStyle = s.renk; c.lineWidth = s.kalin || 1.8; c.setLineDash(s.kesik || []); c.beginPath();
+    s.x.forEach((v, i) => { if (!isFinite(s.y[i])) return; const px = X(v), py = Y(s.y[i]); i ? c.lineTo(px, py) : c.moveTo(px, py); }); c.stroke();
+    if (s.nokta) { c.fillStyle = s.renk; s.x.forEach((v, i) => { c.beginPath(); c.arc(X(v), Y(s.y[i]), 2.4, 0, 7); c.fill(); }); } }
+  c.setLineDash([]); c.restore();
+  c.strokeStyle = sil; c.strokeRect(m.l + .5, m.t + .5, pw, ph);
+  // lejant
+  const lej = ayar.seriler.filter(s => s.ad).concat(ayar.bant ? [{ad: ayar.bant[2], bant: true}] : []);
+  c.font = "12px system-ui,sans-serif"; c.textAlign = "left";
+  const lw = Math.max(...lej.map(s => c.measureText(s.ad).width)) + 40, lx = ayar.lejSol ? m.l + 8 : m.l + pw - lw - 8; let ly = m.t + 8;
+  c.fillStyle = document.documentElement.dataset.theme === "light" ? "rgba(255,255,255,.88)" : "rgba(13,17,23,.82)"; c.fillRect(lx, ly, lw, lej.length * 18 + 6);
+  lej.forEach((s, i) => { const yy = ly + 13 + i * 18;
+    if (s.bant) { c.fillStyle = "rgba(150,150,150,.5)"; c.fillRect(lx + 6, yy - 6, 22, 10); }
+    else { c.strokeStyle = s.renk; c.lineWidth = 2; c.setLineDash(s.kesik || []); c.beginPath(); c.moveTo(lx + 6, yy - 1); c.lineTo(lx + 28, yy - 1); c.stroke(); c.setLineDash([]); }
+    c.fillStyle = yazi; c.fillText(s.ad, lx + 34, yy + 3); });
+}
+const E = VERI.egri;
+const TSON = Math.max(E.uzay.Tmax[0].at(-1), E.mars.Tmax[0].at(-1));
+function grafikH() {
+  grafik("gH", {xad: T_("ekx"), yad: T_("hy"), bant: [0, 0.03, T_("darbe")], dikey: K.sizinti_uzay.zaman[D2.j], xlim: [0, TSON], seriler: [
+    {x: E.uzay.h[0], y: E.uzay.h[1], renk: RENK.uzay, ad: T_("uzay"), nokta: true}, {x: E.mars.h[0], y: E.mars.h[1], renk: RENK.mars, ad: T_("mars"), nokta: true}]});
+  const hu = E.uzay.h, hm = E.mars.h, n = Math.min(hu[0].length, hm[0].length), son = n - 1;
+  let im = -1; for (let i = 0; i < n; i++) if (hu[0][i] >= 0.4 - 1e-6 && hu[0][i] <= 0.65 + 1e-6 && (im < 0 || Math.abs(hm[1][i] - hu[1][i]) > Math.abs(hm[1][im] - hu[1][im]))) im = i;
+  const fw = im < 0 ? NaN : hm[1][im] - hu[1][im];
+  document.getElementById("hOzet").innerHTML = sablon(T_("h_ozet"), {t: fmt(hu[0][son], 2), u: fmt(hu[1][son], 1), m: fmt(hm[1][son], 1),
+    fm: fmt(Math.abs(fw), 1), tm: im < 0 ? "–" : fmt(hu[0][im], 2), wu: im < 0 ? "–" : fmt(hu[1][im], 1), wm: im < 0 ? "–" : fmt(hm[1][im], 1),
+    wyon: fw > 0 ? T_("yukari") : T_("asagi")});
+}
+function grafikler() {
+  grafik("gT", {xad: T_("ekx"), yad: T_("tmax"), bant: [0, 0.03, T_("darbe")], xlim: [0, TSON], seriler: [
+    {x: E.uzay.Tmax[0], y: E.uzay.Tmax[1], renk: RENK.uzay, ad: T_("uzay")}, {x: E.mars.Tmax[0], y: E.mars.Tmax[1], renk: RENK.mars, ad: T_("mars"), kesik: [6, 3]}]});
+  grafik("gQ", {xad: T_("ekx"), yad: T_("q"), bant: [0, 0.03, T_("darbe")], xlim: [0, TSON], seriler: [
+    {x: E.uzay.Q[0], y: E.uzay.Q[1], renk: RENK.uzay, ad: T_("uzay")}, {x: E.mars.Q[0], y: E.mars.Q[1], renk: RENK.mars, ad: T_("mars"), kesik: [6, 3]}]});
+  grafik("gD", {xad: T_("ekx"), yad: T_("d2"), y0sifir: true, seriler: [{x: E.damla.d2[0], y: E.damla.d2[1], renk: RENK.of, ad: T_("of") + " (K = " + fmt(E.damla.K, 2) + ")"}]});
+  grafik("gR", {xad: T_("ekx"), yad: T_("rf"), y0sifir: true, lejSol: true, seriler: [{x: E.damla.rf[0], y: E.damla.rf[1], renk: RENK.of, ad: T_("of"), nokta: true}]});
+  // FLEX
+  const s = [{x: E.damla.d2[0], y: E.damla.d2[1], renk: RENK.of, ad: T_("of") + " (K = " + fmt(E.damla.K, 2) + ")", kalin: 2.4}];
+  if (E.damla_motoru) { const Kd = E.damla_motoru.K, ts = 4 / Kd; s.push({x: [0, ts], y: [4, 0], renk: RENK.dm, kesik: [7, 4], ad: T_("dm") + " (K = " + fmt(Kd, 2) + ")"}); }
+  E.flex.forEach((f, i) => { const ts = f.sure || f.d0 * f.d0 / f.K; s.push({x: [0, ts], y: [f.d0 * f.d0, f.d0 * f.d0 - f.K * ts], renk: RENK.flex, kesik: [2, 3], kalin: 1.4, ad: i === 0 ? T_("flex_benzer") : null}); });
+  grafik("gF", {xad: T_("ekx"), yad: T_("d2"), y0sifir: true, seriler: s});
+}
+function flexTablo() {
+  const kt = T_("kt"), sat = [[T_("of"), E.damla.K, 2.0, ""]];
+  if (E.damla_motoru) sat.push([T_("dm"), E.damla_motoru.K, 2.0, ""]);
+  E.flex.forEach(f => sat.push([f.ad, f.K, f.d0, f.son]));
+  document.getElementById("kTablo").innerHTML = `<table><tr><th>${kt.kaynak}</th><th>${kt.K}</th><th>${kt.d0}</th><th>${kt.not}</th></tr>` +
+    sat.map(r => `<tr><td>${r[0]}</td><td class="say">${fmt(r[1], 3)}</td><td class="say">${fmt(r[2], 2)}</td><td>${r[3]}</td></tr>`).join("") + "</table>";
+  const fk = E.flex.map(f => f.K), ort = fk.reduce((a, b) => a + b, 0) / fk.length;
+  document.getElementById("kSonuc").innerHTML = `<div class="kutu" style="margin-top:0"><div class="sonuc">` + sablon(T_("k_sonuc"), {oran: fmt(E.damla.K / ort, 1), of: fmt(E.damla.K, 2),
+    dm: E.damla_motoru ? fmt(E.damla_motoru.K, 2) : "–", f1: fmt(Math.min(...fk), 2), f2: fmt(Math.max(...fk), 2)}) + `</div><p class="alt">${T_("k_sonuc2")}</p></div>`;
+  document.getElementById("flexAlt").textContent = sablon(T_("flex_alt"), {f: (E.flex_kaynak || "–").split("/").slice(-2).join("/")});
+}
+function kosuTablo() {
+  const kh = T_("kh"), sure = s => s === null ? "–" : (s < 3600 ? fmt(s / 60, 0) + " " + T_("dk") : fmt(s / 3600, 2) + " " + T_("sa"));
+  document.getElementById("kosuTablo").innerHTML = `<table><tr>${["kosu", "hucre", "izgara", "sim", "gercek", "cekirdek", "kimya", "isinim", "durum"].map(k => `<th>${kh[k]}</th>`).join("")}</tr>` +
+    VERI.tablo.map(r => `<tr><td><b>${r[DIL]}</b>${r.gosterim ? `<br><span class="rozet uyari">${T_("gosterim_rozet")}</span>` : ""}</td>` +
+      `<td class="say">${r.hucre.toLocaleString(DIL === "tr" ? "tr-TR" : "en-US")}</td><td>${r.h2 ? fmt(r.h, 2) + "–" + fmt(r.h2, 2) : fmt(r.h, 2)} mm</td><td class="say">${fmt(r.son_t, 2)} s</td>` +
+      `<td class="say">${sure(r.saat_s)}</td><td class="say">${r.cekirdek}</td><td>${r["kimya_" + DIL]}</td><td>${T_("isinim_yok")}</td>` +
+      `<td>${r.durum === "durdu" ? `<span class="rozet kotu">${T_("durum_durdu")}</span>` : `<span class="rozet ok">${r.durum === "damla_bitti" ? T_("durum_damla") : T_("durum_tamam")}</span>`}</td></tr>`).join("") + "</table>";
+  document.getElementById("p1Not").innerHTML = `<b>${T_("p1_bas")}</b><ul style="margin:6px 0 0;padding-left:18px">` + VERI.p1.map(n => `<li>${n[DIL]}</li>`).join("") + "</ul>";
+  document.getElementById("genelNot").innerHTML = sablon(T_("genel"), {u: VERI.uretim});
+}
+
+// ---------------------------------------------------------------- sekmeler, dil, tema
+let SEKME = 0;
+function sekme(i) { SEKME = i; document.querySelectorAll("nav button").forEach(b => b.classList.toggle("aktif", +b.dataset.s === i));
+  document.querySelectorAll(".sekme").forEach((s, j) => s.classList.toggle("aktif", j === i)); hepsiniCiz(); }
+document.querySelectorAll("nav button").forEach(b => b.onclick = () => sekme(+b.dataset.s));
+function metinler() {
+  document.documentElement.lang = DIL;
+  document.querySelectorAll("[data-t]").forEach(e => { const v = T_(e.dataset.t); if (typeof v === "string") e.textContent = v; });
+  if (D1.oyna) document.getElementById("oynat1").textContent = T_("durdur");
+  if (D2.oyna) document.getElementById("oynat2").textContent = T_("durdur");
+  const gruplar = [];   // ardışık aynı gruptaki koşular tek <optgroup>
+  Object.keys(K).forEach(ad => { const g = VERI.bilgi[ad]["grup_" + DIL] || ""; if (!gruplar.length || gruplar.at(-1).g !== g) gruplar.push({g, a: []}); gruplar.at(-1).a.push(ad); });
+  kosuSec.innerHTML = gruplar.map(G => `<optgroup label="${G.g}">` + G.a.map(ad => `<option value="${ad}">${VERI.bilgi[ad][DIL]}</option>`).join("") + "</optgroup>").join("");
+  kosuSec.value = D1.ad;
+  alanDugmeleri("alanSec", D1, guncelle1); alanDugmeleri("alanSec2", D2, guncelle2);
+}
+function hepsiniCiz() { if (SEKME === 0) guncelle1(); if (SEKME === 1) guncelle2(); if (SEKME === 2) grafikler(); if (SEKME === 3) { grafikler(); flexTablo(); } if (SEKME === 4) kosuTablo(); }
+function dil(d) { DIL = d; document.getElementById("dilTR").classList.toggle("aktif", d === "tr"); document.getElementById("dilEN").classList.toggle("aktif", d === "en");
+  try { localStorage.setItem("of_gorsel_dil", d); } catch (e) {} metinler(); hepsiniCiz(); }
+document.getElementById("dilTR").onclick = () => dil("tr");
+document.getElementById("dilEN").onclick = () => dil("en");
+document.getElementById("tema").onclick = () => { const r = document.documentElement; r.dataset.theme = r.dataset.theme === "light" ? "dark" : "light";
+  try { localStorage.setItem("of_gorsel_tema", r.dataset.theme); } catch (e) {} hepsiniCiz(); };
+window.addEventListener("resize", () => { if (SEKME >= 1) hepsiniCiz(); });
+
+// başlangıç: #sekme=2&dil=en&kosu=sizinti_mars&alan=Qdot&kare=10 (ekran görüntüsü / bağlantı için)
+(function () {
+  const p = new URLSearchParams(location.hash.slice(1)); let d = p.get("dil");
+  try { d = d || localStorage.getItem("of_gorsel_dil"); const t = localStorage.getItem("of_gorsel_tema"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  if (p.get("kosu") && K[p.get("kosu")]) D1.ad = p.get("kosu");
+  if (p.get("alan")) D1.alan = D2.alan = p.get("alan");
+  if (p.get("kare")) D1.j = D2.j = +p.get("kare");
+  DIL = d === "en" ? "en" : "tr"; metinler();
+  kam1.sigdir(); kam2.sigdir();
+  if (p.get("gorunum")) document.querySelector(`[data-g="${p.get("gorunum")}"]`).click();
+  if (p.get("kenar")) document.getElementById("kenar").checked = true;
+  dil(DIL); sekme(+(p.get("sekme") || 0));
+})();
+</script>
+</body>
+</html>

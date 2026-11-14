@@ -1,0 +1,12 @@
+﻿g,basinc,akis,kalinlik,malzeme,oksijen,yandi,yayilma_hizi,min_oksijen,sicaklik,kaynak
+0.0001,100.0,10.0,,methane,5.0,0,,6.5,294.256,"OpenFOAM counterFlowFlame2D (mikro-g, 1 atm, 10 cm/s)"
+0.0001,100.0,10.0,,methane,6.0,0,,6.5,295.885,"OpenFOAM counterFlowFlame2D (mikro-g, 1 atm, 10 cm/s)"
+0.0001,100.0,10.0,,methane,7.0,1,,6.5,1037.08,"OpenFOAM counterFlowFlame2D (mikro-g, 1 atm, 10 cm/s)"
+0.0001,100.0,10.0,,methane,8.0,1,,6.5,1162.58,"OpenFOAM counterFlowFlame2D (mikro-g, 1 atm, 10 cm/s)"
+0.0001,100.0,10.0,,methane,9.0,1,,6.5,1264.68,"OpenFOAM counterFlowFlame2D (mikro-g, 1 atm, 10 cm/s)"
+0.0001,100.0,10.0,,methane,10.0,1,,6.5,1356.63,"OpenFOAM counterFlowFlame2D (mikro-g, 1 atm, 10 cm/s)"
+0.0001,100.0,10.0,,methane,12.0,1,,6.5,1525.69,"OpenFOAM counterFlowFlame2D (mikro-g, 1 atm, 10 cm/s)"
+0.0001,100.0,10.0,,methane,14.0,1,,6.5,1680.9,"OpenFOAM counterFlowFlame2D (mikro-g, 1 atm, 10 cm/s)"
+0.0001,100.0,10.0,,methane,16.0,1,,6.5,1825.22,"OpenFOAM counterFlowFlame2D (mikro-g, 1 atm, 10 cm/s)"
+0.0001,100.0,10.0,,methane,18.0,1,,6.5,1961.74,"OpenFOAM counterFlowFlame2D (mikro-g, 1 atm, 10 cm/s)"
+0.0001,100.0,10.0,,methane,21.0,1,,6.5,2155.44,"OpenFOAM counterFlowFlame2D (mikro-g, 1 atm, 10 cm/s)"

@@ -1,0 +1,4 @@
+#!/bin/bash
+# Piroliz kutuphanesi: libFlameInFreefallSolid.so
+source /opt/openfoam14/etc/bashrc >/dev/null 2>&1
+cd "$(dirname "$0")/kaynak" && wmake libso

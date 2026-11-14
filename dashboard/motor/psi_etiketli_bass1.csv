@@ -1,0 +1,139 @@
+﻿makale_id,kaynak,link,veri_turu,platform,g_seviyesi,malzeme_sade,numune_tipi,yakit_turu,kalinlik_mm,oksijen_yuzde,seyreltici,basinc_kpa,akis_hizi_cm_s,akis_yonu,yanar,etiket_kaynagi
+PSI-26_1,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,22.1,n2,98.3,10.0,,1,psi
+PSI-26_1,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,22.1,n2,98.3,5.0,,1,psi
+PSI-26_2,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,22.1,n2,98.3,10.0,,1,psi
+PSI-26_2,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,22.1,n2,98.3,5.0,,1,psi
+PSI-26_2,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,22.1,n2,98.3,3.0,,1,psi
+PSI-26_3,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,10.0,22.1,n2,98.3,10.0,,1,psi
+PSI-26_3,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,10.0,22.1,n2,98.3,3.5,,1,psi
+PSI-26_4,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,21.9,n2,98.3,10.0,,1,psi
+PSI-26_5,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,21.9,n2,98.3,5.0,,1,psi
+PSI-26_6,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,21.7,n2,99.3,10.0,,1,psi
+PSI-26_6,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,21.7,n2,99.3,6.0,,1,psi
+PSI-26_7,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,21.7,n2,99.3,10.0,,1,psi
+PSI-26_7,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,21.7,n2,99.3,2.5,,1,psi
+PSI-26_8,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,21.7,n2,99.3,10.0,,1,psi
+PSI-26_8,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,21.7,n2,99.3,1.5,,1,psi
+PSI-26_9,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,10.0,21.89,n2,100.3,6.0,,1,psi
+PSI-26_9,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,10.0,21.89,n2,100.3,0.0,,0,psi
+PSI-26_10,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,10.0,21.89,n2,100.3,6.0,,1,psi
+PSI-26_10,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,10.0,21.89,n2,100.3,2.5,,1,psi
+PSI-26_10,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,10.0,21.89,n2,100.3,0.5,,1,psi
+PSI-26_10,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,10.0,21.89,n2,100.3,0.0,,0,psi
+PSI-26_11,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,10.0,21.89,n2,100.3,1.0,,1,psi
+PSI-26_11,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,10.0,21.89,n2,100.3,0.0,,0,psi
+PSI-26_12,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,21.63,n2,99.7,22.0,,1,psi
+PSI-26_13,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,21.63,n2,99.7,11.0,,1,psi
+PSI-26_14,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,nomex,fabric,kati,,21.63,n2,99.7,15.0,,0,psi
+PSI-26_15,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,21.7,n2,99.7,11.0,,1,psi
+PSI-26_16,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,21.7,n2,99.7,6.5,,1,psi
+PSI-26_17,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,21.7,n2,99.7,6.0,,1,psi
+PSI-26_17,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,21.7,n2,99.7,3.5,,1,psi
+PSI-26_18,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,21.7,n2,99.7,7.0,,1,psi
+PSI-26_19,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,21.7,n2,99.7,6.5,,1,psi
+PSI-26_19,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,21.7,n2,99.7,21.0,,1,psi
+PSI-26_19,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,21.7,n2,99.7,0.0,,0,psi
+PSI-26_20,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,21.17,n2,98.5,5.5,,1,psi
+PSI-26_21,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,21.17,n2,98.5,6.0,,1,psi
+PSI-26_21,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,21.17,n2,98.5,2.0,,1,psi
+PSI-26_22,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,21.17,n2,98.5,5.0,,1,psi
+PSI-26_23,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,21.17,n2,98.5,5.0,,1,psi
+PSI-26_24,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,nomex,fabric,kati,,21.17,n2,98.5,9.0,,1,psi
+PSI-26_24,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,nomex,fabric,kati,,21.17,n2,98.5,9.0,,1,psi
+PSI-26_25,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,21.18,n2,99.9,9.5,,1,psi
+PSI-26_26,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,21.18,n2,99.9,9.0,,1,psi
+PSI-26_27,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,21.18,n2,99.9,9.0,,1,psi
+PSI-26_28,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,21.18,n2,99.9,9.0,,1,psi
+PSI-26_29,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,10.0,20.89,n2,100.1,9.75,,1,psi
+PSI-26_30,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,10.0,20.89,n2,100.1,10.0,,1,psi
+PSI-26_30,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,10.0,20.89,n2,100.1,0.0,,0,psi
+PSI-26_31,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,10.0,20.89,n2,100.1,10.0,,1,psi
+PSI-26_32,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,10.0,20.89,n2,100.1,4.0,,1,psi
+PSI-26_33,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,21.75,n2,98.9,6.0,,1,psi
+PSI-26_33,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,21.75,n2,98.9,4.0,,1,psi
+PSI-26_33,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,21.75,n2,98.9,9.0,,1,psi
+PSI-26_34,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,21.75,n2,98.9,6.5,,1,psi
+PSI-26_34,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,21.75,n2,98.9,11.0,,1,psi
+PSI-26_35,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,21.75,n2,98.9,7.0,,1,psi
+PSI-26_35,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,21.75,n2,98.9,2.0,,1,psi
+PSI-26_35,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,21.75,n2,98.9,0.0,,0,psi
+PSI-26_36,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,21.75,n2,98.9,6.5,,1,psi
+PSI-26_36,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,21.75,n2,98.9,2.0,,1,psi
+PSI-26_37,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,21.98,n2,98.9,5.75,,1,psi
+PSI-26_38,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,nomex,fabric,kati,,21.98,n2,98.9,14.5,,1,psi
+PSI-26_39,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thick_sheet,kati,,21.98,n2,98.9,10.0,,1,psi
+PSI-26_39,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thick_sheet,kati,,21.98,n2,98.9,4.0,,1,psi
+PSI-26_43,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,ultem,thin_sheet,kati,,21.89,n2,100.0,14.5,,1,psi
+PSI-26_44,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,21.89,n2,100.0,10.0,,1,psi
+PSI-26_45,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,22.22,n2,100.1,9.0,,1,psi
+PSI-26_49,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thick_sheet,kati,,22.22,n2,100.1,6.0,,1,psi
+PSI-26_50,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thick_sheet,kati,,22.38,n2,100.1,10.0,,1,psi
+PSI-26_51,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,22.38,n2,100.1,10.0,,1,psi
+PSI-26_52,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,22.38,n2,100.1,10.0,,1,psi
+PSI-26_53,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,22.38,n2,100.1,10.0,,1,psi
+PSI-26_54,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,22.72,n2,100.8,9.0,,1,psi
+PSI-26_54,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,22.72,n2,100.8,44.0,,1,psi
+PSI-26_55,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,22.67,n2,101.7,10.0,,1,psi
+PSI-26_55,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,22.67,n2,101.7,20.0,,1,psi
+PSI-26_55,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,22.67,n2,101.7,44.0,,1,psi
+PSI-26_56,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,nomex,fabric,kati,,22.53,n2,102.1,30.0,,1,psi
+PSI-26_57,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,nomex,fabric,kati,,22.53,n2,102.1,15.0,,1,psi
+PSI-26_58,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,ultem,thin_sheet,kati,,22.53,n2,102.1,8.0,,1,psi
+PSI-26_59,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,,22.51,n2,102.1,6.5,,1,psi
+PSI-26_60,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,22.58,n2,102.2,10.0,,1,psi
+PSI-26_60,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,22.58,n2,102.2,44.0,,1,psi
+PSI-26_61,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,22.58,n2,102.2,10.0,,1,psi
+PSI-26_62,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,22.58,n2,102.2,5.0,,1,psi
+PSI-26_63,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,22.58,n2,102.2,5.0,,1,psi
+PSI-26_65,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,21.52,n2,100.4,20.0,,1,psi
+PSI-26_66,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,21.58,n2,100.4,10.0,,1,psi
+PSI-26_67,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,21.58,n2,100.4,5.0,,1,psi
+PSI-26_76,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thick_sheet,kati,,21.93,n2,98.6,9.0,,1,psi
+PSI-26_76,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thick_sheet,kati,,21.93,n2,98.6,7.0,,1,psi
+PSI-26_77,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thick_sheet,kati,,21.93,n2,98.6,9.0,,1,psi
+PSI-26_80,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,17.07,n2,98.3,12.0,,1,psi
+PSI-26_81,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,17.07,n2,98.3,12.0,,1,psi
+PSI-26_82,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,21.1,n2,99.5,7.5,,1,psi
+PSI-26_82,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,21.1,n2,99.5,2.0,,1,psi
+PSI-26_83,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,21.1,n2,99.5,7.5,,1,psi
+PSI-26_84,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,21.1,n2,99.5,8.0,,1,psi
+PSI-26_84,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,21.1,n2,99.5,0.0,,0,psi
+PSI-26_85,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,21.1,n2,99.5,8.0,,1,psi
+PSI-26_85,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,21.1,n2,99.5,1.0,,1,psi
+PSI-26_85,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,21.1,n2,99.5,8.0,,1,psi
+PSI-26_85,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,21.1,n2,99.5,20.0,,1,psi
+PSI-26_85,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,21.1,n2,99.5,8.0,,1,psi
+PSI-26_85,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,21.1,n2,99.5,1.0,,1,psi
+PSI-26_86,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,21.11,n2,99.3,8.0,,1,psi
+PSI-26_86,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,21.11,n2,99.3,5.0,,1,psi
+PSI-26_90,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thin_sheet,kati,,17.1,n2,100.3,0.0,,0,psi
+PSI-26_90,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,17.53,n2,98.3,5.0,,1,psi
+PSI-26_91,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,17.53,n2,98.3,5.0,,1,psi
+PSI-26_91,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,17.53,n2,98.3,2.0,,1,psi
+PSI-26_91,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,17.53,n2,98.3,1.0,,1,psi
+PSI-26_91,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,17.53,n2,98.3,1.0,,1,psi
+PSI-26_92,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,20.5,n2,98.3,5.0,,1,psi
+PSI-26_92,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,20.5,n2,98.3,1.0,,1,psi
+PSI-26_92,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,20.5,n2,98.3,1.0,,1,psi
+PSI-26_93,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,10.0,16.67,n2,98.9,6.0,,1,psi
+PSI-26_93,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,10.0,16.67,n2,98.9,8.0,,1,psi
+PSI-26_95,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,10.0,17.8,n2,98.9,8.0,,1,psi
+PSI-26_95,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,10.0,17.8,n2,98.9,2.0,,1,psi
+PSI-26_95,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,10.0,17.8,n2,98.9,1.0,,1,psi
+PSI-26_96,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thick_sheet,kati,,21.0,n2,98.9,9.0,,1,psi
+PSI-26_97,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,thick_sheet,kati,,21.0,n2,98.9,15.0,,1,psi
+PSI-26_98,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,17.34,n2,99.6,8.0,,1,psi
+PSI-26_98,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,17.34,n2,99.6,4.0,,1,psi
+PSI-26_98,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,17.34,n2,99.6,1.0,,1,psi
+PSI-26_99,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,17.34,n2,99.6,8.0,,1,psi
+PSI-26_99,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,17.34,n2,99.6,2.0,,1,psi
+PSI-26_99,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,17.34,n2,99.6,1.0,,1,psi
+PSI-26_104,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,17.2,n2,99.0,5.0,,1,psi
+PSI-26_105,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,17.2,n2,99.0,5.0,,1,psi
+PSI-26_106,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,17.1,n2,99.0,10.0,,1,psi
+PSI-26_106,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,17.1,n2,99.0,5.0,,1,psi
+PSI-26_106,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,17.1,n2,99.0,2.0,,1,psi
+PSI-26_107,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,17.13,n2,99.0,10.0,,1,psi
+PSI-26_108,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,17.17,n2,99.3,10.0,,1,psi
+PSI-26_108,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,17.17,n2,99.3,7.0,,1,psi
+PSI-26_108,nasa_psi,NASA PSI-26 (BASS) – BASS_test_matrix.xlsx,deney,ISS,0.0001,pmma,sphere,kati,20.0,17.17,n2,99.3,1.0,,1,psi

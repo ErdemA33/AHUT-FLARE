@@ -1,0 +1,170 @@
+{
+ "hatalar": [],
+ "hizli_satir_sayisi": 16,
+ "hizli_ilk": [
+  "çözüm başladı: pmma · g=0,38 · %21 O₂ · 101,3 kPa",
+  "1. girdi ve varsayılanlar · 0 ms · varsayılan kullanıldı: numune_tipi = thin_sheet, kalinlik = 0.2, yakit_turu = kati",
+  "2. malzeme tanıma · 0 ms · listede: 'pmma'"
+ ],
+ "hizli_dom": 16,
+ "bos_metin": "Soldaki ağaçtan girdileri ayarlayıp ÇÖZ'e basın.",
+ "kosu_id": "k1794645013019",
+ "foam_dom": 28,
+ "foam_son": [
+  "adım 201 | t 0.5025 s | 50.2 % | Δt 0.0025 | Tmax 1300.0 | Co 0.452 | kalan 00:00:49",
+  "adım 209 | t 0.5225 s | 52.2 % | Δt 0.0025 | Tmax 1300.0 | Co 0.468 | kalan 00:00:47"
+ ],
+ "foam_uyari": [
+  "--> FOAM Warning : sahte uyarı: bounding h"
+ ],
+ "seri_n": 27,
+ "seri_son": {
+  "duvar": 52.25,
+  "t": 0.5225,
+  "dt": 0.0025,
+  "tmax": 1300,
+  "co": 0.468,
+  "adim_dk": 240
+ },
+ "ozet": {
+  "adim": 210,
+  "t": 0.525,
+  "bitis_t": 1,
+  "yuzde": 52.5,
+  "kalan": 47.75,
+  "bitis_saati": 1794645074.5295398,
+  "adim_dk": 240,
+  "duvar": 52.5
+ },
+ "grafik_svg": 4,
+ "arayuz_sistem": {
+  "ek": {
+   "sicaklik": {
+    "paket": 49,
+    "cekirdekler": [
+     {
+      "ad": "Core 0",
+      "t": 46
+     },
+     {
+      "ad": "Core 4",
+      "t": 50
+     },
+     {
+      "ad": "Core 8",
+      "t": 48
+     },
+     {
+      "ad": "Core 12",
+      "t": 47
+     },
+     {
+      "ad": "Core 16",
+      "t": 46
+     },
+     {
+      "ad": "Core 20",
+      "t": 46
+     },
+     {
+      "ad": "Core 28",
+      "t": 47
+     },
+     {
+      "ad": "Core 29",
+      "t": 47
+     },
+     {
+      "ad": "Core 30",
+      "t": 47
+     },
+     {
+      "ad": "Core 31",
+      "t": 47
+     }
+    ],
+    "yuksek": 100
+   },
+   "fan": [
+    {
+     "ad": "cpu_fan",
+     "rpm": 2700
+    },
+    {
+     "ad": "gpu_fan",
+     "rpm": 3000
+    }
+   ],
+   "profil": "performance",
+   "pil": {
+    "yuzde": 100,
+    "prizde": true
+   },
+   "disk": {
+    "bos": 4800897024,
+    "toplam": 52014657536,
+    "yuzde": 85.62657951784924
+   },
+   "foam": {
+    "surecler": [],
+    "cozucu": 0,
+    "mpirun": 0,
+    "cekirdek": 0,
+    "calisma_dizinleri": []
+   }
+  },
+  "cpu": {
+   "toplam": 1.3519988623084198,
+   "n": 16,
+   "bellek": {
+    "kullanilan": 5371666432,
+    "toplam": 16366252032,
+    "yuzde": 42.9
+   },
+   "takas": {
+    "kullanilan": 0,
+    "toplam": 4294963200,
+    "yuzde": 0
+   },
+   "yuk": [
+    0.80712890625,
+    4.0185546875,
+    7.05224609375
+   ]
+  }
+ },
+ "sensors_package": [
+  "49.0"
+ ],
+ "sensors_fan": [
+  [
+   "cpu_fan",
+   "2700"
+  ],
+  [
+   "gpu_fan",
+   "3000"
+  ]
+ ],
+ "df_bos_GB": 4.47,
+ "meminfo": {
+  "toplam_GB": 15.24,
+  "kullanilan_GB": 6.56
+ },
+ "load": [
+  0.80712890625,
+  4.0185546875,
+  7.05224609375
+ ],
+ "profil": "performance",
+ "serit_var": false,
+ "mesaj_popup_acik": 3,
+ "tablo_satir": 3,
+ "grafik_svg_gt": 1,
+ "gorunume_donus": true,
+ "durum": "TAMAM",
+ "mesaj_kosu": [
+  "Koşu TAMAM: sahte-foam-kosusu"
+ ],
+ "gecmis_satir": 2
+}

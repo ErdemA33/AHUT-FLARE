@@ -1,0 +1,99 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  14
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volScalarField;
+    location    "0.3/tel";
+    object      T;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 1 0 0 0];
+
+internalField   nonuniform List<scalar> 
+33
+(
+569.0958812
+569.0946831
+569.088903
+569.1283369
+569.1215343
+569.1537231
+569.1457957
+569.1709526
+569.161668
+569.1809869
+569.1670643
+569.1782918
+569.1595894
+569.1623209
+569.1421435
+569.1331895
+569.1147568
+569.0707223
+569.036077
+568.9905705
+568.9339187
+569.1076504
+569.0827033
+569.0464069
+568.9982219
+569.1339976
+569.116137
+569.0874973
+569.0477664
+569.1498151
+569.1372947
+569.1150626
+569.083487
+)
+;
+
+boundaryField
+{
+    frontAndBack
+    {
+        type            empty;
+    }
+    tel_to_fluid
+    {
+        type            coupledTemperature;
+        refValue        nonuniform List<scalar> 6(551.9239058 551.1015451 549.8898245 548.3470408 553.0047647 549.9413872);
+        refGradient     nonuniform List<scalar> 6(-310.3784793 -310.5438868 -310.6743451 -310.7709247 -310.8872119 -310.8485639);
+        valueFraction   nonuniform List<scalar> 6(0.001803762304 0.001454503936 0.001118506051 0.000833468009 0.001137178046 0.0008445185579);
+        value           nonuniform List<scalar> 6(568.9005733 568.9696037 569.0239709 569.0641615 569.1125306 569.0965239);
+        qrNbr           qr;
+    }
+    tel_to_sibal
+    {
+        type            coupledTemperature;
+        refValue        nonuniform List<scalar> 0();
+        refGradient     nonuniform List<scalar> 0();
+        valueFraction   nonuniform List<scalar> 0();
+        value           nonuniform List<scalar> 0();
+    }
+    procBoundary3to0
+    {
+        type            processor;
+        value           uniform 569.0925013;
+    }
+    procBoundary3to1
+    {
+        type            processor;
+        value           nonuniform List<scalar> 7(569.0536215 569.0526491 569.0478085 569.0235572 568.9767256 568.9200972 568.8544263);
+    }
+    procBoundary3to2
+    {
+        type            processor;
+        value           nonuniform List<scalar> 8(569.1297802 569.1297802 569.1554365 569.1729647 569.1845269 569.183063 569.1670035 569.1364696);
+    }
+}
+
+
+// ************************************************************************* //

@@ -1,0 +1,426 @@
+{
+ "w=0.5": [
+  {
+   "tohum": 0,
+   "kayip": 919.2036889758463,
+   "CO2+He": {
+    "n": 167,
+    "K_medyan_hata_yuzde": 11.142816378161669,
+    "sonme_capi_medyan_hata_mm": 0.886,
+    "sonme_capi_medyan_hata_oran": 0.32769230769230767,
+    "dogruluk": 0.8502994011976048,
+    "auc": 0.80995670995671,
+    "yanan_orani": 0.7904191616766467
+   },
+   "He": {
+    "n": 47,
+    "K_medyan_hata_yuzde": 25.86551065654541,
+    "sonme_capi_medyan_hata_mm": 1.065,
+    "sonme_capi_medyan_hata_oran": 0.4630872483221476,
+    "dogruluk": 0.8297872340425532,
+    "auc": 0.8173076923076923,
+    "yanan_orani": 0.8297872340425532
+   },
+   "He NC7H16": {
+    "n": 21,
+    "K_medyan_hata_yuzde": 49.31689110747022,
+    "sonme_capi_medyan_hata_mm": 1.64,
+    "sonme_capi_medyan_hata_oran": 0.6556603773584905,
+    "dogruluk": 0.8571428571428571,
+    "auc": 0.8148148148148149,
+    "yanan_orani": 0.8571428571428571,
+    "K_oran_medyan": 1.4931689110747022
+   },
+   "p": {
+    "lnA_NC7H16": 4.108850619643629,
+    "lnA_CH3OH": -6.90639858708389,
+    "Ta": 8901.417526596284,
+    "ln_Crad": -3.912023005428146,
+    "beta": 0.8277796436384444,
+    "kz": 0.7312688875771988,
+    "s": 2.688270393786692,
+    "ln_kw": -4.63920740079224
+   }
+  },
+  {
+   "tohum": 1,
+   "kayip": 678.0822354018958,
+   "CO2+He": {
+    "n": 167,
+    "K_medyan_hata_yuzde": 14.71638139603791,
+    "sonme_capi_medyan_hata_mm": 0.5047999999999999,
+    "sonme_capi_medyan_hata_oran": 0.16111111111111112,
+    "dogruluk": 0.7664670658682635,
+    "auc": 0.7950216450216451,
+    "yanan_orani": 0.7904191616766467
+   },
+   "He": {
+    "n": 47,
+    "K_medyan_hata_yuzde": 29.881981195342288,
+    "sonme_capi_medyan_hata_mm": 0.71,
+    "sonme_capi_medyan_hata_oran": 0.26285714285714284,
+    "dogruluk": 0.8297872340425532,
+    "auc": 0.717948717948718,
+    "yanan_orani": 0.8297872340425532
+   },
+   "He NC7H16": {
+    "n": 21,
+    "K_medyan_hata_yuzde": 59.220844431024375,
+    "sonme_capi_medyan_hata_mm": 1.64,
+    "sonme_capi_medyan_hata_oran": 0.6556603773584905,
+    "dogruluk": 0.8571428571428571,
+    "auc": 0.7962962962962963,
+    "yanan_orani": 0.8571428571428571,
+    "K_oran_medyan": 1.5922084443102438
+   },
+   "p": {
+    "lnA_NC7H16": -10.978741277572551,
+    "lnA_CH3OH": -2.9066104065861236,
+    "Ta": 12476.015294868424,
+    "ln_Crad": -2.9915197503009794,
+    "beta": 0.33942302094756327,
+    "kz": 0.79865596362573,
+    "s": 1.4156962131264814,
+    "ln_kw": -2.3350733225970326
+   }
+  },
+  {
+   "tohum": 2,
+   "kayip": 709.7820755335179,
+   "CO2+He": {
+    "n": 167,
+    "K_medyan_hata_yuzde": 13.59981678877843,
+    "sonme_capi_medyan_hata_mm": 0.46919999999999984,
+    "sonme_capi_medyan_hata_oran": 0.14657223796033997,
+    "dogruluk": 0.7844311377245509,
+    "auc": 0.8023809523809523,
+    "yanan_orani": 0.7904191616766467
+   },
+   "He": {
+    "n": 47,
+    "K_medyan_hata_yuzde": 27.143463817578883,
+    "sonme_capi_medyan_hata_mm": 0.73,
+    "sonme_capi_medyan_hata_oran": 0.28285714285714286,
+    "dogruluk": 0.8297872340425532,
+    "auc": 0.7948717948717948,
+    "yanan_orani": 0.8297872340425532
+   },
+   "He NC7H16": {
+    "n": 21,
+    "K_medyan_hata_yuzde": 57.900585390690566,
+    "sonme_capi_medyan_hata_mm": 1.64,
+    "sonme_capi_medyan_hata_oran": 0.6556603773584905,
+    "dogruluk": 0.8571428571428571,
+    "auc": 0.8333333333333333,
+    "yanan_orani": 0.8571428571428571,
+    "K_oran_medyan": 1.5790058539069056
+   },
+   "p": {
+    "lnA_NC7H16": 14.023078574810299,
+    "lnA_CH3OH": 5.49194466928876,
+    "Ta": 16615.746327760575,
+    "ln_Crad": -3.186858194363331,
+    "beta": 0.33715432685796315,
+    "kz": 0.7736024947716379,
+    "s": 3.077515150511519,
+    "ln_kw": -2.456200957290358
+   }
+  },
+  {
+   "tohum": 3,
+   "kayip": 2348.403008257944,
+   "CO2+He": {
+    "n": 167,
+    "K_medyan_hata_yuzde": 23.383361313889786,
+    "sonme_capi_medyan_hata_mm": 0.8,
+    "sonme_capi_medyan_hata_oran": 0.32142857142857145,
+    "dogruluk": 0.46107784431137727,
+    "auc": 0.7402597402597402,
+    "yanan_orani": 0.7904191616766467
+   },
+   "He": {
+    "n": 47,
+    "K_medyan_hata_yuzde": 45.07411343136416,
+    "sonme_capi_medyan_hata_mm": 1.116,
+    "sonme_capi_medyan_hata_oran": 0.4061016949152541,
+    "dogruluk": 0.5957446808510638,
+    "auc": 0.6089743589743589,
+    "yanan_orani": 0.8297872340425532
+   },
+   "He NC7H16": {
+    "n": 21,
+    "K_medyan_hata_yuzde": 24.5114445592872,
+    "sonme_capi_medyan_hata_mm": 0.8,
+    "sonme_capi_medyan_hata_oran": 0.3333333333333333,
+    "dogruluk": 0.3333333333333333,
+    "auc": 0.8703703703703705,
+    "yanan_orani": 0.8571428571428571,
+    "K_oran_medyan": 1.23981132436855
+   },
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": -0.4999619539247657,
+    "beta": 1.0,
+    "kz": 1.2210070430098565,
+    "s": 1.3985071057497214,
+    "ln_kw": -5.808133183084819
+   }
+  },
+  {
+   "tohum": 4,
+   "kayip": 1701.4394546395256,
+   "CO2+He": {
+    "n": 167,
+    "K_medyan_hata_yuzde": 17.291512488771748,
+    "sonme_capi_medyan_hata_mm": 1.42,
+    "sonme_capi_medyan_hata_oran": 0.4834834834834835,
+    "dogruluk": 0.7544910179640718,
+    "auc": 0.7935064935064935,
+    "yanan_orani": 0.7904191616766467
+   },
+   "He": {
+    "n": 47,
+    "K_medyan_hata_yuzde": 36.66655879400664,
+    "sonme_capi_medyan_hata_mm": 1.64,
+    "sonme_capi_medyan_hata_oran": 0.5661016949152542,
+    "dogruluk": 0.8297872340425532,
+    "auc": 0.7596153846153846,
+    "yanan_orani": 0.8297872340425532
+   },
+   "He NC7H16": {
+    "n": 21,
+    "K_medyan_hata_yuzde": 43.975172538585895,
+    "sonme_capi_medyan_hata_mm": 1.64,
+    "sonme_capi_medyan_hata_oran": 0.6556603773584905,
+    "dogruluk": 0.8571428571428571,
+    "auc": 0.8333333333333333,
+    "yanan_orani": 0.8571428571428571,
+    "K_oran_medyan": 1.439751725385859
+   },
+   "p": {
+    "lnA_NC7H16": 13.29168316717103,
+    "lnA_CH3OH": 0.3424602974370275,
+    "Ta": 29477.36152556971,
+    "ln_Crad": -2.8121663974656874,
+    "beta": 0.6280359164630478,
+    "kz": 0.810547520253987,
+    "s": 3.0721969535545637,
+    "ln_kw": -11.567897294994603
+   }
+  }
+ ],
+ "w=0.333333": [
+  {
+   "tohum": 0,
+   "kayip": 632.7118651456541,
+   "CO2+He": {
+    "n": 167,
+    "K_medyan_hata_yuzde": 14.215688275352145,
+    "sonme_capi_medyan_hata_mm": 0.4755999999999998,
+    "sonme_capi_medyan_hata_oran": 0.1495750708215297,
+    "dogruluk": 0.7604790419161677,
+    "auc": 0.7948051948051948,
+    "yanan_orani": 0.7904191616766467
+   },
+   "He": {
+    "n": 47,
+    "K_medyan_hata_yuzde": 35.38423291058681,
+    "sonme_capi_medyan_hata_mm": 0.73,
+    "sonme_capi_medyan_hata_oran": 0.28285714285714286,
+    "dogruluk": 0.8297872340425532,
+    "auc": 0.7564102564102564,
+    "yanan_orani": 0.8297872340425532
+   },
+   "He NC7H16": {
+    "n": 21,
+    "K_medyan_hata_yuzde": 46.43522222484799,
+    "sonme_capi_medyan_hata_mm": 1.64,
+    "sonme_capi_medyan_hata_oran": 0.6556603773584905,
+    "dogruluk": 0.8571428571428571,
+    "auc": 0.8333333333333333,
+    "yanan_orani": 0.8571428571428571,
+    "K_oran_medyan": 1.46435222224848
+   },
+   "p": {
+    "lnA_NC7H16": 4.108850619643629,
+    "lnA_CH3OH": -6.90639858708389,
+    "Ta": 8901.417526596284,
+    "ln_Crad": -2.8119293728445482,
+    "beta": 0.7066993863766869,
+    "kz": 1.066694750649688,
+    "s": 2.574676435417359,
+    "ln_kw": -2.364061399980702
+   }
+  },
+  {
+   "tohum": 1,
+   "kayip": 645.306849983622,
+   "CO2+He": {
+    "n": 167,
+    "K_medyan_hata_yuzde": 15.311515885735849,
+    "sonme_capi_medyan_hata_mm": 0.5047999999999999,
+    "sonme_capi_medyan_hata_oran": 0.16111111111111112,
+    "dogruluk": 0.7544910179640718,
+    "auc": 0.791991341991342,
+    "yanan_orani": 0.7904191616766467
+   },
+   "He": {
+    "n": 47,
+    "K_medyan_hata_yuzde": 27.181117850892058,
+    "sonme_capi_medyan_hata_mm": 0.71,
+    "sonme_capi_medyan_hata_oran": 0.26285714285714284,
+    "dogruluk": 0.8297872340425532,
+    "auc": 0.7564102564102564,
+    "yanan_orani": 0.8297872340425532
+   },
+   "He NC7H16": {
+    "n": 21,
+    "K_medyan_hata_yuzde": 52.1395733340897,
+    "sonme_capi_medyan_hata_mm": 1.64,
+    "sonme_capi_medyan_hata_oran": 0.6556603773584905,
+    "dogruluk": 0.8571428571428571,
+    "auc": 0.8333333333333333,
+    "yanan_orani": 0.8571428571428571,
+    "K_oran_medyan": 1.521395733340897
+   },
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": -2.8478895301583815,
+    "beta": 0.22601378723745125,
+    "kz": 0.996823530035208,
+    "s": 3.2074808348206036,
+    "ln_kw": -2.3338015952596556
+   }
+  },
+  {
+   "tohum": 2,
+   "kayip": 645.306849983622,
+   "CO2+He": {
+    "n": 167,
+    "K_medyan_hata_yuzde": 15.311515885735849,
+    "sonme_capi_medyan_hata_mm": 0.5047999999999999,
+    "sonme_capi_medyan_hata_oran": 0.16111111111111112,
+    "dogruluk": 0.7544910179640718,
+    "auc": 0.791991341991342,
+    "yanan_orani": 0.7904191616766467
+   },
+   "He": {
+    "n": 47,
+    "K_medyan_hata_yuzde": 27.181117850892058,
+    "sonme_capi_medyan_hata_mm": 0.71,
+    "sonme_capi_medyan_hata_oran": 0.26285714285714284,
+    "dogruluk": 0.8297872340425532,
+    "auc": 0.7564102564102564,
+    "yanan_orani": 0.8297872340425532
+   },
+   "He NC7H16": {
+    "n": 21,
+    "K_medyan_hata_yuzde": 52.1395733340897,
+    "sonme_capi_medyan_hata_mm": 1.64,
+    "sonme_capi_medyan_hata_oran": 0.6556603773584905,
+    "dogruluk": 0.8571428571428571,
+    "auc": 0.8333333333333333,
+    "yanan_orani": 0.8571428571428571,
+    "K_oran_medyan": 1.521395733340897
+   },
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": -2.8478895301583815,
+    "beta": 0.22601378723745125,
+    "kz": 0.996823530035208,
+    "s": 3.2074808348206036,
+    "ln_kw": -2.3338015952596556
+   }
+  },
+  {
+   "tohum": 3,
+   "kayip": 645.306849983622,
+   "CO2+He": {
+    "n": 167,
+    "K_medyan_hata_yuzde": 15.311515885735849,
+    "sonme_capi_medyan_hata_mm": 0.5047999999999999,
+    "sonme_capi_medyan_hata_oran": 0.16111111111111112,
+    "dogruluk": 0.7544910179640718,
+    "auc": 0.791991341991342,
+    "yanan_orani": 0.7904191616766467
+   },
+   "He": {
+    "n": 47,
+    "K_medyan_hata_yuzde": 27.181117850892058,
+    "sonme_capi_medyan_hata_mm": 0.71,
+    "sonme_capi_medyan_hata_oran": 0.26285714285714284,
+    "dogruluk": 0.8297872340425532,
+    "auc": 0.7564102564102564,
+    "yanan_orani": 0.8297872340425532
+   },
+   "He NC7H16": {
+    "n": 21,
+    "K_medyan_hata_yuzde": 52.1395733340897,
+    "sonme_capi_medyan_hata_mm": 1.64,
+    "sonme_capi_medyan_hata_oran": 0.6556603773584905,
+    "dogruluk": 0.8571428571428571,
+    "auc": 0.8333333333333333,
+    "yanan_orani": 0.8571428571428571,
+    "K_oran_medyan": 1.521395733340897
+   },
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": -2.8478895301583815,
+    "beta": 0.22601378723745125,
+    "kz": 0.996823530035208,
+    "s": 3.2074808348206036,
+    "ln_kw": -2.3338015952596556
+   }
+  },
+  {
+   "tohum": 4,
+   "kayip": 645.306849983622,
+   "CO2+He": {
+    "n": 167,
+    "K_medyan_hata_yuzde": 15.311515885735849,
+    "sonme_capi_medyan_hata_mm": 0.5047999999999999,
+    "sonme_capi_medyan_hata_oran": 0.16111111111111112,
+    "dogruluk": 0.7544910179640718,
+    "auc": 0.791991341991342,
+    "yanan_orani": 0.7904191616766467
+   },
+   "He": {
+    "n": 47,
+    "K_medyan_hata_yuzde": 27.181117850892058,
+    "sonme_capi_medyan_hata_mm": 0.71,
+    "sonme_capi_medyan_hata_oran": 0.26285714285714284,
+    "dogruluk": 0.8297872340425532,
+    "auc": 0.7564102564102564,
+    "yanan_orani": 0.8297872340425532
+   },
+   "He NC7H16": {
+    "n": 21,
+    "K_medyan_hata_yuzde": 52.1395733340897,
+    "sonme_capi_medyan_hata_mm": 1.64,
+    "sonme_capi_medyan_hata_oran": 0.6556603773584905,
+    "dogruluk": 0.8571428571428571,
+    "auc": 0.8333333333333333,
+    "yanan_orani": 0.8571428571428571,
+    "K_oran_medyan": 1.521395733340897
+   },
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": -2.8478895301583815,
+    "beta": 0.22601378723745125,
+    "kz": 0.996823530035208,
+    "s": 3.2074808348206036,
+    "ln_kw": -2.3338015952596556
+   }
+  }
+ ]
+}

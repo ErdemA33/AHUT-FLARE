@@ -1,0 +1,12 @@
+#!/bin/bash
+# Kilitli motor ile Saffire-III S1 (10 s), 4 cekirdek.
+# Motor dosyalari ../motor/{kinetik,radyasyon,piroliz} klasorlerinden vakaya kopyalanir.
+# Agi bastan uretmek icin: python3 mesh_olustur.py && blockMesh && splitMeshRegions -cellZones -overwrite
+source /opt/openfoam14/etc/bashrc >/dev/null 2>&1
+cd "$(dirname "$0")"
+M=../motor
+cp $M/kinetik/reactions $M/kinetik/chemistryProperties $M/kinetik/reactionProperties constant/fluid/
+cp $M/radyasyon/radiationProperties $M/radyasyon/fvModels constant/fluid/
+cp $M/piroliz/fvModels $M/piroliz/physicalProperties constant/sibal/
+decomposePar -allRegions -force > log.decomposePar 2>&1
+mpirun -np 4 foamMultiRun -parallel > log.run 2>&1

@@ -1,0 +1,11 @@
+FoamFile { format ascii; class dictionary; location "constant/fluid"; object fvConstraints; }
+
+limitY
+{
+    type            limitFields;
+    fields          (CH4 O2 CO2 H2O N2 CO);
+    min             0;
+    max             1;
+    selectionMode   all;
+}
+// limitTemperature yok: enerjiyi kesmesin (sonuclar fiziksel sinirlarla raporda kontrol edilir)

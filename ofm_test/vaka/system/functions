@@ -1,0 +1,103 @@
+FoamFile { format ascii; class dictionary; location "system"; object functions; }
+
+telT
+{
+    type            volFieldValue;
+    libs            ("libfieldFunctionObjects.so");
+    region          tel;
+    writeControl    timeStep;
+    writeInterval   10;
+    writeFields     no;
+    cellZone        all;
+    operation       max;
+    fields          (T);
+}
+telTort
+{
+    $telT;
+    operation       volAverage;
+}
+gazMax
+{
+    type            volFieldValue;
+    libs            ("libfieldFunctionObjects.so");
+    region          fluid;
+    writeControl    timeStep;
+    writeInterval   10;
+    writeFields     no;
+    cellZone        all;
+    operation       max;
+    fields          (T CO2 CH4);
+}
+sibalKutle
+{
+    type            volFieldValue;
+    libs            ("libfieldFunctionObjects.so");
+    region          sibal;
+    writeControl    timeStep;
+    writeInterval   1;
+    writeFields     no;
+    cellZone        all;
+    operation       volIntegrate;
+    fields          (rhoV rhoCh);
+}
+sibalMaxT
+{
+    type            volFieldValue;
+    libs            ("libfieldFunctionObjects.so");
+    region          sibal;
+    writeControl    timeStep;
+    writeInterval   10;
+    writeFields     no;
+    cellZone        all;
+    operation       max;
+    fields          (T);
+}
+yakitAkisi
+{
+    type            surfaceFieldValue;
+    libs            ("libfieldFunctionObjects.so");
+    region          fluid;
+    writeControl    timeStep;
+    writeInterval   1;
+    writeFields     no;
+    select          patch;
+    patch           fluid_to_sibal;
+    operation       sum;
+    fields          (phi);
+}
+gazProb
+{
+    type            probes;
+    libs            ("libsampling.so");
+    region          fluid;
+    writeControl    timeStep;
+    writeInterval   10;
+    fields          (T CH4 O2 CO2);
+    probeLocations
+    (
+        (0.15625 0.00032 0)   // telin 0.05 mm ustu
+        (0.15625 0.001 0)     // tel ekseni, y = 1 mm
+        (0.158 0.0002 0)      // telin 1.75 mm asagi akisi, yuzeye yakin
+        (0.20 0.001 0)
+        (0.30 0.001 0)
+        (0.49 0.010 0)        // TC (34 cm / 10 mm), deney t=10 s'de 429 K
+        (0.77 0.008 0)
+    );
+}
+sibalYuzey
+{
+    type            surfaces;
+    libs            ("libsampling.so");
+    region          sibal;
+    writeControl    adjustableRunTime;
+    writeInterval   0.05;
+    surfaceFormat   raw;
+    interpolate     false;
+    interpolationScheme cell;
+    fields          (T rhoV rhoCh);
+    surfaces
+    {
+        ust { type patch; patches (sibal_to_fluid); }
+    }
+}

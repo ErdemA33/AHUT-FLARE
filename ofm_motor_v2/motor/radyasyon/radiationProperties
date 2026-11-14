@@ -1,0 +1,27 @@
+FoamFile { format ascii; class dictionary; location "constant/fluid"; object radiationProperties; }
+// fvDOM + greyMean (CO2, H2O; Smith vd. 1982 polinomlari), Cf 0.52
+// NOT: _template_kati'deki katsayilar 10^(3k) carpanlari eksik yaziliydi; burada duzeltildi.
+radiationModel  fvDOM;
+fvDOM { nPhi 4; nTheta 0; tolerance 0.001; maxIter 4; }
+// Cf = 0.52 uygulandi (Zhao 2015)
+solverFreq      1;
+absorptionEmissionModel greyMean;
+greyMean
+{
+    lookUpTableFileName none;
+    EhrrCoeff           0;
+    CO2
+    {
+        Tcommon 200; invTemp true; Tlow 200; Thigh 2500;
+        loTcoeffs (0 0 0 0 0 0);
+        hiTcoeffs (9.74532 -63081.2 142220000 -1.00906e+11 2.92812e+13 -3.024788e+15);
+    }
+    H2O
+    {
+        Tcommon 200; invTemp true; Tlow 200; Thigh 2500;
+        loTcoeffs (0 0 0 0 0 0);
+        hiTcoeffs (-0.1200836 -584.428 4895956 -1559402000 2.671864e+11 -9713600000);
+    }
+}
+scatterModel    none;
+sootModel       none;

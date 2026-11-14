@@ -1,0 +1,54 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  14
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volScalarField;
+    location    "0/sibal";
+    object      T;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 1 0 0 0];
+
+internalField   uniform 294.32;
+
+boundaryField
+{
+    sibalAlt
+    {
+        type            symmetryPlane;
+    }
+    sibalUc
+    {
+        type            zeroGradient;
+    }
+    frontAndBack
+    {
+        type            empty;
+    }
+    sibal_to_tel
+    {
+        type            coupledTemperature;
+        value           nonuniform List<scalar> 0();
+    }
+    sibal_to_fluid
+    {
+        type            coupledTemperature;
+        qrNbr           qr;
+        value           uniform 294.32;
+    }
+    procBoundary1to0
+    {
+        type            processor;
+        value           uniform 294.32;
+    }
+}
+
+
+// ************************************************************************* //

@@ -1,0 +1,268 @@
+{
+ "aciklama": "gaz_isinim.geri_emme ile (DAMLA_GERI_EMME=1), C_rad=0.3 + alev terimi; dürüst testler",
+ "geri_emmeli": {
+  "G_tum": {
+   "parca": "tum",
+   "kayip": 2964.4446429246314,
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": -1.2039728043259361,
+    "beta": 1.2640842749847612,
+    "kz": 0.7723171005532176,
+    "s": 2.3358717501559307,
+    "ln_kw": -3.0119811020367724,
+    "ln_fsr": -0.8881430013170228
+   },
+   "hepsi": {
+    "n": 261,
+    "alev_oran_medyan_hata_yuzde": 27.16629938409745,
+    "K_medyan_hata_yuzde": 9.623875670288518,
+    "sonme_capi_medyan_hata_mm": 0.33374966434274733,
+    "sonme_capi_medyan_hata_oran": 0.11370363924266645,
+    "dogruluk": 0.8812260536398467,
+    "auc": 0.8467886259693777,
+    "yanan_orani": 0.8199233716475096
+   }
+  },
+  "G_NC7H16": {
+   "parca": "NC7H16",
+   "kayip": 909.728648529563,
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": -1.2039728043259361,
+    "beta": 1.3715457809582994,
+    "kz": 0.8271664303618546,
+    "s": 2.3040579025840273,
+    "ln_kw": -2.7075277322859788,
+    "ln_fsr": -0.6355438936500145
+   },
+   "test NC7H16": {
+    "n": 108,
+    "alev_oran_medyan_hata_yuzde": 60.5255107922171,
+    "K_medyan_hata_yuzde": 14.768505514131125,
+    "sonme_capi_medyan_hata_mm": 0.5775927472488728,
+    "sonme_capi_medyan_hata_oran": 0.20045638536870974,
+    "dogruluk": 0.75,
+    "auc": 0.8870535714285713,
+    "yanan_orani": 0.7407407407407407
+   }
+  },
+  "G_n2": {
+   "parca": "n2",
+   "kayip": 939.943919357252,
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": -1.2039728043259361,
+    "beta": 1.0775351534811937,
+    "kz": 0.7744653985200397,
+    "s": 1.3633742081236317,
+    "ln_kw": -2.9366005377373856,
+    "ln_fsr": -0.8496777974502332
+   },
+   "eğitim N2": {
+    "n": 94,
+    "alev_oran_medyan_hata_yuzde": 27.682193819887356,
+    "K_medyan_hata_yuzde": 8.255738822493079,
+    "sonme_capi_medyan_hata_mm": 0.2640821114391472,
+    "sonme_capi_medyan_hata_oran": 0.12734254125184152,
+    "dogruluk": 0.9148936170212766,
+    "auc": 0.9298780487804879,
+    "yanan_orani": 0.8723404255319149
+   },
+   "test CO2": {
+    "n": 120,
+    "alev_oran_medyan_hata_yuzde": 24.760568854923065,
+    "K_medyan_hata_yuzde": 7.268966477321848,
+    "sonme_capi_medyan_hata_mm": 0.2520795379682207,
+    "sonme_capi_medyan_hata_oran": 0.08836819627736522,
+    "dogruluk": 0.875,
+    "auc": 0.8705694942254082,
+    "yanan_orani": 0.775
+   },
+   "test He": {
+    "n": 47,
+    "alev_oran_medyan_hata_yuzde": 33.491503773704096,
+    "K_medyan_hata_yuzde": 26.33595525398458,
+    "sonme_capi_medyan_hata_mm": 0.69361011254507,
+    "sonme_capi_medyan_hata_oran": 0.3458466301327778,
+    "dogruluk": 0.8297872340425532,
+    "auc": 0.8044871794871795,
+    "yanan_orani": 0.8297872340425532
+   },
+   "test CO2+He": {
+    "n": 167,
+    "alev_oran_medyan_hata_yuzde": 26.63589023583181,
+    "K_medyan_hata_yuzde": 11.054005081658335,
+    "sonme_capi_medyan_hata_mm": 0.37865978293435837,
+    "sonme_capi_medyan_hata_oran": 0.11781102083774726,
+    "dogruluk": 0.8622754491017964,
+    "auc": 0.8075757575757576,
+    "yanan_orani": 0.7904191616766467
+   }
+  },
+  "G_CH3OH": {
+   "parca": "CH3OH",
+   "kayip": 1095.7649596605588,
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": -1.2039728043259361,
+    "beta": 1.5,
+    "kz": 0.6430328010486264,
+    "s": 3.203704676578996,
+    "ln_kw": -8.976746597166908,
+    "ln_fsr": -1.3678649466621602
+   },
+   "test CH3OH": {
+    "n": 153,
+    "alev_oran_medyan_hata_yuzde": 46.20364857569748,
+    "K_medyan_hata_yuzde": 12.940101443571578,
+    "sonme_capi_medyan_hata_mm": 1.0385443747832714,
+    "sonme_capi_medyan_hata_oran": 0.384217651430456,
+    "dogruluk": 0.8758169934640523,
+    "auc": 0.8012568735271014,
+    "yanan_orani": 0.8758169934640523
+   }
+  }
+ },
+ "geri_emmesiz": {
+  "F0.3_NC7H16": {
+   "parca": "NC7H16",
+   "kayip": 952.4828182016565,
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": -1.2039728043259361,
+    "beta": 1.2937425105274534,
+    "kz": 0.8209347823948286,
+    "s": 5.944661045867059,
+    "ln_kw": -2.8927980142158476,
+    "ln_fsr": -0.6386052549663986
+   },
+   "test NC7H16": {
+    "n": 108,
+    "alev_oran_medyan_hata_yuzde": 57.89775202631855,
+    "K_medyan_hata_yuzde": 15.961761428867577,
+    "sonme_capi_medyan_hata_mm": 0.6330267726035874,
+    "sonme_capi_medyan_hata_oran": 0.20818944607631912,
+    "dogruluk": 0.75,
+    "auc": 0.8834821428571429,
+    "yanan_orani": 0.7407407407407407
+   }
+  },
+  "F0.3_tum": {
+   "parca": "tum",
+   "kayip": 3065.111927349263,
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": -1.2039728043259361,
+    "beta": 1.2776644734474663,
+    "kz": 0.7743783871430113,
+    "s": 2.514725629006034,
+    "ln_kw": -3.0219821300603114,
+    "ln_fsr": -0.8962666227425817
+   },
+   "hepsi": {
+    "n": 261,
+    "alev_oran_medyan_hata_yuzde": 27.34879908917468,
+    "K_medyan_hata_yuzde": 9.958737050328892,
+    "sonme_capi_medyan_hata_mm": 0.30687536778726576,
+    "sonme_capi_medyan_hata_oran": 0.11211740930193319,
+    "dogruluk": 0.8773946360153256,
+    "auc": 0.844303042354345,
+    "yanan_orani": 0.8199233716475096
+   }
+  },
+  "F0.3_n2": {
+   "parca": "n2",
+   "kayip": 951.8872626584958,
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": -1.2039728043259361,
+    "beta": 1.0829116903267264,
+    "kz": 0.7728662657737853,
+    "s": 6.425882836046084,
+    "ln_kw": -2.9797724759737685,
+    "ln_fsr": -0.857881183998765
+   },
+   "eğitim N2": {
+    "n": 94,
+    "alev_oran_medyan_hata_yuzde": 27.648129339990433,
+    "K_medyan_hata_yuzde": 8.300606008766842,
+    "sonme_capi_medyan_hata_mm": 0.2772835174494076,
+    "sonme_capi_medyan_hata_oran": 0.13310068657566215,
+    "dogruluk": 0.9148936170212766,
+    "auc": 0.9298780487804879,
+    "yanan_orani": 0.8723404255319149
+   },
+   "test CO2": {
+    "n": 120,
+    "alev_oran_medyan_hata_yuzde": 24.963062339494936,
+    "K_medyan_hata_yuzde": 7.597753858436285,
+    "sonme_capi_medyan_hata_mm": 0.25100144515686706,
+    "sonme_capi_medyan_hata_oran": 0.0789545389158421,
+    "dogruluk": 0.8416666666666667,
+    "auc": 0.8665870171246516,
+    "yanan_orani": 0.775
+   },
+   "test He": {
+    "n": 47,
+    "alev_oran_medyan_hata_yuzde": 33.17579714123829,
+    "K_medyan_hata_yuzde": 26.82375651713067,
+    "sonme_capi_medyan_hata_mm": 0.7044644431775853,
+    "sonme_capi_medyan_hata_oran": 0.3505806710371333,
+    "dogruluk": 0.8297872340425532,
+    "auc": 0.8044871794871795,
+    "yanan_orani": 0.8297872340425532
+   },
+   "test CO2+He": {
+    "n": 167,
+    "alev_oran_medyan_hata_yuzde": 26.605621781356724,
+    "K_medyan_hata_yuzde": 10.799035180189094,
+    "sonme_capi_medyan_hata_mm": 0.3721629177621819,
+    "sonme_capi_medyan_hata_oran": 0.11437290660978505,
+    "dogruluk": 0.8383233532934131,
+    "auc": 0.8049783549783549,
+    "yanan_orani": 0.7904191616766467
+   }
+  },
+  "F0.3_CH3OH": {
+   "parca": "CH3OH",
+   "kayip": 1104.601151411892,
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": -1.2039728043259361,
+    "beta": 1.5,
+    "kz": 0.6496297277073791,
+    "s": 3.106843174402726,
+    "ln_kw": -2.9294969906038233,
+    "ln_fsr": -1.3484339569694956
+   },
+   "test CH3OH": {
+    "n": 153,
+    "alev_oran_medyan_hata_yuzde": 49.12325584487657,
+    "K_medyan_hata_yuzde": 13.646315303808503,
+    "sonme_capi_medyan_hata_mm": 0.2519598369713383,
+    "sonme_capi_medyan_hata_oran": 0.08742881944962304,
+    "dogruluk": 0.8758169934640523,
+    "auc": 0.7996857816182248,
+    "yanan_orani": 0.8758169934640523
+   }
+  }
+ },
+ "karar": "kötüleşme yok (AUC +0.001..+0.004, doğruluk +0.024); tam benimseme (kalibrasyon + dogrula + bootstrap ~1.5-2 sa) gece OpenFOAM koşuları nedeniyle ertelendi; anahtar DAMLA_GERI_EMME=1"
+}

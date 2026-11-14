@@ -1,0 +1,13 @@
+FoamFile { format ascii; class volScalarField; location "0/fluid"; object IDefault; }
+dimensions [1 0 -3 0 0 0 0];
+internalField uniform 0;
+boundaryField
+{
+    #includeEtc "caseDicts/setConstraintTypes"
+    inlet { type greyDiffusiveRadiation; emissivityMode lookup; emissivity uniform 1.0; value uniform 0; }
+    outlet { type greyDiffusiveRadiation; emissivityMode lookup; emissivity uniform 1.0; value uniform 0; }
+    top { type greyDiffusiveRadiation; emissivityMode lookup; emissivity uniform 0.6; value uniform 0; }
+    base { type greyDiffusiveRadiation; emissivityMode lookup; emissivity uniform 1.0; value uniform 0; }
+    fluid_to_sibal { type greyDiffusiveRadiation; emissivityMode lookup; emissivity uniform 0.8; value uniform 0; }
+    fluid_to_tel { type greyDiffusiveRadiation; emissivityMode lookup; emissivity uniform 0.7; value uniform 0; }
+}

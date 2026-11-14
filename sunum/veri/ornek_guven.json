@@ -1,0 +1,62 @@
+{
+ "girdi": {
+  "malzeme": "pmma",
+  "oksijen": 21.0,
+  "basinc": 101.3,
+  "g": 0.0001,
+  "akis": 0,
+  "kalinlik": 0.2,
+  "numune_tipi": "thin_sheet",
+  "yakit_turu": "kati",
+  "akis_yonu": null,
+  "seyreltici": "n2"
+ },
+ "yanma_ihtimali": 0.805,
+ "yanma_birlesik": 0.696,
+ "agirliklar": {
+  "model": 0.622,
+  "motor": 0.378
+ },
+ "belirsizlik": 0.181,
+ "risk_seviyesi": "ÇOK YÜKSEK",
+ "sonme_siniri": 17.25,
+ "guvenlik_katsayisi": 0.821,
+ "sinirlama": null,
+ "motor": {
+  "yanma": 0.517,
+  "min_oksijen": 17.045,
+  "yayilma_hizi": 0.783,
+  "sicaklik": 2308.323,
+  "motor_kaynagi": "hafif",
+  "motor_auc": 0.729,
+  "yakit_turu": "kati"
+ },
+ "motor_turu": "yonlendirici",
+ "motor_kaynagi": "hafif",
+ "motor_akis": 0,
+ "motor_belirsizlik": null,
+ "guven": {
+  "skor": 88,
+  "veri_bileseni": 1.0,
+  "uyum_bileseni": 0.859,
+  "motor_bileseni": 0.752,
+  "agirliklar": {
+   "veri": 0.4,
+   "uyum": 0.3,
+   "motor": 0.3
+  },
+  "yakin_deney_yanma_orani": 0.946,
+  "yakin_deney": 279,
+  "motorlu_yakin_deney": 279,
+  "yanan": 264,
+  "sonen": 15,
+  "motor_yontemi": "max(0, 2(AUC-0.5)), AUC 0.88, 214 noktada çapraz doğrulama tahmini"
+ },
+ "kullanilan_varsayilanlar": {
+  "numune_tipi": "thin_sheet",
+  "kalinlik": 0.2,
+  "yakit_turu": "kati"
+ },
+ "uyarilar": [],
+ "sure_sn": 0.981
+}

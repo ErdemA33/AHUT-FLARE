@@ -1,0 +1,101 @@
+{
+ "metan ISS (gas_jet, varsayılan)": {
+  "once": {
+   "yanma_ihtimali": 0.966,
+   "yanma_birlesik": 0.966,
+   "agirliklar": {
+    "model": 1.0,
+    "motor": 0.0
+   },
+   "motor_kaynagi": "hafif",
+   "motor": {
+    "yanma": 0.95,
+    "min_oksijen": 8.011,
+    "sicaklik": 2319.244,
+    "motor_auc": null,
+    "sonme_turu": null,
+    "alev_boyu": null,
+    "alev_yaricapi": null,
+    "kalibre_degil": null,
+    "geometri": null
+   },
+   "uyarilar": [
+    "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı."
+   ]
+  },
+  "sonra": {
+   "yanma_ihtimali": 0.966,
+   "yanma_birlesik": 0.966,
+   "agirliklar": {
+    "model": 1.0,
+    "motor": 0.0
+   },
+   "motor_kaynagi": "gaz",
+   "motor": {
+    "yanma": 0.987,
+    "min_oksijen": 13.75,
+    "sicaklik": 2031.3,
+    "motor_auc": null,
+    "sonme_turu": "yok",
+    "alev_boyu": 31.11,
+    "alev_yaricapi": null,
+    "kalibre_degil": true,
+    "geometri": "jet"
+   },
+   "uyarilar": [
+    "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
+    "debi / akış verilmedi: varsayılan kullanıldı (küre 1 mg/s, düz 2.5 g/m²s, jet 30 cm/s)",
+    "Gaz motoru bu koşulda kalibre değil (jet geometrisi için etiketli PSI verisi yok (SLICE tablosu yok): kopma/üflenme literatür varsayımı; yakıt ['CH4'] etiketli veriyle kalibre edilmedi): motor ağırlığı 0."
+   ]
+  }
+ },
+ "etilen düz brülör µg %34 57 kPa": {
+  "once": {
+   "yanma_ihtimali": 0.921,
+   "yanma_birlesik": 0.921,
+   "agirliklar": {
+    "model": 1.0,
+    "motor": 0.0
+   },
+   "motor_kaynagi": "hafif",
+   "motor": {
+    "yanma": 0.939,
+    "min_oksijen": 9.275,
+    "sicaklik": 2464.789,
+    "motor_auc": null,
+    "sonme_turu": null,
+    "alev_boyu": null,
+    "alev_yaricapi": null,
+    "kalibre_degil": null,
+    "geometri": null
+   },
+   "uyarilar": [
+    "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı."
+   ]
+  },
+  "sonra": {
+   "yanma_ihtimali": 0.921,
+   "yanma_birlesik": 0.899,
+   "agirliklar": {
+    "model": 0.459,
+    "motor": 0.541
+   },
+   "motor_kaynagi": "gaz",
+   "motor": {
+    "yanma": 0.88,
+    "min_oksijen": 26.75,
+    "sicaklik": 1211.5,
+    "motor_auc": 0.946,
+    "sonme_turu": "yok",
+    "alev_boyu": 23.61,
+    "alev_yaricapi": 20.21,
+    "kalibre_degil": false,
+    "geometri": "duz"
+   },
+   "uyarilar": [
+    "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
+    "debi / akış verilmedi: varsayılan kullanıldı (küre 1 mg/s, düz 2.5 g/m²s, jet 30 cm/s)"
+   ]
+  }
+ }
+}

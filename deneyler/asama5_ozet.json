@@ -1,0 +1,74 @@
+{
+ "tarih": "2026-11-12",
+ "kural": "FLEX µg dürüst ölçütleri değişmedi (damla_test: 1558 değer, 0 sayısal fark; yalnız 4 uyarı metni)",
+ "once_sonra": [
+  {
+   "olcut": "FLEX dürüst, N2->CO2+He AUC",
+   "once": 0.805,
+   "sonra": 0.805
+  },
+  {
+   "olcut": "FLEX heptan dışarıda AUC",
+   "once": 0.883,
+   "sonra": 0.883
+  },
+  {
+   "olcut": "FLEX metanol dışarıda AUC",
+   "once": 0.8,
+   "sonra": 0.8
+  },
+  {
+   "olcut": "1 g damla, 96 nokta, c=0,3 AUC / doğruluk",
+   "once": [
+    0.602,
+    0.792
+   ],
+   "sonra": [
+    0.602,
+    0.792
+   ],
+   "not": "c serbest CV: 0,638 / 0,781 -> benimsenmedi"
+  },
+  {
+   "olcut": "K(1 g)/K(µg) heptan 1 mm",
+   "once": 1.31,
+   "sonra": 1.31,
+   "literatur": [
+    1.2,
+    1.5
+   ]
+  },
+  {
+   "olcut": "etanol kontrol (25 nokta, hepsi yanar) doğruluk",
+   "once": 1.0,
+   "sonra": 1.0,
+   "durum": "kalibre_degil"
+  },
+  {
+   "olcut": "n-dekan kontrol (10 nokta, hepsi yanar) doğruluk",
+   "once": 0.7,
+   "sonra": 0.7,
+   "durum": "kalibre_degil"
+  },
+  {
+   "olcut": "1-propanol kontrol AUC (71 nokta)",
+   "once": 0.792,
+   "sonra": 0.792,
+   "durum": "kontrol, kalibrasyonda kullanılmadı"
+  },
+  {
+   "olcut": "motor_kontrol sıvı dürüst AUC",
+   "once": 0.82,
+   "sonra": 0.82
+  }
+ ],
+ "5a": "benimsenmedi: c ızgara ucunda (1,0), K oranı 1,94, doğruluk düştü; kod: n_tasinim parametresi eklendi (varsayılan 0,25, davranış aynı)",
+ "5b": "etanol ve n-dekan tek sınıflı (hepsi yanar): AUC yok, makale-dışarıda lnA kalibrasyonu doğruluğu değiştirmiyor -> kalibre_degil; 1-propanol kontrol",
+ "5c": "koşulları tam akışlı µg damla ölçümü yok -> doğrulanamadı, uyarı metni güncellendi",
+ "5d": "PSI_CFI klasörü yok -> atlandı",
+ "dosyalar": [
+  "deneyler/asama5a_tasinim.json",
+  "deneyler/asama5b_yakitlar.json",
+  "deneyler/asama5c_akis.json"
+ ]
+}

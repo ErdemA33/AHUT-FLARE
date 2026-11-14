@@ -1,0 +1,43 @@
+{
+  "kevlar": {
+    "yakit_turu": "kati",
+    "benzer_malzeme": "nomex",
+    "numune_tipi": "fabric",
+    "gerekce": "Kevlar ve Nomex her ikisi de yüksek ısıya dayanıklı aromatik poliamid/polimer yapılı kumaşlardır.",
+    "sebep": null,
+    "durum": "kabul",
+    "model": "gemma-4-31b",
+    "tarih": "2026-11-10 03:24"
+  },
+  "hidrolik yağı": {
+    "yakit_turu": "sivi",
+    "benzer_malzeme": "n-decane",
+    "numune_tipi": "pool",
+    "gerekce": "Hidrolik yağlar yüksek karbon zincirli hidrokarbonlar olduğu için n-dekana benzer yanma özellikleri gösterir.",
+    "sebep": null,
+    "durum": "kabul",
+    "model": "gemma-4-31b",
+    "tarih": "2026-11-10 03:24"
+  },
+  "etanol": {
+    "yakit_turu": "sivi",
+    "benzer_malzeme": "ethanol",
+    "numune_tipi": "droplet",
+    "gerekce": "Etanol, oda sıcaklığında sıvı formda bulunan alkol bazlı bir yakıttır.",
+    "sebep": null,
+    "durum": "kabul",
+    "model": "gemma-4-31b",
+    "tarih": "2026-11-10 03:24"
+  },
+  "asdfgh": {
+    "yakit_turu": null,
+    "benzer_malzeme": null,
+    "numune_tipi": null,
+    "gerekce": null,
+    "sebep": "LLM bunu gerçek bir malzeme olarak tanımadı (benzer_malzeme null)",
+    "durum": "reddedildi",
+    "ham_cevap": "```json\n{\"yakit_turu\": \"kati\", \"benzer_malzeme\": null, \"numune_tipi\": \"thick_sheet\", \"gerekce\": \"Verilen girdi anlamlı bir malzeme adı değildir.\"}\n```",
+    "model": "gemma-4-31b",
+    "tarih": "2026-11-10 03:26"
+  }
+}

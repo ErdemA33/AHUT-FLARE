@@ -1,0 +1,13 @@
+FoamFile { format ascii; class volScalarField; location "0/fluid"; object H2O; }
+dimensions [0 0 0 0 0 0 0];
+internalField uniform 0.0072;
+boundaryField
+{
+    #includeEtc "caseDicts/setConstraintTypes"
+    inlet { type fixedValue; value uniform 0.0072; }
+    outlet { type inletOutlet; inletValue uniform 0.0072; value uniform 0.0072; }
+    top { type zeroGradient; }
+    base { type zeroGradient; }
+    fluid_to_sibal { type coupledPyrolysisSpecies; fuel no; value uniform 0.0072; }
+    fluid_to_tel { type zeroGradient; }
+}

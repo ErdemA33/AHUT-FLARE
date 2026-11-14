@@ -1,0 +1,24 @@
+{
+ "kismi_g": {
+  "test_1g_flex2": {
+   "n": 65,
+   "makale": 4,
+   "c=0": {
+    "auc": 0.5493096646942801,
+    "dogruluk": 0.676923076923077
+   },
+   "c=0.3": {
+    "auc": 0.6143984220907297,
+    "dogruluk": 0.7076923076923077
+   }
+  },
+  "c_tasinim": 0.3,
+  "c_secimi": "1 g verisiyle c ayarı makale dışarıda CV'de kötüleşti (AUC 0.60 -> 0.44); literatür değeri 0.3 korundu",
+  "K_oran_1g_heptan_1mm_model": 1.310825790411898,
+  "K_oran_literatur": [
+   1.2,
+   1.5
+  ],
+  "kismi_g_verisi": "heptan/metanol için kısmi g yanar/söner ya da K verisi yok: Ay/Mars değerleri Faeth bağıntısıyla ara değer (doğrulanmadı)"
+ }
+}

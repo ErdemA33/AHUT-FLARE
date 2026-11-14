@@ -1,0 +1,94 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  14
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    format      ascii;
+    class       volScalarField;
+    location    "0.1/tel";
+    object      T;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 0 1 0 0 0];
+
+internalField   nonuniform List<scalar> 
+33
+(
+394.8613871
+394.8614326
+394.86113
+394.8975908
+394.8975257
+394.896767
+394.9289511
+394.9287737
+394.9275809
+394.8422607
+394.8027255
+394.7585481
+394.7110442
+394.8814879
+394.8513601
+394.8186354
+394.7847076
+394.9166074
+394.8957049
+394.8721799
+394.8463098
+394.6229965
+394.6286842
+394.6475748
+394.6941546
+394.6987003
+394.7126733
+394.7583568
+394.7610883
+394.7689415
+394.8148197
+394.8156501
+394.8174676
+)
+;
+
+boundaryField
+{
+    frontAndBack
+    {
+        type            empty;
+    }
+    tel_to_fluid
+    {
+        type            coupledTemperature;
+        refValue        nonuniform List<scalar> 3(380.2928615 384.4066607 385.8081973);
+        refGradient     nonuniform List<scalar> 3(-53.45866449 -53.52246913 -53.57424917);
+        valueFraction   nonuniform List<scalar> 3(0.001696232814 0.001699092002 0.001577390753);
+        value           nonuniform List<scalar> 3(394.6862337 394.7666662 394.831608);
+        qrNbr           qr;
+    }
+    tel_to_sibal
+    {
+        type            coupledTemperature;
+        refValue        nonuniform List<scalar> 3(365.6794906 365.356788 364.2690741);
+        refGradient     uniform 0;
+        valueFraction   nonuniform List<scalar> 3(0.001292311544 0.001279118258 0.001241166336);
+        value           nonuniform List<scalar> 3(394.5855927 394.5912427 394.6098737);
+    }
+    procBoundary1to0
+    {
+        type            processor;
+        value           nonuniform List<scalar> 7(394.8609555 394.8969684 394.9281255 394.6280752 394.6981252 394.7605565 394.815173);
+    }
+    procBoundary1to3
+    {
+        type            processor;
+        value           nonuniform List<scalar> 7(394.955714 394.9554226 394.9537851 394.9468246 394.9336428 394.9169849 394.896488);
+    }
+}
+
+
+// ************************************************************************* //

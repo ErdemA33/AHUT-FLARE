@@ -1,0 +1,520 @@
+{
+ "aciklama": "C_rad fiziksel aralıkta sabit, beta serbest vs mevcut (C_rad serbest -> 0.02); dürüst testler",
+ "varyant": {
+  "P0.5_CH3OH": {
+   "parca": "CH3OH",
+   "kayip": 4048.8739559562528,
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": -0.6931471805599453,
+    "beta": 1.0719790826978688,
+    "kz": 1.4814862302506904,
+    "s": 11.465945388541083,
+    "ln_kw": -9.303162926597379
+   },
+   "test CH3OH": {
+    "n": 153,
+    "K_medyan_hata_yuzde": 41.535038133957634,
+    "sonme_capi_medyan_hata_mm": 0.6853606045430167,
+    "sonme_capi_medyan_hata_oran": 0.24883951504282947,
+    "dogruluk": 0.7581699346405228,
+    "auc": 0.7474469756480755,
+    "yanan_orani": 0.8758169934640523
+   }
+  },
+  "B3_tum": {
+   "parca": "tum",
+   "kayip": 5937.916228449268,
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": -1.2039728043259361,
+    "beta": 1.8901667789878407,
+    "kz": 1.1887551981923248,
+    "s": 6.498041806203003,
+    "ln_kw": -3.484649002160979
+   },
+   "hepsi": {
+    "n": 261,
+    "K_medyan_hata_yuzde": 19.08204066822764,
+    "sonme_capi_medyan_hata_mm": 0.5916939326916362,
+    "sonme_capi_medyan_hata_oran": 0.20430107526881724,
+    "dogruluk": 0.578544061302682,
+    "auc": 0.7830582620799365,
+    "yanan_orani": 0.8199233716475096
+   }
+  },
+  "P1.0_CH3OH": {
+   "parca": "CH3OH",
+   "kayip": 4014.084548426029,
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": 0.0,
+    "beta": 0.9115791302273332,
+    "kz": 1.5941363826022683,
+    "s": 11.242230762845864,
+    "ln_kw": -9.303162926597379
+   },
+   "test CH3OH": {
+    "n": 153,
+    "K_medyan_hata_yuzde": 38.7978973155105,
+    "sonme_capi_medyan_hata_mm": 0.8799999999999999,
+    "sonme_capi_medyan_hata_oran": 0.3428571428571428,
+    "dogruluk": 0.6078431372549019,
+    "auc": 0.7348782403770622,
+    "yanan_orani": 0.8758169934640523
+   }
+  },
+  "P0.3_tum": {
+   "parca": "tum",
+   "kayip": 5904.017868264191,
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": -1.2039728043259361,
+    "beta": 1.5,
+    "kz": 1.1346605810978851,
+    "s": 6.876631308419924,
+    "ln_kw": -2.9905893758052393
+   },
+   "hepsi": {
+    "n": 261,
+    "K_medyan_hata_yuzde": 19.60499112717053,
+    "sonme_capi_medyan_hata_mm": 0.47999999999999976,
+    "sonme_capi_medyan_hata_oran": 0.17274805787039035,
+    "dogruluk": 0.6053639846743295,
+    "auc": 0.776894014714655,
+    "yanan_orani": 0.8199233716475096
+   }
+  },
+  "P0.5_tum": {
+   "parca": "tum",
+   "kayip": 6512.97968746716,
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": -0.6931471805599453,
+    "beta": 1.428828395866257,
+    "kz": 1.228966230417402,
+    "s": 7.547771374991679,
+    "ln_kw": -2.776725766028358
+   },
+   "hepsi": {
+    "n": 261,
+    "K_medyan_hata_yuzde": 21.629691974810306,
+    "sonme_capi_medyan_hata_mm": 0.5600000000000005,
+    "sonme_capi_medyan_hata_oran": 0.17796610169491522,
+    "dogruluk": 0.5517241379310345,
+    "auc": 0.7765957446808511,
+    "yanan_orani": 0.8199233716475096
+   }
+  },
+  "P0.3_CH3OH": {
+   "parca": "CH3OH",
+   "kayip": 3859.069257265869,
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": -1.2039728043259361,
+    "beta": 0.9693567847030482,
+    "kz": 1.3323111060563826,
+    "s": 11.277609809830498,
+    "ln_kw": -9.303162926597379
+   },
+   "test CH3OH": {
+    "n": 153,
+    "K_medyan_hata_yuzde": 38.612911886601,
+    "sonme_capi_medyan_hata_mm": 0.8821730956071201,
+    "sonme_capi_medyan_hata_oran": 0.3289410455760318,
+    "dogruluk": 0.7973856209150327,
+    "auc": 0.7584446190102121,
+    "yanan_orani": 0.8758169934640523
+   }
+  },
+  "P1.0_tum": {
+   "parca": "tum",
+   "kayip": 7593.9662143493915,
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": 0.0,
+    "beta": 1.5,
+    "kz": 1.4941354511679708,
+    "s": 7.722819017298937,
+    "ln_kw": -4.143662962941391
+   },
+   "hepsi": {
+    "n": 261,
+    "K_medyan_hata_yuzde": 24.595305516844505,
+    "sonme_capi_medyan_hata_mm": 0.7300000000000006,
+    "sonme_capi_medyan_hata_oran": 0.2786377708978329,
+    "dogruluk": 0.421455938697318,
+    "auc": 0.7782859415390734,
+    "yanan_orani": 0.8199233716475096
+   }
+  },
+  "P0.3_NC7H16": {
+   "parca": "NC7H16",
+   "kayip": 1446.2867070625905,
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": -1.2039728043259361,
+    "beta": 1.5,
+    "kz": 1.062264286007635,
+    "s": 2.3158867246874606,
+    "ln_kw": -2.8366212234173385
+   },
+   "test NC7H16": {
+    "n": 108,
+    "K_medyan_hata_yuzde": 34.01636647960007,
+    "sonme_capi_medyan_hata_mm": 0.6950000000000001,
+    "sonme_capi_medyan_hata_oran": 0.21865419690325583,
+    "dogruluk": 0.32407407407407407,
+    "auc": 0.8839285714285713,
+    "yanan_orani": 0.7407407407407407
+   }
+  },
+  "P0.3_n2": {
+   "parca": "n2",
+   "kayip": 2073.1936640837966,
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": -1.2039728043259361,
+    "beta": 1.5,
+    "kz": 1.2210100361016964,
+    "s": 10.923180164783325,
+    "ln_kw": -5.343969684795192
+   },
+   "eğitim N2": {
+    "n": 94,
+    "K_medyan_hata_yuzde": 23.531944199538735,
+    "sonme_capi_medyan_hata_mm": 0.22082055911690335,
+    "sonme_capi_medyan_hata_oran": 0.07221626970682662,
+    "dogruluk": 0.6276595744680851,
+    "auc": 0.8821138211382114,
+    "yanan_orani": 0.8723404255319149
+   },
+   "test CO2": {
+    "n": 120,
+    "K_medyan_hata_yuzde": 12.016448666751177,
+    "sonme_capi_medyan_hata_mm": 0.7734153212547817,
+    "sonme_capi_medyan_hata_oran": 0.24128998717726535,
+    "dogruluk": 0.5416666666666666,
+    "auc": 0.8060533651931502,
+    "yanan_orani": 0.775
+   },
+   "test He": {
+    "n": 47,
+    "K_medyan_hata_yuzde": 58.529476751590124,
+    "sonme_capi_medyan_hata_mm": 0.780076579802407,
+    "sonme_capi_medyan_hata_oran": 0.2740156689910968,
+    "dogruluk": 0.7021276595744681,
+    "auc": 0.6282051282051282,
+    "yanan_orani": 0.8297872340425532
+   },
+   "test CO2+He": {
+    "n": 167,
+    "K_medyan_hata_yuzde": 18.2737858189449,
+    "sonme_capi_medyan_hata_mm": 0.7768306425095635,
+    "sonme_capi_medyan_hata_oran": 0.2549019607843138,
+    "dogruluk": 0.5868263473053892,
+    "auc": 0.74004329004329,
+    "yanan_orani": 0.7904191616766467
+   }
+  },
+  "P1.0_n2": {
+   "parca": "n2",
+   "kayip": 2338.808325547485,
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": 0.0,
+    "beta": 1.1958745012911278,
+    "kz": 1.325342401312918,
+    "s": 7.501511186841483,
+    "ln_kw": -3.7612080803198102
+   },
+   "eğitim N2": {
+    "n": 94,
+    "K_medyan_hata_yuzde": 18.813237723076917,
+    "sonme_capi_medyan_hata_mm": 0.6141491011439839,
+    "sonme_capi_medyan_hata_oran": 0.22483067678362276,
+    "dogruluk": 0.4787234042553192,
+    "auc": 0.8628048780487805,
+    "yanan_orani": 0.8723404255319149
+   },
+   "test CO2": {
+    "n": 120,
+    "K_medyan_hata_yuzde": 18.96173115477162,
+    "sonme_capi_medyan_hata_mm": 0.9199999999999998,
+    "sonme_capi_medyan_hata_oran": 0.33257495734135056,
+    "dogruluk": 0.325,
+    "auc": 0.8315412186379928,
+    "yanan_orani": 0.775
+   },
+   "test He": {
+    "n": 47,
+    "K_medyan_hata_yuzde": 44.02369465685834,
+    "sonme_capi_medyan_hata_mm": 0.741592237710383,
+    "sonme_capi_medyan_hata_oran": 0.2786377708978329,
+    "dogruluk": 0.5531914893617021,
+    "auc": 0.5961538461538461,
+    "yanan_orani": 0.8297872340425532
+   },
+   "test CO2+He": {
+    "n": 167,
+    "K_medyan_hata_yuzde": 22.29814317442056,
+    "sonme_capi_medyan_hata_mm": 0.8432051628315658,
+    "sonme_capi_medyan_hata_oran": 0.32258064516129037,
+    "dogruluk": 0.38922155688622756,
+    "auc": 0.7474025974025974,
+    "yanan_orani": 0.7904191616766467
+   }
+  },
+  "B3_NC7H16": {
+   "parca": "NC7H16",
+   "kayip": 1476.9246552907566,
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": -1.2039728043259361,
+    "beta": 1.6910269016275126,
+    "kz": 1.0797854737885642,
+    "s": 7.427466962984607,
+    "ln_kw": -2.666100222871045
+   },
+   "test NC7H16": {
+    "n": 108,
+    "K_medyan_hata_yuzde": 33.50813579261971,
+    "sonme_capi_medyan_hata_mm": 0.7049588531937556,
+    "sonme_capi_medyan_hata_oran": 0.21865419690325583,
+    "dogruluk": 0.3148148148148148,
+    "auc": 0.8866071428571428,
+    "yanan_orani": 0.7407407407407407
+   }
+  },
+  "P0.5_n2": {
+   "parca": "n2",
+   "kayip": 2087.5069280743564,
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": -0.6931471805599453,
+    "beta": 1.5,
+    "kz": 1.2678368168605447,
+    "s": 7.472694605801985,
+    "ln_kw": -6.456130592683448
+   },
+   "eğitim N2": {
+    "n": 94,
+    "K_medyan_hata_yuzde": 21.193225074172183,
+    "sonme_capi_medyan_hata_mm": 0.4192702859638918,
+    "sonme_capi_medyan_hata_oran": 0.16158054960149204,
+    "dogruluk": 0.5957446808510638,
+    "auc": 0.8770325203252032,
+    "yanan_orani": 0.8723404255319149
+   },
+   "test CO2": {
+    "n": 120,
+    "K_medyan_hata_yuzde": 13.078634491817553,
+    "sonme_capi_medyan_hata_mm": 0.8054593337086133,
+    "sonme_capi_medyan_hata_oran": 0.31515444015444016,
+    "dogruluk": 0.4083333333333333,
+    "auc": 0.8116288331342094,
+    "yanan_orani": 0.775
+   },
+   "test He": {
+    "n": 47,
+    "K_medyan_hata_yuzde": 50.42837015550248,
+    "sonme_capi_medyan_hata_mm": 0.640832030483478,
+    "sonme_capi_medyan_hata_oran": 0.22994022215584495,
+    "dogruluk": 0.5957446808510638,
+    "auc": 0.6089743589743589,
+    "yanan_orani": 0.8297872340425532
+   },
+   "test CO2+He": {
+    "n": 167,
+    "K_medyan_hata_yuzde": 20.734531877854412,
+    "sonme_capi_medyan_hata_mm": 0.7800000000000002,
+    "sonme_capi_medyan_hata_oran": 0.2786377708978329,
+    "dogruluk": 0.46107784431137727,
+    "auc": 0.7378787878787878,
+    "yanan_orani": 0.7904191616766467
+   }
+  },
+  "P1.0_NC7H16": {
+   "parca": "NC7H16",
+   "kayip": 2774.776960862139,
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": 0.0,
+    "beta": 1.4037398290220935,
+    "kz": 1.2646618714489717,
+    "s": 7.251117998313454,
+    "ln_kw": -2.663982748373041
+   },
+   "test NC7H16": {
+    "n": 108,
+    "K_medyan_hata_yuzde": 34.70731961142161,
+    "sonme_capi_medyan_hata_mm": 0.7500000000000003,
+    "sonme_capi_medyan_hata_oran": 0.24422729618163058,
+    "dogruluk": 0.26851851851851855,
+    "auc": 0.8678571428571429,
+    "yanan_orani": 0.7407407407407407
+   }
+  },
+  "B3_n2": {
+   "parca": "n2",
+   "kayip": 2026.662466948673,
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": -1.2039728043259361,
+    "beta": 1.8642212211212834,
+    "kz": 1.2196986774468048,
+    "s": 6.219039344255863,
+    "ln_kw": -3.6418912877631073
+   },
+   "eğitim N2": {
+    "n": 94,
+    "K_medyan_hata_yuzde": 21.378473696492645,
+    "sonme_capi_medyan_hata_mm": 0.26048764989560236,
+    "sonme_capi_medyan_hata_oran": 0.10694930347409157,
+    "dogruluk": 0.6276595744680851,
+    "auc": 0.8943089430894309,
+    "yanan_orani": 0.8723404255319149
+   },
+   "test CO2": {
+    "n": 120,
+    "K_medyan_hata_yuzde": 10.900734570428948,
+    "sonme_capi_medyan_hata_mm": 0.7999999999999999,
+    "sonme_capi_medyan_hata_oran": 0.25725361662532487,
+    "dogruluk": 0.5166666666666667,
+    "auc": 0.8100358422939069,
+    "yanan_orani": 0.775
+   },
+   "test He": {
+    "n": 47,
+    "K_medyan_hata_yuzde": 53.839109516873876,
+    "sonme_capi_medyan_hata_mm": 0.6268633458302517,
+    "sonme_capi_medyan_hata_oran": 0.19615281483106975,
+    "dogruluk": 0.6595744680851063,
+    "auc": 0.6282051282051282,
+    "yanan_orani": 0.8297872340425532
+   },
+   "test CO2+He": {
+    "n": 167,
+    "K_medyan_hata_yuzde": 18.223381722472112,
+    "sonme_capi_medyan_hata_mm": 0.77,
+    "sonme_capi_medyan_hata_oran": 0.2543352601156069,
+    "dogruluk": 0.5568862275449101,
+    "auc": 0.7424242424242424,
+    "yanan_orani": 0.7904191616766467
+   }
+  },
+  "P0.5_NC7H16": {
+   "parca": "NC7H16",
+   "kayip": 1916.922408872442,
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": -0.6931471805599453,
+    "beta": 1.3860239336788605,
+    "kz": 1.151572324686673,
+    "s": 6.7139811978873345,
+    "ln_kw": -3.0644802058462353
+   },
+   "test NC7H16": {
+    "n": 108,
+    "K_medyan_hata_yuzde": 33.515583084064865,
+    "sonme_capi_medyan_hata_mm": 0.7200000000000003,
+    "sonme_capi_medyan_hata_oran": 0.22483067678362276,
+    "dogruluk": 0.2962962962962963,
+    "auc": 0.8919642857142858,
+    "yanan_orani": 0.7407407407407407
+   }
+  },
+  "B3_CH3OH": {
+   "parca": "CH3OH",
+   "kayip": 3870.451967835779,
+   "p": {
+    "lnA_NC7H16": 0.0,
+    "lnA_CH3OH": 0.0,
+    "Ta": 15098.0,
+    "ln_Crad": -1.2039728043259361,
+    "beta": 1.149340507785997,
+    "kz": 1.339261018935569,
+    "s": 8.983435093496482,
+    "ln_kw": -8.910613336253023
+   },
+   "test CH3OH": {
+    "n": 153,
+    "K_medyan_hata_yuzde": 35.82440678781049,
+    "sonme_capi_medyan_hata_mm": 0.5671294087570098,
+    "sonme_capi_medyan_hata_oran": 0.21428571428571438,
+    "dogruluk": 0.803921568627451,
+    "auc": 0.7576590730557737,
+    "yanan_orani": 0.8758169934640523
+   }
+  }
+ },
+ "kontrol_1g_mekanizma": {
+  "mevcut": {
+   "kontrol hepsi AUC": 0.7119232339730502,
+   "kontrol doğr": 0.7304964539007093,
+   "µg AUC": 0.7729166666666667,
+   "µg doğr": 0.75,
+   "1 g AUC": 0.6143984220907297,
+   "1 g doğr": 0.7076923076923077,
+   "heptan sönme (d0: çap/tür)": "1mm:0.13/isinim 2mm:0.58/isinim 3mm:1.40/isinim 4mm:2.62/isinim"
+  },
+  "C_rad 0.3": {
+   "kontrol hepsi AUC": 0.6312780726827276,
+   "kontrol doğr": 0.5460992907801419,
+   "µg AUC": 0.6979166666666666,
+   "µg doğr": 0.6710526315789473,
+   "1 g AUC": 0.4960552268244576,
+   "1 g doğr": 0.4,
+   "heptan sönme (d0: çap/tür)": "1mm:0.63/isinim 2mm:2.00/isinim 3mm:3.00/isinim 4mm:4.00/isinim"
+  },
+  "C_rad 0.5": {
+   "kontrol hepsi AUC": 0.6224989791751736,
+   "kontrol doğr": 0.5319148936170213,
+   "µg AUC": 0.6944444444444444,
+   "µg doğr": 0.6447368421052632,
+   "1 g AUC": 0.47337278106508873,
+   "1 g doğr": 0.4,
+   "heptan sönme (d0: çap/tür)": "1mm:0.73/isinim 2mm:2.00/isinim 3mm:3.00/isinim 4mm:4.00/isinim"
+  },
+  "C_rad 1.0": {
+   "kontrol hepsi AUC": 0.5920783993466722,
+   "kontrol doğr": 0.5177304964539007,
+   "µg AUC": 0.6875,
+   "µg doğr": 0.618421052631579,
+   "1 g AUC": 0.3964497041420118,
+   "1 g doğr": 0.4,
+   "heptan sönme (d0: çap/tür)": "1mm:0.91/isinim 2mm:2.00/isinim 3mm:3.00/isinim 4mm:4.00/isinim"
+  }
+ },
+ "karar": "fiziksel sürüm AUC kaybı 0.06-0.07 > 0.02 -> mevcut sürüm korundu; çıktıda isinim_temsili notu"
+}

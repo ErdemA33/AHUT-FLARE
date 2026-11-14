@@ -1,0 +1,283 @@
+﻿makale_id,kaynak,link,veri_turu,platform,g_seviyesi,malzeme_sade,numune_tipi,yakit_turu,kalinlik_mm,oksijen_yuzde,seyreltici,basinc_kpa,akis_hizi_cm_s,akis_yonu,yanar,etiket_kaynagi
+PSI-25_B1,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.1,22.2,n2,101.3,5.0,,1,psi
+PSI-25_B2,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.2,22.2,n2,101.3,5.0,,1,psi
+PSI-25_B3,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.1,22.0,n2,101.3,2.0,,1,psi
+PSI-25_B4,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.3,22.2,n2,101.3,5.0,,1,psi
+PSI-25_B5,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.2,22.05,n2,101.3,5.0,,1,psi
+PSI-25_B6,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.1,20.95,n2,101.3,3.0,,1,psi
+PSI-25_B6,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.1,20.95,n2,101.3,5.0,,1,psi
+PSI-25_B6,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.1,20.95,n2,101.3,10.0,,1,psi
+PSI-25_B7,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.4,22.15,n2,101.3,2.0,,1,psi
+PSI-25_B8,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.2,20.75,n2,101.3,10.0,,1,psi
+PSI-25_B9,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.1,20.95,n2,101.3,2.0,,1,psi
+PSI-25_B9,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.1,20.95,n2,101.3,1.0,,1,psi
+PSI-25_B10,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.2,20.9,n2,101.3,5.0,,1,psi
+PSI-25_B10,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.2,20.9,n2,101.3,4.0,,1,psi
+PSI-25_B10,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.2,20.9,n2,101.3,3.0,,1,psi
+PSI-25_B10,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.2,20.9,n2,101.3,2.0,,1,psi
+PSI-25_B10,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.2,20.9,n2,101.3,1.0,,1,psi
+PSI-25_B11,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.2,20.85,n2,101.3,5.0,,1,psi
+PSI-25_B11,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.2,20.85,n2,101.3,3.0,,1,psi
+PSI-25_B11,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.2,20.85,n2,101.3,1.0,,1,psi
+PSI-25_B11,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.2,20.85,n2,101.3,1.0,,1,psi
+PSI-25_B12,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.3,22.15,n2,101.3,2.0,,1,psi
+PSI-25_B13,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.4,20.75,n2,101.3,10.0,,1,psi
+PSI-25_B13,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.4,20.75,n2,101.3,5.0,,1,psi
+PSI-25_B13,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.4,20.75,n2,101.3,4.0,,1,psi
+PSI-25_B13,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.4,20.75,n2,101.3,3.0,,1,psi
+PSI-25_B13,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.4,20.75,n2,101.3,2.0,,1,psi
+PSI-25_B13,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.4,20.75,n2,101.3,1.0,,1,psi
+PSI-25_B14,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.2,15.0,n2,101.3,5.0,,1,psi
+PSI-25_B14,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.2,15.0,n2,101.3,3.0,,1,psi
+PSI-25_B14,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.2,15.0,n2,101.3,2.0,,0,psi
+PSI-25_B15,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.1,20.9,n2,101.3,10.0,,1,psi
+PSI-25_B16,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.1,17.25,n2,101.3,3.0,,1,psi
+PSI-25_B16,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.1,17.25,n2,101.3,0.5,,1,psi
+PSI-25_B17,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.2,17.45,n2,101.3,5.0,,1,psi
+PSI-25_B17,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.2,17.45,n2,101.3,3.0,,1,psi
+PSI-25_B18,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.2,17.4,n2,101.3,10.0,,0,psi
+PSI-25_B19,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.1,17.25,n2,101.3,10.0,,0,psi
+PSI-25_B20,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.1,17.4,n2,101.3,5.0,,1,psi
+PSI-25_B20,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.1,17.4,n2,101.3,3.0,,1,psi
+PSI-25_B21,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.2,20.7,n2,101.3,5.0,,1,psi
+PSI-25_B22,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.2,20.6,n2,101.3,5.0,,1,psi
+PSI-25_B22,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thin_sheet,kati,0.2,20.6,n2,101.3,2.0,,1,psi
+PSI-25_F1,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,nomex,fabric,kati,,22.2,n2,101.3,9.5,,1,psi
+PSI-25_F2,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,nomex,fabric,kati,,21.0,n2,101.3,15.0,,1,psi
+PSI-25_F3,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,nomex,fabric,kati,,21.7,n2,101.3,8.0,,1,psi
+PSI-25_M1,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,1.0,22.05,n2,101.3,10.0,,1,psi
+PSI-25_M1,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,1.0,22.05,n2,101.3,8.0,,1,psi
+PSI-25_M2,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,3.0,21.7,n2,101.3,20.0,,1,psi
+PSI-25_M2,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,3.0,21.7,n2,101.3,15.0,,1,psi
+PSI-25_M2,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,3.0,21.7,n2,101.3,13.0,,1,psi
+PSI-25_M2,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,3.0,21.7,n2,101.3,14.0,,1,psi
+PSI-25_M3,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,5.0,20.25,n2,101.3,10.0,,1,psi
+PSI-25_M3,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,5.0,20.25,n2,101.3,20.0,,1,psi
+PSI-25_M3,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,5.0,20.25,n2,101.3,18.0,,1,psi
+PSI-25_M4,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,5.0,21.8,n2,101.3,5.0,,1,psi
+PSI-25_M4,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,5.0,21.8,n2,101.3,4.0,,1,psi
+PSI-25_M4,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,5.0,21.8,n2,101.3,3.0,,1,psi
+PSI-25_M5,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,3.0,22.2,n2,101.3,20.0,,1,psi
+PSI-25_M5,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,3.0,22.2,n2,101.3,13.0,,1,psi
+PSI-25_M5,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,3.0,22.2,n2,101.3,10.0,,1,psi
+PSI-25_M5,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,3.0,22.2,n2,101.3,8.0,,1,psi
+PSI-25_M5,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,3.0,22.2,n2,101.3,5.0,,1,psi
+PSI-25_M6,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,1.0,21.25,n2,101.3,10.0,,1,psi
+PSI-25_M6,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,1.0,21.25,n2,101.3,5.0,,1,psi
+PSI-25_M6,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,1.0,21.25,n2,101.3,3.0,,1,psi
+PSI-25_M7,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,1.0,18.65,n2,101.3,10.0,,1,psi
+PSI-25_M7,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,1.0,18.65,n2,101.3,6.0,,1,psi
+PSI-25_M7,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,1.0,18.65,n2,101.3,5.0,,1,psi
+PSI-25_M7,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,1.0,18.65,n2,101.3,4.5,,1,psi
+PSI-25_M7,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,1.0,18.65,n2,101.3,4.0,,1,psi
+PSI-25_M7,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,1.0,18.65,n2,101.3,3.0,,1,psi
+PSI-25_M8,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,2.0,18.65,n2,101.3,10.0,,1,psi
+PSI-25_M8,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,2.0,18.65,n2,101.3,5.0,,1,psi
+PSI-25_M8,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,2.0,18.65,n2,101.3,7.0,,1,psi
+PSI-25_M8,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,2.0,18.65,n2,101.3,5.0,,1,psi
+PSI-25_M9,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,3.0,17.8,n2,101.3,10.0,,1,psi
+PSI-25_M9,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,3.0,17.8,n2,101.3,14.0,,1,psi
+PSI-25_M10,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,4.0,19.35,n2,101.3,10.0,,1,psi
+PSI-25_M10,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,4.0,19.35,n2,101.3,17.0,,1,psi
+PSI-25_M10,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,4.0,19.35,n2,101.3,14.0,,1,psi
+PSI-25_M10,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,4.0,19.35,n2,101.3,10.0,,1,psi
+PSI-25_M10,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,4.0,19.35,n2,101.3,8.0,,1,psi
+PSI-25_M11,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,5.0,19.25,n2,101.3,10.0,,1,psi
+PSI-25_M11,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,5.0,19.25,n2,101.3,20.0,,1,psi
+PSI-25_M11,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,5.0,19.25,n2,101.3,15.0,,1,psi
+PSI-25_M11,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,5.0,19.25,n2,101.3,12.0,,1,psi
+PSI-25_M12,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,2.0,21.05,n2,101.3,1.0,,1,psi
+PSI-25_M13,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,4.0,20.8,n2,101.3,6.0,,1,psi
+PSI-25_M13,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,4.0,20.8,n2,101.3,5.0,,1,psi
+PSI-25_M13,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,4.0,20.8,n2,101.3,4.0,,1,psi
+PSI-25_M14,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,2.0,21.9,n2,101.3,10.0,,1,psi
+PSI-25_M14,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,2.0,21.9,n2,101.3,8.0,,1,psi
+PSI-25_M15,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,4.0,20.5,n2,101.3,10.0,,1,psi
+PSI-25_M15,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,4.0,20.5,n2,101.3,8.0,,1,psi
+PSI-25_M15,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,4.0,20.5,n2,101.3,7.0,,1,psi
+PSI-25_M15,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,4.0,20.5,n2,101.3,8.0,,1,psi
+PSI-25_M15,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,4.0,20.5,n2,101.3,10.0,,1,psi
+PSI-25_M15,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,4.0,20.5,n2,101.3,20.0,,1,psi
+PSI-25_M15,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,4.0,20.5,n2,101.3,18.0,,1,psi
+PSI-25_M15,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,4.0,20.5,n2,101.3,16.0,,1,psi
+PSI-25_M15,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,4.0,20.5,n2,101.3,15.0,,1,psi
+PSI-25_M16,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,1.0,18.95,n2,101.3,10.0,,1,psi
+PSI-25_M16,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,1.0,18.95,n2,101.3,6.0,,1,psi
+PSI-25_M16,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,1.0,18.95,n2,101.3,3.0,,1,psi
+PSI-25_M16,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,1.0,18.95,n2,101.3,2.0,,1,psi
+PSI-25_M16,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,1.0,18.95,n2,101.3,1.0,,1,psi
+PSI-25_M16,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,1.0,18.95,n2,101.3,10.0,,1,psi
+PSI-25_M17,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,2.0,18.8,n2,101.3,10.0,,1,psi
+PSI-25_M17,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,2.0,18.8,n2,101.3,5.0,,1,psi
+PSI-25_M17,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,2.0,18.8,n2,101.3,3.0,,1,psi
+PSI-25_M18,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,3.0,17.35,n2,101.3,10.0,,1,psi
+PSI-25_M18,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,3.0,17.35,n2,101.3,15.0,,1,psi
+PSI-25_M18,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,3.0,17.35,n2,101.3,10.0,,1,psi
+PSI-25_M18,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,3.0,17.35,n2,101.3,8.0,,1,psi
+PSI-25_M19,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,4.0,19.0,n2,101.3,10.0,,1,psi
+PSI-25_M19,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,4.0,19.0,n2,101.3,17.0,,1,psi
+PSI-25_M19,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,4.0,19.0,n2,101.3,14.0,,1,psi
+PSI-25_M19,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,4.0,19.0,n2,101.3,10.0,,1,psi
+PSI-25_M19,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,4.0,19.0,n2,101.3,7.0,,1,psi
+PSI-25_M19,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,4.0,19.0,n2,101.3,5.0,,1,psi
+PSI-25_M20,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,5.0,17.7,n2,101.3,10.0,,1,psi
+PSI-25_M20,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,5.0,17.7,n2,101.3,8.0,,1,psi
+PSI-25_O1,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,21.95,n2,101.3,20.0,,1,psi
+PSI-25_O1,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,21.95,n2,101.3,10.0,,1,psi
+PSI-25_O1,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,21.95,n2,101.3,5.0,,1,psi
+PSI-25_O1,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,21.95,n2,101.3,2.0,,1,psi
+PSI-25_O1,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,21.95,n2,101.3,1.0,,1,psi
+PSI-25_O3a,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,18.0,n2,101.3,5.0,,1,psi
+PSI-25_O3a,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,18.0,n2,101.3,3.0,,1,psi
+PSI-25_O3b,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,17.85,n2,101.3,5.0,,1,psi
+PSI-25_O3b,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,17.85,n2,101.3,3.0,,1,psi
+PSI-25_O3b,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,17.85,n2,101.3,2.0,,1,psi
+PSI-25_O3b,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,17.85,n2,101.3,1.0,,1,psi
+PSI-25_O4,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,9.525,14.2,n2,101.3,5.0,,1,psi
+PSI-25_O5a,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,12.7,14.65,n2,101.3,5.0,,1,psi
+PSI-25_O5a,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,12.7,14.65,n2,101.3,10.0,,1,psi
+PSI-25_O5a,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,12.7,14.65,n2,101.3,5.0,,1,psi
+PSI-25_O5a,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,12.7,14.65,n2,101.3,2.0,,1,psi
+PSI-25_O5b,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,12.7,14.15,n2,101.3,49.0,,1,psi
+PSI-25_O5b,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,12.7,14.15,n2,101.3,5.0,,1,psi
+PSI-25_O10,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,16.4,n2,101.3,5.0,,1,psi
+PSI-25_O10,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,16.4,n2,101.3,2.0,,1,psi
+PSI-25_O11,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,15.1,n2,101.3,5.0,,0,psi
+PSI-25_O12,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,9.525,13.55,n2,101.3,,,0,psi
+PSI-25_O13a,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,12.7,15.25,n2,101.3,49.0,,1,psi
+PSI-25_O13a,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,12.7,15.25,n2,101.3,44.0,,1,psi
+PSI-25_O13a,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,12.7,15.25,n2,101.3,42.0,,1,psi
+PSI-25_O13a,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,12.7,15.25,n2,101.3,41.0,,1,psi
+PSI-25_O13a,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,12.7,15.25,n2,101.3,41.0,,1,psi
+PSI-25_O13a,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,12.7,15.25,n2,101.3,40.5,,1,psi
+PSI-25_O13b,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,12.7,14.5,n2,101.3,7.0,,1,psi
+PSI-25_O13b,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,12.7,14.5,n2,101.3,4.0,,1,psi
+PSI-25_O14,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,15.8,n2,101.3,5.0,,1,psi
+PSI-25_O15a,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,9.525,16.9,n2,101.3,5.0,,1,psi
+PSI-25_O15b,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,9.525,16.15,n2,101.3,5.0,,1,psi
+PSI-25_O16,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,9.525,14.5,n2,101.3,5.0,,1,psi
+PSI-25_O17,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,14.7,n2,101.3,3.0,,1,psi
+PSI-25_O17,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,14.7,n2,101.3,11.0,,1,psi
+PSI-25_O18,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,14.85,n2,101.3,5.0,,1,psi
+PSI-25_O18,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,14.85,n2,101.3,2.0,,1,psi
+PSI-25_O18,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,14.85,n2,101.3,11.0,,1,psi
+PSI-25_O18,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,14.85,n2,101.3,2.0,,1,psi
+PSI-25_O18,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,14.85,n2,101.3,11.0,,1,psi
+PSI-25_O18,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,14.85,n2,101.3,2.0,,1,psi
+PSI-25_O19,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,14.95,n2,101.3,5.0,,1,psi
+PSI-25_O20,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,16.2,n2,101.3,5.0,,1,psi
+PSI-25_O20,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,16.2,n2,101.3,8.0,,1,psi
+PSI-25_O20,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,16.2,n2,101.3,38.5,,1,psi
+PSI-25_O21,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,9.525,15.65,n2,101.3,28.0,,1,psi
+PSI-25_O22,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,12.7,15.15,n2,101.3,4.0,,1,psi
+PSI-25_O22,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,12.7,15.15,n2,101.3,26.5,,0,psi
+PSI-25_P1,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,17.6,n2,101.3,5.0,,1,psi
+PSI-25_P1,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,17.6,n2,101.3,2.0,,1,psi
+PSI-25_P2,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,17.3,n2,101.3,5.0,,1,psi
+PSI-25_P2,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,17.3,n2,101.3,2.5,,1,psi
+PSI-25_P2,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,17.3,n2,101.3,2.0,,1,psi
+PSI-25_P3a,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,17.55,n2,101.3,5.0,,1,psi
+PSI-25_P3a,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,17.55,n2,101.3,2.5,,1,psi
+PSI-25_P3b,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,6.35,17.1,n2,101.3,5.0,,1,psi
+PSI-25_P4,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,9.525,17.8,n2,101.3,5.0,,1,psi
+PSI-25_P4,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,9.525,17.8,n2,101.3,0.36,,1,psi
+PSI-25_P4,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,9.525,17.8,n2,101.3,0.32,,1,psi
+PSI-25_P4,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,9.525,17.8,n2,101.3,0.308,,1,psi
+PSI-25_P5,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,12.7,19.3,n2,101.3,5.0,,1,psi
+PSI-25_P6,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,18.7,n2,101.3,5.0,,1,psi
+PSI-25_P6,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,18.7,n2,101.3,0.36,,1,psi
+PSI-25_P6,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,18.7,n2,101.3,0.32,,1,psi
+PSI-25_P6,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,18.7,n2,101.3,0.31,,1,psi
+PSI-25_P8,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,9.525,16.35,n2,101.3,5.0,,0,psi
+PSI-25_P8,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,9.525,16.35,n2,101.3,10.0,,0,psi
+PSI-25_P8,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,9.525,16.35,n2,101.3,15.0,,0,psi
+PSI-25_P9,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,12.7,17.35,n2,101.3,5.0,,1,psi
+PSI-25_P10,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,16.7,n2,101.3,5.0,,1,psi
+PSI-25_P10,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,16.7,n2,101.3,0.36,,1,psi
+PSI-25_P10,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,16.7,n2,101.3,0.32,,1,psi
+PSI-25_P10,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,16.7,n2,101.3,0.31,,1,psi
+PSI-25_P10,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,16.7,n2,101.3,0.3,,0,psi
+PSI-25_P12,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,9.525,17.15,n2,101.3,5.0,,1,psi
+PSI-25_P12,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,9.525,17.15,n2,101.3,3.0,,1,psi
+PSI-25_P12,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,9.525,17.15,n2,101.3,2.0,,1,psi
+PSI-25_P12,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,9.525,17.15,n2,101.3,1.0,,1,psi
+PSI-25_P12,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,9.525,17.15,n2,101.3,0.5,,1,psi
+PSI-25_P13a,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,12.7,20.7,n2,101.3,5.0,,1,psi
+PSI-25_P13b,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,12.7,20.4,n2,101.3,5.0,,1,psi
+PSI-25_P14,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,18.2,n2,101.3,5.0,,1,psi
+PSI-25_P15,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,17.75,n2,101.3,5.0,,1,psi
+PSI-25_P16,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,17.8,n2,101.3,5.0,,1,psi
+PSI-25_P16,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,17.8,n2,101.3,8.0,,1,psi
+PSI-25_P16,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,17.8,n2,101.3,2.0,,1,psi
+PSI-25_P17,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,16.65,n2,101.3,5.0,,1,psi
+PSI-25_P17,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,16.65,n2,101.3,3.0,,1,psi
+PSI-25_P17,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,16.65,n2,101.3,2.0,,1,psi
+PSI-25_P17,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,16.65,n2,101.3,22.0,,1,psi
+PSI-25_P17,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,16.65,n2,101.3,2.0,,1,psi
+PSI-25_P18,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,19.5,n2,101.3,2.0,,1,psi
+PSI-25_P18,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,19.5,n2,101.3,2.0,,1,psi
+PSI-25_P19,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,17.1,n2,101.3,5.0,,1,psi
+PSI-25_P19,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,17.1,n2,101.3,8.0,,1,psi
+PSI-25_P19,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,17.1,n2,101.3,2.0,,1,psi
+PSI-25_P20,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,18.6,n2,101.3,2.0,,1,psi
+PSI-25_P20,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,18.6,n2,101.3,2.0,,1,psi
+PSI-25_P21a,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,16.3,n2,101.3,5.0,,1,psi
+PSI-25_P21b,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,6.35,16.3,n2,101.3,5.0,,1,psi
+PSI-25_P22a,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,9.525,20.8,n2,101.3,5.0,,1,psi
+PSI-25_P22b,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,9.525,20.0,n2,101.3,5.0,,1,psi
+PSI-25_P23,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,9.525,17.6,n2,101.3,2.0,,1,psi
+PSI-25_P23,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,9.525,17.6,n2,101.3,2.0,,1,psi
+PSI-25_P24,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,9.525,18.25,n2,101.3,2.0,,1,psi
+PSI-25_P24,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma (black),rod,kati,9.525,18.25,n2,101.3,2.0,,1,psi
+PSI-25_P25,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,rod,kati,9.525,20.55,n2,101.3,5.0,,1,psi
+PSI-25_T1,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,18.5,n2,101.3,10.0,,1,psi
+PSI-25_T2,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,18.5,n2,101.3,9.0,,1,psi
+PSI-25_T2,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,18.5,n2,101.3,5.0,,1,psi
+PSI-25_T2,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,18.5,n2,101.3,4.0,,1,psi
+PSI-25_T3,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,,17.0,n2,101.3,10.0,,1,psi
+PSI-25_T4,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,18.7,n2,101.3,9.0,,1,psi
+PSI-25_T4,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,18.7,n2,101.3,1.0,,1,psi
+PSI-25_T5,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,18.85,n2,101.3,10.0,,1,psi
+PSI-25_T5,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,18.85,n2,101.3,2.0,,1,psi
+PSI-25_T5,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,18.85,n2,101.3,1.0,,1,psi
+PSI-25_T6,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,18.8,n2,101.3,5.0,,1,psi
+PSI-25_T6,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,18.8,n2,101.3,2.0,,1,psi
+PSI-25_T6,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,18.8,n2,101.3,1.0,,1,psi
+PSI-25_T6,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,18.8,n2,101.3,1.0,,1,psi
+PSI-25_T7,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,,17.2,n2,101.3,10.0,,1,psi
+PSI-25_T7,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,,17.2,n2,101.3,5.0,,1,psi
+PSI-25_T7,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,,17.2,n2,101.3,3.0,,1,psi
+PSI-25_T7,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,pmma,thick_sheet,kati,,17.2,n2,101.3,1.0,,1,psi
+PSI-25_T9,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,16.4,n2,101.3,10.0,,1,psi
+PSI-25_T10,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,16.45,n2,101.3,5.0,,1,psi
+PSI-25_T11,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,17.05,n2,101.3,5.0,,1,psi
+PSI-25_T12,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,16.85,n2,101.3,5.0,,1,psi
+PSI-25_T13,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,17.55,n2,101.3,5.0,,1,psi
+PSI-25_T13,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,17.55,n2,101.3,1.0,,1,psi
+PSI-25_T14,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,16.9,n2,101.3,5.0,,1,psi
+PSI-25_T14,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,16.9,n2,101.3,3.0,,1,psi
+PSI-25_T15,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,18.7,n2,101.3,9.0,,1,psi
+PSI-25_T15,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,18.7,n2,101.3,29.0,,1,psi
+PSI-25_T16,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,17.55,n2,101.3,5.0,,1,psi
+PSI-25_T16,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,17.55,n2,101.3,3.0,,1,psi
+PSI-25_T17,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,16.9,n2,101.3,6.0,,1,psi
+PSI-25_T18,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,17.4,n2,101.3,5.0,,1,psi
+PSI-25_T18,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,17.4,n2,101.3,2.0,,1,psi
+PSI-25_T19,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,17.2,n2,101.3,11.0,,1,psi
+PSI-25_T20,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,17.2,n2,101.3,11.0,,1,psi
+PSI-25_T20,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,17.2,n2,101.3,3.0,,1,psi
+PSI-25_T21,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,17.2,n2,101.3,11.0,,1,psi
+PSI-25_T22,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,17.05,n2,101.3,10.0,,1,psi
+PSI-25_T22,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,17.05,n2,101.3,5.0,,1,psi
+PSI-25_T23,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,17.25,n2,101.3,10.0,,1,psi
+PSI-25_T24,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,18.2,n2,101.3,10.0,,1,psi
+PSI-25_T25,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,20.75,n2,101.3,5.0,,1,psi
+PSI-25_T25,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,20.75,n2,101.3,2.5,,1,psi
+PSI-25_T26,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,20.75,n2,101.3,5.0,,1,psi
+PSI-25_T26,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,20.75,n2,101.3,2.5,,1,psi
+PSI-25_T27,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,20.65,n2,101.3,5.0,,1,psi
+PSI-25_T27,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,20.65,n2,101.3,2.0,,1,psi
+PSI-25_T28a,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,20.7,n2,101.3,5.0,,1,psi
+PSI-25_T28b,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,20.7,n2,101.3,5.0,,1,psi
+PSI-25_T29,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,20.6,n2,101.3,5.0,,1,psi
+PSI-25_T29,nasa_psi,NASA PSI-25 (BASS-II) – Experimental table,deney,ISS,0.0001,cotton-fiberglass (sibal),fabric,kati,,20.6,n2,101.3,2.0,,1,psi

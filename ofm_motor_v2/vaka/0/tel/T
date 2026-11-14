@@ -1,0 +1,9 @@
+FoamFile { format ascii; class volScalarField; location "0/tel"; object T; }
+dimensions [0 0 0 1 0 0 0];
+internalField uniform 294.32;
+boundaryField
+{
+    #includeEtc "caseDicts/setConstraintTypes"
+    tel_to_fluid { type coupledTemperature; qrNbr qr; value uniform 294.32; }
+    tel_to_sibal { type coupledTemperature; value uniform 294.32; }
+}

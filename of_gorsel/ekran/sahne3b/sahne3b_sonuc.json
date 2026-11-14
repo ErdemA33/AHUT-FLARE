@@ -1,0 +1,107 @@
+{
+ "hatalar": [],
+ "three": "160",
+ "pmma": {
+  "tuval": true,
+  "nesne": 6,
+  "ok": 1,
+  "etiketler": [
+   "ateşleyici teli",
+   "100 mm",
+   "50 mm",
+   "kalınlık 0,2 mm (görünür olsun diye büyütüldü)",
+   "g = 1e−4 g₀ · uzay (μg)",
+   "akış bilinmiyor (en kötü durum)",
+   "%21 O₂ · 101,3 kPa"
+  ],
+  "not": "temsili boyutlar",
+  "vurgu": "malzeme"
+ },
+ "pmma_kalinlik_3mm": [
+  "kalınlık 3 mm"
+ ],
+ "akis_vurgu": "akis",
+ "metanol": {
+  "tuval": true,
+  "nesne": 5,
+  "ok": 1,
+  "etiketler": [
+   "ateşleyici (iki tel)",
+   "SiC fiber",
+   "d₀ = 1 mm",
+   "g = 1e−4 g₀ · uzay (μg)",
+   "akış bilinmiyor (en kötü durum)",
+   "%21 O₂ · 101,3 kPa"
+  ],
+  "not": "temsili boyutlar",
+  "vurgu": "numune"
+ },
+ "metan": {
+  "tuval": true,
+  "nesne": 3,
+  "ok": 1,
+  "etiketler": [
+   "ateşleyici",
+   "gözenekli küre brülör (sızıntı)",
+   "Ø 6,35 mm",
+   "g = 1e−4 g₀ · uzay (μg)",
+   "akış bilinmiyor (en kötü durum)",
+   "%21 O₂ · 101,3 kPa"
+  ],
+  "not": "temsili boyutlar",
+  "vurgu": "numune"
+ },
+ "sibal": {
+  "tuval": true,
+  "nesne": 2,
+  "ok": 5,
+  "etiketler": [
+   "ateşleyici teli",
+   "numune 940 mm",
+   "300 mm",
+   "1.300 mm",
+   "2B vaka · derinlik 10 mm · kalınlık 0,16 mm",
+   "g = 1e−4 g₀ · uzay (μg)",
+   "akış 25 cm/s",
+   "%21 O₂ · 101,3 kPa"
+  ],
+  "not": "boyutlar OpenFOAM vakasından (polyMesh)",
+  "vurgu": "malzeme"
+ },
+ "sibal_izgara_kenar": 33320,
+ "sonuc": {
+  "sec": "/home/user/ahut_flare_public/of_kosular/sizinti3d_ince/mars_3b.npz",
+  "ad": "sizinti3d_ince/mars",
+  "kare": 17,
+  "izo": [
+   9582,
+   4026
+  ],
+  "kesit": true,
+  "damla": 0,
+  "olcek": true,
+  "bant": "3B alan sonucu: sizinti3d_ince/mars · n-heptane · Mars — 3B sonuç seç —damla_dogrulama/t211_N02H203 · n-heptane · uzay (μg)damla_dogrulama/t214_N04H201 · n-heptane · uzay (μg)damla_dogrulama/t35_181F001 · n-heptane · uzay (μg)damla_dogrulama/t62_301F001 · n-heptane · uzay (μg)damla_dogrulama/t69_193R002 · n-heptane · uzay (μg)damla_dogrulama/t72_193R001 · n-heptane · uzay (μg)damla_dogrulama/t74_221F001 · n-heptane · uzay (μg)sizinti3d_ince/mars · n-heptane · Mars"
+ },
+ "zaman_9": {
+  "i": 9,
+  "t": 0.53,
+  "izo": 2,
+  "damla": 1730
+ },
+ "izo_sure_ms": 164,
+ "alan_O2": {
+  "alan": "O2",
+  "izo": 2,
+  "olcek": "O2"
+ },
+ "oynat_ilerledi": 13,
+ "sonucsuz_bant": "3B alan sonucu yok (hızlı çözüm) · başka koşulun sonucu: — 3B sonuç seç —damla_dogrulama/t211_N02H203 · n-heptane · uzay (μg)damla_dogrulama/t214_N04H201 · n-heptane · uzay (μg)damla_dogrulama/t35_181F001 · n-heptane · uzay (μg)damla_dogrulama/t62_301F001 · n-heptane · uzay (μg)damla_dogrulama/t69_193R002 · n-heptane · uzay (μg)damla_dogrulama/t72_193R001 · n-heptane · uzay (μg)damla_dogrulama/t74_221F001 · n-heptane · uzay (μg)sizinti3d_ince/mars · n-heptane · Mars",
+ "sonucsuz_geo": true,
+ "paraview": {
+  "tamam": true,
+  "aciklama": "pv_3b.py (uzay | mars, izo 1200/2400 K, damlalar)",
+  "komut": "/usr/bin/paraview --script=/home/user/ahut_flare_public/pv_3b.py",
+  "hata": null
+ },
+ "paraview_calisti": true
+}

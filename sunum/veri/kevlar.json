@@ -1,0 +1,73 @@
+{
+ "girdi": {
+  "malzeme": "nomex",
+  "oksijen": 21.0,
+  "basinc": 101.3,
+  "g": 0.0001,
+  "akis": null,
+  "kalinlik": 0.37,
+  "numune_tipi": "fabric",
+  "yakit_turu": "kati",
+  "akis_yonu": null,
+  "seyreltici": "n2"
+ },
+ "yanma_ihtimali": 0.442,
+ "yanma_birlesik": 0.639,
+ "agirliklar": {
+  "model": 0.622,
+  "motor": 0.378
+ },
+ "belirsizlik": 0.219,
+ "risk_seviyesi": "ORTA",
+ "sonme_siniri": 22.25,
+ "guvenlik_katsayisi": 1.06,
+ "sinirlama": null,
+ "motor": {
+  "yanma": 0.963,
+  "min_oksijen": 12.597,
+  "yayilma_hizi": 1.931,
+  "sicaklik": 1548.777,
+  "motor_kaynagi": "hafif",
+  "motor_auc": 0.729,
+  "yakit_turu": "kati"
+ },
+ "motor_turu": "yonlendirici",
+ "motor_kaynagi": "hafif",
+ "motor_akis": 0.0,
+ "motor_belirsizlik": null,
+ "guven": {
+  "skor": 51,
+  "veri_bileseni": 0.733,
+  "uyum_bileseni": 0.715,
+  "motor_bileseni": 0.0,
+  "agirliklar": {
+   "veri": 0.4,
+   "uyum": 0.3,
+   "motor": 0.3
+  },
+  "yakin_deney_yanma_orani": 0.727,
+  "yakin_deney": 11,
+  "motorlu_yakin_deney": 11,
+  "yanan": 8,
+  "sonen": 3,
+  "motor_yontemi": "max(0, 2(AUC-0.5)), AUC 0.50, 10 noktada çapraz doğrulama tahmini"
+ },
+ "kullanilan_varsayilanlar": {
+  "kalinlik": 0.37
+ },
+ "uyarilar": [
+  "'kevlar' listede yok, LLM bunu 'nomex' malzemesine benzetti (kati, fabric) — kontrol edin.",
+  "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
+  "Model ve motor çelişiyor: model 'söner', motor 'yanar' diyor."
+ ],
+ "llm_siniflandirma": {
+  "girilen": "kevlar",
+  "durum": "kabul",
+  "yakit_turu": "kati",
+  "benzer_malzeme": "nomex",
+  "numune_tipi": "fabric",
+  "gerekce": "Kevlar ve Nomex her ikisi de yüksek ısıya dayanıklı aromatik poliamid/polimer yapılı kumaşlardır.",
+  "kaynak": "onbellek"
+ },
+ "sure_sn": 0.157
+}

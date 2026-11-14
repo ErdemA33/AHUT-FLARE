@@ -1,0 +1,12 @@
+OpenFOAM render çıktılarını (mp4 / webm / png) bu klasöre koyun.
+Program klasörü 5 saniyede bir izler ve yeni dosyayı Sonuçlar > Render Görüntüsü
+altında gösterir.
+
+Dosya adı şu biçimde olursa program videoyu vakayla eşleştirir:
+
+    <malzeme>_g<yerçekimi>_o<oksijen>_p<basınç>[_a<akış>].mp4
+
+Örnekler:
+    pmma_g1e-4_o21_p101.3_a10.mp4
+    nomex_g0.38_o34_p56.5.webm
+    cotton_g1_o21_p101.3_a0.png

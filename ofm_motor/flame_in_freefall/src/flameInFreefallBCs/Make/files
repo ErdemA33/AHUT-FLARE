@@ -1,0 +1,7 @@
+pyrolysisArrhenius.C
+pyrolysisFuelFraction/pyrolysisFuelFractionFvPatchScalarField.C
+pyrolysisTemperature/pyrolysisTemperatureFvPatchScalarField.C
+pyrolysisThinSolidTemperature/pyrolysisThinSolidTemperatureFvPatchScalarField.C
+pyrolysisVelocity/pyrolysisVelocityFvPatchVectorField.C
+
+LIB = $(FOAM_USER_LIBBIN)/libFlameInFreefallBCs

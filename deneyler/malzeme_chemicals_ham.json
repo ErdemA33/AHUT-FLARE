@@ -1,0 +1,1363 @@
+{
+ "kaynak": "chemicals 1.5.2 (Caleb Bell; https://github.com/CalebBell/chemicals)",
+ "maddeler": {
+  "ethanol": {
+   "cas": "64-17-5",
+   "ad": "ethanol",
+   "formul": "C2H6O",
+   "MW": 46.06844,
+   "Tb": [
+    351.570441659,
+    "HEOS"
+   ],
+   "Tc": [
+    514.71,
+    "HEOS"
+   ],
+   "T_flash": [
+    285.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "T_autoignition": [
+    673.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "LFL": [
+    0.031,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "UFL": [
+    0.19,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "Hvap_CRC": {
+    "Tb": 351.44,
+    "HvapTb_J_mol": 38560.0,
+    "Hvap298_J_mol": 42320.0,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "rho_l_298": [
+    785.8854462646391,
+    "Perry's 8E Tablo 2-32 (DIPPR 105) katsayıları"
+   ],
+   "HHV": {
+    "J_mol": -1367393.0,
+    "LHV_J_mol": -1235358.512,
+    "Hf_J_mol": -277030.0,
+    "Hf_kaynak": "ATCT_L"
+   }
+  },
+  "isopropanol": {
+   "cas": "67-63-0",
+   "ad": "isopropanol",
+   "formul": "C3H8O",
+   "MW": 60.09502,
+   "Tb": [
+    355.36,
+    "CRC_ORG"
+   ],
+   "Tc": [
+    508.3,
+    "IUPAC"
+   ],
+   "T_flash": [
+    285.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "T_autoignition": [
+    672.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "LFL": [
+    0.02,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "UFL": [
+    0.127,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "Hvap_CRC": {
+    "Tb": 355.45,
+    "HvapTb_J_mol": 39850.0,
+    "Hvap298_J_mol": 45390.0,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "rho_l_298": [
+    781.8325242900169,
+    "Perry's 8E Tablo 2-32 (DIPPR 105) katsayıları"
+   ],
+   "HHV": {
+    "J_mol": -2005622.0,
+    "LHV_J_mol": -1829576.016,
+    "Hf_J_mol": -318100.0,
+    "Hf_kaynak": "CRC"
+   }
+  },
+  "methanol": {
+   "cas": "67-56-1",
+   "ad": "methanol",
+   "formul": "CH4O",
+   "MW": 32.04186,
+   "Tb": [
+    337.632383296,
+    "HEOS"
+   ],
+   "Tc": [
+    513.38,
+    "HEOS"
+   ],
+   "T_flash": [
+    282.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "T_autoignition": [
+    713.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "LFL": [
+    0.06,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "UFL": [
+    0.36,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "Hvap_CRC": {
+    "Tb": 337.75,
+    "HvapTb_J_mol": 35210.0,
+    "Hvap298_J_mol": 37430.0,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "rho_l_298": [
+    789.6089454472512,
+    "Perry's 8E Tablo 2-32 (DIPPR 105) katsayıları"
+   ],
+   "HHV": {
+    "J_mol": -726724.0,
+    "LHV_J_mol": -638701.008,
+    "Hf_J_mol": -238400.0,
+    "Hf_kaynak": "ATCT_L"
+   }
+  },
+  "n-heptane": {
+   "cas": "142-82-5",
+   "ad": "heptane",
+   "formul": "C7H16",
+   "MW": 100.20194,
+   "Tb": [
+    371.550360483,
+    "HEOS"
+   ],
+   "Tc": [
+    540.2,
+    "HEOS"
+   ],
+   "T_flash": [
+    266.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "T_autoignition": [
+    477.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "LFL": [
+    0.0085,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "UFL": [
+    0.067,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "Hvap_CRC": {
+    "Tb": 371.55,
+    "HvapTb_J_mol": 31770.0,
+    "Hvap298_J_mol": 36570.0,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "rho_l_298": [
+    681.535115735759,
+    "Perry's 8E Tablo 2-32 (DIPPR 105) katsayıları"
+   ],
+   "HHV": {
+    "J_mol": -4817008.0,
+    "LHV_J_mol": -4464916.032,
+    "Hf_J_mol": -223910.0,
+    "Hf_kaynak": "ATCT_L"
+   }
+  },
+  "n-decane": {
+   "cas": "124-18-5",
+   "ad": "decane",
+   "formul": "C10H22",
+   "MW": 142.28168,
+   "Tb": [
+    447.270229382,
+    "HEOS"
+   ],
+   "Tc": [
+    617.7,
+    "HEOS"
+   ],
+   "T_flash": [
+    319.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "T_autoignition": [
+    508.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "LFL": [
+    0.007,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "UFL": [
+    0.056,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "Hvap_CRC": {
+    "Tb": 447.3,
+    "HvapTb_J_mol": 39580.0,
+    "Hvap298_J_mol": 51420.0,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "rho_l_298": [
+    727.888218010334,
+    "Perry's 8E Tablo 2-32 (DIPPR 105) katsayıları"
+   ],
+   "HHV": {
+    "J_mol": -6777915.0,
+    "LHV_J_mol": -6293788.544,
+    "Hf_J_mol": -300900.0,
+    "Hf_kaynak": "CRC"
+   }
+  },
+  "acetone": {
+   "cas": "67-64-1",
+   "ad": "acetone",
+   "formul": "C3H6O",
+   "MW": 58.07914,
+   "Tb": [
+    329.224922705,
+    "HEOS"
+   ],
+   "Tc": [
+    508.1,
+    "HEOS"
+   ],
+   "T_flash": [
+    253.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "T_autoignition": [
+    812.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "LFL": [
+    0.025,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "UFL": [
+    0.143,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "Hvap_CRC": {
+    "Tb": 329.2,
+    "HvapTb_J_mol": 29100.0,
+    "Hvap298_J_mol": 30990.0,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "rho_l_298": [
+    786.5689031292935,
+    "Perry's 8E Tablo 2-32 (DIPPR 105) katsayıları"
+   ],
+   "HHV": {
+    "J_mol": -1789497.0,
+    "LHV_J_mol": -1657462.512,
+    "Hf_J_mol": -248400.0,
+    "Hf_kaynak": "CRC"
+   }
+  },
+  "propylene-glycol": {
+   "cas": "57-55-6",
+   "ad": "1,2-propanediol",
+   "formul": "C3H8O2",
+   "MW": 76.09442,
+   "Tb": [
+    460.45,
+    "CRC_ORG"
+   ],
+   "Tc": [
+    676.0,
+    "IUPAC"
+   ],
+   "T_flash": [
+    358.652431792038,
+    "Serat DIPPR (2017)"
+   ],
+   "T_autoignition": [
+    null,
+    null
+   ],
+   "LFL": [
+    null,
+    null
+   ],
+   "UFL": [
+    null,
+    null
+   ],
+   "Hvap_CRC": {
+    "Tb": 460.75,
+    "HvapTb_J_mol": 52400.0,
+    "Hvap298_J_mol": null,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "rho_l_298": [
+    1032.5743579920331,
+    "Perry's 8E Tablo 2-32 (DIPPR 105) katsayıları"
+   ],
+   "HHV": {
+    "J_mol": -1822722.0,
+    "LHV_J_mol": -1646676.016,
+    "Hf_J_mol": -501000.0,
+    "Hf_kaynak": "CRC"
+   }
+  },
+  "mmh": {
+   "cas": "60-34-4",
+   "ad": "methylhydrazine",
+   "formul": "CH6N2",
+   "MW": 46.07174,
+   "Tb": [
+    356.15,
+    "CRC_ORG"
+   ],
+   "Tc": [
+    567.0,
+    "PSRK"
+   ],
+   "T_flash": [
+    296.15,
+    "NFPA 497 (2008)"
+   ],
+   "T_autoignition": [
+    467.15,
+    "NFPA 497 (2008)"
+   ],
+   "LFL": [
+    0.025,
+    "NFPA 497 (2008)"
+   ],
+   "UFL": [
+    0.92,
+    "NFPA 497 (2008)"
+   ],
+   "Hvap_CRC": {
+    "Tb": 360.65,
+    "HvapTb_J_mol": 36120.0,
+    "Hvap298_J_mol": 40370.0,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "HHV": {
+    "J_mol": -1305149.0,
+    "LHV_J_mol": -1173114.512,
+    "Hf_J_mol": 54200.0,
+    "Hf_kaynak": "CRC"
+   }
+  },
+  "hydrazine": {
+   "cas": "302-01-2",
+   "ad": "hydrazine",
+   "formul": "H4N2",
+   "MW": 32.04516,
+   "Tb": [
+    386.7,
+    "CRC_INORG"
+   ],
+   "Tc": [
+    653.0,
+    "MATTHEWS"
+   ],
+   "T_flash": [
+    311.15,
+    "NFPA 497 (2008)"
+   ],
+   "T_autoignition": [
+    296.15,
+    "NFPA 497 (2008)"
+   ],
+   "LFL": [
+    0.029,
+    "WIKIDATA"
+   ],
+   "UFL": [
+    0.98,
+    "NFPA 497 (2008)"
+   ],
+   "Hvap_CRC": {
+    "Tb": 386.7,
+    "HvapTb_J_mol": 41800.0,
+    "Hvap298_J_mol": 44700.0,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "rho_l_298": [
+    1003.5332026623809,
+    "Perry's 8E Tablo 2-32 (DIPPR 105) katsayıları"
+   ],
+   "HHV": {
+    "J_mol": -622250.0,
+    "LHV_J_mol": -534227.008,
+    "Hf_J_mol": 50600.0,
+    "Hf_kaynak": "CRC"
+   }
+  },
+  "hydrogen": {
+   "cas": "1333-74-0",
+   "ad": "hydrogen",
+   "formul": "H2",
+   "MW": 2.01588,
+   "Tb": [
+    20.3689085101,
+    "HEOS"
+   ],
+   "Tc": [
+    33.145,
+    "HEOS"
+   ],
+   "T_flash": [
+    null,
+    null
+   ],
+   "T_autoignition": [
+    833.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "LFL": [
+    0.04,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "UFL": [
+    0.77,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "Hvap_CRC": {
+    "Tb": 20.39,
+    "HvapTb_J_mol": 900.0,
+    "Hvap298_J_mol": null,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "HHV": {
+    "J_mol": -285825.0,
+    "LHV_J_mol": -241813.50400000002,
+    "Hf_J_mol": 0.0,
+    "Hf_kaynak": "ATCT_G"
+   }
+  },
+  "methane": {
+   "cas": "74-82-8",
+   "ad": "methane",
+   "formul": "CH4",
+   "MW": 16.04246,
+   "Tb": [
+    111.667205474,
+    "HEOS"
+   ],
+   "Tc": [
+    190.564,
+    "HEOS"
+   ],
+   "T_flash": [
+    null,
+    null
+   ],
+   "T_autoignition": [
+    873.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "LFL": [
+    0.044,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "UFL": [
+    0.17,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "Hvap_CRC": {
+    "Tb": 111.67,
+    "HvapTb_J_mol": 8190.0,
+    "Hvap298_J_mol": null,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "HHV": {
+    "J_mol": -890590.0,
+    "LHV_J_mol": -802567.008,
+    "Hf_J_mol": -74534.0,
+    "Hf_kaynak": "ATCT_G"
+   }
+  },
+  "ethylene": {
+   "cas": "74-85-1",
+   "ad": "ethene",
+   "formul": "C2H4",
+   "MW": 28.05316,
+   "Tb": [
+    169.378648434,
+    "HEOS"
+   ],
+   "Tc": [
+    282.35,
+    "HEOS"
+   ],
+   "T_flash": [
+    null,
+    null
+   ],
+   "T_autoignition": [
+    713.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "LFL": [
+    0.023,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "UFL": [
+    0.36,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "Hvap_CRC": {
+    "Tb": 169.38,
+    "HvapTb_J_mol": 13530.0,
+    "Hvap298_J_mol": null,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "HHV": {
+    "J_mol": -1411158.0,
+    "LHV_J_mol": -1323135.008,
+    "Hf_J_mol": 52560.0,
+    "Hf_kaynak": "ATCT_G"
+   }
+  },
+  "ethane": {
+   "cas": "74-84-0",
+   "ad": "ethane",
+   "formul": "C2H6",
+   "MW": 30.06904,
+   "Tb": [
+    184.568587832,
+    "HEOS"
+   ],
+   "Tc": [
+    305.322,
+    "HEOS"
+   ],
+   "T_flash": [
+    244.15,
+    "NFPA 497 (2008)"
+   ],
+   "T_autoignition": [
+    788.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "LFL": [
+    0.024,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "UFL": [
+    0.155,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "Hvap_CRC": {
+    "Tb": 184.55,
+    "HvapTb_J_mol": 14690.0,
+    "Hvap298_J_mol": 5160.0,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "HHV": {
+    "J_mol": -1560643.0,
+    "LHV_J_mol": -1428608.512,
+    "Hf_J_mol": -83780.0,
+    "Hf_kaynak": "ATCT_G"
+   }
+  },
+  "propane": {
+   "cas": "74-98-6",
+   "ad": "propane",
+   "formul": "C3H8",
+   "MW": 44.09562,
+   "Tb": [
+    231.03624791,
+    "HEOS"
+   ],
+   "Tc": [
+    369.89,
+    "HEOS"
+   ],
+   "T_flash": [
+    null,
+    null
+   ],
+   "T_autoignition": [
+    723.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "LFL": [
+    0.017,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "UFL": [
+    0.109,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "Hvap_CRC": {
+    "Tb": 231.05,
+    "HvapTb_J_mol": 19040.0,
+    "Hvap298_J_mol": 14790.0,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "HHV": {
+    "J_mol": -2219332.0,
+    "LHV_J_mol": -2043286.016,
+    "Hf_J_mol": -104390.0,
+    "Hf_kaynak": "ATCT_G"
+   }
+  },
+  "carbon-monoxide": {
+   "cas": "630-08-0",
+   "ad": "carbon monoxide",
+   "formul": "CO",
+   "MW": 28.0101,
+   "Tb": [
+    81.6381829183,
+    "HEOS"
+   ],
+   "Tc": [
+    132.86,
+    "HEOS"
+   ],
+   "T_flash": [
+    null,
+    null
+   ],
+   "T_autoignition": [
+    880.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "LFL": [
+    0.109,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "UFL": [
+    0.74,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "Hvap_CRC": {
+    "Tb": 81.65,
+    "HvapTb_J_mol": 6040.0,
+    "Hvap298_J_mol": null,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "HHV": {
+    "J_mol": -282949.0,
+    "LHV_J_mol": -282949.0,
+    "Hf_J_mol": -110525.0,
+    "Hf_kaynak": "ATCT_G"
+   }
+  },
+  "ammonia": {
+   "cas": "7664-41-7",
+   "ad": "ammonia",
+   "formul": "H3N",
+   "MW": 17.03052,
+   "Tb": [
+    239.83431862,
+    "HEOS"
+   ],
+   "Tc": [
+    405.56,
+    "HEOS"
+   ],
+   "T_flash": [
+    null,
+    null
+   ],
+   "T_autoignition": [
+    903.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "LFL": [
+    0.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "UFL": [
+    0.336,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "Hvap_CRC": {
+    "Tb": 239.82,
+    "HvapTb_J_mol": 23330.0,
+    "Hvap298_J_mol": 19860.0,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "HHV": {
+    "J_mol": -383179.5,
+    "LHV_J_mol": -317162.256,
+    "Hf_J_mol": -45558.0,
+    "Hf_kaynak": "ATCT_G"
+   }
+  },
+  "acetylene": {
+   "cas": "74-86-2",
+   "ad": "acetylene",
+   "formul": "C2H2",
+   "MW": 26.03728,
+   "Tb": [
+    189.00035,
+    "WEBBOOK"
+   ],
+   "Tc": [
+    308.3,
+    "HEOS"
+   ],
+   "T_flash": [
+    null,
+    null
+   ],
+   "T_autoignition": [
+    578.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "LFL": [
+    0.023,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "UFL": [
+    1.0,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "HHV": {
+    "J_mol": -1301093.0,
+    "LHV_J_mol": -1257081.504,
+    "Hf_J_mol": 228320.0,
+    "Hf_kaynak": "ATCT_G"
+   }
+  },
+  "dmc": {
+   "cas": "616-38-6",
+   "ad": "dimethyl carbonate",
+   "formul": "C3H6O3",
+   "MW": 90.07794,
+   "Tb": [
+    363.256130164,
+    "HEOS"
+   ],
+   "Tc": [
+    557.0,
+    "HEOS"
+   ],
+   "T_flash": [
+    null,
+    null
+   ],
+   "T_autoignition": [
+    null,
+    null
+   ],
+   "LFL": [
+    null,
+    null
+   ],
+   "UFL": [
+    null,
+    null
+   ]
+  },
+  "dec": {
+   "cas": "105-58-8",
+   "ad": "diethyl carbonate",
+   "formul": "C5H10O3",
+   "MW": 118.1311,
+   "Tb": [
+    399.05,
+    "CRC_ORG"
+   ],
+   "Tc": [
+    576.33,
+    "PSRK"
+   ],
+   "T_flash": [
+    297.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "T_autoignition": [
+    723.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "LFL": [
+    0.014,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "UFL": [
+    0.117,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "Hvap_CRC": {
+    "Tb": 399.15,
+    "HvapTb_J_mol": null,
+    "Hvap298_J_mol": 43600.0,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "HHV": {
+    "J_mol": -2714995.0,
+    "LHV_J_mol": -2494937.52,
+    "Hf_J_mol": -681500.0,
+    "Hf_kaynak": "CRC"
+   }
+  },
+  "ec": {
+   "cas": "96-49-1",
+   "ad": "ethylene carbonate",
+   "formul": "C3H4O3",
+   "MW": 88.06206,
+   "Tb": [
+    519.15,
+    "CRC_ORG"
+   ],
+   "Tc": [
+    794.82,
+    "PSRK"
+   ],
+   "T_flash": [
+    null,
+    null
+   ],
+   "T_autoignition": [
+    null,
+    null
+   ],
+   "LFL": [
+    null,
+    null
+   ],
+   "UFL": [
+    null,
+    null
+   ],
+   "HHV": {
+    "J_mol": -1069272.0,
+    "LHV_J_mol": -981249.008,
+    "Hf_J_mol": -682800.0,
+    "Hf_kaynak": "CRC"
+   }
+  },
+  "glycerol": {
+   "cas": "56-81-5",
+   "ad": "glycerol",
+   "formul": "C3H8O3",
+   "MW": 92.09382,
+   "Tb": [
+    562.15,
+    "CRC_ORG"
+   ],
+   "Tc": [
+    850.0,
+    "IUPAC"
+   ],
+   "T_flash": [
+    446.989213229,
+    "Serat DIPPR (2017)"
+   ],
+   "T_autoignition": [
+    null,
+    null
+   ],
+   "LFL": [
+    null,
+    null
+   ],
+   "UFL": [
+    null,
+    null
+   ],
+   "Hvap_CRC": {
+    "Tb": 563.15,
+    "HvapTb_J_mol": 61000.0,
+    "Hvap298_J_mol": null,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "rho_l_298": [
+    1258.0706703771111,
+    "VDI Isı Atlası PPDS-2 katsayıları"
+   ],
+   "HHV": {
+    "J_mol": -1654122.0,
+    "LHV_J_mol": -1478076.016,
+    "Hf_J_mol": -669600.0,
+    "Hf_kaynak": "CRC"
+   }
+  },
+  "ethylene-glycol": {
+   "cas": "107-21-1",
+   "ad": "ethylene glycol",
+   "formul": "C2H6O2",
+   "MW": 62.06784,
+   "Tb": [
+    470.31348274,
+    "HEOS"
+   ],
+   "Tc": [
+    719.0,
+    "HEOS"
+   ],
+   "T_flash": [
+    365.262344628008,
+    "Serat DIPPR (2017)"
+   ],
+   "T_autoignition": [
+    null,
+    null
+   ],
+   "LFL": [
+    0.032,
+    "WIKIDATA"
+   ],
+   "UFL": [
+    0.153,
+    "WIKIDATA"
+   ],
+   "Hvap_CRC": {
+    "Tb": 470.45,
+    "HvapTb_J_mol": 50500.0,
+    "Hvap298_J_mol": 63900.0,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "rho_l_298": [
+    1110.1787183851025,
+    "Perry's 8E Tablo 2-32 (DIPPR 105) katsayıları"
+   ],
+   "HHV": {
+    "J_mol": -1184423.0,
+    "LHV_J_mol": -1052388.512,
+    "Hf_J_mol": -460000.0,
+    "Hf_kaynak": "CRC"
+   }
+  },
+  "udmh": {
+   "cas": "57-14-7",
+   "ad": "1,1-dimethylhydrazine",
+   "formul": "C2H8N2",
+   "MW": 60.09832,
+   "Tb": [
+    335.55,
+    "CRC_ORG"
+   ],
+   "Tc": [
+    511.22437,
+    "JOBACK"
+   ],
+   "T_flash": [
+    255.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "T_autoignition": [
+    513.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "LFL": [
+    0.024,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "UFL": [
+    0.2,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "Hvap_CRC": {
+    "Tb": 337.05,
+    "HvapTb_J_mol": 32550.0,
+    "Hvap298_J_mol": 35000.0,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "HHV": {
+    "J_mol": -1979148.0,
+    "LHV_J_mol": -1803102.016,
+    "Hf_J_mol": 48900.0,
+    "Hf_kaynak": "CRC"
+   }
+  },
+  "ethyl-acetate": {
+   "cas": "141-78-6",
+   "ad": "ethyl acetate",
+   "formul": "C4H8O2",
+   "MW": 88.10512,
+   "Tb": [
+    350.25,
+    "CRC_ORG"
+   ],
+   "Tc": [
+    523.3,
+    "IUPAC"
+   ],
+   "T_flash": [
+    269.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "T_autoignition": [
+    743.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "LFL": [
+    0.02,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "UFL": [
+    0.128,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "Hvap_CRC": {
+    "Tb": 350.26,
+    "HvapTb_J_mol": 31940.0,
+    "Hvap298_J_mol": 35600.0,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "rho_l_298": [
+    893.6163605837044,
+    "Perry's 8E Tablo 2-32 (DIPPR 105) katsayıları"
+   ],
+   "HHV": {
+    "J_mol": -2237896.0,
+    "LHV_J_mol": -2061850.016,
+    "Hf_J_mol": -479300.0,
+    "Hf_kaynak": "CRC"
+   }
+  },
+  "hydrogen-peroxide": {
+   "cas": "7722-84-1",
+   "ad": "hydrogen peroxide",
+   "formul": "H2O2",
+   "MW": 34.01468,
+   "Tb": [
+    423.35,
+    "CRC_INORG"
+   ],
+   "Tc": [
+    728.0,
+    "WEBBOOK"
+   ],
+   "T_flash": [
+    null,
+    null
+   ],
+   "T_autoignition": [
+    null,
+    null
+   ],
+   "LFL": [
+    null,
+    null
+   ],
+   "UFL": [
+    null,
+    null
+   ],
+   "Hvap_CRC": {
+    "Tb": 423.35,
+    "HvapTb_J_mol": null,
+    "Hvap298_J_mol": 51600.0,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "HHV": {
+    "J_mol": -98025.0,
+    "LHV_J_mol": -54013.504,
+    "Hf_J_mol": -187800.0,
+    "Hf_kaynak": "CRC"
+   }
+  },
+  "n-butane": {
+   "cas": "106-97-8",
+   "ad": "butane",
+   "formul": "C4H10",
+   "MW": 58.1222,
+   "Tb": [
+    272.659900526,
+    "HEOS"
+   ],
+   "Tc": [
+    425.125,
+    "HEOS"
+   ],
+   "T_flash": [
+    213.15,
+    "WIKIDATA"
+   ],
+   "T_autoignition": [
+    645.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "LFL": [
+    0.014,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "UFL": [
+    0.093,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "Hvap_CRC": {
+    "Tb": 272.65,
+    "HvapTb_J_mol": 22440.0,
+    "Hvap298_J_mol": 21020.0,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "HHV": {
+    "J_mol": -2877171.0,
+    "LHV_J_mol": -2657113.52,
+    "Hf_J_mol": -125850.0,
+    "Hf_kaynak": "ATCT_G"
+   }
+  },
+  "isobutane": {
+   "cas": "75-28-5",
+   "ad": "isobutane",
+   "formul": "C4H10",
+   "MW": 58.1222,
+   "Tb": [
+    261.401014643,
+    "HEOS"
+   ],
+   "Tc": [
+    407.81,
+    "HEOS"
+   ],
+   "T_flash": [
+    null,
+    null
+   ],
+   "T_autoignition": [
+    733.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "LFL": [
+    0.013,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "UFL": [
+    0.098,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "Hvap_CRC": {
+    "Tb": 261.42,
+    "HvapTb_J_mol": 21300.0,
+    "Hvap298_J_mol": 19230.0,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "HHV": {
+    "J_mol": -2867661.0,
+    "LHV_J_mol": -2647603.52,
+    "Hf_J_mol": -135360.0,
+    "Hf_kaynak": "ATCT_G"
+   }
+  },
+  "dme": {
+   "cas": "115-10-6",
+   "ad": "dimethyl ether",
+   "formul": "C2H6O",
+   "MW": 46.06844,
+   "Tb": [
+    248.367837876,
+    "HEOS"
+   ],
+   "Tc": [
+    400.378,
+    "HEOS"
+   ],
+   "T_flash": [
+    232.15,
+    "NFPA 497 (2008)"
+   ],
+   "T_autoignition": [
+    513.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "LFL": [
+    0.027,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "UFL": [
+    0.32,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "Hvap_CRC": {
+    "Tb": 248.35,
+    "HvapTb_J_mol": 21510.0,
+    "Hvap298_J_mol": 18510.0,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "HHV": {
+    "J_mol": -1460403.0,
+    "LHV_J_mol": -1328368.512,
+    "Hf_J_mol": -184020.0,
+    "Hf_kaynak": "ATCT_G"
+   }
+  },
+  "nitrous-oxide": {
+   "cas": "10024-97-2",
+   "ad": "nitrous oxide",
+   "formul": "N2O",
+   "MW": 44.0128,
+   "Tb": [
+    184.683943645,
+    "HEOS"
+   ],
+   "Tc": [
+    309.52,
+    "HEOS"
+   ],
+   "T_flash": [
+    null,
+    null
+   ],
+   "T_autoignition": [
+    null,
+    null
+   ],
+   "LFL": [
+    null,
+    null
+   ],
+   "UFL": [
+    null,
+    null
+   ],
+   "Hvap_CRC": {
+    "Tb": 184.67,
+    "HvapTb_J_mol": 16530.0,
+    "Hvap298_J_mol": null,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "HHV": {
+    "J_mol": -82574.0,
+    "LHV_J_mol": -82574.0,
+    "Hf_J_mol": 82574.0,
+    "Hf_kaynak": "ATCT_G"
+   }
+  },
+  "formaldehyde": {
+   "cas": "50-00-0",
+   "ad": "formaldehyde",
+   "formul": "CH2O",
+   "MW": 30.02598,
+   "Tb": [
+    254.05,
+    "CRC_ORG"
+   ],
+   "Tc": [
+    408.0,
+    "PSRK"
+   ],
+   "T_flash": [
+    333.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "T_autoignition": [
+    697.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "LFL": [
+    0.07,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "UFL": [
+    0.73,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "HHV": {
+    "J_mol": -570139.0,
+    "LHV_J_mol": -526127.504,
+    "Hf_J_mol": -109160.0,
+    "Hf_kaynak": "ATCT_G"
+   }
+  },
+  "hydrogen-sulfide": {
+   "cas": "7783-06-4",
+   "ad": "hydrogen sulfide",
+   "formul": "H2S",
+   "MW": 34.08088,
+   "Tb": [
+    212.854883148,
+    "HEOS"
+   ],
+   "Tc": [
+    373.1,
+    "HEOS"
+   ],
+   "T_flash": [
+    null,
+    null
+   ],
+   "T_autoignition": [
+    533.15,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "LFL": [
+    0.04,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "UFL": [
+    0.455,
+    "IEC 60079-20-1 (2010)"
+   ],
+   "Hvap_CRC": {
+    "Tb": 213.6,
+    "HvapTb_J_mol": 18670.0,
+    "Hvap298_J_mol": 14080.0,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "HHV": {
+    "J_mol": -562025.0,
+    "LHV_J_mol": -518013.504,
+    "Hf_J_mol": -20600.0,
+    "Hf_kaynak": "CRC"
+   }
+  },
+  "oxygen": {
+   "cas": "7782-44-7",
+   "ad": "oxygen",
+   "formul": "O2",
+   "MW": 31.9988,
+   "Tb": [
+    90.1878078805,
+    "HEOS"
+   ],
+   "Tc": [
+    154.581,
+    "HEOS"
+   ],
+   "T_flash": [
+    null,
+    null
+   ],
+   "T_autoignition": [
+    null,
+    null
+   ],
+   "LFL": [
+    null,
+    null
+   ],
+   "UFL": [
+    null,
+    null
+   ],
+   "Hvap_CRC": {
+    "Tb": 90.2,
+    "HvapTb_J_mol": 6820.0,
+    "Hvap298_J_mol": null,
+    "tablo": "CRC Handbook (chemicals Hvap_data_CRC)"
+   },
+   "HHV": {
+    "J_mol": 0.0,
+    "LHV_J_mol": 0.0,
+    "Hf_J_mol": 0.0,
+    "Hf_kaynak": "ATCT_G"
+   }
+  }
+ }
+}

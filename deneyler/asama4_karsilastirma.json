@@ -1,0 +1,81 @@
+{
+ "alt_kume_n": 45,
+ "ayrintili_sonuc_veren": 41,
+ "ayrintili_parametreler": {
+  "lnA_NC7H16": 3.0298423002696175,
+  "lnA_CH3OH": 0.0,
+  "Ta": 15098.0,
+  "ln_Crad": 0.0
+ },
+ "ayrintili": {
+  "n": 41,
+  "alev_oran_medyan_hata_yuzde": NaN,
+  "K_medyan_hata_yuzde": 16.447368421052634,
+  "sonme_capi_medyan_hata_mm": 0.9505000000000001,
+  "sonme_capi_medyan_hata_oran": 0.39904718810601164,
+  "dogruluk": 0.36585365853658536,
+  "auc": 0.7045454545454546,
+  "yanan_orani": 0.7317073170731707
+ },
+ "hizli_ayni_testler": {
+  "n": 41,
+  "alev_oran_medyan_hata_yuzde": NaN,
+  "K_medyan_hata_yuzde": 11.077824158011696,
+  "sonme_capi_medyan_hata_mm": 0.3572927789982042,
+  "sonme_capi_medyan_hata_oran": 0.1243897396045242,
+  "dogruluk": 0.8780487804878049,
+  "auc": 0.8757575757575757,
+  "yanan_orani": 0.7317073170731707
+ },
+ "hizli_alt_kume_tumu": {
+  "n": 45,
+  "alev_oran_medyan_hata_yuzde": NaN,
+  "K_medyan_hata_yuzde": 8.546471846913374,
+  "sonme_capi_medyan_hata_mm": 0.3572927789982042,
+  "sonme_capi_medyan_hata_oran": 0.1243897396045242,
+  "dogruluk": 0.8888888888888888,
+  "auc": 0.8850267379679144,
+  "yanan_orani": 0.7555555555555555
+ },
+ "K_ortak_n": 41,
+ "ayrintili NC7H16": {
+  "n": 16,
+  "alev_oran_medyan_hata_yuzde": NaN,
+  "K_medyan_hata_yuzde": 19.58783068783068,
+  "sonme_capi_medyan_hata_mm": 0.6960000000000002,
+  "sonme_capi_medyan_hata_oran": 0.25100671140939607,
+  "dogruluk": 0.625,
+  "auc": 0.859375,
+  "yanan_orani": 0.5
+ },
+ "hizli NC7H16": {
+  "n": 16,
+  "alev_oran_medyan_hata_yuzde": NaN,
+  "K_medyan_hata_yuzde": 16.349907602348814,
+  "sonme_capi_medyan_hata_mm": 0.25152435698746645,
+  "sonme_capi_medyan_hata_oran": 0.0891930343927186,
+  "dogruluk": 0.875,
+  "auc": 0.84375,
+  "yanan_orani": 0.5
+ },
+ "ayrintili CH3OH": {
+  "n": 25,
+  "alev_oran_medyan_hata_yuzde": NaN,
+  "K_medyan_hata_yuzde": 13.249999999999995,
+  "sonme_capi_medyan_hata_mm": 0.9550000000000001,
+  "sonme_capi_medyan_hata_oran": 0.40061538461538454,
+  "dogruluk": 0.2,
+  "auc": 1.0,
+  "yanan_orani": 0.88
+ },
+ "hizli CH3OH": {
+  "n": 25,
+  "alev_oran_medyan_hata_yuzde": NaN,
+  "K_medyan_hata_yuzde": 7.786634054416142,
+  "sonme_capi_medyan_hata_mm": 0.3710181281604852,
+  "sonme_capi_medyan_hata_oran": 0.13029478122168708,
+  "dogruluk": 0.88,
+  "auc": 0.9090909090909091,
+  "yanan_orani": 0.88
+ }
+}

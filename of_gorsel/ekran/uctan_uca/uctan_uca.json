@@ -1,0 +1,438 @@
+{
+ "zaman": "2026-11-13 06:30:22",
+ "goruntuler": [
+  "01_pmma_mars_30_70_ozet.png",
+  "01_pmma_mars_30_70_motor.png",
+  "01_pmma_mars_30_70_guven.png",
+  "02_metanol_iss_ozet.png",
+  "02_metanol_iss_motor.png",
+  "03_heptan_mars_ozet.png",
+  "03_heptan_mars_motor.png",
+  "04_etilen_iss_ozet.png",
+  "04_etilen_iss_motor.png",
+  "05_metan_iss_ozet.png",
+  "05_metan_iss_motor.png",
+  "06_lexan_iss_ozet.png",
+  "07_ipa_iss_ozet.png",
+  "08_kevlar_iss_ozet.png",
+  "09_hidrazin_iss_ozet.png",
+  "09_hidrazin_iss_motor.png",
+  "10_asdfgh_ozet.png",
+  "11_internetsiz_pmma_ozet.png",
+  "11_internetsiz_pmma_llm.png",
+  "12_parametre_supurmesi.png",
+  "13_vaka_kaydedildi_kutuphane.png",
+  "13_vaka_acildi.png",
+  "14_topluluk_form.png",
+  "14_topluluk_onayli_disa_aktarildi.png",
+  "15_video_listesi.png"
+ ],
+ "senaryolar": {
+  "pmma_mars_30_70": {
+   "risk_model": "ÇOK YÜKSEK",
+   "p_model": 0.999,
+   "p_birlesik": 0.969,
+   "agirliklar": {
+    "model": 0.622,
+    "motor": 0.378
+   },
+   "motor": "hafif",
+   "motor_yanma": 0.92,
+   "guven_v2": 16,
+   "bant": "düşük",
+   "tanima": "listede: 'pmma'",
+   "tanima_kaynagi": "liste",
+   "girdi": {
+    "malzeme": "pmma",
+    "oksijen": 30,
+    "basinc": 70,
+    "g": 0.38,
+    "akis": null,
+    "kalinlik": 0.2,
+    "numune_tipi": "thin_sheet",
+    "yakit_turu": "kati",
+    "akis_yonu": null,
+    "seyreltici": "n2"
+   },
+   "uyarilar": [
+    "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
+    "Kısmi g için deney verisi az; uzay, gerçek g ve Dünya sonuçlarının en kötüsü alındı.",
+    "Güven düşük (0/100): bu koşula yakın deney az ya da motor orada zayıf."
+   ]
+  },
+  "metanol_iss": {
+   "risk_model": "ÇOK YÜKSEK",
+   "p_model": 1,
+   "p_birlesik": 0.987,
+   "agirliklar": {
+    "model": 0.558,
+    "motor": 0.442
+   },
+   "motor": "damla",
+   "motor_yanma": 0.971,
+   "guven_v2": 87,
+   "bant": "yüksek",
+   "tanima": "listede: 'methanol'",
+   "tanima_kaynagi": "liste",
+   "girdi": {
+    "malzeme": "methanol",
+    "oksijen": 21,
+    "basinc": 101.3,
+    "g": 0.0001,
+    "akis": null,
+    "kalinlik": 1,
+    "numune_tipi": "droplet",
+    "yakit_turu": "sivi",
+    "akis_yonu": null,
+    "seyreltici": "n2"
+   },
+   "uyarilar": [
+    "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
+    "Damla için zorlanmış akış: Ranz–Marshall taşınım düzeltmesi doğrulanamadı (FLEX'te akış yoktu; veri setinde µg/düşük g akışlı damla için koşulları tam bir ölçüm bulunamadı, Aşama 5c)."
+   ]
+  },
+  "heptan_mars": {
+   "risk_model": "ÇOK YÜKSEK",
+   "p_model": 0.999,
+   "p_birlesik": 0.99,
+   "agirliklar": {
+    "model": 0.496,
+    "motor": 0.504
+   },
+   "motor": "damla",
+   "motor_yanma": 0.981,
+   "guven_v2": 19,
+   "bant": "düşük",
+   "tanima": "listede: 'n-heptane'",
+   "tanima_kaynagi": "liste",
+   "girdi": {
+    "malzeme": "n-heptane",
+    "oksijen": 21,
+    "basinc": 101.3,
+    "g": 0.38,
+    "akis": null,
+    "kalinlik": 1,
+    "numune_tipi": "droplet",
+    "yakit_turu": "sivi",
+    "akis_yonu": null,
+    "seyreltici": "n2"
+   },
+   "uyarilar": [
+    "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
+    "Kısmi g için deney verisi az; uzay, gerçek g ve Dünya sonuçlarının en kötüsü alındı.",
+    "Kısmi g: damla için deney verisi yok; Faeth/Ranz–Marshall bağıntısıyla ara değer (yalnız µg'de kalibre; 1 g'de 96 noktada sınandı, makale dışarıda AUC 0,60).",
+    "Damla için zorlanmış akış: Ranz–Marshall taşınım düzeltmesi doğrulanamadı (FLEX'te akış yoktu; veri setinde µg/düşük g akışlı damla için koşulları tam bir ölçüm bulunamadı, Aşama 5c).",
+    "Görünmeyen soğuk alev: sıcak alev söndükten sonra damla yanmayı sürdürebilir — yangın bitti sanılabilir. (tahmini soğuk alev süresi ~0.0 s, kaba)",
+    "Güven düşük (0/100): bu koşula yakın deney az ya da motor orada zayıf."
+   ]
+  },
+  "etilen_iss": {
+   "risk_model": "ÇOK YÜKSEK",
+   "p_model": 0.961,
+   "p_birlesik": 0.446,
+   "agirliklar": {
+    "model": 0.459,
+    "motor": 0.541
+   },
+   "motor": "gaz",
+   "motor_yanma": 0.01,
+   "guven_v2": 76,
+   "bant": "yüksek",
+   "tanima": "listede: 'ethylene'",
+   "tanima_kaynagi": "liste",
+   "girdi": {
+    "malzeme": "ethylene",
+    "oksijen": 21,
+    "basinc": 101.3,
+    "g": 0.0001,
+    "akis": null,
+    "kalinlik": null,
+    "numune_tipi": "flat_burner",
+    "yakit_turu": "gaz",
+    "akis_yonu": null,
+    "seyreltici": "n2"
+   },
+   "uyarilar": [
+    "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
+    "debi / akış verilmedi: varsayılan kullanıldı (küre 1 mg/s, düz 2.5 g/m²s, jet 30 cm/s)",
+    "Model ve motor çelişiyor: model 'yanar', motor 'söner' diyor."
+   ]
+  },
+  "metan_iss": {
+   "risk_model": "ÇOK YÜKSEK",
+   "p_model": 0.969,
+   "p_birlesik": 0.969,
+   "agirliklar": {
+    "model": 1,
+    "motor": 0
+   },
+   "motor": "gaz",
+   "motor_yanma": 0.986,
+   "guven_v2": 32,
+   "bant": "düşük",
+   "tanima": "listede: 'methane'",
+   "tanima_kaynagi": "liste",
+   "girdi": {
+    "malzeme": "methane",
+    "oksijen": 21,
+    "basinc": 101.3,
+    "g": 0.0001,
+    "akis": null,
+    "kalinlik": null,
+    "numune_tipi": "gas_jet",
+    "yakit_turu": "gaz",
+    "akis_yonu": null,
+    "seyreltici": "n2"
+   },
+   "uyarilar": [
+    "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
+    "debi / akış verilmedi: varsayılan kullanıldı (küre 1 mg/s, düz 2.5 g/m²s, jet 30 cm/s)",
+    "Gaz motoru bu koşulda kalibre değil (jet geometrisi için etiketli PSI verisi yok (SLICE tablosu yok): kopma/üflenme literatür varsayımı; yakıt ['CH4'] etiketli veriyle kalibre edilmedi): motor ağırlığı 0."
+   ]
+  },
+  "lexan_iss": {
+   "risk_model": "ÇOK YÜKSEK",
+   "p_model": 0.955,
+   "p_birlesik": 0.955,
+   "agirliklar": {
+    "model": 1,
+    "motor": 0
+   },
+   "motor": "hafif",
+   "motor_yanma": 0.968,
+   "guven_v2": 15,
+   "bant": "düşük",
+   "tanima": "kütüphane: 'Lexan' -> polycarbonate (model: polycarbonate, motor: pmma)",
+   "tanima_kaynagi": "kutuphane",
+   "girdi": {
+    "malzeme": "polycarbonate",
+    "oksijen": 21,
+    "basinc": 101.3,
+    "g": 0.0001,
+    "akis": null,
+    "kalinlik": 0.25,
+    "numune_tipi": "thin_sheet",
+    "yakit_turu": "kati",
+    "akis_yonu": null,
+    "seyreltici": "n2"
+   },
+   "uyarilar": [
+    "'Lexan' kütüphanede: Polikarbonat (veri setinde 7 nokta var); risk modeli 'polycarbonate', motor “pmma”.",
+    "'Polikarbonat' motorda kalibre değil: motor ağırlığı 0 (benzer malzeme: pmma).",
+    "zayıf eşleme: pmma",
+    "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
+    "Güven düşük (0/100): bu koşula yakın deney az ya da motor orada zayıf."
+   ]
+  },
+  "ipa_iss": {
+   "risk_model": "ÇOK YÜKSEK",
+   "p_model": 0.997,
+   "p_birlesik": 0.997,
+   "agirliklar": {
+    "model": 1,
+    "motor": 0
+   },
+   "motor": "damla",
+   "motor_yanma": 0.978,
+   "guven_v2": 48,
+   "bant": "düşük",
+   "tanima": "kütüphane: 'IPA' -> isopropanol (model: 1-propanol, motor: 1-propanol)",
+   "tanima_kaynagi": "kutuphane",
+   "girdi": {
+    "malzeme": "1-propanol",
+    "oksijen": 21,
+    "basinc": 101.3,
+    "g": 0.0001,
+    "akis": null,
+    "kalinlik": null,
+    "numune_tipi": "droplet",
+    "yakit_turu": "sivi",
+    "akis_yonu": null,
+    "seyreltici": "n2"
+   },
+   "uyarilar": [
+    "'IPA' kütüphanede: İzopropanol (IPA) (veri yok); risk modeli '1-propanol', motor “1-propanol”.",
+    "'İzopropanol (IPA)' motorda kalibre değil: motor ağırlığı 0 (benzer malzeme: 1-propanol).",
+    "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
+    "Bu yakıt motorda kalibre edilmedi (1-propanol; FLEX'te yalnız n-heptan ve metanol var): damla motoru sonucu düşük ağırlıklı ya da ağırlıksız.",
+    "Damla için zorlanmış akış: Ranz–Marshall taşınım düzeltmesi doğrulanamadı (FLEX'te akış yoktu; veri setinde µg/düşük g akışlı damla için koşulları tam bir ölçüm bulunamadı, Aşama 5c)."
+   ]
+  },
+  "kevlar_iss": {
+   "risk_model": "ORTA",
+   "p_model": 0.442,
+   "p_birlesik": 0.442,
+   "agirliklar": {
+    "model": 1,
+    "motor": 0
+   },
+   "motor": "hafif",
+   "motor_yanma": 0.963,
+   "guven_v2": 39,
+   "bant": "düşük",
+   "tanima": "kütüphane: 'kevlar' -> kevlar (model: nomex, motor: nomex)",
+   "tanima_kaynagi": "kutuphane",
+   "girdi": {
+    "malzeme": "nomex",
+    "oksijen": 21,
+    "basinc": 101.3,
+    "g": 0.0001,
+    "akis": null,
+    "kalinlik": 0.37,
+    "numune_tipi": "fabric",
+    "yakit_turu": "kati",
+    "akis_yonu": null,
+    "seyreltici": "n2"
+   },
+   "uyarilar": [
+    "'kevlar' kütüphanede: Kevlar (veri setinde 1 nokta var); risk modeli 'nomex', motor “nomex”.",
+    "'Kevlar' motorda kalibre değil: motor ağırlığı 0 (benzer malzeme: nomex).",
+    "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
+    "Model ve motor çelişiyor: model 'söner', motor 'yanar' diyor."
+   ]
+  },
+  "hidrazin_iss": {
+   "risk_model": "ÇOK YÜKSEK",
+   "p_model": 0.988,
+   "p_birlesik": 0.988,
+   "agirliklar": {
+    "model": 1,
+    "motor": 0
+   },
+   "motor": null,
+   "motor_yanma": null,
+   "guven_v2": 9,
+   "bant": "düşük",
+   "tanima": "kütüphane: 'hidrazin' -> hydrazine (model: hydrazine, motor: yok)",
+   "tanima_kaynagi": "kutuphane",
+   "girdi": {
+    "malzeme": "hydrazine",
+    "oksijen": 21,
+    "basinc": 101.3,
+    "g": 0.0001,
+    "akis": null,
+    "kalinlik": null,
+    "numune_tipi": "pool",
+    "yakit_turu": "sivi",
+    "akis_yonu": null,
+    "seyreltici": "n2"
+   },
+   "uyarilar": [
+    "'hidrazin' kütüphanede: MMH / hidrazin (itici) (veri yok); risk modeli 'hydrazine', motor yok.",
+    "Uygun motor yok: yalnız risk modeli kullanıldı.",
+    "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
+    "Güven düşük (0/100): bu koşula yakın deney az ya da motor orada zayıf."
+   ]
+  },
+  "asdfgh": {
+   "risk_model": null,
+   "p_model": null,
+   "p_birlesik": null,
+   "agirliklar": null,
+   "motor": null,
+   "motor_yanma": null,
+   "guven_v2": null,
+   "bant": null,
+   "tanima": "tanınmadı (reddedildi, kaynak: onbellek)",
+   "tanima_kaynagi": "onbellek",
+   "girdi": {
+    "malzeme": "asdfgh",
+    "oksijen": 21,
+    "basinc": 101.3,
+    "g": 0.0001,
+    "akis": null,
+    "kalinlik": null,
+    "numune_tipi": null,
+    "yakit_turu": null,
+    "akis_yonu": null,
+    "seyreltici": "n2"
+   },
+   "uyarilar": [
+    "'asdfgh' malzemesi tanınmadı, listeden seçin (LLM önerisi denetimden geçmedi: LLM bunu gerçek bir malzeme olarak tanımadı (benzer_malzeme null))."
+   ]
+  },
+  "internetsiz_pmma": {
+   "risk_model": "ÇOK YÜKSEK",
+   "p_model": 0.972,
+   "p_birlesik": 0.971,
+   "agirliklar": {
+    "model": 0.622,
+    "motor": 0.378
+   },
+   "motor": "hafif",
+   "motor_yanma": 0.968,
+   "guven_v2": 85,
+   "bant": "yüksek",
+   "tanima": "listede: 'pmma'",
+   "tanima_kaynagi": "liste",
+   "girdi": {
+    "malzeme": "pmma",
+    "oksijen": 21,
+    "basinc": 101.3,
+    "g": 0.0001,
+    "akis": null,
+    "kalinlik": 0.2,
+    "numune_tipi": "thin_sheet",
+    "yakit_turu": "kati",
+    "akis_yonu": null,
+    "seyreltici": "n2"
+   },
+   "uyarilar": [
+    "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı."
+   ],
+   "llm": {
+    "durum": "hata",
+    "metin": "LLM yorumu alınamadı (bağlantı hatası: [Errno 111] Connection refused)"
+   }
+  },
+  "supurme": {
+   "n": 17,
+   "hata": 0,
+   "sure": 2.266
+  },
+  "vaka": {
+   "id": "de251b52f375",
+   "acilan": "de251b52f375",
+   "baslik": "uçtan uca deneme · PMMA ISS"
+  },
+  "topluluk": {
+   "son_id": 1,
+   "liste": [
+    {
+     "id": 1,
+     "malzeme": "pmma",
+     "durum": "onayli",
+     "etiketler": [
+      "celiski"
+     ]
+    }
+   ],
+   "paket": "/path/to/ahut-flare/of_gorsel/ekran/uctan_uca/topluluk_paket.json"
+  },
+  "video": {
+   "dosya": 37,
+   "video": 22
+  }
+ },
+ "hatalar": [],
+ "kaydet_mesaj": {
+  "k": 1,
+  "mesajlar": [
+   {
+    "tur": "bilgi",
+    "metin": "Kaydedildi: uçtan uca deneme · PMMA ISS",
+    "zaman": "06:31:53"
+   },
+   {
+    "tur": "bilgi",
+    "metin": "Süpürme tamamlandı: 17 nokta · Güvenlik eşiği 16,52 %",
+    "zaman": "06:31:52"
+   },
+   {
+    "tur": "bilgi",
+    "metin": "Süpürülüyor: Oksijen · 17 nokta",
+    "zaman": "06:31:49"
+   }
+  ]
+ }
+}

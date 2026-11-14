@@ -1,0 +1,110 @@
+{
+ "tarih": "2026-11-12",
+ "karar": "U eğrisi grafiği sunum paketinden çıkarıldı; hafif motor değiştirilmedi (düzeltme dürüst testi kötüleştirdi)",
+ "bilesenler_durgun_PMMA_0.2mm": {
+  "g": [
+   0.0001,
+   0.001,
+   0.01,
+   0.165,
+   0.38,
+   1.0
+  ],
+  "risk_modeli": [
+   17.16,
+   16.26,
+   16.27,
+   16.23,
+   16.26,
+   16.31
+  ],
+  "hafif_motor": [
+   17.0,
+   8.0,
+   8.23,
+   11.16,
+   12.43,
+   14.24
+  ],
+  "birlesik": [
+   17.16,
+   14.77,
+   14.66,
+   14.95,
+   15.64,
+   16.14
+  ]
+ },
+ "literatur": {
+  "Takahashi_ug_MLOC_6cm_s": 14.7,
+  "Takahashi_1g_LOI": 17.0,
+  "LOI_0.2mm_FireTechnol2021": 17.5,
+  "BASS-II_PSI-25": "%15: 3–5 cm/s yanar, 2 cm/s söner",
+  "BASS_PSI-26_durgun": "%21,7'de bile söner"
+ },
+ "kaynak": "psi_etiketli*.csv'de ince katılar için %15 altında sönme etiketi yok; ince_kati Ta≈10342 K -> düşük O2'de yanma",
+ "denenen_duzeltme": {
+  "yontem": "hafif_motor.py'ye Takahashi çapa noktaları (µg 6 cm/s 15,7→1, 13,7→0; 1 g 18→1, 16→0), ağırlıklı kalibrasyon",
+  "sonuc": [
+   {
+    "agirlik": 0,
+    "U": [
+     17.25,
+     7.5,
+     10.0,
+     7.0,
+     8.25,
+     11.25,
+     12.5,
+     14.25
+    ],
+    "cv_auc_kati": 0.729
+   },
+   {
+    "agirlik": 10,
+    "U": [
+     13.75,
+     11.25,
+     13.5,
+     10.75,
+     12.25,
+     14.75,
+     15.75,
+     17.75
+    ],
+    "cv_auc_kati": 0.687
+   },
+   {
+    "agirlik": 30,
+    "U": [
+     21.5,
+     11.25,
+     13.75,
+     11.0,
+     12.5,
+     15.0,
+     16.25,
+     18.5
+    ],
+    "cv_auc_kati": 0.672
+   },
+   {
+    "agirlik": 100,
+    "U": [
+     null,
+     11.75,
+     14.0,
+     11.25,
+     12.75,
+     15.25,
+     16.5,
+     18.5
+    ],
+    "cv_auc_kati": 0.571
+   }
+  ],
+  "U_sirasi": "ISS durgun, ISS 2 cm/s, ISS 6 cm/s, 1e-3 g, 1e-2 g, Ay, Mars, Dünya (PMMA 0,125 mm)",
+  "karar": "GERİ ALINDI (dürüst test kötüleşti); hafif_motor.py ve parametreleri git'teki haliyle aynı"
+ },
+ "harita": "motor değişmediği için harita.csv yeniden hesaplanmadı; haritaya yalnız risk modelinin %50 sınırı eklendi (Ay ~%15,7, Mars ~%15,8 @70 kPa) ve not düşüldü"
+}

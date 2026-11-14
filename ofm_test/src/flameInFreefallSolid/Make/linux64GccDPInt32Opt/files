@@ -1,0 +1,5 @@
+SOURCE += sibalPyrolysis/sibalPyrolysis.C
+SOURCE += coupledPyrolysisVelocity/coupledPyrolysisVelocityFvPatchVectorField.C
+SOURCE += coupledPyrolysisSpecies/coupledPyrolysisSpeciesFvPatchScalarField.C
+
+LIB = $(FOAM_USER_LIBBIN)/libFlameInFreefallSolid

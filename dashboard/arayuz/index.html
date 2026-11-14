@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="tr" data-tema="acik">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' data: blob: file:; media-src 'self' file: blob: data:; img-src 'self' file: data: blob:">
+<title>AHUT FLARE</title>
+<link rel="icon" type="image/png" href="marka/favicon.png">
+<link rel="stylesheet" href="stil/temel.css">
+<link rel="stylesheet" href="stil/kabuk.css">
+<link rel="stylesheet" href="stil/icerik.css">
+<link rel="stylesheet" href="stil/izleyici.css">
+</head>
+<body>
+<div id="uyg">
+
+  <!-- ============================ MENÜ ÇUBUĞU ============================ -->
+  <div class="menucubugu" id="menucubugu">
+    <img class="menu-logo" src="marka/logo-yuvarlak-128.png" alt="AHUT" width="22" height="22">
+    <span class="menu-ad">AHUT&nbsp;<span class="flare">FLARE</span></span>
+
+    <div class="menu" data-menu="dosya">
+      <button class="menu-bas" data-d="menu.dosya">Dosya</button>
+      <div class="acilir" role="menu">
+        <button data-komut="yeni"><span data-d="komut.yeni">Yeni Vaka</span><kbd>Ctrl+N</kbd></button>
+        <button data-komut="ac"><span data-d="komut.ac">Vaka Aç…</span><kbd>Ctrl+O</kbd></button>
+        <button data-komut="kaydet"><span data-d="komut.kaydet">Kütüphaneye Kaydet</span><kbd>Ctrl+S</kbd></button>
+        <hr>
+        <button data-komut="ice"><span data-d="komut.ice">İçe Aktar (.ahut)…</span></button>
+        <button data-komut="disa"><span data-d="komut.disa">Dışa Aktar (.ahut)…</span></button>
+        <button data-komut="rapor"><span data-d="komut.rapor">Rapor Oluştur…</span></button>
+        <hr>
+        <button data-komut="klasor-veri"><span data-d="komut.klasorVeri">Veri Klasörünü Aç</span></button>
+        <button data-komut="klasor-render"><span data-d="komut.klasorRender">Render Klasörünü Aç</span></button>
+        <hr>
+        <button data-komut="cikis"><span data-d="komut.cikis">Çıkış</span></button>
+      </div>
+    </div>
+
+    <div class="menu" data-menu="duzen">
+      <button class="menu-bas" data-d="menu.duzen">Düzen</button>
+      <div class="acilir" role="menu">
+        <button data-komut="sifirla"><span data-d="komut.sifirla">Girdileri Varsayılana Döndür</span></button>
+        <button data-komut="onayar-iss"><span data-d="komut.onayarIss">Ön Ayar: ISS</span></button>
+        <button data-komut="onayar-mars"><span data-d="komut.onayarMars">Ön Ayar: Mars Üssü</span></button>
+        <button data-komut="onayar-ay"><span data-d="komut.onayarAy">Ön Ayar: Ay Üssü</span></button>
+      </div>
+    </div>
+
+    <div class="menu" data-menu="gorunum">
+      <button class="menu-bas" data-d="menu.gorunum">Görünüm</button>
+      <div class="acilir" role="menu">
+        <button data-komut="tema-acik"><span data-d="komut.temaAcik">Açık Tema</span><span class="isaret" id="isAcik"></span></button>
+        <button data-komut="tema-koyu"><span data-d="komut.temaKoyu">Koyu Tema</span><span class="isaret" id="isKoyu"></span></button>
+        <button data-komut="sunum"><span data-d="komut.sunum">Sunum Modu</span><kbd>F5</kbd></button>
+        <button data-komut="tamekran"><span data-d="komut.tamekran">Tam Ekran</span><kbd>F11</kbd></button>
+        <hr>
+        <button data-komut="panel-sifirla"><span data-d="komut.panelSifirla">Panel Düzenini Sıfırla</span></button>
+      </div>
+    </div>
+
+    <div class="menu" data-menu="birimler">
+      <button class="menu-bas" data-d="menu.birimler">Birimler</button>
+      <div class="acilir" role="menu">
+        <div class="acilir-bas" data-d="birim.basinc">Basınç</div>
+        <button data-birim="basinc:kPa">kPa<span class="isaret"></span></button>
+        <button data-birim="basinc:psi">psi<span class="isaret"></span></button>
+        <button data-birim="basinc:atm">atm<span class="isaret"></span></button>
+        <hr>
+        <div class="acilir-bas" data-d="birim.akis">Hava akışı</div>
+        <button data-birim="akis:cm/s">cm/s<span class="isaret"></span></button>
+        <button data-birim="akis:m/s">m/s<span class="isaret"></span></button>
+      </div>
+    </div>
+
+    <div class="menu" data-menu="araclar">
+      <button class="menu-bas" data-d="menu.araclar">Araçlar</button>
+      <div class="acilir" role="menu">
+        <button data-komut="coz"><span data-d="komut.coz">Çöz</span><kbd>F8</kbd></button>
+        <button data-komut="llm"><span data-d="komut.llm">Yapay Zeka Yorumu İste</span></button>
+        <hr>
+        <button data-komut="karsilastir"><span data-d="komut.karsilastir">Vaka Karşılaştır…</span></button>
+        <button data-komut="supur"><span data-d="komut.supur">Parametre Süpürmesi…</span></button>
+        <button data-komut="json"><span data-d="komut.json">Ham Sonucu JSON Olarak Göster</span></button>
+      </div>
+    </div>
+
+    <div class="menu" data-menu="profil">
+      <button class="menu-bas" data-d="menu.profil">Profil</button>
+      <div class="acilir" role="menu">
+        <button data-komut="profil-duzenle"><span data-d="komut.profilDuzenle">Profili Düzenle…</span></button>
+        <button data-komut="git-kutuphane"><span data-d="komut.gitKutuphane">Vaka Kütüphanem</span></button>
+        <button data-komut="git-topluluk"><span data-d="komut.gitTopluluk">Topluluk</span></button>
+      </div>
+    </div>
+
+    <div class="menu" data-menu="yardim">
+      <button class="menu-bas" data-d="menu.yardim">Yardım</button>
+      <div class="acilir" role="menu">
+        <button data-komut="git-baslangic"><span data-d="komut.gitBaslangic">Başlangıç Ekranı</span></button>
+        <button data-komut="kisayollar"><span data-d="komut.kisayollar">Klavye Kısayolları</span></button>
+        <button data-komut="hakkinda"><span data-d="komut.hakkinda">Hakkında</span></button>
+      </div>
+    </div>
+
+    <div class="menu-sag">
+      <button class="kucuk-dugme" id="dilDugme" title="Türkçe / English">EN</button>
+      <button class="kucuk-dugme profil-dugme" data-komut="profil-duzenle">
+        <span class="avatar" id="avatar">?</span><span id="profilAd" data-d="genel.profilYok">Profil tanımlı değil</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- ============================ ARAÇ ÇUBUĞU ============================ -->
+  <div class="aracubugu">
+    <button class="arac" data-komut="yeni" data-d-t="komut.yeni" title="Yeni Vaka">
+      <svg viewBox="0 0 16 16"><path d="M3 1.5h6l4 4v9h-10z"/><path d="M9 1.5v4h4"/></svg><span data-d="komut.yeniK">Yeni</span>
+    </button>
+    <button class="arac" data-komut="ac" title="Vaka Aç">
+      <svg viewBox="0 0 16 16"><path d="M1.5 4h5l1.5 2h6.5v8h-13z"/></svg><span data-d="komut.acK">Aç</span>
+    </button>
+    <button class="arac" data-komut="kaydet" title="Kaydet">
+      <svg viewBox="0 0 16 16"><path d="M2 2h9l3 3v9h-12z"/><path d="M5 2v4h5V2"/><rect x="4.5" y="9" width="7" height="5"/></svg><span data-d="komut.kaydetK">Kaydet</span>
+    </button>
+    <i class="ayrac"></i>
+    <button class="arac birincil" id="btnCoz" data-komut="coz" title="Çöz (F8)">
+      <svg viewBox="0 0 16 16"><path d="M3.5 2l10 6-10 6z"/></svg><span data-d="komut.cozK">ÇÖZ</span>
+    </button>
+    <select class="giris" id="cozumTuru" title="Çözüm türü" style="height:24px;max-width:150px"></select>
+    <button class="arac" id="btnLlm" data-komut="llm" title="Yapay zeka yorumu">
+      <svg viewBox="0 0 16 16"><path d="M2 3h12v8H9l-3 3v-3H2z"/></svg><span data-d="komut.llmK">Yorum</span>
+    </button>
+    <i class="ayrac"></i>
+    <button class="arac" data-komut="rapor" title="Rapor oluştur">
+      <svg viewBox="0 0 16 16"><path d="M3 1.5h7l3 3v10h-10z"/><path d="M5 7h6M5 10h6M5 13h4"/></svg><span data-d="komut.raporK">Rapor</span>
+    </button>
+    <button class="arac" data-komut="paylas" title="GitHub'da paylaş">
+      <svg viewBox="0 0 16 16"><path d="M8 11V2"/><path d="M4.5 5.5L8 2l3.5 3.5"/><path d="M2.5 10v4h11v-4"/></svg><span data-d="komut.paylasK">Paylaş</span>
+    </button>
+    <i class="ayrac"></i>
+    <button class="arac" data-komut="sunum" title="Sunum modu (F5)">
+      <svg viewBox="0 0 16 16"><rect x="1.5" y="2.5" width="13" height="9"/><path d="M8 11.5v3M5 14.5h6"/></svg><span data-d="komut.sunumK">Sunum</span>
+    </button>
+    <div class="arac-sag" id="aracDurum"></div>
+  </div>
+
+  <!-- ============================ SEKME ŞERİDİ ============================ -->
+  <div class="sekmeserit" role="tablist" id="sekmeserit">
+    <button role="tab" data-sekme="baslangic" aria-selected="true" data-d="sekme.baslangic">Başlangıç</button>
+    <button role="tab" data-sekme="calisma" aria-selected="false" data-d="sekme.calisma">Model</button>
+    <button role="tab" data-sekme="kutuphane" aria-selected="false" data-d="sekme.kutuphane">Kütüphane</button>
+    <button role="tab" data-sekme="topluluk" aria-selected="false" data-d="sekme.topluluk">Topluluk</button>
+  </div>
+
+  <!-- ============================ GÖVDE ============================ -->
+  <div class="govde" id="govde">
+
+    <!-- ---------- BAŞLANGIÇ ---------- -->
+    <section class="ekran acik" id="ek-baslangic"></section>
+
+    <!-- ---------- ÇALIŞMA (kurulum + çözüm + sonuçlar tek ekranda) ----------
+         ağaç + ayrıntılar | görüntü alanı | sağ panel | dikey sekmeler -->
+    <section class="ekran calisma" id="ek-calisma">
+      <div class="sutun sol" id="sutunSol">
+        <div class="panel" id="panelAgac">
+          <div class="panel-bas"><span data-d="panel.anahat">Anahat</span></div>
+          <div class="panel-ic kaydir" id="agac"></div>
+        </div>
+        <div class="bolucu yatay" data-bolucu="orta"></div>
+        <div class="panel" id="panelAyrinti">
+          <div class="panel-bas"><span id="ayrintiBaslik" data-d="panel.ayrintilar">Ayrıntılar</span></div>
+          <div class="panel-ic kaydir" id="ayrintilar"></div>
+        </div>
+      </div>
+
+      <div class="bolucu dikey" data-bolucu="sol"></div>
+
+      <div class="panel gorselpanel" id="panelGorsel">
+        <div class="panel-bas">
+          <span id="gorselBaslik">—</span>
+          <span class="panel-bas-sag" id="gorselArac"></span>
+        </div>
+        <div class="panel-ic kaydir" id="gorsel"></div>
+        <div class="gt-gecis" id="gtGecis" role="tablist" hidden>
+          <button data-gt="grafik" class="secili" data-d="panel.grafik">Grafik</button>
+          <button data-gt="tablo" data-d="panel.tablo">Tablo Verisi</button>
+        </div>
+      </div>
+
+      <div class="bolucu dikey" data-bolucu="sag" id="bolucuSag"></div>
+
+      <div class="panel" id="panelAlt">
+        <div class="panel-bas">
+          <span id="altBaslik" data-d="panel.sistem">Sistem</span>
+          <span class="panel-bas-sag"><button class="panel-kapat" id="altKapat" title="Paneli gizle">×</button></span>
+        </div>
+        <div class="panel-ic kaydir" id="altIc"></div>
+      </div>
+
+    </section>
+
+    <!-- Eski "Çözüm" ekranı kaldırıldı: çözüm ilerlemesi görüntü alanında ve durum çubuğunda gösterilir. -->
+
+    <!-- ---------- KÜTÜPHANE ---------- -->
+    <section class="ekran" id="ek-kutuphane"></section>
+
+    <!-- ---------- TOPLULUK ---------- -->
+    <section class="ekran" id="ek-topluluk"></section>
+  </div>
+
+  <!-- ============================ DURUM ÇUBUĞU ============================ -->
+  <div class="durumcubugu">
+    <span class="nokta" id="dMotor" data-d="durum.motorYukleniyor">Model yükleniyor…</span>
+    <span id="dVaka">—</span>
+    <button class="db-alan" id="dMesaj" data-alt-ac="mesaj"></button>
+    <button class="db-alan" id="dSistem" data-alt-ac="sistem" data-d="panel.sistem">Sistem</button>
+    <span id="dSure"></span>
+    <span class="db-sag" id="dBirim"></span>
+    <span id="dBaglanti"></span>
+    <span id="dCpu"></span>
+    <span id="dSurum"></span>
+  </div>
+</div>
+
+<div class="mesaj-popup" id="mesajPopup" hidden></div>
+<div class="kayan" id="kayan" role="status"></div>
+<div class="ortu" id="ortu" hidden><div class="pencere" id="pencereIc" role="dialog" aria-modal="true"></div></div>
+
+<script src="js/dil.js"></script>
+<script src="js/kopru.js"></script>
+<script src="js/grafik.js"></script>
+<script src="js/kabuk.js"></script>
+<script src="vendor/three.min.js"></script>
+<script src="js/sahne3b.js"></script>
+<script src="js/izleyici.js"></script>
+<script src="js/ofm.js"></script>
+<script src="js/ayrintili.js"></script>
+<script src="js/uygulama.js"></script>
+</body>
+</html>

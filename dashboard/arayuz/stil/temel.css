@@ -1,0 +1,183 @@
+/* ======================================================================
+   AHUT FLARE — 1. TEMEL
+   Marka renkleri, yazı tipi, sıfırlama ve ortak denetimler.
+   Renkleri değiştirmek için yalnızca "MARKA" bölümüne dokunun.
+   ====================================================================== */
+
+/* ---------- MARKA ---------- */
+:root{
+  --marka-kirmizi:#c8010a;
+  --marka-mavi:#0a378d;
+
+  --yazi-tipi:"Segoe UI",Tahoma,system-ui,-apple-system,"Noto Sans","DejaVu Sans",sans-serif;
+  --tek-aralik:"Consolas","Cascadia Mono","DejaVu Sans Mono",ui-monospace,monospace;
+}
+
+/* Renk grupları:
+   - risk ölçeği (--yesil/--sari/--turuncu/--kirmizi/--gri): YALNIZ risk göstergesi
+     (rozet, risk levhası, risk haritası, seviye rengi).
+   - durum (--ok/--uyari/--hata): mesajlar, doğrulama, ağaç durum noktaları.
+   - grafik (--g-*): seriler ve veri noktaları; tema değişkeninden okunur. */
+
+/* ---------- AÇIK TEMA (varsayılan) — VS Code "Light Modern" paleti ---------- */
+:root,:root[data-tema="acik"]{
+  --ikon:#424242;             /* icon.foreground */
+  --zemin:#f8f8f8;
+  --kabuk:#f8f8f8;            /* titleBar / activityBar / statusBar */
+  --kabuk2:#f8f8f8;           /* sekme şeridi (editorGroupHeader) */
+  --panel:#f8f8f8;            /* sideBar / panel */
+  --panel-bas:#f8f8f8;        /* sideBarSectionHeader */
+  --panel-ic:#ffffff;         /* editor.background: ağaç, tablolar, görüntü alanı */
+  --cizgi:#e5e5e5;            /* sideBar / panel / tab border */
+  --cizgi-acik:#cecece;       /* input.border */
+  --yazi:#3b3b3b;             /* foreground */
+  --sonuk:#616161;            /* descriptionForeground */
+  --cok-sonuk:#868686;
+  --vurgu:#005fb8;            /* button.background / focusBorder */
+  --vurgu2:#005fb8;           /* textLink */
+  --vurgu-yazi:#ffffff;
+  --secim:#e8e8e8;            /* list.activeSelectionBackground */
+  --secim-kenar:#005fb8;      /* list.focusOutline */
+  --girdi:#ffffff;            /* input.background */
+  --girdi-kenar:#cecece;
+  --golge:none;
+  --cam:#f8f8f8;
+  --ortu:rgba(0,0,0,.25);
+
+  --yesil:#2e9e4f; --sari:#e0b000; --turuncu:#e46c0a; --kirmizi:#c00000; --gri:#8c8c8c;
+  --rozet-yazi:#1e1e1e;
+  --r-yazi-1:#1e7a3c; --r-yazi-2:#8a6d00; --r-yazi-3:#b4530a; --r-yazi-4:#c00000;
+  --ok:#388a34; --uyari:#bf8803; --hata:#e51400;   /* testing.iconPassed / editorWarning / editorError */
+
+  --g-seri2:#c05000;
+  --g-yanar:#e51400; --g-sondu:#388a34;
+  --g-isaret:#ffffff; --g-hale:#000000;
+}
+
+/* ---------- KOYU TEMA (Görünüm menüsünden) — VS Code "Dark Modern" paleti ---------- */
+:root[data-tema="koyu"]{
+  color-scheme:dark;
+  --ikon:#cccccc;             /* icon.foreground */
+  --zemin:#181818;
+  --kabuk:#181818;            /* titleBar / activityBar / statusBar */
+  --kabuk2:#181818;           /* editorGroupHeader */
+  --panel:#181818;            /* sideBar / panel */
+  --panel-bas:#181818;        /* sideBarSectionHeader */
+  --panel-ic:#1f1f1f;         /* editor.background */
+  --cizgi:#2b2b2b;            /* sideBar / panel / tab border */
+  --cizgi-acik:#3c3c3c;       /* input.border */
+  --yazi:#cccccc;             /* foreground */
+  --sonuk:#9d9d9d;            /* descriptionForeground */
+  --cok-sonuk:#6e7681;
+  --vurgu:#0078d4;            /* button.background / focusBorder */
+  --vurgu2:#4daafc;           /* textLink */
+  --vurgu-yazi:#ffffff;
+  --secim:#04395e;            /* list.activeSelectionBackground */
+  --secim-kenar:#0078d4;
+  --girdi:#313131;            /* input.background */
+  --girdi-kenar:#3c3c3c;
+  --golge:none;
+  --cam:#181818;
+  --ortu:rgba(0,0,0,.55);
+
+  --yesil:#34d399; --sari:#fbbf24; --turuncu:#fb923c; --kirmizi:#ff4d5a; --gri:#6e7681;
+  --rozet-yazi:#07101e;
+  --r-yazi-1:#34d399; --r-yazi-2:#fbbf24; --r-yazi-3:#fb923c; --r-yazi-4:#ff4d5a;
+  --ok:#89d185; --uyari:#cca700; --hata:#f14c4c;   /* testing.iconPassed / editorWarning / editorError */
+
+  --g-seri2:#d18616;
+  --g-yanar:#f14c4c; --g-sondu:#89d185;
+  --g-isaret:#ffffff; --g-hale:#000000;
+}
+
+/* ---------- SIFIRLAMA ---------- */
+*{box-sizing:border-box}
+/* hidden özniteliği her zaman kazanmalı: display veren bir sınıf kuralı
+   (ör. .ortu{display:grid}) tarayıcının [hidden] kuralını ezer ve gizli
+   sanılan katman ekranı kaplayıp bütün tıklamaları yutar. */
+[hidden]{display:none !important}
+html,body{margin:0;height:100%;overflow:hidden}
+body{
+  background:var(--zemin);color:var(--yazi);
+  font:400 12px/1.45 var(--yazi-tipi);
+  -webkit-font-smoothing:antialiased;
+  user-select:none;                       /* kabuk seçilemez; içerik alanları aşağıda açılır */
+}
+button,input,select,textarea{font:inherit;color:inherit;margin:0}
+button{background:none;border:0;cursor:pointer}
+h1,h2,h3,h4{margin:0;font-weight:600}
+a{color:var(--vurgu2);text-decoration:none}
+a:hover{text-decoration:underline}
+hr{border:0;border-top:1px solid var(--cizgi);margin:4px 0}
+:focus-visible{outline:2px solid var(--vurgu);outline-offset:1px}
+::selection{background:var(--secim);color:var(--yazi)}
+
+/* Metin seçilebilir alanlar */
+.secilebilir,.secilebilir *{user-select:text}
+
+/* Kaydırma çubukları: ince, araç programı görünümü */
+.kaydir{overflow:auto}
+*{scrollbar-color:var(--cizgi-acik) transparent}
+*::-webkit-scrollbar{width:11px;height:11px}
+*::-webkit-scrollbar-track{background:transparent}
+*::-webkit-scrollbar-thumb{background:var(--cizgi-acik);border:3px solid transparent;background-clip:content-box;}
+*::-webkit-scrollbar-thumb:hover{background:var(--vurgu);border:3px solid transparent;background-clip:content-box}
+*::-webkit-scrollbar-corner{background:transparent}
+
+/* ---------- ORTAK DENETİMLER ---------- */
+.dugme{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--panel-bas);border:1px solid var(--cizgi-acik);
+  padding:5px 12px;font-weight:700;font-size:12.5px;color:var(--yazi);white-space:nowrap;
+}
+.dugme:hover{border-color:var(--vurgu);background:var(--secim)}
+.dugme:active{}
+.dugme[disabled]{opacity:.42;cursor:not-allowed}
+.dugme.birincil{background:var(--vurgu);border-color:var(--vurgu);color:var(--vurgu-yazi)}
+.dugme.birincil:hover{filter:brightness(1.2);background:var(--vurgu)}
+.dugme.tehlike{border-color:var(--hata);color:var(--hata)}
+.dugme.tehlike:hover{background:color-mix(in srgb,var(--hata) 16%,transparent)}
+.dugme.kucuk{padding:2px 9px;font-size:11.5px}
+.dugme svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round}
+
+.giris{
+  width:100%;background:var(--girdi);color:var(--yazi);
+  border:1px solid var(--girdi-kenar);padding:4px 7px;font-size:12.5px;
+  user-select:text;
+}
+.giris:hover{border-color:var(--cizgi-acik)}
+.giris:focus{outline:none;border-color:var(--vurgu);}
+.giris.hatali{border-color:var(--hata);}
+.giris.varsayilan{color:var(--sonuk);font-style:italic}
+input[type=number].giris{-moz-appearance:textfield}
+input[type=number].giris::-webkit-outer-spin-button,
+input[type=number].giris::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+select.giris{-webkit-appearance:none;appearance:none;cursor:pointer;padding-right:20px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23505050' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 6px center}
+textarea.giris{resize:vertical;min-height:62px;line-height:1.5}
+label.onay{display:inline-flex;align-items:center;gap:6px;cursor:pointer}
+input[type=checkbox]{accent-color:var(--vurgu);width:13px;height:13px;cursor:pointer}
+input[type=range]{width:100%;accent-color:var(--vurgu);cursor:pointer}
+
+/* ---------- ROZETLER VE ETİKETLER ---------- */
+.rozet{display:inline-block;padding:1px 9px;font-weight:700;font-size:10.5px;
+  letter-spacing:.4px;color:var(--rozet-yazi);white-space:nowrap}
+.r-DUSUK{background:var(--yesil)}
+.r-ORTA{background:var(--sari)}
+.r-YUKSEK{background:var(--turuncu)}
+.r-COK-YUKSEK{background:var(--kirmizi);color:#fff}
+.r-yok{background:var(--gri);color:#fff}
+.etiket{display:inline-block;padding:1px 7px;background:var(--panel-bas);
+  border:1px solid var(--cizgi);color:var(--sonuk);font-size:10.5px;font-weight:700}
+.etiket.uyari{border-color:var(--uyari);color:var(--uyari);background:transparent}
+
+.sonuk{color:var(--sonuk)}
+.sayi{font-variant-numeric:tabular-nums}
+.tek{font-family:var(--tek-aralik);font-size:11.5px}
+
+/* ---------- YÜKLENİYOR ---------- */
+.donen::before{content:"";display:inline-block;width:11px;height:11px;border:2px solid var(--cizgi-acik);
+  border-top-color:var(--vurgu);margin-right:7px;vertical-align:-1px;animation:don .85s linear infinite}
+@keyframes don{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){.donen::before{animation:none}}

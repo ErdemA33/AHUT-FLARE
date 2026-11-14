@@ -1,0 +1,369 @@
+{
+ "C2H5OH": {
+  "etiketli_tum": 51,
+  "etiketli_kosullu": 25,
+  "yanan": 25,
+  "makale": 8,
+  "kaynak": {
+   "gemma3_test": 25
+  },
+  "g": {
+   "0.0001": 25
+  },
+  "K_olcum_sayisi": 8,
+  "K_olcum": [
+   {
+    "makale": "10.1016_j.proci.2006.08.087",
+    "g": 0.0001,
+    "d0": 0.015,
+    "O2": 30.0,
+    "K": "0.96 mm2/s",
+    "supheli": "evet"
+   },
+   {
+    "makale": "10.1016_j.proci.2006.08.087",
+    "g": 0.0001,
+    "d0": 0.015,
+    "O2": 30.0,
+    "K": "0.56 mm2/s",
+    "supheli": "evet"
+   },
+   {
+    "makale": "10.1016_j.proci.2006.08.087",
+    "g": 0.0001,
+    "d0": 0.015,
+    "O2": 30.0,
+    "K": "0.55 mm2/s",
+    "supheli": "evet"
+   },
+   {
+    "makale": "10.1016_j.proci.2014.06.043",
+    "g": 0.0001,
+    "d0": 0.56,
+    "O2": 21.0,
+    "K": "0.613 mm2/s",
+    "supheli": "evet"
+   },
+   {
+    "makale": "10.1016_s0082-0784_82_80278-6",
+    "g": 1.6,
+    "d0": 1.3,
+    "O2": NaN,
+    "K": "0.9 mm2/s",
+    "supheli": "evet"
+   },
+   {
+    "makale": "10.1016_s1540-7489_02_80316-9",
+    "g": 0.0001,
+    "d0": NaN,
+    "O2": NaN,
+    "K": "0.6 mm2/s",
+    "supheli": "evet"
+   },
+   {
+    "makale": "10.1080_00102200903074154",
+    "g": NaN,
+    "d0": 1.9,
+    "O2": 35.0,
+    "K": "1850 mm2/s",
+    "supheli": "evet"
+   },
+   {
+    "makale": "10.1080_00102200903074154",
+    "g": NaN,
+    "d0": 1.6,
+    "O2": 30.0,
+    "K": "2301 mm2/s",
+    "supheli": "evet"
+   }
+  ],
+  "kalibre_degil_lnA": 0.0,
+  "kalibre_degil": {
+   "dogruluk": 1.0,
+   "auc": null,
+   "bce_ort": 0.01
+  },
+  "makale_dis_cv": {
+   "dogruluk": 1.0,
+   "auc": null,
+   "bce_ort": 0.01
+  },
+  "cv_lnA_secimleri": [
+   -2.0,
+   -2.0,
+   -3.0,
+   -2.0,
+   -2.0,
+   -2.0,
+   -2.0,
+   -2.0
+  ],
+  "tum_veri_lnA": -2.0,
+  "izgara": [
+   -3.0,
+   3.0
+  ]
+ },
+ "NC10H22": {
+  "etiketli_tum": 40,
+  "etiketli_kosullu": 10,
+  "yanan": 10,
+  "makale": 6,
+  "kaynak": {
+   "gemma3_test": 10
+  },
+  "g": {
+   "0.0001": 10
+  },
+  "K_olcum_sayisi": 21,
+  "K_olcum": [
+   {
+    "makale": "10.1007_bf02870972",
+    "g": 0.0001,
+    "d0": NaN,
+    "O2": NaN,
+    "K": "0.96 mm2/s",
+    "supheli": "evet"
+   },
+   {
+    "makale": "10.1007_bf02870972",
+    "g": 0.0001,
+    "d0": NaN,
+    "O2": NaN,
+    "K": "0.78 mm2/s",
+    "supheli": "evet"
+   },
+   {
+    "makale": "10.1007_bf02870972",
+    "g": 0.0001,
+    "d0": NaN,
+    "O2": NaN,
+    "K": "0.63 mm2/s",
+    "supheli": "evet"
+   },
+   {
+    "makale": "10.1007_bf02870972",
+    "g": 0.0001,
+    "d0": NaN,
+    "O2": NaN,
+    "K": "1.14 mm2/s",
+    "supheli": "evet"
+   },
+   {
+    "makale": "10.1007_bf02870972",
+    "g": 0.0001,
+    "d0": NaN,
+    "O2": NaN,
+    "K": "0.66 mm2/s",
+    "supheli": "evet"
+   },
+   {
+    "makale": "10.1007_bf02870972",
+    "g": 0.0001,
+    "d0": NaN,
+    "O2": NaN,
+    "K": "0.72 mm2/s",
+    "supheli": "evet"
+   },
+   {
+    "makale": "10.1016_0094-5765_88_90008-2",
+    "g": 0.0001,
+    "d0": NaN,
+    "O2": NaN,
+    "K": "0.66 mm2/s",
+    "supheli": "evet"
+   },
+   {
+    "makale": "10.1063_1.38986",
+    "g": 0.0001,
+    "d0": NaN,
+    "O2": NaN,
+    "K": "0.63 mm2/s",
+    "supheli": "evet"
+   },
+   {
+    "makale": "10.1063_1.38986",
+    "g": 1.0,
+    "d0": NaN,
+    "O2": NaN,
+    "K": "0.66 mm2/s",
+    "supheli": "evet"
+   },
+   {
+    "makale": "10.1063_1.38986",
+    "g": 1.0,
+    "d0": NaN,
+    "O2": NaN,
+    "K": "0.81 mm2/s",
+    "supheli": "evet"
+   },
+   {
+    "makale": "10.1063_1.38986",
+    "g": 0.0001,
+    "d0": NaN,
+    "O2": NaN,
+    "K": "0.67 mm2/s",
+    "supheli": "evet"
+   },
+   {
+    "makale": "10.1080_00102202.2016.1225730",
+    "g": 0.0001,
+    "d0": NaN,
+    "O2": NaN,
+    "K": "1 mm^2/s",
+    "supheli": "evet"
+   },
+   {
+    "makale": "10.1080_00102202.2016.1225730",
+    "g": 0.0001,
+    "d0": NaN,
+    "O2": NaN,
+    "K": "0.75 mm^2/s",
+    "supheli": "evet"
+   },
+   {
+    "makale": "10.1080_00102209608935508",
+    "g": NaN,
+    "d0": NaN,
+    "O2": NaN,
+    "K": "0.86 mm2/s",
+    "supheli": "evet"
+   },
+   {
+    "makale": "10.1080_00102209608935508",
+    "g": NaN,
+    "d0": NaN,
+    "O2": NaN,
+    "K": "1.01 mm2/s",
+    "supheli": "evet"
+   },
+   {
+    "makale": "10.2514_3.51103",
+    "g": NaN,
+    "d0": NaN,
+    "O2": 40.0,
+    "K": "0.952 mm2/sec",
+    "supheli": "evet"
+   },
+   {
+    "makale": "10.2514_3.51103",
+    "g": NaN,
+    "d0": NaN,
+    "O2": NaN,
+    "K": "0.952 mm2/S6C",
+    "supheli": "evet"
+   },
+   {
+    "makale": "10.2514_3.51103",
+    "g": NaN,
+    "d0": NaN,
+    "O2": NaN,
+    "K": "0.952 mm2/s",
+    "supheli": "evet"
+   },
+   {
+    "makale": "20010074042",
+    "g": 0.0001,
+    "d0": NaN,
+    "O2": 25.0,
+    "K": "1 mm2/s",
+    "supheli": "evet"
+   },
+   {
+    "makale": "W1521860815",
+    "g": 1.0,
+    "d0": NaN,
+    "O2": NaN,
+    "K": "1 mm2/s",
+    "supheli": "evet"
+   },
+   {
+    "makale": "W1974189763",
+    "g": 0.0001,
+    "d0": NaN,
+    "O2": 25.0,
+    "K": "0.52 mm2/s",
+    "supheli": "evet"
+   }
+  ],
+  "kalibre_degil_lnA": 0.0,
+  "kalibre_degil": {
+   "dogruluk": 0.7,
+   "auc": null,
+   "bce_ort": 0.357
+  },
+  "makale_dis_cv": {
+   "dogruluk": 0.7,
+   "auc": null,
+   "bce_ort": 0.357
+  },
+  "cv_lnA_secimleri": [
+   -1.5,
+   -1.5,
+   -1.5,
+   -1.5,
+   -1.5,
+   -1.5
+  ],
+  "tum_veri_lnA": -1.5,
+  "izgara": [
+   -3.0,
+   3.0
+  ]
+ },
+ "NC3H7OH": {
+  "etiketli_tum": 91,
+  "etiketli_kosullu": 71,
+  "yanan": 45,
+  "makale": 4,
+  "kaynak": {
+   "makale_elle": 42,
+   "gemma3_test": 29
+  },
+  "g": {
+   "0.0001": 46,
+   "1.0": 25
+  },
+  "K_olcum_sayisi": 2,
+  "K_olcum": [
+   {
+    "makale": "10.1007_bf02870978",
+    "g": 0.00101937,
+    "d0": NaN,
+    "O2": NaN,
+    "K": "0.85 mm2/s",
+    "supheli": "evet"
+   },
+   {
+    "makale": "10.1007_bf02870978",
+    "g": 0.00101937,
+    "d0": NaN,
+    "O2": NaN,
+    "K": "1.03 mm2/s",
+    "supheli": "evet"
+   }
+  ],
+  "kalibre_degil_lnA": 0.0,
+  "kalibre_degil": {
+   "dogruluk": 0.789,
+   "auc": 0.792,
+   "bce_ort": 0.677
+  },
+  "makale_dis_cv": {
+   "dogruluk": 0.789,
+   "auc": 0.762,
+   "bce_ort": 0.678
+  },
+  "cv_lnA_secimleri": [
+   1.0,
+   -3.0,
+   -3.0,
+   -3.0
+  ],
+  "tum_veri_lnA": -3.0,
+  "izgara": [
+   -3.0,
+   3.0
+  ]
+ }
+}

@@ -1,0 +1,42 @@
+# ---- GİZLİ: API anahtarı asla depoya girmemeli ----
+evren_anahtar.txt
+*.anahtar
+
+# ---- yerel kullanıcı verisi ----
+veri/ayarlar.json
+veri/profil.json
+veri/vakalar/
+veri/sinama_raporu.txt
+render/*
+!render/BURAYA_RENDER_KOY.txt
+
+# ---- paketleme çıktıları ----
+build/
+dist/
+*.spec.bak
+paketleme/Cikti/
+*.zip
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# ---- editör / işletim sistemi ----
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# ---- backend yazılabilir dosyaları (YANGIN_VERI_KLASORU = veri/) ----
+veri/loglar/
+veri/topluluk/
+veri/malzeme_onbellek.json
+veri/motor_karsilastirma.csv
+veri/motor_kontrol.png
+motor/topluluk/
+veri/malzemeler_kullanici.json
+veri/malzemeler_kullanici.tmp

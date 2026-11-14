@@ -1,0 +1,41 @@
+{
+ "bicim": "topluluk_paketi",
+ "surum": 1,
+ "olusturma": "2026-11-13T06:32:08",
+ "kayit_sayisi": 1,
+ "not": "Topluluk verisi model ve motor kalibrasyonuna girmez. İçe aktarılan kayıtlar 'onaysiz' girer.",
+ "kayitlar": [
+  {
+   "id": 1,
+   "malzeme": "pmma",
+   "yakit_turu": null,
+   "numune_tipi": null,
+   "kalinlik_mm": null,
+   "g": 0.0001,
+   "oksijen_yuzde": 17.0,
+   "basinc_kpa": 101.3,
+   "akis_cm_s": null,
+   "seyreltici": null,
+   "sonuc": "sondu",
+   "yayilma_hizi_mm_s": null,
+   "K_mm2_s": null,
+   "sonme_capi_mm": null,
+   "kaynak_turu": "kendi_deney",
+   "kaynak": "uçtan uca deneme defteri s. 1",
+   "yontem": null,
+   "ekleyen": "deneme",
+   "tarih": "2026-11-13",
+   "durum": "onayli",
+   "etiketler": [
+    "celiski"
+   ],
+   "kontrol_notlari": [
+    "aynı koşulda NASA: 97/104 nokta yandı; bu kayıt 'sondu' diyor (PSI-25_B16, PSI-25_B17, PSI-25_B18)"
+   ],
+   "moderator": "moderatör (deneme)",
+   "karar_tarihi": "2026-11-13T06:32:06",
+   "gerekce": null,
+   "eklenme": "2026-11-13T06:23:18"
+  }
+ ]
+}

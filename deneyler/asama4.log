@@ -1,0 +1,174 @@
+== bekleme başladı Thu Nov 12 08:24:05 AM +03 2026
+== OpenFOAM kuyruğu boş; başlıyor Thu Nov 12 09:04:06 AM +03 2026, işçi 15
+/path/to/ahut-flare/damla_motoru.py:1565: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+  "not": "alt küme kalibrasyonu (tüm testler > 1 saat); Ta sabit (Westbrook-Dryer); "
+/path/to/ahut-flare/damla_motoru.py:1565: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+  "not": "alt küme kalibrasyonu (tüm testler > 1 saat); Ta sabit (Westbrook-Dryer); "
+/path/to/ahut-flare/damla_motoru.py:1565: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+  "not": "alt küme kalibrasyonu (tüm testler > 1 saat); Ta sabit (Westbrook-Dryer); "
+/path/to/ahut-flare/damla_motoru.py:1565: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+  "not": "alt küme kalibrasyonu (tüm testler > 1 saat); Ta sabit (Westbrook-Dryer); "
+/path/to/ahut-flare/damla_motoru.py:1565: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+  "not": "alt küme kalibrasyonu (tüm testler > 1 saat); Ta sabit (Westbrook-Dryer); "
+/path/to/ahut-flare/damla_motoru.py:1565: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+  "not": "alt küme kalibrasyonu (tüm testler > 1 saat); Ta sabit (Westbrook-Dryer); "
+/path/to/ahut-flare/damla_motoru.py:1565: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+  "not": "alt küme kalibrasyonu (tüm testler > 1 saat); Ta sabit (Westbrook-Dryer); "
+/path/to/ahut-flare/damla_motoru.py:1565: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+  "not": "alt küme kalibrasyonu (tüm testler > 1 saat); Ta sabit (Westbrook-Dryer); "
+/path/to/ahut-flare/damla_motoru.py:1565: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+  "not": "alt küme kalibrasyonu (tüm testler > 1 saat); Ta sabit (Westbrook-Dryer); "
+/path/to/ahut-flare/damla_motoru.py:1565: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+  "not": "alt küme kalibrasyonu (tüm testler > 1 saat); Ta sabit (Westbrook-Dryer); "
+/path/to/ahut-flare/damla_motoru.py:1565: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+  "not": "alt küme kalibrasyonu (tüm testler > 1 saat); Ta sabit (Westbrook-Dryer); "
+/path/to/ahut-flare/damla_motoru.py:1565: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+  "not": "alt küme kalibrasyonu (tüm testler > 1 saat); Ta sabit (Westbrook-Dryer); "
+/path/to/ahut-flare/damla_motoru.py:1565: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+  "not": "alt küme kalibrasyonu (tüm testler > 1 saat); Ta sabit (Westbrook-Dryer); "
+/path/to/ahut-flare/damla_motoru.py:1565: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+  "not": "alt küme kalibrasyonu (tüm testler > 1 saat); Ta sabit (Westbrook-Dryer); "
+/path/to/ahut-flare/damla_motoru.py:1565: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+  "not": "alt küme kalibrasyonu (tüm testler > 1 saat); Ta sabit (Westbrook-Dryer); "
+/path/to/ahut-flare/damla_motoru.py:1565: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+  "not": "alt küme kalibrasyonu (tüm testler > 1 saat); Ta sabit (Westbrook-Dryer); "
+1 test 61 s; 45 test / 15 işçi -> tur başına ~3.0 dk; en fazla 60 tur -> ~182 dk (bütçe 320.0 dk)
+tur   1 | lnA_NC7H16=0.000, lnA_CH3OH=0.000, ln_Crad=0.000 | kayıp 1250.4 {'bce': 115.46437276863452, 'K': 372.244155954658, 'D': 762.7179772172149, 'basarisiz': 0} | 301 s
+tur   2 | lnA_NC7H16=-1.416, lnA_CH3OH=0.000, ln_Crad=0.000 | kayıp 1614.5 {'bce': 136.6447186782925, 'K': 639.6480655961884, 'D': 838.2085512940498, 'basarisiz': 0} | 255 s
+tur   3 | lnA_NC7H16=1.416, lnA_CH3OH=0.000, ln_Crad=0.000 | kayıp 1215.8 {'bce': 111.86919640581257, 'K': 358.90942945321177, 'D': 745.0428287927027, 'basarisiz': 0} | 370 s
+tur   4 | lnA_NC7H16=3.167, lnA_CH3OH=0.000, ln_Crad=0.000 | kayıp 1192.9 {'bce': 109.13365139687907, 'K': 354.12300259376553, 'D': 729.6508512605749, 'basarisiz': 0} | 532 s
+tur   5 | lnA_NC7H16=2.527, lnA_CH3OH=0.000, ln_Crad=0.000 | kayıp 1199.3 {'bce': 109.95484183778856, 'K': 354.8750891099693, 'D': 734.4516146533385, 'basarisiz': 0} | 484 s
+tur   6 | lnA_NC7H16=4.249, lnA_CH3OH=0.000, ln_Crad=0.000 | kayıp 1146.8 {'bce': 116.49950059574704, 'K': 341.8986911027979, 'D': 688.4224621585233, 'basarisiz': 2} | 626 s
+tur   7 | lnA_NC7H16=4.918, lnA_CH3OH=0.000, ln_Crad=0.000 | kayıp 955.9 {'bce': 132.20780751655127, 'K': 328.4149235511638, 'D': 495.3108357286565, 'basarisiz': 8} | 954 s
+tur   8 | lnA_NC7H16=5.331, lnA_CH3OH=0.000, ln_Crad=0.000 | kayıp 890.2 {'bce': 143.131308362171, 'K': 297.312619660077, 'D': 449.77488085378695, 'basarisiz': 11} | 960 s
+tur   9 | lnA_NC7H16=5.805, lnA_CH3OH=0.000, ln_Crad=0.000 | kayıp 893.2 {'bce': 161.05686801479533, 'K': 236.72134726518644, 'D': 495.4240446689747, 'basarisiz': 14} | 998 s
+tur  10 | lnA_NC7H16=5.512, lnA_CH3OH=0.000, ln_Crad=0.000 | kayıp 823.8 {'bce': 172.9053605455224, 'K': 230.1227900707166, 'D': 420.75791176793564, 'basarisiz': 17} | 1025 s
+tur  11 | lnA_NC7H16=5.566, lnA_CH3OH=0.000, ln_Crad=0.000 | kayıp 874.9 {'bce': 166.90448675033753, 'K': 242.3940202065012, 'D': 465.5580526288203, 'basarisiz': 15} | 1025 s
+tur  12 | lnA_NC7H16=5.454, lnA_CH3OH=0.000, ln_Crad=0.000 | kayıp 875.2 {'bce': 171.90056160679194, 'K': 237.75103729383417, 'D': 465.5580526288203, 'basarisiz': 16} | 1017 s
+tur  13 | lnA_NC7H16=5.496, lnA_CH3OH=0.000, ln_Crad=0.000 | kayıp 823.8 {'bce': 172.90515699242474, 'K': 230.10070852292327, 'D': 420.75791176793564, 'basarisiz': 17} | 1018 s
+tur  14 | lnA_NC7H16=5.479, lnA_CH3OH=0.000, ln_Crad=0.000 | kayıp 823.4 {'bce': 167.914298650342, 'K': 234.72160988779694, 'D': 420.75791176793564, 'basarisiz': 16} | 1020 s
+tur  15 | lnA_NC7H16=5.479, lnA_CH3OH=-1.416, ln_Crad=0.000 | kayıp 1319.7 {'bce': 188.23099561645355, 'K': 637.7157925241071, 'D': 493.71419495276365, 'basarisiz': 16} | 960 s
+tur  16 | lnA_NC7H16=5.479, lnA_CH3OH=1.416, ln_Crad=0.000 | kayıp 740.7 {'bce': 188.4713511753605, 'K': 167.7090457757967, 'D': 384.52334151910827, 'basarisiz': 16} | 1104 s
+/path/to/ahut-flare/damla_motoru.py:1246: RuntimeWarning: invalid value encountered in divide
+  Y = Y / Y.sum(0)
+/path/to/ahut-flare/damla_motoru.py:1246: RuntimeWarning: invalid value encountered in divide
+  Y = Y / Y.sum(0)
+tur  17 | lnA_NC7H16=5.479, lnA_CH3OH=3.167, ln_Crad=0.000 | kayıp 606.6 {'bce': 199.9028362303526, 'K': 124.51776359757608, 'D': 282.22514214967043, 'basarisiz': 18} | 1128 s
+/path/to/ahut-flare/damla_motoru.py:1246: RuntimeWarning: invalid value encountered in divide
+  Y = Y / Y.sum(0)
+tur  18 | lnA_NC7H16=5.479, lnA_CH3OH=3.665, ln_Crad=0.000 | kayıp 680.5 {'bce': 195.03934400355394, 'K': 135.33379431011193, 'D': 350.09741091180524, 'basarisiz': 18} | 1240 s
+tur  19 | lnA_NC7H16=5.479, lnA_CH3OH=2.675, ln_Crad=0.000 | kayıp 693.5 {'bce': 180.52526144257826, 'K': 148.50518023913594, 'D': 364.47178372866694, 'basarisiz': 16} | 1219 s
+tur  20 | lnA_NC7H16=5.479, lnA_CH3OH=3.190, ln_Crad=0.000 | kayıp 610.3 {'bce': 184.2818171902789, 'K': 137.47347170608765, 'D': 288.5683742091359, 'basarisiz': 16} | 1264 s
+/path/to/ahut-flare/damla_motoru.py:1246: RuntimeWarning: invalid value encountered in divide
+  Y = Y / Y.sum(0)
+/path/to/ahut-flare/damla_motoru.py:1246: RuntimeWarning: invalid value encountered in divide
+  Y = Y / Y.sum(0)
+tur  21 | lnA_NC7H16=5.479, lnA_CH3OH=2.979, ln_Crad=0.000 | kayıp 673.4 {'bce': 208.24245400324756, 'K': 112.05805144547583, 'D': 353.12698131358366, 'basarisiz': 18} | 1171 s
+tur  22 | lnA_NC7H16=5.479, lnA_CH3OH=3.145, ln_Crad=0.000 | kayıp 735.3 {'bce': 183.67678711327312, 'K': 147.57171588436552, 'D': 404.04263446266646, 'basarisiz': 16} | 1250 s
+Süre bütçesi doldu; o ana kadarki en iyi değer kullanılıyor.
+Traceback (most recent call last):
+  File "/path/to/ahut-flare/damla_motoru.py", line 1750, in <module>
+    main()
+  File "/path/to/ahut-flare/damla_motoru.py", line 1746, in main
+    kalibre_ayrintili_main(k.cekirdek, k.alt_kume, k.butce_dk, k.maxfev)
+  File "/path/to/ahut-flare/damla_motoru.py", line 1565, in kalibre_ayrintili_main
+    "not": "alt küme kalibrasyonu (tüm testler > 1 saat); Ta sabit (Westbrook-Dryer); "
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'str' object is not callable
+== kalibrasyon çıkış 1 Thu Nov 12 02:37:08 PM +03 2026
+{
+ "alt_kume_n": 45,
+ "ayrintili_sonuc_veren": 41,
+ "ayrintili_parametreler": {
+  "lnA_NC7H16": 3.0298423002696175,
+  "lnA_CH3OH": 0.0,
+  "Ta": 15098.0,
+  "ln_Crad": 0.0
+ },
+ "ayrintili": {
+  "n": 41,
+  "alev_oran_medyan_hata_yuzde": NaN,
+  "K_medyan_hata_yuzde": 16.447368421052634,
+  "sonme_capi_medyan_hata_mm": 0.9505000000000001,
+  "sonme_capi_medyan_hata_oran": 0.39904718810601164,
+  "dogruluk": 0.36585365853658536,
+  "auc": 0.7045454545454546,
+  "yanan_orani": 0.7317073170731707
+ },
+ "hizli_ayni_testler": {
+  "n": 41,
+  "alev_oran_medyan_hata_yuzde": NaN,
+  "K_medyan_hata_yuzde": 11.077824158011696,
+  "sonme_capi_medyan_hata_mm": 0.3572927789982042,
+  "sonme_capi_medyan_hata_oran": 0.1243897396045242,
+  "dogruluk": 0.8780487804878049,
+  "auc": 0.8757575757575757,
+  "yanan_orani": 0.7317073170731707
+ },
+ "hizli_alt_kume_tumu": {
+  "n": 45,
+  "alev_oran_medyan_hata_yuzde": NaN,
+  "K_medyan_hata_yuzde": 8.546471846913374,
+  "sonme_capi_medyan_hata_mm": 0.3572927789982042,
+  "sonme_capi_medyan_hata_oran": 0.1243897396045242,
+  "dogruluk": 0.8888888888888888,
+  "auc": 0.8850267379679144,
+  "yanan_orani": 0.7555555555555555
+ },
+ "K_ortak_n": 41,
+ "ayrintili NC7H16": {
+  "n": 16,
+  "alev_oran_medyan_hata_yuzde": NaN,
+  "K_medyan_hata_yuzde": 19.58783068783068,
+  "sonme_capi_medyan_hata_mm": 0.6960000000000002,
+  "sonme_capi_medyan_hata_oran": 0.25100671140939607,
+  "dogruluk": 0.625,
+  "auc": 0.859375,
+  "yanan_orani": 0.5
+ },
+ "hizli NC7H16": {
+  "n": 16,
+  "alev_oran_medyan_hata_yuzde": NaN,
+  "K_medyan_hata_yuzde": 16.349907602348814,
+  "sonme_capi_medyan_hata_mm": 0.25152435698746645,
+  "sonme_capi_medyan_hata_oran": 0.0891930343927186,
+  "dogruluk": 0.875,
+  "auc": 0.84375,
+  "yanan_orani": 0.5
+ },
+ "ayrintili CH3OH": {
+  "n": 25,
+  "alev_oran_medyan_hata_yuzde": NaN,
+  "K_medyan_hata_yuzde": 13.249999999999995,
+  "sonme_capi_medyan_hata_mm": 0.9550000000000001,
+  "sonme_capi_medyan_hata_oran": 0.40061538461538454,
+  "dogruluk": 0.2,
+  "auc": 1.0,
+  "yanan_orani": 0.88
+ },
+ "hizli CH3OH": {
+  "n": 25,
+  "alev_oran_medyan_hata_yuzde": NaN,
+  "K_medyan_hata_yuzde": 7.786634054416142,
+  "sonme_capi_medyan_hata_mm": 0.3710181281604852,
+  "sonme_capi_medyan_hata_oran": 0.13029478122168708,
+  "dogruluk": 0.88,
+  "auc": 0.9090909090909091,
+  "yanan_orani": 0.88
+ }
+}
+/path/to/ahut-flare/damla_motoru.py:1565: SyntaxWarning: 'str' object is not callable; perhaps you missed a comma?
+  "not": "alt küme kalibrasyonu (tüm testler > 1 saat); Ta sabit (Westbrook-Dryer); "
+n-heptan, hava, 2 mm {'yanma': 1.0, 'K': 0.4878, 'sonme_capi': None, 'T_maks': 1290.3, 'sure_s': 109.02, 't_son': 7.863930082368307, 'adim': 303, 'nfev': 6559, 'ates': True, 'su_son': None}
+n-heptan, %30 CO2, 3.5 mm {'yanma': 0.0087, 'K': 0.2836, 'sonme_capi': 3.472, 'T_maks': 1327.8, 'sure_s': 59.65, 't_son': 0.6647099905987726, 'adim': 6, 'nfev': 4000, 'ates': True, 'su_son': None}
+metanol, hava, 3 mm {'yanma': 0.0, 'K': None, 'sonme_capi': None, 'T_maks': 1499.6, 'sure_s': 47.16, 't_son': 0.0, 'adim': 1, 'nfev': 2509, 'ates': False, 'su_son': 0.0}
+Traceback (most recent call last):
+  File "/path/to/ahut-flare/damla_motoru.py", line 1750, in <module>
+    main()
+  File "/path/to/ahut-flare/damla_motoru.py", line 1744, in main
+    ornek_ayrintili_main()
+  File "/path/to/ahut-flare/damla_motoru.py", line 1694, in ornek_ayrintili_main
+    a.plot(np.array(k["r_mm"][i]) / (d0 / 2), k["T"][i], label=f"t={tt[i]:.2f} s, d={k['d'][i]:.2f} mm")
+                    ~~~~~~~~~^^^
+IndexError: list index out of range
+== ASAMA4 BITTI Thu Nov 12 02:40:44 PM +03 2026

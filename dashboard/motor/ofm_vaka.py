@@ -1,0 +1,154 @@
+#!/usr/bin/env python3
+"""ofm_vaka.py — OpenFOAM motorunun Saffire-III S1 vakasını (motor_c/vaka) bir KOPYAYA hazırlar: O2, basınç, akış, g, bitiş zamanı, çekirdek sayısı.
+Paketin kendisine dokunulmaz. Kalınlık OpenFOAM vaka ağında sabittir (mesh_olustur.py pakette yok): ±%5'ten farklıysa vaka DESTEKLENMEZ.
+
+    destek(kosul)            -> {"destekli": bool, "neden": str|None, ...}     (ayrıntılı çözüm bu vakayı koşabilir mi?)
+    hazirla(hedef, paket, kosul, cekirdek, bitis_s) -> {"notlar": [...], "bilgi": {...}}
+    kaldirma_kontrol(log_metni) -> (tamam: bool|None, mesaj)                 (ilk dakikada günlükten kaldırmanın açık olduğunu denetler)
+
+Desteklenen (şimdilik): katı, SIBAL (pamuk/cam elyaf). Sıvı ve gaz vakaları OpenFOAM motorundan gelince DESTEK tablosuna eklenecek.
+"""
+import json
+import re
+import shutil
+from pathlib import Path
+
+DESTEK = {"kati": {"sibal", "cotton-fiberglass", "cotton fiberglass"}}   # yakıt türü -> malzeme adları
+KALINLIK_AG_MM = 0.32          # MOTOR_KILIT sibal.yarim_kalinlik_m × 2 (ağ buna göre)
+KALINLIK_TOL = 0.05
+G0 = 9.81
+M = {"O2": 31.998, "N2": 28.014, "H2O": 18.015, "CO2": 44.009}
+DOSYA_KOPYA = [("kinetik", ["reactions", "chemistryProperties", "reactionProperties"], "constant/fluid"),
+               ("radyasyon", ["radiationProperties", "fvModels"], "constant/fluid"),
+               ("piroliz", ["fvModels", "physicalProperties"], "constant/sibal")]
+
+
+def _norm(a):
+    return re.sub(r"\s+", " ", str(a or "").lower().replace("_", " ")).strip()
+
+
+def desteklenen_mi(malzeme, yakit_turu="kati"):
+    return _norm(malzeme) in {_norm(x) for x in DESTEK.get(yakit_turu, set())}
+
+
+def destek(kosul, yakit_turu=None, malzeme_kanonik=None):
+    """kosul: {malzeme, oksijen, basinc, g, akis, kalinlik, ...}. yakit_turu/malzeme_kanonik biliniyorsa (tahmin çıktısından) verilir."""
+    ad = malzeme_kanonik or kosul.get("malzeme")
+    tur = yakit_turu or ("kati" if desteklenen_mi(ad, "kati") else None)
+    if not (tur and desteklenen_mi(ad, tur)):
+        return {"destekli": False, "neden": "Ayrıntılı motor bu malzeme/yakıt için henüz hazır değil (şimdilik yalnız katı / SIBAL; "
+                                            "sıvı ve gaz vakaları OpenFOAM motorundan gelince eklenecek).", "kod": "malzeme"}
+    kal = kosul.get("kalinlik")
+    if kal is not None and abs(kal - KALINLIK_AG_MM) / KALINLIK_AG_MM > KALINLIK_TOL:
+        return {"destekli": False, "kod": "kalinlik",
+                "neden": f"OpenFOAM vakasının ağı {KALINLIK_AG_MM:g} mm kalınlık içindir; {kal:g} mm için yeniden ağ gerekir (pakette ağ betiği yok)."}
+    if not (0 < (kosul.get("basinc") or 0) < 400):
+        return {"destekli": False, "kod": "basinc", "neden": "Basınç 0–400 kPa aralığında olmalı."}
+    return {"destekli": True, "neden": None, "kalinlik_ag_mm": KALINLIK_AG_MM}
+
+
+def kilit_oku(paket):
+    return json.loads((Path(paket) / "MOTOR_KILIT.json").read_text(encoding="utf-8"))
+
+
+def kutle_kesirleri(kilit, oksijen_mol):
+    """Kilitteki H2O ve CO2 mol kesirleri korunur; O2 mol kesri oksijen_mol/100; N2 geri kalan. -> mass fractions."""
+    o = kilit["ortam"]
+    n = {k: o[f"Y_{k}"] / M[k] for k in M}
+    top = sum(n.values())
+    x = {k: v / top for k, v in n.items()}
+    x["O2"] = oksijen_mol / 100.0
+    x["N2"] = 1.0 - x["O2"] - x["H2O"] - x["CO2"]
+    if x["N2"] <= 0:
+        raise ValueError("O2 oranı bu bileşimde çok yüksek (N2 negatif).")
+    kutle = {k: x[k] * M[k] for k in M}
+    s = sum(kutle.values())
+    return {k: v / s for k, v in kutle.items()}
+
+
+def _sayi_degistir(dosya, eski, yeni):
+    s = Path(dosya).read_text(encoding="utf-8")
+    Path(dosya).write_text(s.replace(eski, yeni), encoding="utf-8")
+
+
+def _gecerli_kopya_yok(ad):
+    return ad.startswith("processor") or ad.startswith("log.") or ad == "postProcessing" or bool(re.fullmatch(r"\d+(\.\d+)?", ad) and ad != "0")
+
+
+def hazirla(hedef, paket, kosul, cekirdek, bitis_s=10.0):
+    hedef, paket = Path(hedef), Path(paket)
+    kilit = kilit_oku(paket)
+    notlar = []
+    shutil.copytree(paket / "vaka", hedef, ignore=lambda d, adlar: [a for a in adlar if _gecerli_kopya_yok(a) and Path(d) == paket / "vaka"])
+    for klasor, dosyalar, hd in DOSYA_KOPYA:
+        for f in dosyalar:
+            shutil.copy2(paket / klasor / f, hedef / hd / f)
+    # --- O2 (mol %), N2: kilit bileşiminden
+    ok = kosul.get("oksijen")
+    if ok is not None:
+        yeni = kutle_kesirleri(kilit, float(ok))
+        for tur in ("O2", "N2"):
+            eski = f"{kilit['ortam']['Y_' + tur]:g}"
+            for f in [hedef / "0" / "fluid" / tur]:
+                s = f.read_text(encoding="utf-8")
+                if eski not in s:
+                    raise ValueError(f"{f.name}: kilit değeri {eski} dosyada bulunamadı")
+                f.write_text(s.replace(eski, f"{yeni[tur]:.6f}"), encoding="utf-8")
+        notlar.append(f"O2 %{ok:g} mol → Y_O2 {yeni['O2']:.6f}, Y_N2 {yeni['N2']:.6f} (H2O, CO2 kilit değerinde)")
+    # --- basınç
+    p_kilit = f"{kilit['ortam']['p']:g}"
+    p = kosul.get("basinc")
+    if p is not None:
+        _sayi_degistir(hedef / "0" / "fluid" / "p", p_kilit, f"{p * 1000.0:g}")
+        notlar.append(f"basınç {p:g} kPa")
+    # --- akış
+    u_kilit = f"{kilit['ortam']['U_in']:g}"
+    akis = kosul.get("akis")
+    if akis is not None:
+        _sayi_degistir(hedef / "0" / "fluid" / "U", f"({u_kilit} 0 0)", f"({akis / 100.0:g} 0 0)")
+        notlar.append(f"akış {akis:g} cm/s")
+    else:
+        notlar.append(f"akış bilinmiyor: Saffire değeri {kilit['ortam']['U_in'] * 100:g} cm/s kullanıldı")
+    # --- yerçekimi
+    g = kosul.get("g")
+    if g is not None and g > 0.01:
+        gv = G0 * g
+        (hedef / "constant" / "fluid" / "g").write_text(
+            'FoamFile { format ascii; class uniformDimensionedVectorField; location "constant/fluid"; object g; }\n'
+            f"dimensions [0 1 -2 0 0 0 0];\nvalue (0 {-gv:g} 0);\n", encoding="utf-8")
+        pr = f"{(p if p is not None else kilit['ortam']['p'] / 1000.0) * 1000.0:g}"
+        (hedef / "0" / "fluid" / "p_rgh").write_text(
+            'FoamFile { format ascii; class volScalarField; location "0/fluid"; object p_rgh; }\n'
+            f"dimensions [1 -1 -2 0 0 0 0];\ninternalField uniform {pr};\nboundaryField\n{{\n"
+            "    #includeEtc \"caseDicts/setConstraintTypes\"\n"
+            "    inlet { type fixedFluxPressure; value uniform " + pr + "; }\n"
+            "    outlet { type prghTotalPressure; p0 uniform " + pr + "; value uniform " + pr + "; }\n"
+            "    top { type fixedFluxPressure; value uniform " + pr + "; }\n"
+            "    base { type fixedFluxPressure; value uniform " + pr + "; }\n"
+            "    fluid_to_sibal { type fixedFluxPressure; value uniform " + pr + "; }\n"
+            "    fluid_to_tel { type fixedFluxPressure; value uniform " + pr + "; }\n}\n", encoding="utf-8")
+        fv = hedef / "system" / "fluid" / "fvSolution"
+        s = fv.read_text(encoding="utf-8")
+        s = s.replace("    pFinal\n", "    p_rgh\n    {\n        $p;\n    }\n\n    p_rghFinal\n    {\n        $p_rgh;\n        relTol 0;\n    }\n\n    pFinal\n", 1)
+        fv.write_text(s, encoding="utf-8")
+        notlar.append(f"g = {g:g} g₀ ({gv:g} m/s², −y yönü): constant/fluid/g + 0/fluid/p_rgh eklendi; ilk dakikada kaldırma denetlenecek")
+    # --- bitiş zamanı, çekirdek
+    cd = hedef / "system" / "controlDict"
+    cd.write_text(re.sub(r"endTime\s+[0-9.eE+-]+;", f"endTime         {bitis_s:g};", cd.read_text(encoding="utf-8")), encoding="utf-8")
+    dp = hedef / "system" / "decomposeParDict"
+    dp.write_text(re.sub(r"numberOfSubdomains\s+\d+;", f"numberOfSubdomains {int(cekirdek)};", dp.read_text(encoding="utf-8")), encoding="utf-8")
+    (hedef / "kos.sh").write_text("#!/bin/bash\nsource /opt/openfoam14/etc/bashrc >/dev/null 2>&1\ncd \"$(dirname \"$0\")\"\n"
+                                  "decomposePar -allRegions -force > log.decomposePar 2>&1 || exit 1\n"
+                                  f"exec mpirun --oversubscribe -np {int(cekirdek)} foamMultiRun -parallel\n", encoding="utf-8")
+    return {"notlar": notlar, "kilit": kilit}
+
+
+def kaldirma_kontrol(log_metni, g_acik):
+    """g > 0 koşusunda günlükten: p_rgh çözülüyor mu (kaldırma formülasyonu devrede)? -> (tamam|None, mesaj)."""
+    if not g_acik:
+        return None, "g ≈ 0: kaldırma beklenmiyor"
+    if re.search(r"Solving for p_rgh", log_metni):
+        return True, "kaldırma açık: p_rgh çözülüyor"
+    if re.search(r"Solving for p\b", log_metni):
+        return False, "kaldırma KAPALI görünüyor: günlükte p_rgh yok, yalnız p çözülüyor"
+    return None, "kaldırma denetlenemedi: günlükte henüz basınç çözümü yok"

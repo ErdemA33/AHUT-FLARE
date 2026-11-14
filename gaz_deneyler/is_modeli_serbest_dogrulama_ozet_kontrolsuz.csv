@@ -1,0 +1,25 @@
+﻿deney,alt_kume,n,auc,dogruluk,yanan_orani,X_r_mutlak_hata_medyan_FT,q_merkez_hata_medyan_yuzde_FT,y_f_hata_medyan_yuzde,R_eff_hata_medyan_yuzde,not,R_f_kuram_hata_medyan_yuzde,T_ad_hata_medyan_K,T_ad_hata_ort_K,T_ad_hata_maks_K,Z_st_hata_maks,yanabilir_dogru_orani
+BRE içeride (tüm veriyle kalibre),59 test,59,0.9770114942528736,0.9152542372881356,0.4915254237288136,0.03875391871321454,9.442998160479332,13.34935324630504,8.99244929194415,"eğitim hatası, dürüst değil",,,,,,
+BRE gün dışarıda (8 kat),59 test,59,0.9632183908045977,0.8813559322033898,0.4915254237288136,0.03545983261176261,10.443868070462603,11.99247383056914,8.518332875057954,her gün kalan 7 günle kalibre,,,,,,
+BRE dışarıda: Xf1_ile,X_f=1 ile kalibre -> X_f=0.5 (N2 seyreltik yakıt) test,27,0.9882352941176471,0.9629629629629629,0.6296296296296297,0.03211891960009591,13.624202324187129,18.023978446002765,10.272524367249147,,,,,,,
+BRE dışarıda: Xf05_ile,X_f=0.5 ile kalibre -> X_f=1 test,32,0.9708333333333333,0.75,0.375,0.04914354487362699,2.3698030847547678,10.580943117226921,9.314395272371168,,,,,,,
+BRE dışarıda: p1bar_ile,~1 bar ile kalibre -> 0.56-0.71 bar test,35,0.9311594202898551,0.8285714285714286,0.6571428571428571,0.04422654537859044,34.54787315531029,9.83567831760861,10.02644633975076,,,,,,,
+BRE dışarıda: pdusuk_ile,0.56-0.71 bar ile kalibre -> ~1 bar test,24,1.0,0.7916666666666666,0.25,0.05234756176518862,41.176822431302135,20.00494508231943,9.036028640983051,,,,,,,
+BRE dışarıda: O2yuksek_ile,X_O2>=0.30 ile kalibre -> X_O2<0.30 test,27,1.0,0.8518518518518519,0.25925925925925924,0.04384927700380675,5.733889761269784,20.11352890215703,13.763291800694644,,,,,,,
+BRE ile kalibre -> küre (Irace 2021),"4 test (3 yanar, 1 ışınımla söndü)",4,0.6666666666666666,0.75,0.75,,,,,"alev 3 (SE, ölçülen sönme T 1140 K): model T_f 1272 K, yanma 1.00; sönme türü yok",5.195266314184832,,,,,
+küre (Irace 4 test) ile kalibre -> BRE,59 test,59,0.9563218390804598,0.5084745762711864,0.4915254237288136,0.24587562836204224,63.425731872538485,43.56177850352172,94.96241074345546,"yalnız ln_Crad=0.00, fv_ppm=0.00, s=1.27; k_s=1, k_v=k_y=1 (yarım küre kuramı)",,,,,,
+küre (Irace 4 test) ile kalibre -> BRE (geometri BRE boyut ölçümünden),59 test,59,0.9149425287356321,0.8813559322033898,0.4915254237288136,0.1250985481315521,77.93894759182804,13.34935324630504,8.99244929194415,"k_v=0.357, k_y=0.687 etiketsiz boyut ölçümünden; sönme etiketleri kullanılmadı",,,,,,
+"PSI-10 Flame Design (küre, 147 sayısal test)",T_ad ve Z_st,147,,,,,,,,"tabloda sönme sonucu yok -> yanma değerlendirilemez (bilgi: model 59/147 testi kararlı diyor; Snegirev 2022 bu deneyden 19 kendiliğinden sönen alevi inceledi, toplam ve test kimlikleri yayında yok)",,19.13780485558891,-16.801105066572212,28.565162169967607,0.00016406269737889723,
+"PSI-23 s-Flame (küre, pozitif-yalnız)",hepsi,23,,,,,,,,tutuşmuş alevler; debi tabloda yok (0.2-20 mg/s tarandı),,,,,,1.0
+"PSI-23 s-Flame (küre, pozitif-yalnız)",He seyreltici,14,,,,,,,,tutuşmuş alevler; debi tabloda yok (0.2-20 mg/s tarandı),,,,,,1.0
+"PSI-23 s-Flame (küre, pozitif-yalnız)",N2 seyreltici,9,,,,,,,,tutuşmuş alevler; debi tabloda yok (0.2-20 mg/s tarandı),,,,,,1.0
+"PSI-23 s-Flame (küre, pozitif-yalnız)",H2 içeren,11,,,,,,,,tutuşmuş alevler; debi tabloda yok (0.2-20 mg/s tarandı),,,,,,1.0
+"PSI-20 BRE özeti (düz, pozitif-yalnız)",CH4 (kalibrasyon dışı yakıt),5,,,,,,,,"tutuşan alevlerin O2 değerleri; m'' 0.5-12 g/m2s, p 0.56-1 bar tarandı; tutuşma kararlı yanma demek değil (Dehghani: 59 tutuşmanın 30'u SE)",,,,,,1.0
+"PSI-20 BRE özeti (düz, pozitif-yalnız)",C2H4,37,,,,,,,,"tutuşan alevlerin O2 değerleri; m'' 0.5-12 g/m2s, p 0.56-1 bar tarandı; tutuşma kararlı yanma demek değil (Dehghani: 59 tutuşmanın 30'u SE)",,,,,,0.7567567567567568
+"PSI-20 BRE özeti (düz, pozitif-yalnız)",50 mm brülör,6,,,,,,,,"tutuşan alevlerin O2 değerleri; m'' 0.5-12 g/m2s, p 0.56-1 bar tarandı; tutuşma kararlı yanma demek değil (Dehghani: 59 tutuşmanın 30'u SE)",,,,,,0.0
+"PSI-21/22 jet (pozitif-yalnız, kalibre değil)",CLD (aralık üstü),32,,,,,,,,"hava, 2.1 mm lüle, U 5-100 cm/s tarandı",,,,,,1.0
+"PSI-21/22 jet (pozitif-yalnız, kalibre değil)",E-FIELD (aralık üstü),32,,,,,,,,"hava, 2.1 mm lüle, U 5-100 cm/s tarandı",,,,,,1.0
+"PSI-21/22 jet (pozitif-yalnız, kalibre değil)",CLD (aralık altı),31,,,,,,,,en düşük derişim (0% alt uçlu 1 gün çıkarıldı); tablo notu: bazı alevler buna ulaşmadan söndü (pozitif olmayabilir),,,,,,0.967741935483871
+"literatür kontrol (etiketli_gemma3, gaz, kalibrasyonda yok)",dışarıda kalan,0,,,,,,,,{},,,,,,
+GEOMETRİ BAŞINA AUC,duz (BRE gün dışarıda),59,0.9632183908045977,0.8813559322033898,0.4915254237288136,,,,,,,,,,,
+GEOMETRİ BAŞINA AUC,"kure (Irace, BRE ile kalibre)",4,0.6666666666666666,0.75,0.75,,,,,,,,,,,

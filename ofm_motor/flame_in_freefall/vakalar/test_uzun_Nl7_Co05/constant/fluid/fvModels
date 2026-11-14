@@ -1,0 +1,8 @@
+FoamFile { format ascii; class dictionary; location "constant/fluid"; object fvModels; }
+
+// OF14: radyasyon bir fvModel olarak acilir (radiationProperties tek basina yetmez)
+radiation
+{
+    type    radiation;
+    libs    ("libradiationModels.so");
+}

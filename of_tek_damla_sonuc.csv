@@ -1,0 +1,6 @@
+﻿kaynak,K_mm2_s,T_maks_medyan_K,alev_yaricapi_mm,son_t_s,son_d_mm,sondu_mu,d0_mm,sonme_capi_mm,yanma_suresi_s,test_sonu
+OpenFOAM isinimsiz,1.12887467255619,2664.7355,9.695999999999996,3.9,0.0,,,,,
+FLEX test 7 (20CAL13),0.67,,,,,,1.87,,5.3,Disruption
+FLEX test 51 (209F005),0.65,,,,,,2.41,0.0,8.2,Completion
+FLEX test 229 (N01H502),0.57,,,,,,2.39,,10.6,Disruption
+damla_motoru (hızlı),0.598,1721.9,,,,,2.0,0.36,,

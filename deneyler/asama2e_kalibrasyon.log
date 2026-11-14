@@ -1,0 +1,81 @@
+Hızlı mod kalibrasyonu: 261 test, kayıp 3065.1 {'bce': 91.60374372511762, 'K': 1066.6449174121822, 'D': 809.3204014636381, 'F': 1097.542865014496}, 1160 s
+  lnA_NC7H16       0.0000
+  lnA_CH3OH        0.0000
+  Ta           15098.0000
+  ln_Crad         -1.2040
+  beta             1.2777
+  kz               0.7744
+  s                2.5147
+  ln_kw           -3.0220
+  ln_fsr          -0.8963
+Eğitim: {'n': 261, 'alev_oran_medyan_hata_yuzde': 27.349, 'K_medyan_hata_yuzde': 9.959, 'sonme_capi_medyan_hata_mm': 0.307, 'sonme_capi_medyan_hata_oran': 0.112, 'dogruluk': 0.877, 'auc': 0.844, 'yanan_orani': 0.82}
+flex2 kontrol: {'n': 141, 'dogruluk': 0.7304964539007093, 'auc': 0.7106982441812983}
+N2 ile kalibre parametreler: {'lnA_NC7H16': 0.0, 'lnA_CH3OH': 0.0, 'Ta': 15098.0, 'ln_Crad': -1.204, 'beta': 1.083, 'kz': 0.773, 's': 6.426, 'ln_kw': -2.98, 'ln_fsr': -0.858}
+                        deney            alt_kume   n  alev_oran_medyan_hata_yuzde  K_medyan_hata_yuzde  sonme_capi_medyan_hata_mm  sonme_capi_medyan_hata_oran  dogruluk   auc  yanan_orani
+               N2 ile kalibre eğitim N2 (içeride)  94                       27.648                8.301                      0.277                        0.133     0.915 0.930        0.872
+               N2 ile kalibre            test CO2 120                       24.963                7.598                      0.251                        0.079     0.842 0.867        0.775
+               N2 ile kalibre             test He  47                       33.176               26.824                      0.704                        0.351     0.830 0.804        0.830
+               N2 ile kalibre         test CO2+He 167                       26.606               10.799                      0.372                        0.114     0.838 0.805        0.790
+               yakıt dışarıda         test NC7H16 108                       57.898               15.962                      0.633                        0.208     0.750 0.883        0.741
+               yakıt dışarıda          test CH3OH 153                       49.123               13.646                      0.252                        0.087     0.876 0.800        0.876
+tüm veriyle kalibre (içeride)               hepsi 261                       27.349                9.959                      0.307                        0.112     0.877 0.844        0.820
+tüm veriyle kalibre (içeride)                  n2  94                       28.651                8.097                      0.341                        0.146     0.915 0.930        0.872
+tüm veriyle kalibre (içeride)                 co2 120                       24.958                7.177                      0.215                        0.072     0.867 0.867        0.775
+tüm veriyle kalibre (içeride)                  he  47                       33.123               26.596                      0.613                        0.316     0.830 0.808        0.830
+
+ yakit seyreltici              model  test  sonme_olcumu  sonme_capi_medyan_hata_mm  sonme_capi_medyan_hata_oran  K_medyan_hata_yuzde  dogruluk   auc
+ CH3OH        co2 tüm veri (içeride)    74            39                      0.186                        0.075                6.473     0.824 0.854
+ CH3OH        co2     N2 ile kalibre    74            39                      0.192                        0.071                6.934     0.811 0.854
+ CH3OH        co2     yakıt dışarıda    74            39                      0.252                        0.073               16.237     0.851 0.853
+ CH3OH         he tüm veri (içeride)    26            16                      0.464                        0.155               17.878     0.808 0.914
+ CH3OH         he     N2 ile kalibre    26            16                      0.447                        0.147               18.927     0.808 0.914
+ CH3OH         he     yakıt dışarıda    26            16                      0.355                        0.117                7.514     0.808 0.914
+ CH3OH         n2 tüm veri (içeride)    53            28                      0.247                        0.118                7.578     0.943 0.820
+ CH3OH         n2     N2 ile kalibre    53            28                      0.235                        0.113                7.183     0.943 0.820
+ CH3OH         n2     yakıt dışarıda    53            28                      0.187                        0.080               13.450     0.943 0.820
+NC7H16        co2 tüm veri (içeride)    46            11                      0.228                        0.070               10.781     0.935 0.933
+NC7H16        co2     N2 ile kalibre    46            11                      0.348                        0.097               11.390     0.891 0.933
+NC7H16        co2     yakıt dışarıda    46            11                      0.710                        0.218               14.853     0.587 0.921
+NC7H16         he tüm veri (içeride)    21            11                      0.989                        0.347               45.143     0.857 0.815
+NC7H16         he     N2 ile kalibre    21            11                      1.304                        0.460               45.604     0.857 0.815
+NC7H16         he     yakıt dışarıda    21            11                      0.626                        0.203               38.565     0.857 0.833
+NC7H16         n2 tüm veri (içeride)    41             6                      0.678                        0.221               12.483     0.878 1.000
+NC7H16         n2     N2 ile kalibre    41             6                      0.952                        0.305               11.361     0.878 1.000
+NC7H16         n2     yakıt dışarıda    41             6                      0.307                        0.094               13.416     0.878 0.997
+Kaydedildi: damla_dogrulama.csv, damla_dogrulama_ozet_hizli.csv, damla_dogrulama_gruplar.csv
+  Gemma verisi: etiketli_gemma3.csv (1966 nokta, yeni betik)
+  + 282 NASA PSI noktası eklendi (psi_etiketli.csv)
+  + 138 NASA PSI noktası eklendi (psi_etiketli_bass1.csv)
+  + 273 NASA PSI noktası eklendi (psi_etiketli_flex.csv)
+  + 168 NASA PSI noktası eklendi (psi_etiketli_flex2.csv)
+  + 29 NASA PSI noktası eklendi (psi_etiketli_saffire.csv)
+{"NC7H16": 0.8834821428571429, "CH3OH": 0.7996857816182248, "C2H5OH": null, "NC10H22": null, "NC3H7OH": 0.7923076923076923}
+Kaydedildi: motor_dogrulama.json (yalnız damla, 2 s)
+   yakit  d0_mm     g  K_mm2_s  K_oran_ug  Nu_2  yanma  sonme_capi_mm  T_alev_K  min_oksijen
+n-heptan    1.0 0.000    0.715      1.000 1.000  0.975          0.150  2148.496         8.75
+n-heptan    1.0 0.165    0.858      1.201 1.203  0.980          0.133  2192.629         8.25
+n-heptan    1.0 0.380    0.890      1.246 1.250  0.980          0.130  2198.107         8.00
+n-heptan    1.0 1.000    0.937      1.311 1.318  0.981          0.125  2204.379         8.00
+n-heptan    2.0 0.000    0.586      1.000 1.000  0.910          0.641  1871.567        11.50
+n-heptan    2.0 0.165    0.852      1.454 1.347  0.970          0.473  2129.197         9.00
+n-heptan    2.0 0.380    0.913      1.557 1.425  0.974          0.448  2151.023         8.50
+n-heptan    2.0 1.000    0.991      1.691 1.539  0.977          0.419  2173.053         8.25
+n-heptan    3.0 0.000    0.508      1.000 1.000  0.765          1.496  1593.254        14.50
+n-heptan    3.0 0.165    0.875      1.721 1.476  0.956          0.923  2065.570         9.50
+n-heptan    3.0 0.380    0.953      1.874 1.581  0.965          0.859  2108.751         9.00
+n-heptan    3.0 1.000    1.064      2.093 1.734  0.973          0.785  2148.765         8.50
+ metanol    1.0 0.000    0.560      1.000 1.000  0.970          0.288  2082.983         8.25
+ metanol    1.0 0.165    0.650      1.162 1.208  0.971          0.271  2085.732         8.00
+ metanol    1.0 0.380    0.672      1.201 1.256  0.971          0.269  2086.084         8.00
+ metanol    1.0 1.000    0.704      1.259 1.326  0.971          0.263  2086.489         8.00
+ metanol    2.0 0.000    0.538      1.000 1.000  0.967          0.744  2067.313         8.25
+ metanol    2.0 0.165    0.696      1.292 1.350  0.970          0.669  2081.923         8.25
+ metanol    2.0 0.380    0.734      1.364 1.431  0.970          0.661  2083.224         8.25
+ metanol    2.0 1.000    0.790      1.469 1.549  0.970          0.641  2084.566         8.25
+ metanol    3.0 0.000    0.518      1.000 1.000  0.962          1.306  2040.748         8.50
+ metanol    3.0 0.165    0.738      1.426 1.475  0.969          1.134  2078.287         8.25
+ metanol    3.0 0.380    0.792      1.530 1.584  0.969          1.113  2080.762         8.25
+ metanol    3.0 1.000    0.857      1.655 1.744  0.970          1.071  2083.127         8.25
+1 g testi: {'n': 65, 'makale': 4, 'c=0': {'auc': 0.5424063116370808, 'dogruluk': 0.5692307692307692}, 'c=0.3': {'auc': 0.6134122287968442, 'dogruluk': 0.7076923076923077}}
+K(1 g)/K(µg), heptan 1 mm: model 1.31, literatür (1.2, 1.5)
+Kaydedildi: damla_kismi_g.csv, damla_kismi_g.png, damla_dogrulama_ek.json

@@ -1,0 +1,358 @@
+[
+  {
+    "ad": "ISS",
+    "girdi": {
+      "malzeme": "pmma",
+      "oksijen": 21,
+      "basinc": 101,
+      "g": 0.0001,
+      "akis": null,
+      "kalinlik": 0.2,
+      "numune_tipi": "thin_sheet",
+      "yakit_turu": "kati",
+      "akis_yonu": null,
+      "seyreltici": "n2"
+    },
+    "yanma_ihtimali": 0.97,
+    "belirsizlik": 0.028,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "sonme_siniri": 17.25,
+    "guvenlik_katsayisi": 0.821,
+    "sinirlama": null,
+    "motor": {
+      "yanma": 0.968,
+      "min_oksijen": 9.314,
+      "yayilma_hizi": 0.783,
+      "sicaklik": 2308.323
+    },
+    "motor_turu": "hafif",
+    "motor_akis": 5.0,
+    "guven": {
+      "skor": 92,
+      "veri_bileseni": 1.0,
+      "uyum_bileseni": 0.976,
+      "motor_bileseni": 0.752,
+      "agirliklar": {
+        "veri": 0.4,
+        "uyum": 0.3,
+        "motor": 0.3
+      },
+      "yakin_deney_yanma_orani": 0.946,
+      "yakin_deney": 279,
+      "motorlu_yakin_deney": 279,
+      "yanan": 264,
+      "sonen": 15,
+      "motor_yontemi": "max(0, 2(AUC-0.5)), AUC 0.88, 214 noktada çapraz doğrulama tahmini"
+    },
+    "kullanilan_varsayilanlar": {
+      "numune_tipi": "thin_sheet",
+      "kalinlik": 0.2,
+      "yakit_turu": "kati"
+    },
+    "uyarilar": [
+      "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı."
+    ],
+    "sure_sn": 0.358
+  },
+  {
+    "ad": "Ay",
+    "girdi": {
+      "malzeme": "pmma",
+      "oksijen": 21,
+      "basinc": 101,
+      "g": 0.165,
+      "akis": null,
+      "kalinlik": 0.2,
+      "numune_tipi": "thin_sheet",
+      "yakit_turu": "kati",
+      "akis_yonu": null,
+      "seyreltici": "n2"
+    },
+    "yanma_ihtimali": 0.995,
+    "belirsizlik": 0.003,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "sonme_siniri": 15.5,
+    "guvenlik_katsayisi": 0.738,
+    "sinirlama": {
+      "uzay": {
+        "g": 0.0001,
+        "yanma_ihtimali": 0.97,
+        "belirsizlik": 0.028,
+        "sonme_siniri": 17.25,
+        "guvenlik_katsayisi": 0.821,
+        "risk_seviyesi": "ÇOK YÜKSEK"
+      },
+      "gercek_g": {
+        "g": 0.165,
+        "yanma_ihtimali": 0.995,
+        "belirsizlik": 0.003,
+        "sonme_siniri": 15.5,
+        "guvenlik_katsayisi": 0.738,
+        "risk_seviyesi": "ÇOK YÜKSEK"
+      },
+      "dunya": {
+        "g": 1.0,
+        "yanma_ihtimali": 0.994,
+        "belirsizlik": 0.005,
+        "sonme_siniri": 15.75,
+        "guvenlik_katsayisi": 0.75,
+        "risk_seviyesi": "ÇOK YÜKSEK"
+      }
+    },
+    "motor": {
+      "yanma": 0.939,
+      "min_oksijen": 11.164,
+      "yayilma_hizi": 0.783,
+      "sicaklik": 2308.323
+    },
+    "motor_turu": "hafif",
+    "motor_akis": 0.0,
+    "guven": {
+      "skor": 34,
+      "veri_bileseni": 0.2,
+      "uyum_bileseni": 0.672,
+      "motor_bileseni": 0.2,
+      "agirliklar": {
+        "veri": 0.4,
+        "uyum": 0.3,
+        "motor": 0.3
+      },
+      "yakin_deney_yanma_orani": 0.667,
+      "yakin_deney": 3,
+      "motorlu_yakin_deney": 3,
+      "yanan": 2,
+      "sonen": 1,
+      "motor_yontemi": "bir sınıfta <3 nokta: 0.6 × max(0, 2(doğruluk-0.5)), doğruluk 0.67, 3 noktada çapraz doğrulama tahmini"
+    },
+    "kullanilan_varsayilanlar": {
+      "numune_tipi": "thin_sheet",
+      "kalinlik": 0.2,
+      "yakit_turu": "kati"
+    },
+    "uyarilar": [
+      "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
+      "Kısmi g için deney verisi az; uzay, gerçek g ve Dünya sonuçlarının en kötüsü alındı.",
+      "Güven düşük (34/100): bu koşula yakın deney az ya da motor orada zayıf."
+    ],
+    "sure_sn": 0.313
+  },
+  {
+    "ad": "Mars",
+    "girdi": {
+      "malzeme": "pmma",
+      "oksijen": 21,
+      "basinc": 101,
+      "g": 0.38,
+      "akis": null,
+      "kalinlik": 0.2,
+      "numune_tipi": "thin_sheet",
+      "yakit_turu": "kati",
+      "akis_yonu": null,
+      "seyreltici": "n2"
+    },
+    "yanma_ihtimali": 0.995,
+    "belirsizlik": 0.003,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "sonme_siniri": 15.75,
+    "guvenlik_katsayisi": 0.75,
+    "sinirlama": {
+      "uzay": {
+        "g": 0.0001,
+        "yanma_ihtimali": 0.97,
+        "belirsizlik": 0.028,
+        "sonme_siniri": 17.25,
+        "guvenlik_katsayisi": 0.821,
+        "risk_seviyesi": "ÇOK YÜKSEK"
+      },
+      "gercek_g": {
+        "g": 0.38,
+        "yanma_ihtimali": 0.995,
+        "belirsizlik": 0.003,
+        "sonme_siniri": 15.75,
+        "guvenlik_katsayisi": 0.75,
+        "risk_seviyesi": "ÇOK YÜKSEK"
+      },
+      "dunya": {
+        "g": 1.0,
+        "yanma_ihtimali": 0.994,
+        "belirsizlik": 0.005,
+        "sonme_siniri": 15.75,
+        "guvenlik_katsayisi": 0.75,
+        "risk_seviyesi": "ÇOK YÜKSEK"
+      }
+    },
+    "motor": {
+      "yanma": 0.894,
+      "min_oksijen": 12.432,
+      "yayilma_hizi": 0.783,
+      "sicaklik": 2308.323
+    },
+    "motor_turu": "hafif",
+    "motor_akis": 0.0,
+    "guven": {
+      "skor": 34,
+      "veri_bileseni": 0.2,
+      "uyum_bileseni": 0.672,
+      "motor_bileseni": 0.2,
+      "agirliklar": {
+        "veri": 0.4,
+        "uyum": 0.3,
+        "motor": 0.3
+      },
+      "yakin_deney_yanma_orani": 0.667,
+      "yakin_deney": 3,
+      "motorlu_yakin_deney": 3,
+      "yanan": 2,
+      "sonen": 1,
+      "motor_yontemi": "bir sınıfta <3 nokta: 0.6 × max(0, 2(doğruluk-0.5)), doğruluk 0.67, 3 noktada çapraz doğrulama tahmini"
+    },
+    "kullanilan_varsayilanlar": {
+      "numune_tipi": "thin_sheet",
+      "kalinlik": 0.2,
+      "yakit_turu": "kati"
+    },
+    "uyarilar": [
+      "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
+      "Kısmi g için deney verisi az; uzay, gerçek g ve Dünya sonuçlarının en kötüsü alındı.",
+      "Güven düşük (34/100): bu koşula yakın deney az ya da motor orada zayıf."
+    ],
+    "sure_sn": 0.335
+  },
+  {
+    "ad": "Dünya",
+    "girdi": {
+      "malzeme": "pmma",
+      "oksijen": 21,
+      "basinc": 101,
+      "g": 1,
+      "akis": null,
+      "kalinlik": 0.2,
+      "numune_tipi": "thin_sheet",
+      "yakit_turu": "kati",
+      "akis_yonu": null,
+      "seyreltici": "n2"
+    },
+    "yanma_ihtimali": 0.994,
+    "belirsizlik": 0.005,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "sonme_siniri": 15.75,
+    "guvenlik_katsayisi": 0.75,
+    "sinirlama": null,
+    "motor": {
+      "yanma": 0.796,
+      "min_oksijen": 14.241,
+      "yayilma_hizi": 0.783,
+      "sicaklik": 2308.323
+    },
+    "motor_turu": "hafif",
+    "motor_akis": 0.0,
+    "guven": {
+      "skor": 75,
+      "veri_bileseni": 1.0,
+      "uyum_bileseni": 0.919,
+      "motor_bileseni": 0.246,
+      "agirliklar": {
+        "veri": 0.4,
+        "uyum": 0.3,
+        "motor": 0.3
+      },
+      "yakin_deney_yanma_orani": 0.913,
+      "yakin_deney": 69,
+      "motorlu_yakin_deney": 69,
+      "yanan": 63,
+      "sonen": 6,
+      "motor_yontemi": "max(0, 2(AUC-0.5)), AUC 0.62, 6 noktada çapraz doğrulama tahmini"
+    },
+    "kullanilan_varsayilanlar": {
+      "numune_tipi": "thin_sheet",
+      "kalinlik": 0.2,
+      "yakit_turu": "kati"
+    },
+    "uyarilar": [
+      "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı."
+    ],
+    "sure_sn": 0.106
+  },
+  {
+    "ad": "Mars %30 70 kPa",
+    "girdi": {
+      "malzeme": "pmma",
+      "oksijen": 30,
+      "basinc": 70,
+      "g": 0.38,
+      "akis": null,
+      "kalinlik": 0.2,
+      "numune_tipi": "thin_sheet",
+      "yakit_turu": "kati",
+      "akis_yonu": null,
+      "seyreltici": "n2"
+    },
+    "yanma_ihtimali": 0.999,
+    "belirsizlik": 0.001,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "sonme_siniri": 15.75,
+    "guvenlik_katsayisi": 0.525,
+    "sinirlama": {
+      "uzay": {
+        "g": 0.0001,
+        "yanma_ihtimali": 0.99,
+        "belirsizlik": 0.011,
+        "sonme_siniri": 17.25,
+        "guvenlik_katsayisi": 0.575,
+        "risk_seviyesi": "ÇOK YÜKSEK"
+      },
+      "gercek_g": {
+        "g": 0.38,
+        "yanma_ihtimali": 0.999,
+        "belirsizlik": 0.001,
+        "sonme_siniri": 15.75,
+        "guvenlik_katsayisi": 0.525,
+        "risk_seviyesi": "ÇOK YÜKSEK"
+      },
+      "dunya": {
+        "g": 1.0,
+        "yanma_ihtimali": 0.998,
+        "belirsizlik": 0.002,
+        "sonme_siniri": 16.25,
+        "guvenlik_katsayisi": 0.542,
+        "risk_seviyesi": "ÇOK YÜKSEK"
+      }
+    },
+    "motor": {
+      "yanma": 0.92,
+      "min_oksijen": 13.091,
+      "yayilma_hizi": 0.811,
+      "sicaklik": 2426.664
+    },
+    "motor_turu": "hafif",
+    "motor_akis": 0.0,
+    "guven": {
+      "skor": 0,
+      "veri_bileseni": 0.0,
+      "uyum_bileseni": null,
+      "motor_bileseni": 0.0,
+      "agirliklar": {
+        "veri": 0.7,
+        "uyum": 0.0,
+        "motor": 0.3
+      },
+      "yakin_deney_yanma_orani": null,
+      "yakin_deney": 0,
+      "motorlu_yakin_deney": 0,
+      "yanan": 0,
+      "sonen": 0,
+      "motor_yontemi": "ölçülemedi (motorun sonuç verdiği yakın deney yok)"
+    },
+    "kullanilan_varsayilanlar": {
+      "numune_tipi": "thin_sheet",
+      "kalinlik": 0.2,
+      "yakit_turu": "kati"
+    },
+    "uyarilar": [
+      "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
+      "Kısmi g için deney verisi az; uzay, gerçek g ve Dünya sonuçlarının en kötüsü alındı.",
+      "Güven düşük (0/100): bu koşula yakın deney az ya da motor orada zayıf."
+    ],
+    "sure_sn": 0.308
+  }
+]

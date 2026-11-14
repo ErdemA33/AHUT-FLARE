@@ -1,0 +1,13 @@
+FoamFile { format ascii; class volScalarField; location "0/fluid"; object p; }
+dimensions [1 -1 -2 0 0 0 0];
+internalField uniform 99451;
+boundaryField
+{
+    #includeEtc "caseDicts/setConstraintTypes"
+    inlet { type zeroGradient; }
+    outlet { type totalPressure; p0 uniform 99451; value uniform 99451; }
+    top { type zeroGradient; }
+    base { type zeroGradient; }
+    fluid_to_sibal { type zeroGradient; }
+    fluid_to_tel { type zeroGradient; }
+}

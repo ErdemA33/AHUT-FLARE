@@ -1,0 +1,13 @@
+{
+ "tarih": "2026-11-12",
+ "arama": "veri_temiz.csv + motor_kontrol.etiketli(): numune_tipi droplet, akis_hizi_cm_s > 0, g <= 0,2",
+ "bulunan": {
+  "veri_temiz_satir": 66,
+  "K_olcumlu": 9,
+  "K_olcumlu_kosullari_tam(cap+O2)": 0,
+  "etiketli_sondu_mu": 3,
+  "etiketli_motor_kontrol": 8
+ },
+ "not": "K'lı 9 satırın hepsi şüpheli işaretli; 10.1016_s0082-0784_06_80431-5 satırlarında 'akış' 0,3-1,2 değerleri büyük olasılıkla damla çapı (LLM ayıklama hatası). Etiketli 8 noktanın 7'sinde yakıt tanınmıyor, hepsi 'yanar'.",
+ "karar": "Ranz-Marshall zorlanmış akış düzeltmesi doğrulanamadı; kalibre edilmedi; uyarı metni 'doğrulanamadı (veri bulunamadı)' olarak güncellendi"
+}

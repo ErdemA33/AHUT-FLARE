@@ -1,0 +1,38 @@
+FoamFile
+{
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      controlDict;
+}
+// Saffire-III S1, kati bolge vakasi (fluid + SIBAL + Kanthal tel), foamMultiRun
+
+libs ("libFlameInFreefallSolid.so");
+
+regionSolvers
+{
+    fluid           multicomponentFluid;
+    sibal           solid;
+    tel             solid;
+}
+
+startFrom       startTime;
+startTime       0;
+stopAt          endTime;
+endTime         0.4;
+deltaT          1e-6;
+writeControl    adjustableRunTime;
+writeInterval   0.1;
+purgeWrite      0;
+writeFormat     ascii;
+writePrecision  10;
+writeCompression off;
+timeFormat      general;
+timePrecision   8;
+runTimeModifiable true;
+adjustTimeStep  yes;
+maxCo            0.5;
+maxDi           10;
+maxDeltaT       1e-4;
+
+// fonksiyonlar: system/functions (OF14 otomatik okur)

@@ -1,0 +1,194 @@
+{
+ "zaman": "2026-11-14 09:48:42",
+ "hatalar": [],
+ "erisim": true,
+ "kosul": {
+  "malzeme": "pmma",
+  "oksijen": 30,
+  "basinc": 70,
+  "g": 0.38,
+  "akis": null,
+  "kalinlik": null,
+  "numune_tipi": null,
+  "yakit_turu": null,
+  "akis_yonu": null,
+  "seyreltici": "n2"
+ },
+ "bekle_kutu_kapali": true,
+ "mesajlar": [
+  {
+   "rol": "kullanici",
+   "metin": "neden riskli?"
+  },
+  {
+   "rol": "asistan",
+   "metin": "Risk seviyesi ÇOK YÜKSEK olarak belirlenmiştir çünkü birleşik yanma ihtimali 0.969'dur. Ortam oksijeni %30 iken sönme sınırı %15.75'tir; bu durum güvenlik katsayısının 0.525 olmasına yol açmıştır. Güvenlik katsayısı 1'den küçük olduğu için ortam tehlikelidir. Ayrıca yanma ihtimali %50'nin üzerinde olduğundan alev yanar kabul edilmektedir. Ancak, kalibrasyon kapsamı dışında kalınması nedeniyle güven skoru 16 ile düşük seviyededir.",
+   "hesaplar": [],
+   "mevcut": {
+    "yanma_birlesik": 0.969,
+    "yanma_ihtimali_model": 0.999,
+    "motor_yanma": 0.92,
+    "motor_kaynagi": "hafif",
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "sonme_siniri": 15.75,
+    "guvenlik_katsayisi": 0.525,
+    "guven": 16,
+    "guven_bant": "düşük"
+   },
+   "dogrulanamayan": [],
+   "eski": false
+  },
+  {
+   "rol": "kullanici",
+   "metin": "güven neden düşük?"
+  },
+  {
+   "rol": "asistan",
+   "metin": "Güven skoru 16 ile düşük seviyededir çünkü bu koşullara yakın bir NASA deneyi bulunmamaktadır ve sistem kalibrasyon kapsamı dışındadır. Bu durum, güven skorunu etkileyen cezalar kısmında belirtilmiştir.",
+   "hesaplar": [],
+   "mevcut": {
+    "yanma_birlesik": 0.969,
+    "yanma_ihtimali_model": 0.999,
+    "motor_yanma": 0.92,
+    "motor_kaynagi": "hafif",
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "sonme_siniri": 15.75,
+    "guvenlik_katsayisi": 0.525,
+    "guven": 16,
+    "guven_bant": "düşük"
+   },
+   "dogrulanamayan": [],
+   "eski": false
+  },
+  {
+   "rol": "kullanici",
+   "metin": "oksijen %25 olsa?"
+  },
+  {
+   "rol": "asistan",
+   "metin": "Oksijen oranı %25'e düştüğünde, birleşik yanma ihtimali 0.969'dan 0.959'a gerilemiş ancak risk seviyesi hala ÇOK YÜKSEK kalmaya devam etmiştir. Güvenlik katsayısı 0.525'ten 0.63'e yükselerek durumu biraz daha iyileştirmiştir. En belirgin değişim güven skorunda görülmüş; skor 16'dan 52'ye çıkarak düşük banttan orta banda yükselmiştir. Buna rağmen, yanma ihtimali %50'nin üzerinde olduğu için alev yanmaya devam etmektedir.",
+   "hesaplar": [
+    {
+     "istek": {
+      "oksijen": 25
+     },
+     "durum": "tamam",
+     "girdi": {
+      "malzeme": "pmma",
+      "oksijen": 25,
+      "basinc": 70,
+      "g": 0.38,
+      "akis": null,
+      "kalinlik": 0.2,
+      "numune_tipi": "thin_sheet",
+      "yakit_turu": "kati",
+      "akis_yonu": null,
+      "seyreltici": "n2"
+     },
+     "ozet": {
+      "yanma_birlesik": 0.959,
+      "yanma_ihtimali_model": 0.998,
+      "motor_yanma": 0.896,
+      "motor_kaynagi": "hafif",
+      "risk_seviyesi": "ÇOK YÜKSEK",
+      "sonme_siniri": 15.75,
+      "guvenlik_katsayisi": 0.63,
+      "guven": 52,
+      "guven_bant": "orta"
+     },
+     "agirliklar": {
+      "model": 0.622,
+      "motor": 0.378
+     },
+     "uyarilar": [
+      "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
+      "Kısmi g için deney verisi az; uzay, gerçek g ve Dünya sonuçlarının en kötüsü alındı."
+     ]
+    }
+   ],
+   "mevcut": {
+    "yanma_birlesik": 0.969,
+    "yanma_ihtimali_model": 0.999,
+    "motor_yanma": 0.92,
+    "motor_kaynagi": "hafif",
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "sonme_siniri": 15.75,
+    "guvenlik_katsayisi": 0.525,
+    "guven": 16,
+    "guven_bant": "düşük"
+   },
+   "dogrulanamayan": [],
+   "eski": false
+  },
+  {
+   "rol": "kullanici",
+   "metin": "basınç 101 kPa olsa?"
+  },
+  {
+   "rol": "asistan",
+   "metin": "Basıncın 101 kPa'ya çıkmasıyla birlikte birleşik yanma ihtimali 0.969'dan 0.977'ye yükselmiş ve risk seviyesi ÇOK YÜKSEK kalmaya devam etmiştir. Motor yanma değeri ise 0.92'den 0.94'e artmıştır. Sönme sınırı (%15.75) ve buna bağlı olarak güvenlik katsayısı (0.525) değişmemiştir. Güven skoru 16 ile düşük seviyesini korumuştur. Özetle, basınç artışı yanma ihtimalini hafifçe artırmıştır.",
+   "hesaplar": [
+    {
+     "istek": {
+      "basinc": 101
+     },
+     "durum": "tamam",
+     "girdi": {
+      "malzeme": "pmma",
+      "oksijen": 30,
+      "basinc": 101,
+      "g": 0.38,
+      "akis": null,
+      "kalinlik": 0.2,
+      "numune_tipi": "thin_sheet",
+      "yakit_turu": "kati",
+      "akis_yonu": null,
+      "seyreltici": "n2"
+     },
+     "ozet": {
+      "yanma_birlesik": 0.977,
+      "yanma_ihtimali_model": 0.999,
+      "motor_yanma": 0.94,
+      "motor_kaynagi": "hafif",
+      "risk_seviyesi": "ÇOK YÜKSEK",
+      "sonme_siniri": 15.75,
+      "guvenlik_katsayisi": 0.525,
+      "guven": 16,
+      "guven_bant": "düşük"
+     },
+     "agirliklar": {
+      "model": 0.622,
+      "motor": 0.378
+     },
+     "uyarilar": [
+      "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
+      "Kısmi g için deney verisi az; uzay, gerçek g ve Dünya sonuçlarının en kötüsü alındı.",
+      "Güven düşük (16/100): bu koşula yakın NASA deneyi yok; kalibrasyon kapsamı dışı."
+     ]
+    }
+   ],
+   "mevcut": {
+    "yanma_birlesik": 0.969,
+    "yanma_ihtimali_model": 0.999,
+    "motor_yanma": 0.92,
+    "motor_kaynagi": "hafif",
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "sonme_siniri": 15.75,
+    "guvenlik_katsayisi": 0.525,
+    "guven": 16,
+    "guven_bant": "düşük"
+   },
+   "dogrulanamayan": [],
+   "eski": false
+  }
+ ],
+ "girdi_degisti": {
+  "kapali": true,
+  "eski": 8
+ },
+ "cevrimdisi": {
+  "kapali": true,
+  "mesaj": "LLM'e ulaşılamıyor (bağlantı yok (sınama)). Sohbet kapalı; hesaplar ve diğer sonuçlar çevrimdışı çalışır. Yeniden dene"
+ },
+ "js_hatalari": []
+}
