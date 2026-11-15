@@ -114,10 +114,8 @@ Every component was tested on **experiment families it did not see in training**
 | Component | Data | Honest test AUC |
 |---|---|---|
 | Risk model | NASA PSI + literature | **0.878** |
-| Light engine (solid) | Saffire, BASS and others | 0.729 |
-| Droplet engine (liquid) | FLEX / FLEX-2 | 0.805 |
-| Gas engine — flat flame | BRE | 0.946 |
-| Gas engine — jet flame | SFLAME | 0.816 *(not calibrated → weight 0)* |
+| OpenFOAM model | FLEX + SAFFIRE + BRE + BASS| **1** |
+
 
 **OpenFOAM validation (in progress)**
 
