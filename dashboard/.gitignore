@@ -9,6 +9,8 @@ data/cases/
 data/selftest_report.txt
 render/*
 !render/PUT_RENDERS_HERE.txt
+!render/*_dogrulama-*
+!render/dogrulama_render.json
 
 # ---- paketleme çıktıları ----
 build/

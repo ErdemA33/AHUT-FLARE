@@ -100,6 +100,8 @@ class Izleyici:
         self.disa_aktar_kancasi = None           # callable(kayit): TAMAM bitince 3B dışa aktarma başlatır
         self.kontrol_kancasi = None              # callable(kayit, log_metni) -> (tamam|None, mesaj)
         self._gecmis: dict[str, deque] = {}      # ilerleme için (duvar saati, t) örnekleri
+        self._disa_sira: deque = deque()          # 3B dışa aktarma sırası (koşu id); aynı anda yalnız bir tane
+        self._disa_aktif: int | None = None       # sürmekte olan dışa aktarmanın pid'i
         self._yukle()
         self._dongu = threading.Thread(target=self._calis, daemon=True)
         self._dongu.start()
@@ -111,6 +113,12 @@ class Izleyici:
                 if k.get("durum") in ("ÇALIŞIYOR", "BEKLİYOR", "DURAKLADI") and not k.get("harici"):
                     k["durum"] = "İPTAL"          # uygulama kapanırken yarım kalmış
                     k["bitis"] = k.get("bitis") or time.time()
+                elif k.get("harici") and k.get("durum") == "İPTAL" and k.get("dizin"):
+                    # eski sürüm, arayüzde izlenmeyen harici koşuları bitince İPTAL sayıyordu: günlükten yeniden değerlendir
+                    if self._gunluk_bitti(Path(k["dizin"]), k.get("log") or "log.run") == "TAMAM":
+                        k["durum"] = "TAMAM"
+                        k["yeniden_degerlendirildi"] = True
+                        self._disa_sira.append(k["id"])
                 self._kosular[k["id"]] = k
         except (OSError, ValueError):
             pass
@@ -254,10 +262,8 @@ class Izleyici:
         self._bildirim.append({"id": k["id"], "ad": k["ad"], "durum": durum})
         self._yaz()
         if durum == "TAMAM" and self.disa_aktar_kancasi:          # 3B dışa aktarma (kendi ve harici koşular; yalnız okur)
-            try:
-                k["disa_aktarma"] = self.disa_aktar_kancasi(dict(k))
-            except Exception as e:  # noqa: BLE001
-                k["disa_aktarma"] = {"hata": f"{type(e).__name__}: {e}"}
+            k["disa_aktarma"] = {"durum": "sırada"}
+            self._disa_sira.append(k["id"])
         if durum == "TAMAM" and k.get("ice_aktar") and self.bitis_kancasi:
             k["ice_aktarma"] = "bekliyor"
             threading.Thread(target=self._kanca, args=(k,), daemon=True).start()
@@ -362,9 +368,35 @@ class Izleyici:
                         if sira:
                             self._baslat(sira[0])
                     self._harici_tara()
+                    self._disa_aktar_ilerlet()
             except Exception:  # noqa: BLE001
                 pass
             time.sleep(1.0)
+
+    def _disa_aktar_ilerlet(self):
+        """3B dışa aktarma sırasından bir sonrakini başlatır; öncekisi sürerken bekler (aynı anda tek pvpython)."""
+        if self._disa_aktif is not None:
+            try:
+                os.kill(self._disa_aktif, 0)
+                with open(f"/proc/{self._disa_aktif}/stat") as f:
+                    if f.read().split(")")[-1].split()[0] != "Z":
+                        return
+            except (OSError, IndexError):
+                pass
+            self._disa_aktif = None
+        if not self._disa_sira or not self.disa_aktar_kancasi:
+            return
+        k = self._kosular.get(self._disa_sira.popleft())
+        if not k:
+            return
+        try:
+            r = self.disa_aktar_kancasi(dict(k))
+        except Exception as e:  # noqa: BLE001
+            r = {"hata": f"{type(e).__name__}: {e}"}
+        k["disa_aktarma"] = r
+        if isinstance(r, dict) and r.get("pid"):
+            self._disa_aktif = int(r["pid"])
+        self._yaz()
 
     # ------------------------------------------------------------ harici koşular (başka oturumlar; yalnız izlenir)
     def _foam_surecleri(self):
@@ -419,20 +451,36 @@ class Izleyici:
     def _bitis_durumu_harici(self, k: dict) -> str:
         d = self._bitis_durumu(k, None)
         if d != "IRAKSADI":
-            return d if d != "İPTAL" else "İPTAL"
-        # çıkış kodu yok: günlükte bitiş izine bak
-        a = self._ayr.get("k:" + k["id"])
-        son = self._son_zaman(k)
-        bitis_t = self._bitis_zamani(Path(k["dizin"]))
+            return d
+        # çıkış kodu yok: günlükte bitiş izine bak (arayüzde izlenmemiş olsa da)
+        g = self._gunluk_bitti(Path(k["dizin"]), k.get("log") or "log.run", self._son_zaman(k))
+        return g or "İPTAL"
+
+    @classmethod
+    def _gunluk_bitti(cls, dizin: Path, log: str, son: float | None = None) -> str | None:
+        """Harici koşunun günlüğünden bitiş türü: 'TAMAM' (OpenFOAM 'End' / 'Finalising parallel run' ya da son
+        zaman >= endTime), 'IRAKSADI' (FATAL / kayan nokta hatası), belirsizse None."""
+        try:
+            with open(dizin / log, "rb") as f:
+                f.seek(0, os.SEEK_END)
+                f.seek(max(0, f.tell() - 20000))
+                ic = f.read().decode("utf-8", "replace")
+        except OSError:
+            return None
+        if re.search(r"FOAM (FATAL|exiting)|Floating point exception", ic):
+            return "IRAKSADI"
+        if re.search(r"^End\s*$", ic, re.M) or "Finalising parallel run" in ic:
+            return "TAMAM"
+        tt = re.findall(r"^\s*Time\s*=\s*" + _RE_SAYI + r"\s*s?\s*$", ic, re.M)
+        if tt:
+            try:
+                son = max(son or 0.0, float(tt[-1]))
+            except ValueError:
+                pass
+        bitis_t = cls._bitis_zamani(dizin)
         if son is not None and bitis_t is not None and son >= bitis_t * 0.999:
             return "TAMAM"
-        try:
-            ic = (Path(k["dizin"]) / k["log"]).read_text(encoding="utf-8", errors="replace")[-6000:]
-            if re.search(r"FOAM (FATAL|exiting)|Floating point exception", ic):
-                return "IRAKSADI"
-        except OSError:
-            pass
-        return "İPTAL"
+        return None
 
     def _son_zaman(self, k):
         a = self._ayr.get(k["id"])

@@ -1468,7 +1468,10 @@ function renderGorseli() {
   }
   if (uyg && uyg.bekle) return Kabuk.gorselYaz(T("agac.render"), `<div class="gorunum"><div class="bos">${esc(tr ? "Uygun render aranıyor…" : "Looking for a matching render…")}</div></div>`);
   const sogus = uyg && uyg.mod && uyg.mod !== "tum";
-  const gor = !sogus ? liste : uyg.adlar.map((ad) => liste.find((x) => x.ad === ad)).filter(Boolean);
+  let gor = !sogus ? liste : uyg.adlar.map((ad) => liste.find((x) => x.ad === ad)).filter(Boolean);
+  // vakaya kayıtlı render (kütüphaneden açılan vaka) süzgece takılmasın: listenin başına
+  const kayitli = S.renderSecili && liste.find((x) => x.ad === S.renderSecili);
+  if (kayitli && !gor.includes(kayitli)) gor = [kayitli].concat(gor);
   const bantAd = (b) => ({ uzay: tr ? "uzay" : "space", ay: tr ? "Ay" : "Moon", mars: "Mars", dunya: tr ? "Dünya" : "Earth" }[b] || b);
   const kosulMetni = (x) => x.vaka
     ? `${x.vaka.malzeme} · g=${(x.paneller && x.paneller.length ? x.paneller.map(bantAd).join(" | ") : gMetni(x.vaka.g))} · %${nf(x.vaka.oksijen, 1)} O₂ · ${nf(x.vaka.basinc, 1)} kPa`
@@ -1505,7 +1508,9 @@ function renderGorseli() {
     `<div class="render-bilgi"><span>${esc(new Date(v.zaman * 1000).toLocaleString(tr ? "tr-TR" : "en-US"))}</span>` +
     `<span>${esc(nf(v.boyut / 1048576, 1))} MB</span></div>` +
     `<div class="grafik-not">${esc(tr ? "Render koşulu:" : "Render condition:")} ${esc(kosulMetni(v))}${v.ad.indexOf("_kosu-") >= 0 ? " · " + esc(tr ? "ayrıntılı OpenFOAM koşusu" : "detailed OpenFOAM run") : ""}</div>` +
-    `<div class="grafik-not"><b>${esc(tr ? "GÖSTERİM — deney verisiyle doğrulanmadı" : "ILLUSTRATION — not validated against experimental data")}</b></div></div></div>`);
+    (v.ad.indexOf("_dogrulama-") >= 0
+      ? `<div class="grafik-not"><b>${esc(tr ? "DOĞRULAMA — aynı koşuldaki NASA deneyiyle karşılaştırıldı (sonuç: vaka açıklaması)" : "VALIDATION — compared with the NASA experiment at the same condition (result: case description)")}</b></div></div></div>`
+      : `<div class="grafik-not"><b>${esc(tr ? "GÖSTERİM — deney verisiyle doğrulanmadı" : "ILLUSTRATION — not validated against experimental data")}</b></div></div></div>`));
   kutuBagla();
   function kutuBagla() {
     const k = $("#renderTumu");
@@ -2239,6 +2244,7 @@ async function vakaYukle(id, topluluk) {
     paket.supurme ? { parametre: paket.supurme.parametre, bas: paket.supurme.bas,
                       son: paket.supurme.son, adim: paket.supurme.adim, sonuc: paket.supurme } : { sonuc: null });
   S.vakaId = topluluk ? null : paket.id;
+  S.renderSecili = paket.render || null;
   if (paket.sonuc && paket.sonuc.cozum_turu) { S.cozumTuru = paket.sonuc.cozum_turu; S.onTahmin = paket.sonuc.on_tahmin === true; }
   S.ayrintili = null; cozumTuruYaz();
   if (paket.sonuc && paket.sonuc.ayrintili && paket.sonuc.ayrintili.kosu) ayrintiliGeriYukle(paket.sonuc.ayrintili);
