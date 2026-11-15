@@ -9,7 +9,7 @@ from pathlib import Path
 
 BURASI = Path(__file__).resolve().parent
 ANA = BURASI.parent
-sys.path.insert(0, str(BURASI)); sys.path.insert(0, str(ANA))
+sys.path.insert(0, str(BURASI)); sys.path.insert(0, str(ANA)); sys.path.insert(0, str(ANA / "scripts"))
 TMP = Path(tempfile.mkdtemp(prefix="ofm_ui_"))
 os.environ["AHUT_OFM_KOK"] = str(TMP / "ofm")          # Kopru bunu setdefault ile korur
 os.environ["AHUT_RENDER"] = str(TMP / "render"); (TMP / "render").mkdir()

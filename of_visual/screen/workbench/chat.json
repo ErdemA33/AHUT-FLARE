@@ -1,7 +1,7 @@
 {
- "zaman": "2026-11-14 09:48:42",
+ "zaman": "2026-11-15 14:55:11",
  "hatalar": [],
- "erisim": true,
+ "erisim": null,
  "kosul": {
   "malzeme": "pmma",
   "oksijen": 30,
@@ -14,7 +14,6 @@
   "akis_yonu": null,
   "seyreltici": "n2"
  },
- "bekle_kutu_kapali": true,
  "mesajlar": [
   {
    "rol": "kullanici",
@@ -22,7 +21,7 @@
   },
   {
    "rol": "asistan",
-   "metin": "Risk seviyesi ÇOK YÜKSEK olarak belirlenmiştir çünkü birleşik yanma ihtimali 0.969'dur. Ortam oksijeni %30 iken sönme sınırı %15.75'tir; bu durum güvenlik katsayısının 0.525 olmasına yol açmıştır. Güvenlik katsayısı 1'den küçük olduğu için ortam tehlikelidir. Ayrıca yanma ihtimali %50'nin üzerinde olduğundan alev yanar kabul edilmektedir. Ancak, kalibrasyon kapsamı dışında kalınması nedeniyle güven skoru 16 ile düşük seviyededir.",
+   "metin": "Sistem, birleşik yanma ihtimalini %96,9 olarak hesaplamış ve risk seviyesini \"ÇOK YÜKSEK\" olarak belirlemiştir. Temel neden, ortamdaki %30 oksijen oranının, malzemenin %15,75 olan sönme sınırının çok üzerinde olmasıdır. Bu durum güvenlik katsayısının 0,525'e (1'in altına) düşmesine yol açarak ortamı tehlikeli hale getirmiştir. Ayrıca hem risk modelinin (%99,9) hem de fizik motorunun (%92) yüksek yanma ihtimali öngörmesi riski doğrulamaktadır. Ancak, uygun NASA deneyi bulunmadığı ve kalibrasyon kapsamı dışında kalındığı için güven skoru oldukça düşüktür (16/100).",
    "hesaplar": [],
    "mevcut": {
     "yanma_birlesik": 0.969,
@@ -44,7 +43,7 @@
   },
   {
    "rol": "asistan",
-   "metin": "Güven skoru 16 ile düşük seviyededir çünkü bu koşullara yakın bir NASA deneyi bulunmamaktadır ve sistem kalibrasyon kapsamı dışındadır. Bu durum, güven skorunu etkileyen cezalar kısmında belirtilmiştir.",
+   "metin": "Güven skorunun 16/100 ile düşük olmasının temel sebebi, analiz edilen koşullara yakın herhangi bir NASA deneyinin bulunmamasıdır. Sistem, durumu \"kalibrasyon kapsamı dışı\" olarak işaretlemiş ve bu nedenle güven puanına ceza uygulamıştır. Ayrıca kısmi yerçekimi (Mars g=0.38) için mevcut deney verilerinin yetersiz olması da belirsizliği artırmıştır.",
    "hesaplar": [],
    "mevcut": {
     "yanma_birlesik": 0.969,
@@ -66,7 +65,7 @@
   },
   {
    "rol": "asistan",
-   "metin": "Oksijen oranı %25'e düştüğünde, birleşik yanma ihtimali 0.969'dan 0.959'a gerilemiş ancak risk seviyesi hala ÇOK YÜKSEK kalmaya devam etmiştir. Güvenlik katsayısı 0.525'ten 0.63'e yükselerek durumu biraz daha iyileştirmiştir. En belirgin değişim güven skorunda görülmüş; skor 16'dan 52'ye çıkarak düşük banttan orta banda yükselmiştir. Buna rağmen, yanma ihtimali %50'nin üzerinde olduğu için alev yanmaya devam etmektedir.",
+   "metin": "Oksijen oranı %30'dan %25'e düştüğünde, birleşik yanma ihtimali %96,9'dan %95,9'a hafifçe gerilemiş ancak risk seviyesi halen \"ÇOK YÜKSEK\" kalmaya devam etmiştir. Güvenlik katsayısı 0,525'ten 0,63'e yükselerek güvenli bölgeye biraz daha yaklaşmış, fizik motorunun yanma ihtimali ise %92'den %89,6'ya inmiştir. En dikkat çekici değişim güven skorunda yaşanmış; veri uyumu arttığı için skor 16'dan 52'ye çıkarak \"düşük\" banttan \"orta\" banda yükselmiştir. Buna rağmen sönme sınırı (%15,75) hala aşılmış durumdadır.",
    "hesaplar": [
     {
      "istek": {
@@ -126,7 +125,7 @@
   },
   {
    "rol": "asistan",
-   "metin": "Basıncın 101 kPa'ya çıkmasıyla birlikte birleşik yanma ihtimali 0.969'dan 0.977'ye yükselmiş ve risk seviyesi ÇOK YÜKSEK kalmaya devam etmiştir. Motor yanma değeri ise 0.92'den 0.94'e artmıştır. Sönme sınırı (%15.75) ve buna bağlı olarak güvenlik katsayısı (0.525) değişmemiştir. Güven skoru 16 ile düşük seviyesini korumuştur. Özetle, basınç artışı yanma ihtimalini hafifçe artırmıştır.",
+   "metin": "Basıncın 70 kPa'dan 101 kPa'ya çıkmasıyla birlikte birleşik yanma ihtimali %96,9'dan %97,7'ye yükselmiş ve risk seviyesi \"ÇOK YÜKSEK\" kalmaya devam etmiştir. Fizik motorunun yanma ihtimali %92'den %94'e çıkarak basınç artışının yanmayı desteklediğini göstermiştir. Sönme sınırı (%15,75) ve buna bağlı güvenlik katsayısı (0,525) değişmemiştir. Güven skoru ise 16/100 ile aynı şekilde düşük seyretmektedir. Özetle, basınç artışı yanma olasılığını bir miktar daha artırmıştır.",
    "hesaplar": [
     {
      "istek": {
@@ -183,8 +182,8 @@
   }
  ],
  "girdi_degisti": {
-  "kapali": true,
-  "eski": 8
+  "kapali": false,
+  "eski": 0
  },
  "cevrimdisi": {
   "kapali": true,

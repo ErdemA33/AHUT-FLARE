@@ -1,52 +1,55 @@
 {
- "zaman": "2026-11-13 06:18:39",
+ "zaman": "2026-11-15 14:52:24",
  "goruntuler": [
-  "dashboard_01_start.png",
-  "dashboard_02_install_pmma_mars.png",
-  "dashboard_03_solution_suruyor.png",
-  "dashboard_04_result_pmma_mars_summary.png",
-  "dashboard_04_result_pmma_mars_engine.png",
-  "dashboard_04_result_pmma_mars_oxygen.png",
-  "dashboard_04_result_pmma_mars_map.png",
-  "dashboard_04_result_pmma_mars_flow.png",
-  "dashboard_04_result_pmma_mars_experiment.png",
-  "dashboard_04_result_pmma_mars_confidence.png",
-  "dashboard_04_result_pmma_mars_limitation.png",
-  "dashboard_04_result_pmma_mars_llm.png",
-  "dashboard_04_result_pmma_mars_render.png",
-  "dashboard_04_result_pmma_mars_earth.png",
-  "dashboard_02_install_methanol_iss.png",
-  "dashboard_04_result_methanol_iss_summary.png",
-  "dashboard_04_result_methanol_iss_confidence.png",
-  "dashboard_04_result_methanol_iss_engine.png",
-  "dashboard_02_install_ethylene_iss.png",
-  "dashboard_04_result_ethylene_iss_summary.png",
-  "dashboard_04_result_ethylene_iss_confidence.png",
-  "dashboard_04_result_ethylene_iss_engine.png",
-  "dashboard_02_install_ethylene_iss_gas.png",
-  "dashboard_04_result_ethylene_iss_gas_summary.png",
-  "dashboard_04_result_ethylene_iss_gas_confidence.png",
-  "dashboard_04_result_ethylene_iss_gas_engine.png",
-  "dashboard_02_install_lexan_iss.png",
-  "dashboard_04_result_lexan_iss_summary.png",
-  "dashboard_04_result_lexan_iss_confidence.png",
-  "dashboard_04_result_lexan_iss_engine.png",
-  "dashboard_04b_llm_comment.png",
-  "dashboard_04c_llm_input_changed.png",
-  "dashboard_05_solution_last.png",
-  "dashboard_05b_log_steps.png",
-  "dashboard_06_library.png",
-  "dashboard_06b_library_materials.png",
-  "dashboard_06c_material_pmma.png",
-  "dashboard_06d_library_liquids.png",
-  "dashboard_06e_material_ethanol.png",
-  "dashboard_06f_library_gases.png",
-  "dashboard_06g_user_material_form.png",
-  "dashboard_06h_user_material_in_list.png",
-  "dashboard_06i_form_offline.png",
-  "dashboard_06j_form_rejected.png",
-  "dashboard_06k_user_material_solution.png",
-  "dashboard_07_community.png"
+  "dashboard_01_baslangic.png",
+  "dashboard_02_kurulum_pmma_mars.png",
+  "dashboard_02_girdi_pmma_mars_ortam.png",
+  "dashboard_02_girdi_pmma_mars_numune.png",
+  "dashboard_03_cozum_suruyor.png",
+  "dashboard_04_sonuc_pmma_mars_ozet.png",
+  "dashboard_04_sonuc_pmma_mars_motor.png",
+  "dashboard_04_sonuc_pmma_mars_guven.png",
+  "dashboard_04_sonuc_pmma_mars_oksijen.png",
+  "dashboard_04_sonuc_pmma_mars_harita.png",
+  "dashboard_04_sonuc_pmma_mars_akis.png",
+  "dashboard_04_sonuc_pmma_mars_deney.png",
+  "dashboard_04_sonuc_pmma_mars_adimlar.png",
+  "dashboard_04_sonuc_pmma_mars_sinirlama.png",
+  "dashboard_04_sonuc_pmma_mars_llm.png",
+  "dashboard_04_sonuc_pmma_mars_render.png",
+  "dashboard_04_sonuc_pmma_mars_dunya.png",
+  "dashboard_02_kurulum_metanol_iss.png",
+  "dashboard_04_sonuc_metanol_iss_ozet.png",
+  "dashboard_04_sonuc_metanol_iss_guven.png",
+  "dashboard_04_sonuc_metanol_iss_motor.png",
+  "dashboard_02_kurulum_etilen_iss.png",
+  "dashboard_04_sonuc_etilen_iss_ozet.png",
+  "dashboard_04_sonuc_etilen_iss_guven.png",
+  "dashboard_04_sonuc_etilen_iss_motor.png",
+  "dashboard_02_kurulum_etilen_iss_gaz.png",
+  "dashboard_04_sonuc_etilen_iss_gaz_ozet.png",
+  "dashboard_04_sonuc_etilen_iss_gaz_guven.png",
+  "dashboard_04_sonuc_etilen_iss_gaz_motor.png",
+  "dashboard_02_kurulum_lexan_iss.png",
+  "dashboard_04_sonuc_lexan_iss_ozet.png",
+  "dashboard_04_sonuc_lexan_iss_guven.png",
+  "dashboard_04_sonuc_lexan_iss_motor.png",
+  "dashboard_04b_llm_yorum.png",
+  "dashboard_04c_llm_girdi_degisti.png",
+  "dashboard_05_cozum_son.png",
+  "dashboard_05b_gunluk_adimlar.png",
+  "dashboard_06_kutuphane.png",
+  "dashboard_06b_kutuphane_malzemeler.png",
+  "dashboard_06c_malzeme_pmma.png",
+  "dashboard_06d_kutuphane_sivilar.png",
+  "dashboard_06e_malzeme_etanol.png",
+  "dashboard_06f_kutuphane_gazlar.png",
+  "dashboard_06g_kullanici_malzeme_form.png",
+  "dashboard_06h_kullanici_malzeme_listede.png",
+  "dashboard_06i_form_internetsiz.png",
+  "dashboard_06j_form_reddedildi.png",
+  "dashboard_06k_kullanici_malzeme_cozum.png",
+  "dashboard_07_topluluk.png"
  ],
  "vakalar": {
   "pmma_mars": {
@@ -152,7 +155,7 @@
      "uyarilar": [
       "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
       "Kısmi g için deney verisi az; uzay, gerçek g ve Dünya sonuçlarının en kötüsü alındı.",
-      "Güven düşük (0/100): bu koşula yakın deney az ya da motor orada zayıf."
+      "Güven düşük (16/100): bu koşula yakın NASA deneyi yok; kalibrasyon kapsamı dışı."
      ],
      "guven_v2": {
       "skor": 16,
@@ -217,12 +220,12 @@
       "sonen": 0,
       "motor_yontemi": "ölçülemedi (motorun sonuç verdiği yakın deney yok)"
      },
-     "sure_sn": 0.37,
+     "sure_sn": 0.344,
      "adimlar": [
       {
        "no": 1,
        "ad": "girdi ve varsayılanlar",
-       "sure_ms": 0.02,
+       "sure_ms": 0.03,
        "karar": "varsayılan kullanıldı: numune_tipi = thin_sheet, kalinlik = 0.2, yakit_turu = kati",
        "ayrinti": {
         "girdi": {
@@ -242,7 +245,7 @@
       {
        "no": 2,
        "ad": "malzeme tanıma",
-       "sure_ms": 0.05,
+       "sure_ms": 0.06,
        "karar": "listede: 'pmma'",
        "ayrinti": {
         "kaynak": "liste",
@@ -252,7 +255,7 @@
       {
        "no": 3,
        "ad": "risk modeli",
-       "sure_ms": 110.15,
+       "sure_ms": 116.05,
        "karar": "p = 0.999 (gerçek g = 0.38)",
        "ayrinti": {
         "belirsizlik": 0.001,
@@ -289,7 +292,7 @@
       {
        "no": 6,
        "ad": "birleştirme ağırlıkları",
-       "sure_ms": 0.01,
+       "sure_ms": 0.06,
        "karar": "birleşik = 0.969 (model 0.622, motor 0.378)",
        "ayrinti": {
         "kural": "güç = max(0, 2(AUC - 0.5)); w_motor = güç_motor / (güç_model + güç_motor)"
@@ -298,7 +301,7 @@
       {
        "no": 7,
        "ad": "Ay/Mars sınırlama",
-       "sure_ms": 248.72,
+       "sure_ms": 216.68,
        "karar": "uygulandı: en kötü durum 'gercek_g' (p = 0.999)",
        "ayrinti": {
         "uzay": {
@@ -331,7 +334,7 @@
       {
        "no": 9,
        "ad": "güven skoru",
-       "sure_ms": 10.25,
+       "sure_ms": 10.41,
        "karar": "v2 16/100 (düşük), v1 0/100",
        "ayrinti": {
         "v2_bilesenler": {
@@ -354,7 +357,7 @@
         "uyarilar": [
          "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
          "Kısmi g için deney verisi az; uzay, gerçek g ve Dünya sonuçlarının en kötüsü alındı.",
-         "Güven düşük (0/100): bu koşula yakın deney az ya da motor orada zayıf."
+         "Güven düşük (16/100): bu koşula yakın NASA deneyi yok; kalibrasyon kapsamı dışı."
         ]
        }
       },
@@ -368,8 +371,8 @@
       {
        "no": 12,
        "ad": "kayıt",
-       "sure_ms": 0.2,
-       "karar": "yazıldı: /path/to/ahut-flare/dashboard/data/loglar/prediction_log.jsonl",
+       "sure_ms": 0.19,
+       "karar": "yazıldı: dashboard/data/logs/prediction_log.jsonl",
        "ayrinti": {}
       }
      ]
@@ -426,7 +429,7 @@
       "tasinim_dogrulanmadi": true,
       "kismi_g_dogrulanmadi": false,
       "soguk_alev": false,
-      "sonme_turu": "kimyasal",
+      "sonme_turu": "su_emme",
       "isinim_temsili": "Işınım fiziksel aralıkta (C_rad = 0,3, optik ince + yeniden soğurma payı); alev mesafesi FLEX alev çapı ölçümüyle kalibre (β ile C_rad ayrıldı). Yalnız gaz (CO2/H2O) ışınımı; is ışınımı yok.",
       "motor_kaynagi": "damla",
       "motor_auc": 0.8,
@@ -526,12 +529,12 @@
       "sonen": 5,
       "motor_yontemi": "max(0, 2(AUC-0.5)), AUC 0.70, 77 noktada çapraz doğrulama tahmini"
      },
-     "sure_sn": 1.49,
+     "sure_sn": 1.558,
      "adimlar": [
       {
        "no": 1,
        "ad": "girdi ve varsayılanlar",
-       "sure_ms": 0.02,
+       "sure_ms": 0.03,
        "karar": "varsayılan kullanıldı: numune_tipi = droplet, kalinlik = 1.0, yakit_turu = sivi",
        "ayrinti": {
         "girdi": {
@@ -551,7 +554,7 @@
       {
        "no": 2,
        "ad": "malzeme tanıma",
-       "sure_ms": 0.07,
+       "sure_ms": 0.04,
        "karar": "listede: 'methanol'",
        "ayrinti": {
         "kaynak": "liste",
@@ -561,7 +564,7 @@
       {
        "no": 3,
        "ad": "risk modeli",
-       "sure_ms": 105.53,
+       "sure_ms": 115.42,
        "karar": "p = 1.0 (g = 0.0001)",
        "ayrinti": {
         "belirsizlik": 0,
@@ -581,7 +584,7 @@
       {
        "no": 5,
        "ad": "fizik motoru",
-       "sure_ms": 1374.21,
+       "sure_ms": 1431.9,
        "karar": "yanma = 0.971, akış 20.0 cm/s",
        "ayrinti": {
         "denenen_akislar": [
@@ -598,7 +601,7 @@
       {
        "no": 6,
        "ad": "birleştirme ağırlıkları",
-       "sure_ms": 0.01,
+       "sure_ms": 0.08,
        "karar": "birleşik = 0.987 (model 0.558, motor 0.442)",
        "ayrinti": {
         "kural": "güç = max(0, 2(AUC - 0.5)); w_motor = güç_motor / (güç_model + güç_motor)"
@@ -624,7 +627,7 @@
       {
        "no": 9,
        "ad": "güven skoru",
-       "sure_ms": 10.59,
+       "sure_ms": 10.27,
        "karar": "v2 87/100 (yüksek), v1 80/100",
        "ayrinti": {
         "v2_bilesenler": {
@@ -658,8 +661,8 @@
       {
        "no": 12,
        "ad": "kayıt",
-       "sure_ms": 0.18,
-       "karar": "yazıldı: /path/to/ahut-flare/dashboard/data/loglar/prediction_log.jsonl",
+       "sure_ms": 0.17,
+       "karar": "yazıldı: dashboard/data/logs/prediction_log.jsonl",
        "ayrinti": {}
       }
      ]
@@ -690,50 +693,32 @@
       "g": 0.0001,
       "akis": null,
       "kalinlik": null,
-      "numune_tipi": "flat_burner",
+      "numune_tipi": "porous_sphere",
       "yakit_turu": "gaz",
       "akis_yonu": null,
       "seyreltici": "n2"
      },
      "yanma_ihtimali": 0.961,
-     "yanma_birlesik": 0.446,
+     "yanma_birlesik": 0.961,
      "agirliklar": {
-      "model": 0.459,
-      "motor": 0.541
+      "model": 1,
+      "motor": 0
      },
      "belirsizlik": 0.036,
      "risk_seviyesi": "ÇOK YÜKSEK",
      "sonme_siniri": 14.25,
      "guvenlik_katsayisi": 0.679,
      "sinirlama": null,
-     "motor": {
-      "yanma": 0.01,
-      "min_oksijen": 42.5,
-      "sicaklik": 844.4,
-      "sicaklik_adyabatik": 2341.7,
-      "alev_yaricapi": 28.61,
-      "alev_boyu": 39.78,
-      "sonme_turu": "isinim",
-      "isinim_orani": 0.716,
-      "kaynak_kaybi_orani": 0.017,
-      "isi_akisi_kW_m2": 1.97,
-      "Z_st": 0.064,
-      "debi_mg_s": 1.227,
-      "geometri": "duz",
-      "kalibre_degil": false,
-      "motor_kaynagi": "gaz",
-      "motor_auc": 0.946,
-      "yakit_turu": "gaz"
-     },
+     "motor": null,
      "motor_turu": "yonlendirici",
-     "motor_kaynagi": "gaz",
-     "motor_akis": 0,
+     "motor_kaynagi": null,
+     "motor_akis": null,
      "motor_belirsizlik": null,
      "guven": {
-      "skor": 81,
+      "skor": 63,
       "veri_bileseni": 0.867,
       "uyum_bileseni": 0.961,
-      "motor_bileseni": 0.6,
+      "motor_bileseni": 0,
       "agirliklar": {
        "veri": 0.4,
        "uyum": 0.3,
@@ -744,24 +729,37 @@
       "motorlu_yakin_deney": 13,
       "yanan": 13,
       "sonen": 0,
-      "motor_yontemi": "bir sınıfta <3 nokta: 0.6 × max(0, 2(doğruluk-0.5)), doğruluk 1.00"
+      "motor_yontemi": "motor bu koşulu bilmiyor"
      },
      "kullanilan_varsayilanlar": {
-      "numune_tipi": "flat_burner",
-      "yakit_turu": "gaz"
+      "yakit_turu": "gaz",
+      "numune_tipi": "porous_sphere"
      },
      "uyarilar": [
+      "'ethylene' kütüphanede: Etilen (motorda kalibre); risk modeli 'ethylene', motor “ethylene”.",
+      "Numune tipi verilmedi: varsayılan sızıntı (küre). Debi bilinmiyor; gaz motoru kullanılmadı (motor ağırlığı 0, sonuç yalnız risk modeli).",
       "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
-      "debi / akış verilmedi: varsayılan kullanıldı (küre 1 mg/s, düz 2.5 g/m²s, jet 30 cm/s)",
-      "Model ve motor çelişiyor: model 'yanar', motor 'söner' diyor."
+      "Güven düşük (36/100): kalibrasyon kapsamı dışı; fizik motoru kullanılmadı (ağırlık 0)."
      ],
+     "gas_engine_kullanilmadi": "debi bilinmiyor (numune tipi verilmedi)",
+     "kutuphane_eslesme": {
+      "girilen": "ethylene",
+      "id": "ethylene",
+      "ad": "Etilen",
+      "kaynak": "kutuphane",
+      "durum": "motorda kalibre",
+      "motor_benzeri": "ethylene",
+      "model_malzeme": "ethylene",
+      "zayif_esleme": false,
+      "motor_agirligi_sifir": false
+     },
      "guven_v2": {
-      "skor": 76,
-      "bant": "yüksek",
+      "skor": 36,
+      "bant": "düşük",
       "bilesenler": {
        "veri": 1,
-       "uyum": 0.973,
-       "motor": 0.892,
+       "uyum": 0.458,
+       "motor": 0,
        "kesinlik": 0.928
       },
       "agirliklar": {
@@ -770,14 +768,16 @@
        "motor": 0.25,
        "kesinlik": 0.15
       },
-      "ham_skor": 95.6,
+      "ham_skor": 60.4,
       "cezalar": [
        {
-        "ad": "model–motor çelişkisi",
-        "carpan": 0.8
+        "ad": "kalibrasyon kapsamı dışı",
+        "carpan": 0.6,
+        "mesafe": null,
+        "esik": "en yakın NASA / kalibrasyon noktası PENCERE dışında (|ΔO2| > 3 ya da |Δlog p| > 0.3, aynı malzeme ve g bandı)"
        }
       ],
-      "kalibrasyon_mesafesi": 0.01,
+      "kalibrasyon_mesafesi": null,
       "yakin_deney_kaynaklari": {
        "NASA PSI": 9,
        "makale (elle)": 0,
@@ -788,7 +788,7 @@
       "agirlikli_yakin_deney": 15.5,
       "yakin_deney_yanma_orani": 0.419,
       "ayrinti": {
-       "motor": "max(0, 2(AUC-0.5)), AUC 0.946",
+       "motor": "kalibre değil / dürüst AUC yok -> 0",
        "kesinlik": "1 - 2 × max(model ±0.036, motor belirsizliği yok)",
        "kaynak_agirliklari": {
         "psi": 1,
@@ -800,10 +800,10 @@
       }
      },
      "guven_v1": {
-      "skor": 81,
+      "skor": 63,
       "veri_bileseni": 0.867,
       "uyum_bileseni": 0.961,
-      "motor_bileseni": 0.6,
+      "motor_bileseni": 0,
       "agirliklar": {
        "veri": 0.4,
        "uyum": 0.3,
@@ -814,15 +814,15 @@
       "motorlu_yakin_deney": 13,
       "yanan": 13,
       "sonen": 0,
-      "motor_yontemi": "bir sınıfta <3 nokta: 0.6 × max(0, 2(doğruluk-0.5)), doğruluk 1.00"
+      "motor_yontemi": "motor bu koşulu bilmiyor"
      },
-     "sure_sn": 0.199,
+     "sure_sn": 0.122,
      "adimlar": [
       {
        "no": 1,
        "ad": "girdi ve varsayılanlar",
-       "sure_ms": 1.7,
-       "karar": "varsayılan kullanıldı: numune_tipi = flat_burner, yakit_turu = gaz",
+       "sure_ms": 0.08,
+       "karar": "varsayılan kullanıldı: yakit_turu = gaz, numune_tipi = porous_sphere",
        "ayrinti": {
         "girdi": {
          "malzeme": "ethylene",
@@ -831,7 +831,7 @@
          "g": 0.0001,
          "akis": null,
          "kalinlik": null,
-         "numune_tipi": "flat_burner",
+         "numune_tipi": "porous_sphere",
          "yakit_turu": "gaz",
          "seyreltici": "n2"
         },
@@ -841,17 +841,18 @@
       {
        "no": 2,
        "ad": "malzeme tanıma",
-       "sure_ms": 0.05,
-       "karar": "listede: 'ethylene'",
+       "sure_ms": 0.2,
+       "karar": "kütüphane: 'ethylene' -> ethylene (model: ethylene, motor: ethylene)",
        "ayrinti": {
-        "kaynak": "liste",
-        "ana_malzeme": "ethylene"
+        "kaynak": "kutuphane",
+        "durum": "motorda kalibre",
+        "zayif_esleme": false
        }
       },
       {
        "no": 3,
        "ad": "risk modeli",
-       "sure_ms": 116.07,
+       "sure_ms": 108.98,
        "karar": "p = 0.961 (g = 0.0001)",
        "ayrinti": {
         "belirsizlik": 0.036,
@@ -862,34 +863,29 @@
        "no": 4,
        "ad": "yönlendirici seçimi",
        "sure_ms": 0,
-       "karar": "gaz (motor_turu = yonlendirici)",
+       "karar": "yok (motor_turu = yonlendirici)",
        "ayrinti": {
-        "neden": "yakıt türü 'gaz' (gaz), numune 'flat_burner' -> gaz motoru (geometri numune tipinden)",
+        "neden": "motor sonucu yok (kaynak: None)",
         "not": "seçim motor çağrısının içinde; süresi 5. adıma dahil"
        }
       },
       {
        "no": 5,
        "ad": "fizik motoru",
-       "sure_ms": 69.92,
-       "karar": "yanma = 0.01, akış 0.0 cm/s",
+       "sure_ms": 0,
+       "karar": "sonuç yok",
        "ayrinti": {
-        "denenen_akislar": [
-         0,
-         5,
-         10,
-         20
-        ],
-        "secilen_akis": 0,
-        "motor_auc": 0.946,
-        "en_kotu_durum": true
+        "denenen_akislar": [],
+        "secilen_akis": null,
+        "motor_auc": null,
+        "en_kotu_durum": false
        }
       },
       {
        "no": 6,
        "ad": "birleştirme ağırlıkları",
-       "sure_ms": 0.01,
-       "karar": "birleşik = 0.446 (model 0.459, motor 0.541)",
+       "sure_ms": 0.07,
+       "karar": "birleşik = 0.961 (model 1.0, motor 0.0)",
        "ayrinti": {
         "kural": "güç = max(0, 2(AUC - 0.5)); w_motor = güç_motor / (güç_model + güç_motor)"
        }
@@ -914,17 +910,17 @@
       {
        "no": 9,
        "ad": "güven skoru",
-       "sure_ms": 11.51,
-       "karar": "v2 76/100 (yüksek), v1 81/100",
+       "sure_ms": 12.9,
+       "karar": "v2 36/100 (düşük), v1 63/100",
        "ayrinti": {
         "v2_bilesenler": {
          "veri": 1,
-         "uyum": 0.973,
-         "motor": 0.892,
+         "uyum": 0.458,
+         "motor": 0,
          "kesinlik": 0.928
         },
         "v2_cezalar": [
-         "model–motor çelişkisi"
+         "kalibrasyon kapsamı dışı"
         ]
        }
       },
@@ -932,12 +928,13 @@
        "no": 10,
        "ad": "uyarılar",
        "sure_ms": 0,
-       "karar": "3 uyarı",
+       "karar": "4 uyarı",
        "ayrinti": {
         "uyarilar": [
+         "'ethylene' kütüphanede: Etilen (motorda kalibre); risk modeli 'ethylene', motor “ethylene”.",
+         "Numune tipi verilmedi: varsayılan sızıntı (küre). Debi bilinmiyor; gaz motoru kullanılmadı (motor ağırlığı 0, sonuç yalnız risk modeli).",
          "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
-         "debi / akış verilmedi: varsayılan kullanıldı (küre 1 mg/s, düz 2.5 g/m²s, jet 30 cm/s)",
-         "Model ve motor çelişiyor: model 'yanar', motor 'söner' diyor."
+         "Güven düşük (36/100): kalibrasyon kapsamı dışı; fizik motoru kullanılmadı (ağırlık 0)."
         ]
        }
       },
@@ -951,8 +948,8 @@
       {
        "no": 12,
        "ad": "kayıt",
-       "sure_ms": 0.17,
-       "karar": "yazıldı: /path/to/ahut-flare/dashboard/data/loglar/prediction_log.jsonl",
+       "sure_ms": 0.31,
+       "karar": "yazıldı: dashboard/data/logs/prediction_log.jsonl",
        "ayrinti": {}
       }
      ]
@@ -971,7 +968,7 @@
      "akis": null,
      "kalinlik": null,
      "numune_tipi": null,
-     "yakit_turu": "gaz",
+     "yakit_turu": null,
      "akis_yonu": null,
      "seyreltici": "n2"
     },
@@ -983,50 +980,32 @@
       "g": 0.0001,
       "akis": null,
       "kalinlik": null,
-      "numune_tipi": "flat_burner",
+      "numune_tipi": "porous_sphere",
       "yakit_turu": "gaz",
       "akis_yonu": null,
       "seyreltici": "n2"
      },
      "yanma_ihtimali": 0.961,
-     "yanma_birlesik": 0.446,
+     "yanma_birlesik": 0.961,
      "agirliklar": {
-      "model": 0.459,
-      "motor": 0.541
+      "model": 1,
+      "motor": 0
      },
      "belirsizlik": 0.036,
      "risk_seviyesi": "ÇOK YÜKSEK",
      "sonme_siniri": 14.25,
      "guvenlik_katsayisi": 0.679,
      "sinirlama": null,
-     "motor": {
-      "yanma": 0.01,
-      "min_oksijen": 42.5,
-      "sicaklik": 844.4,
-      "sicaklik_adyabatik": 2341.7,
-      "alev_yaricapi": 28.61,
-      "alev_boyu": 39.78,
-      "sonme_turu": "isinim",
-      "isinim_orani": 0.716,
-      "kaynak_kaybi_orani": 0.017,
-      "isi_akisi_kW_m2": 1.97,
-      "Z_st": 0.064,
-      "debi_mg_s": 1.227,
-      "geometri": "duz",
-      "kalibre_degil": false,
-      "motor_kaynagi": "gaz",
-      "motor_auc": 0.946,
-      "yakit_turu": "gaz"
-     },
+     "motor": null,
      "motor_turu": "yonlendirici",
-     "motor_kaynagi": "gaz",
-     "motor_akis": 0,
+     "motor_kaynagi": null,
+     "motor_akis": null,
      "motor_belirsizlik": null,
      "guven": {
-      "skor": 81,
+      "skor": 63,
       "veri_bileseni": 0.867,
       "uyum_bileseni": 0.961,
-      "motor_bileseni": 0.6,
+      "motor_bileseni": 0,
       "agirliklar": {
        "veri": 0.4,
        "uyum": 0.3,
@@ -1037,23 +1016,37 @@
       "motorlu_yakin_deney": 13,
       "yanan": 13,
       "sonen": 0,
-      "motor_yontemi": "bir sınıfta <3 nokta: 0.6 × max(0, 2(doğruluk-0.5)), doğruluk 1.00"
+      "motor_yontemi": "motor bu koşulu bilmiyor"
      },
      "kullanilan_varsayilanlar": {
-      "numune_tipi": "flat_burner"
+      "yakit_turu": "gaz",
+      "numune_tipi": "porous_sphere"
      },
      "uyarilar": [
+      "'ethylene' kütüphanede: Etilen (motorda kalibre); risk modeli 'ethylene', motor “ethylene”.",
+      "Numune tipi verilmedi: varsayılan sızıntı (küre). Debi bilinmiyor; gaz motoru kullanılmadı (motor ağırlığı 0, sonuç yalnız risk modeli).",
       "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
-      "debi / akış verilmedi: varsayılan kullanıldı (küre 1 mg/s, düz 2.5 g/m²s, jet 30 cm/s)",
-      "Model ve motor çelişiyor: model 'yanar', motor 'söner' diyor."
+      "Güven düşük (36/100): kalibrasyon kapsamı dışı; fizik motoru kullanılmadı (ağırlık 0)."
      ],
+     "gas_engine_kullanilmadi": "debi bilinmiyor (numune tipi verilmedi)",
+     "kutuphane_eslesme": {
+      "girilen": "ethylene",
+      "id": "ethylene",
+      "ad": "Etilen",
+      "kaynak": "kutuphane",
+      "durum": "motorda kalibre",
+      "motor_benzeri": "ethylene",
+      "model_malzeme": "ethylene",
+      "zayif_esleme": false,
+      "motor_agirligi_sifir": false
+     },
      "guven_v2": {
-      "skor": 76,
-      "bant": "yüksek",
+      "skor": 36,
+      "bant": "düşük",
       "bilesenler": {
        "veri": 1,
-       "uyum": 0.973,
-       "motor": 0.892,
+       "uyum": 0.458,
+       "motor": 0,
        "kesinlik": 0.928
       },
       "agirliklar": {
@@ -1062,14 +1055,16 @@
        "motor": 0.25,
        "kesinlik": 0.15
       },
-      "ham_skor": 95.6,
+      "ham_skor": 60.4,
       "cezalar": [
        {
-        "ad": "model–motor çelişkisi",
-        "carpan": 0.8
+        "ad": "kalibrasyon kapsamı dışı",
+        "carpan": 0.6,
+        "mesafe": null,
+        "esik": "en yakın NASA / kalibrasyon noktası PENCERE dışında (|ΔO2| > 3 ya da |Δlog p| > 0.3, aynı malzeme ve g bandı)"
        }
       ],
-      "kalibrasyon_mesafesi": 0.01,
+      "kalibrasyon_mesafesi": null,
       "yakin_deney_kaynaklari": {
        "NASA PSI": 9,
        "makale (elle)": 0,
@@ -1080,7 +1075,7 @@
       "agirlikli_yakin_deney": 15.5,
       "yakin_deney_yanma_orani": 0.419,
       "ayrinti": {
-       "motor": "max(0, 2(AUC-0.5)), AUC 0.946",
+       "motor": "kalibre değil / dürüst AUC yok -> 0",
        "kesinlik": "1 - 2 × max(model ±0.036, motor belirsizliği yok)",
        "kaynak_agirliklari": {
         "psi": 1,
@@ -1092,10 +1087,10 @@
       }
      },
      "guven_v1": {
-      "skor": 81,
+      "skor": 63,
       "veri_bileseni": 0.867,
       "uyum_bileseni": 0.961,
-      "motor_bileseni": 0.6,
+      "motor_bileseni": 0,
       "agirliklar": {
        "veri": 0.4,
        "uyum": 0.3,
@@ -1106,15 +1101,15 @@
       "motorlu_yakin_deney": 13,
       "yanan": 13,
       "sonen": 0,
-      "motor_yontemi": "bir sınıfta <3 nokta: 0.6 × max(0, 2(doğruluk-0.5)), doğruluk 1.00"
+      "motor_yontemi": "motor bu koşulu bilmiyor"
      },
-     "sure_sn": 0.181,
+     "sure_sn": 0.13,
      "adimlar": [
       {
        "no": 1,
        "ad": "girdi ve varsayılanlar",
-       "sure_ms": 0.13,
-       "karar": "varsayılan kullanıldı: numune_tipi = flat_burner",
+       "sure_ms": 0.07,
+       "karar": "varsayılan kullanıldı: yakit_turu = gaz, numune_tipi = porous_sphere",
        "ayrinti": {
         "girdi": {
          "malzeme": "ethylene",
@@ -1123,7 +1118,7 @@
          "g": 0.0001,
          "akis": null,
          "kalinlik": null,
-         "numune_tipi": "flat_burner",
+         "numune_tipi": "porous_sphere",
          "yakit_turu": "gaz",
          "seyreltici": "n2"
         },
@@ -1133,17 +1128,18 @@
       {
        "no": 2,
        "ad": "malzeme tanıma",
-       "sure_ms": 0.05,
-       "karar": "listede: 'ethylene'",
+       "sure_ms": 0.21,
+       "karar": "kütüphane: 'ethylene' -> ethylene (model: ethylene, motor: ethylene)",
        "ayrinti": {
-        "kaynak": "liste",
-        "ana_malzeme": "ethylene"
+        "kaynak": "kutuphane",
+        "durum": "motorda kalibre",
+        "zayif_esleme": false
        }
       },
       {
        "no": 3,
        "ad": "risk modeli",
-       "sure_ms": 108.68,
+       "sure_ms": 117.85,
        "karar": "p = 0.961 (g = 0.0001)",
        "ayrinti": {
         "belirsizlik": 0.036,
@@ -1154,34 +1150,29 @@
        "no": 4,
        "ad": "yönlendirici seçimi",
        "sure_ms": 0,
-       "karar": "gaz (motor_turu = yonlendirici)",
+       "karar": "yok (motor_turu = yonlendirici)",
        "ayrinti": {
-        "neden": "yakıt türü 'gaz' (gaz), numune 'flat_burner' -> gaz motoru (geometri numune tipinden)",
+        "neden": "motor sonucu yok (kaynak: None)",
         "not": "seçim motor çağrısının içinde; süresi 5. adıma dahil"
        }
       },
       {
        "no": 5,
        "ad": "fizik motoru",
-       "sure_ms": 60.91,
-       "karar": "yanma = 0.01, akış 0.0 cm/s",
+       "sure_ms": 0,
+       "karar": "sonuç yok",
        "ayrinti": {
-        "denenen_akislar": [
-         0,
-         5,
-         10,
-         20
-        ],
-        "secilen_akis": 0,
-        "motor_auc": 0.946,
-        "en_kotu_durum": true
+        "denenen_akislar": [],
+        "secilen_akis": null,
+        "motor_auc": null,
+        "en_kotu_durum": false
        }
       },
       {
        "no": 6,
        "ad": "birleştirme ağırlıkları",
-       "sure_ms": 0.01,
-       "karar": "birleşik = 0.446 (model 0.459, motor 0.541)",
+       "sure_ms": 0.09,
+       "karar": "birleşik = 0.961 (model 1.0, motor 0.0)",
        "ayrinti": {
         "kural": "güç = max(0, 2(AUC - 0.5)); w_motor = güç_motor / (güç_model + güç_motor)"
        }
@@ -1206,17 +1197,17 @@
       {
        "no": 9,
        "ad": "güven skoru",
-       "sure_ms": 11.28,
-       "karar": "v2 76/100 (yüksek), v1 81/100",
+       "sure_ms": 11.78,
+       "karar": "v2 36/100 (düşük), v1 63/100",
        "ayrinti": {
         "v2_bilesenler": {
          "veri": 1,
-         "uyum": 0.973,
-         "motor": 0.892,
+         "uyum": 0.458,
+         "motor": 0,
          "kesinlik": 0.928
         },
         "v2_cezalar": [
-         "model–motor çelişkisi"
+         "kalibrasyon kapsamı dışı"
         ]
        }
       },
@@ -1224,12 +1215,13 @@
        "no": 10,
        "ad": "uyarılar",
        "sure_ms": 0,
-       "karar": "3 uyarı",
+       "karar": "4 uyarı",
        "ayrinti": {
         "uyarilar": [
+         "'ethylene' kütüphanede: Etilen (motorda kalibre); risk modeli 'ethylene', motor “ethylene”.",
+         "Numune tipi verilmedi: varsayılan sızıntı (küre). Debi bilinmiyor; gaz motoru kullanılmadı (motor ağırlığı 0, sonuç yalnız risk modeli).",
          "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
-         "debi / akış verilmedi: varsayılan kullanıldı (küre 1 mg/s, düz 2.5 g/m²s, jet 30 cm/s)",
-         "Model ve motor çelişiyor: model 'yanar', motor 'söner' diyor."
+         "Güven düşük (36/100): kalibrasyon kapsamı dışı; fizik motoru kullanılmadı (ağırlık 0)."
         ]
        }
       },
@@ -1243,8 +1235,8 @@
       {
        "no": 12,
        "ad": "kayıt",
-       "sure_ms": 0.17,
-       "karar": "yazıldı: /path/to/ahut-flare/dashboard/data/loglar/prediction_log.jsonl",
+       "sure_ms": 0.2,
+       "karar": "yazıldı: dashboard/data/logs/prediction_log.jsonl",
        "ayrinti": {}
       }
      ]
@@ -1269,7 +1261,7 @@
     },
     "tahmin": {
      "girdi": {
-      "malzeme": "polycarbonate",
+      "malzeme": "pmma",
       "oksijen": 21,
       "basinc": 101.3,
       "g": 0.0001,
@@ -1280,13 +1272,13 @@
       "akis_yonu": null,
       "seyreltici": "n2"
      },
-     "yanma_ihtimali": 0.955,
-     "yanma_birlesik": 0.955,
+     "yanma_ihtimali": 0.974,
+     "yanma_birlesik": 0.974,
      "agirliklar": {
       "model": 1,
       "motor": 0
      },
-     "belirsizlik": 0.07,
+     "belirsizlik": 0.025,
      "risk_seviyesi": "ÇOK YÜKSEK",
      "sonme_siniri": 16.5,
      "guvenlik_katsayisi": 0.786,
@@ -1298,29 +1290,28 @@
       "sicaklik": 2308.323,
       "motor_kaynagi": "hafif",
       "motor_auc": 0.729,
-      "yakit_turu": "kati",
-      "benzer_malzeme": "pmma"
+      "yakit_turu": "kati"
      },
      "motor_turu": "yonlendirici",
      "motor_kaynagi": "hafif",
      "motor_akis": 5,
      "motor_belirsizlik": null,
      "guven": {
-      "skor": 0,
-      "veri_bileseni": 0,
-      "uyum_bileseni": null,
-      "motor_bileseni": 0,
+      "skor": 92,
+      "veri_bileseni": 1,
+      "uyum_bileseni": 0.972,
+      "motor_bileseni": 0.752,
       "agirliklar": {
-       "veri": 0.7,
-       "uyum": 0,
+       "veri": 0.4,
+       "uyum": 0.3,
        "motor": 0.3
       },
-      "yakin_deney_yanma_orani": null,
-      "yakin_deney": 0,
-      "motorlu_yakin_deney": 0,
-      "yanan": 0,
-      "sonen": 0,
-      "motor_yontemi": "ölçülemedi (motorun sonuç verdiği yakın deney yok)"
+      "yakin_deney_yanma_orani": 0.946,
+      "yakin_deney": 279,
+      "motorlu_yakin_deney": 279,
+      "yanan": 264,
+      "sonen": 15,
+      "motor_yontemi": "max(0, 2(AUC-0.5)), AUC 0.88, 214 noktada çapraz doğrulama tahmini"
      },
      "kullanilan_varsayilanlar": {
       "yakit_turu": "kati",
@@ -1328,11 +1319,10 @@
       "kalinlik": 0.25
      },
      "uyarilar": [
-      "'Lexan' kütüphanede: Polikarbonat (veri setinde 7 nokta var); risk modeli 'polycarbonate', motor “pmma”.",
+      "'Lexan' kütüphanede: Polikarbonat (veri setinde 7 nokta var); risk modeli 'pmma', motor “pmma”.",
       "'Polikarbonat' motorda kalibre değil: motor ağırlığı 0 (benzer malzeme: pmma).",
       "zayıf eşleme: pmma",
-      "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
-      "Güven düşük (0/100): bu koşula yakın deney az ya da motor orada zayıf."
+      "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı."
      ],
      "kutuphane_eslesme": {
       "girilen": "Lexan",
@@ -1341,47 +1331,46 @@
       "kaynak": "kutuphane",
       "durum": "veri setinde 7 nokta var",
       "motor_benzeri": "pmma",
-      "model_malzeme": "polycarbonate",
+      "model_malzeme": "pmma",
       "zayif_esleme": true,
       "motor_agirligi_sifir": true
      },
      "guven_v2": {
-      "skor": 15,
-      "bant": "düşük",
+      "skor": 68,
+      "bant": "orta",
       "bilesenler": {
-       "veri": 0,
-       "uyum": null,
+       "veri": 1,
+       "uyum": 0.981,
        "motor": 0.458,
-       "kesinlik": 0.86
+       "kesinlik": 0.95
       },
       "agirliklar": {
-       "veri": 0.6,
+       "veri": 0.35,
+       "uyum": 0.25,
        "motor": 0.25,
-       "kesinlik": 0.15,
-       "uyum": 0
+       "kesinlik": 0.15
       },
-      "ham_skor": 24.3,
+      "ham_skor": 85.2,
       "cezalar": [
        {
-        "ad": "kalibrasyon kapsamı dışı",
-        "carpan": 0.6,
-        "mesafe": null,
-        "esik": "en yakın NASA / kalibrasyon noktası PENCERE dışında (|ΔO2| > 3 ya da |Δlog p| > 0.3, aynı malzeme ve g bandı)"
+        "ad": "malzeme kütüphane ile eşlendi",
+        "carpan": 0.8,
+        "ayrinti": "'Lexan' -> 'pmma': yakın deneyler benzer malzemenin"
        }
       ],
-      "kalibrasyon_mesafesi": null,
+      "kalibrasyon_mesafesi": 0.02,
       "yakin_deney_kaynaklari": {
-       "NASA PSI": 0,
+       "NASA PSI": 214,
        "makale (elle)": 0,
-       "Gemma (otomatik)": 0,
+       "Gemma (otomatik)": 65,
        "topluluk (onaylı)": 0,
        "topluluk (onaysız)": 0
       },
-      "agirlikli_yakin_deney": 0,
-      "yakin_deney_yanma_orani": null,
+      "agirlikli_yakin_deney": 246.5,
+      "yakin_deney_yanma_orani": 0.955,
       "ayrinti": {
        "motor": "max(0, 2(AUC-0.5)), AUC 0.729",
-       "kesinlik": "1 - 2 × max(model ±0.070, motor belirsizliği yok)",
+       "kesinlik": "1 - 2 × max(model ±0.025, motor belirsizliği yok)",
        "kaynak_agirliklari": {
         "psi": 1,
         "makale_elle": 0.8,
@@ -1392,32 +1381,32 @@
       }
      },
      "guven_v1": {
-      "skor": 0,
-      "veri_bileseni": 0,
-      "uyum_bileseni": null,
-      "motor_bileseni": 0,
+      "skor": 92,
+      "veri_bileseni": 1,
+      "uyum_bileseni": 0.972,
+      "motor_bileseni": 0.752,
       "agirliklar": {
-       "veri": 0.7,
-       "uyum": 0,
+       "veri": 0.4,
+       "uyum": 0.3,
        "motor": 0.3
       },
-      "yakin_deney_yanma_orani": null,
-      "yakin_deney": 0,
-      "motorlu_yakin_deney": 0,
-      "yanan": 0,
-      "sonen": 0,
-      "motor_yontemi": "ölçülemedi (motorun sonuç verdiği yakın deney yok)"
+      "yakin_deney_yanma_orani": 0.946,
+      "yakin_deney": 279,
+      "motorlu_yakin_deney": 279,
+      "yanan": 264,
+      "sonen": 15,
+      "motor_yontemi": "max(0, 2(AUC-0.5)), AUC 0.88, 214 noktada çapraz doğrulama tahmini"
      },
-     "sure_sn": 0.122,
+     "sure_sn": 0.129,
      "adimlar": [
       {
        "no": 1,
        "ad": "girdi ve varsayılanlar",
-       "sure_ms": 0.07,
+       "sure_ms": 0.03,
        "karar": "varsayılan kullanıldı: yakit_turu = kati, numune_tipi = thin_sheet, kalinlik = 0.25",
        "ayrinti": {
         "girdi": {
-         "malzeme": "polycarbonate",
+         "malzeme": "pmma",
          "oksijen": 21,
          "basinc": 101.3,
          "g": 0.0001,
@@ -1433,8 +1422,8 @@
       {
        "no": 2,
        "ad": "malzeme tanıma",
-       "sure_ms": 0.18,
-       "karar": "kütüphane: 'Lexan' -> polycarbonate (model: polycarbonate, motor: pmma)",
+       "sure_ms": 0.26,
+       "karar": "kütüphane: 'Lexan' -> polycarbonate (model: pmma, motor: pmma)",
        "ayrinti": {
         "kaynak": "kutuphane",
         "durum": "veri setinde 7 nokta var",
@@ -1444,10 +1433,10 @@
       {
        "no": 3,
        "ad": "risk modeli",
-       "sure_ms": 111.36,
-       "karar": "p = 0.955 (g = 0.0001)",
+       "sure_ms": 116.2,
+       "karar": "p = 0.974 (g = 0.0001)",
        "ayrinti": {
-        "belirsizlik": 0.07,
+        "belirsizlik": 0.025,
         "risk": "ÇOK YÜKSEK"
        }
       },
@@ -1464,7 +1453,7 @@
       {
        "no": 5,
        "ad": "fizik motoru",
-       "sure_ms": 1.14,
+       "sure_ms": 1.15,
        "karar": "yanma = 0.968, akış 5.0 cm/s",
        "ayrinti": {
         "denenen_akislar": [
@@ -1481,8 +1470,8 @@
       {
        "no": 6,
        "ad": "birleştirme ağırlıkları",
-       "sure_ms": 0.01,
-       "karar": "birleşik = 0.955 (model 1.0, motor 0.0)",
+       "sure_ms": 0.06,
+       "karar": "birleşik = 0.974 (model 1.0, motor 0.0)",
        "ayrinti": {
         "kural": "güç = max(0, 2(AUC - 0.5)); w_motor = güç_motor / (güç_model + güç_motor)"
        }
@@ -1507,309 +1496,17 @@
       {
        "no": 9,
        "ad": "güven skoru",
-       "sure_ms": 9.62,
-       "karar": "v2 15/100 (düşük), v1 0/100",
-       "ayrinti": {
-        "v2_bilesenler": {
-         "veri": 0,
-         "uyum": null,
-         "motor": 0.458,
-         "kesinlik": 0.86
-        },
-        "v2_cezalar": [
-         "kalibrasyon kapsamı dışı"
-        ]
-       }
-      },
-      {
-       "no": 10,
-       "ad": "uyarılar",
-       "sure_ms": 0,
-       "karar": "5 uyarı",
-       "ayrinti": {
-        "uyarilar": [
-         "'Lexan' kütüphanede: Polikarbonat (veri setinde 7 nokta var); risk modeli 'polycarbonate', motor “pmma”.",
-         "'Polikarbonat' motorda kalibre değil: motor ağırlığı 0 (benzer malzeme: pmma).",
-         "zayıf eşleme: pmma",
-         "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
-         "Güven düşük (0/100): bu koşula yakın deney az ya da motor orada zayıf."
-        ]
-       }
-      },
-      {
-       "no": 11,
-       "ad": "LLM yorumu",
-       "sure_ms": 0,
-       "karar": "istenmedi (llm=False)",
-       "ayrinti": {}
-      },
-      {
-       "no": 12,
-       "ad": "kayıt",
-       "sure_ms": 0.2,
-       "karar": "yazıldı: /path/to/ahut-flare/dashboard/data/loglar/prediction_log.jsonl",
-       "ayrinti": {}
-      }
-     ]
-    }
-   }
-  },
-  "aerogel_iss": {
-   "sonuc": {
-    "tahmin": {
-     "girdi": {
-      "malzeme": "cellulose",
-      "oksijen": 21,
-      "basinc": 101.3,
-      "g": 0.0001,
-      "akis": null,
-      "kalinlik": null,
-      "numune_tipi": "thick_sheet",
-      "yakit_turu": "kati",
-      "akis_yonu": null,
-      "seyreltici": "n2"
-     },
-     "yanma_ihtimali": 0.76,
-     "yanma_birlesik": 0.76,
-     "agirliklar": {
-      "model": 1,
-      "motor": 0
-     },
-     "belirsizlik": 0.259,
-     "risk_seviyesi": "YÜKSEK",
-     "sonme_siniri": 15.75,
-     "guvenlik_katsayisi": 0.75,
-     "sinirlama": null,
-     "motor": {
-      "yanma": 0.987,
-      "min_oksijen": 11.597,
-      "yayilma_hizi": 7.568,
-      "sicaklik": 2295.733,
-      "motor_kaynagi": "hafif",
-      "motor_auc": 0.729,
-      "yakit_turu": "kati"
-     },
-     "motor_turu": "yonlendirici",
-     "motor_kaynagi": "hafif",
-     "motor_akis": 10,
-     "motor_belirsizlik": null,
-     "guven": {
-      "skor": 93,
-      "veri_bileseni": 1,
-      "uyum_bileseni": 0.998,
-      "motor_bileseni": 0.763,
-      "agirliklar": {
-       "veri": 0.4,
-       "uyum": 0.3,
-       "motor": 0.3
-      },
-      "yakin_deney_yanma_orani": 0.762,
-      "yakin_deney": 42,
-      "motorlu_yakin_deney": 42,
-      "yanan": 32,
-      "sonen": 10,
-      "motor_yontemi": "max(0, 2(AUC-0.5)), AUC 0.88"
-     },
-     "kullanilan_varsayilanlar": {
-      "yakit_turu": "kati",
-      "numune_tipi": "thick_sheet"
-     },
-     "uyarilar": [
-      "'aerogel' kütüphanede: aerojel (kullanıcı malzemesi); risk modeli 'cellulose', motor “cellulose”.",
-      "Kullanıcı malzemesi (onaylı, deney verisiyle doğrulanmadı): motor ağırlığı 0.",
-      "'aerojel' motorda kalibre değil: motor ağırlığı 0 (benzer malzeme: cellulose).",
-      "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı."
-     ],
-     "kutuphane_eslesme": {
-      "girilen": "aerogel",
-      "id": "aerojel",
-      "ad": "aerojel",
-      "kaynak": "kullanici",
-      "durum": "kullanıcı malzemesi",
-      "motor_benzeri": "cellulose",
-      "model_malzeme": "cellulose",
-      "zayif_esleme": false,
-      "motor_agirligi_sifir": true
-     },
-     "guven_v2": {
-      "skor": 38,
-      "bant": "düşük",
-      "bilesenler": {
-       "veri": 1,
-       "uyum": 0.998,
-       "motor": 0.458,
-       "kesinlik": 0.482
-      },
-      "agirliklar": {
-       "veri": 0.35,
-       "uyum": 0.25,
-       "motor": 0.25,
-       "kesinlik": 0.15
-      },
-      "ham_skor": 78.6,
-      "cezalar": [
-       {
-        "ad": "malzeme kütüphane ile eşlendi",
-        "carpan": 0.8,
-        "ayrinti": "'aerogel' -> 'cellulose': yakın deneyler benzer malzemenin"
-       },
-       {
-        "ad": "kalibrasyon kapsamı dışı",
-        "carpan": 0.6,
-        "mesafe": null,
-        "esik": "en yakın NASA / kalibrasyon noktası PENCERE dışında (|ΔO2| > 3 ya da |Δlog p| > 0.3, aynı malzeme ve g bandı)"
-       }
-      ],
-      "kalibrasyon_mesafesi": null,
-      "yakin_deney_kaynaklari": {
-       "NASA PSI": 0,
-       "makale (elle)": 0,
-       "Gemma (otomatik)": 42,
-       "topluluk (onaylı)": 0,
-       "topluluk (onaysız)": 0
-      },
-      "agirlikli_yakin_deney": 21,
-      "yakin_deney_yanma_orani": 0.762,
-      "ayrinti": {
-       "motor": "max(0, 2(AUC-0.5)), AUC 0.729",
-       "kesinlik": "1 - 2 × max(model ±0.259, motor belirsizliği yok)",
-       "kaynak_agirliklari": {
-        "psi": 1,
-        "makale_elle": 0.8,
-        "gemma": 0.5,
-        "topluluk_onayli": 0.6,
-        "topluluk_onaysiz": 0.2
-       }
-      }
-     },
-     "guven_v1": {
-      "skor": 93,
-      "veri_bileseni": 1,
-      "uyum_bileseni": 0.998,
-      "motor_bileseni": 0.763,
-      "agirliklar": {
-       "veri": 0.4,
-       "uyum": 0.3,
-       "motor": 0.3
-      },
-      "yakin_deney_yanma_orani": 0.762,
-      "yakin_deney": 42,
-      "motorlu_yakin_deney": 42,
-      "yanan": 32,
-      "sonen": 10,
-      "motor_yontemi": "max(0, 2(AUC-0.5)), AUC 0.88"
-     },
-     "sure_sn": 0.124,
-     "adimlar": [
-      {
-       "no": 1,
-       "ad": "girdi ve varsayılanlar",
-       "sure_ms": 0.06,
-       "karar": "varsayılan kullanıldı: yakit_turu = kati, numune_tipi = thick_sheet",
-       "ayrinti": {
-        "girdi": {
-         "malzeme": "cellulose",
-         "oksijen": 21,
-         "basinc": 101.3,
-         "g": 0.0001,
-         "akis": null,
-         "kalinlik": null,
-         "numune_tipi": "thick_sheet",
-         "yakit_turu": "kati",
-         "seyreltici": "n2"
-        },
-        "akis_bilinmiyor": true
-       }
-      },
-      {
-       "no": 2,
-       "ad": "malzeme tanıma",
-       "sure_ms": 0.18,
-       "karar": "kullanıcı kütüphanesi: 'aerogel' -> aerojel (model: cellulose, motor: cellulose)",
-       "ayrinti": {
-        "kaynak": "kullanici_kutuphanesi",
-        "durum": "kullanıcı malzemesi",
-        "zayif_esleme": false
-       }
-      },
-      {
-       "no": 3,
-       "ad": "risk modeli",
-       "sure_ms": 112.66,
-       "karar": "p = 0.76 (g = 0.0001)",
-       "ayrinti": {
-        "belirsizlik": 0.259,
-        "risk": "YÜKSEK"
-       }
-      },
-      {
-       "no": 4,
-       "ad": "yönlendirici seçimi",
-       "sure_ms": 0,
-       "karar": "hafif (motor_turu = yonlendirici)",
-       "ayrinti": {
-        "neden": "yakıt türü 'kati' -> hafif motor (katı yakıt; ya da sıvı havuz / gaz motoru sonuç vermedi)",
-        "not": "seçim motor çağrısının içinde; süresi 5. adıma dahil"
-       }
-      },
-      {
-       "no": 5,
-       "ad": "fizik motoru",
-       "sure_ms": 1.12,
-       "karar": "yanma = 0.987, akış 10.0 cm/s",
-       "ayrinti": {
-        "denenen_akislar": [
-         0,
-         5,
-         10,
-         20
-        ],
-        "secilen_akis": 10,
-        "motor_auc": 0.729,
-        "en_kotu_durum": true
-       }
-      },
-      {
-       "no": 6,
-       "ad": "birleştirme ağırlıkları",
-       "sure_ms": 0.01,
-       "karar": "birleşik = 0.76 (model 1.0, motor 0.0)",
-       "ayrinti": {
-        "kural": "güç = max(0, 2(AUC - 0.5)); w_motor = güç_motor / (güç_model + güç_motor)"
-       }
-      },
-      {
-       "no": 7,
-       "ad": "Ay/Mars sınırlama",
-       "sure_ms": 0,
-       "karar": "uygulanmadı (g = 0.0001; sınırlama yalnız 0.01 ≤ g < 0.9)",
-       "ayrinti": {}
-      },
-      {
-       "no": 8,
-       "ad": "sönme sınırı ve güvenlik katsayısı",
-       "sure_ms": 0.01,
-       "karar": "sınır %15.75 O2, güvenlik katsayısı 0.75",
-       "ayrinti": {
-        "tanim": "katsayı = sönme sınırı / ortam O2; > 1 güvenli, < 1 yanabilir",
-        "tarama": "%5-60, 0.25 adım"
-       }
-      },
-      {
-       "no": 9,
-       "ad": "güven skoru",
-       "sure_ms": 10.43,
-       "karar": "v2 38/100 (düşük), v1 93/100",
+       "sure_ms": 11.69,
+       "karar": "v2 68/100 (orta), v1 92/100",
        "ayrinti": {
         "v2_bilesenler": {
          "veri": 1,
-         "uyum": 0.998,
+         "uyum": 0.981,
          "motor": 0.458,
-         "kesinlik": 0.482
+         "kesinlik": 0.95
         },
         "v2_cezalar": [
-         "malzeme kütüphane ile eşlendi",
-         "kalibrasyon kapsamı dışı"
+         "malzeme kütüphane ile eşlendi"
         ]
        }
       },
@@ -1820,9 +1517,9 @@
        "karar": "4 uyarı",
        "ayrinti": {
         "uyarilar": [
-         "'aerogel' kütüphanede: aerojel (kullanıcı malzemesi); risk modeli 'cellulose', motor “cellulose”.",
-         "Kullanıcı malzemesi (onaylı, deney verisiyle doğrulanmadı): motor ağırlığı 0.",
-         "'aerojel' motorda kalibre değil: motor ağırlığı 0 (benzer malzeme: cellulose).",
+         "'Lexan' kütüphanede: Polikarbonat (veri setinde 7 nokta var); risk modeli 'pmma', motor “pmma”.",
+         "'Polikarbonat' motorda kalibre değil: motor ağırlığı 0 (benzer malzeme: pmma).",
+         "zayıf eşleme: pmma",
          "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı."
         ]
        }
@@ -1837,25 +1534,173 @@
       {
        "no": 12,
        "ad": "kayıt",
-       "sure_ms": 0.21,
-       "karar": "yazıldı: /path/to/ahut-flare/dashboard/data/loglar/prediction_log.jsonl",
+       "sure_ms": 0.19,
+       "karar": "yazıldı: dashboard/data/logs/prediction_log.jsonl",
        "ayrinti": {}
       }
      ]
+    }
+   }
+  },
+  "aerogel_iss": {
+   "sonuc": {
+    "tahmin": {
+     "girdi": {
+      "malzeme": "aerogel",
+      "oksijen": 21,
+      "basinc": 101.3,
+      "g": 0.0001,
+      "akis": null,
+      "kalinlik": null,
+      "numune_tipi": null,
+      "yakit_turu": null,
+      "akis_yonu": null,
+      "seyreltici": "n2"
+     },
+     "yanma_ihtimali": null,
+     "yanma_birlesik": null,
+     "agirliklar": null,
+     "belirsizlik": null,
+     "risk_seviyesi": null,
+     "sonme_siniri": null,
+     "guvenlik_katsayisi": null,
+     "sinirlama": null,
+     "motor": null,
+     "motor_turu": "yonlendirici",
+     "motor_kaynagi": null,
+     "motor_akis": null,
+     "motor_belirsizlik": null,
+     "guven": null,
+     "guven_v1": null,
+     "guven_v2": null,
+     "kullanilan_varsayilanlar": {},
+     "ozel_durum": {
+      "tur": "yanmaz",
+      "baslik": "Yanıcı değil",
+      "uyari": "yanıcı değil: tahmin yapılmaz",
+      "id": "aerogel",
+      "ad": "Aerojel (silika)",
+      "kategori": "yalıtım/köpük"
+     },
+     "kutuphane_eslesme": {
+      "girilen": "aerogel",
+      "id": "aerogel",
+      "ad": "Aerojel (silika)",
+      "kaynak": "kutuphane",
+      "durum": "veri yok",
+      "motor_benzeri": null,
+      "model_malzeme": null,
+      "zayif_esleme": false,
+      "motor_agirligi_sifir": true
+     },
+     "adimlar": [
+      {
+       "no": 1,
+       "ad": "girdi ve varsayılanlar",
+       "sure_ms": 0,
+       "karar": "atlandı (yanmaz: yakıt olarak çözülmez)",
+       "ayrinti": {}
+      },
+      {
+       "no": 2,
+       "ad": "malzeme tanıma",
+       "sure_ms": 0.18,
+       "karar": "kütüphane: 'aerogel' -> aerogel (yanmaz: yakıt olarak çözülmez)",
+       "ayrinti": {
+        "kaynak": "kutuphane",
+        "ozel": "yanmaz"
+       }
+      },
+      {
+       "no": 3,
+       "ad": "risk modeli",
+       "sure_ms": 0,
+       "karar": "atlandı (yanmaz: yakıt olarak çözülmez)",
+       "ayrinti": {}
+      },
+      {
+       "no": 4,
+       "ad": "yönlendirici seçimi",
+       "sure_ms": 0,
+       "karar": "atlandı (yanmaz: yakıt olarak çözülmez)",
+       "ayrinti": {}
+      },
+      {
+       "no": 5,
+       "ad": "fizik motoru",
+       "sure_ms": 0,
+       "karar": "atlandı (yanmaz: yakıt olarak çözülmez)",
+       "ayrinti": {}
+      },
+      {
+       "no": 6,
+       "ad": "birleştirme ağırlıkları",
+       "sure_ms": 0,
+       "karar": "atlandı (yanmaz: yakıt olarak çözülmez)",
+       "ayrinti": {}
+      },
+      {
+       "no": 7,
+       "ad": "Ay/Mars sınırlama",
+       "sure_ms": 0,
+       "karar": "atlandı (yanmaz: yakıt olarak çözülmez)",
+       "ayrinti": {}
+      },
+      {
+       "no": 8,
+       "ad": "sönme sınırı ve güvenlik katsayısı",
+       "sure_ms": 0,
+       "karar": "atlandı (yanmaz: yakıt olarak çözülmez)",
+       "ayrinti": {}
+      },
+      {
+       "no": 9,
+       "ad": "güven skoru",
+       "sure_ms": 0,
+       "karar": "atlandı (yanmaz: yakıt olarak çözülmez)",
+       "ayrinti": {}
+      },
+      {
+       "no": 10,
+       "ad": "uyarılar",
+       "sure_ms": 0,
+       "karar": "atlandı (yanmaz: yakıt olarak çözülmez)",
+       "ayrinti": {}
+      },
+      {
+       "no": 11,
+       "ad": "LLM yorumu",
+       "sure_ms": 0,
+       "karar": "atlandı (yanmaz: yakıt olarak çözülmez)",
+       "ayrinti": {}
+      },
+      {
+       "no": 12,
+       "ad": "kayıt",
+       "sure_ms": 0,
+       "karar": "atlandı (yanmaz: yakıt olarak çözülmez)",
+       "ayrinti": {}
+      }
+     ],
+     "uyarilar": [
+      "'aerogel' = Aerojel (silika): yanıcı değil: tahmin yapılmaz.",
+      "Silika aerojel; organik katkılı/elyaflı battaniye türleri (Pyrogel, Cryogel vb.) farklı olabilir."
+     ],
+     "sure_sn": 0
     }
    }
   }
  },
  "hatalar": [],
  "llm": {
-  "durum": "geldi",
-  "uzunluk": 870
+  "durum": "hata",
+  "uzunluk": 56
  },
- "malzeme_sayisi": 44,
+ "malzeme_sayisi": 106,
  "kullanici_form": {
-  "ad": "aerojel",
-  "yakit": "kati",
-  "benzer": "cellulose"
+  "ad": "aerogel",
+  "yakit": "",
+  "benzer": ""
  },
  "kullanici_kayit_hata": null,
  "topluluk_bilgi": {
@@ -2031,6 +1876,936 @@
     "yorum_sayisi": 1,
     "llm_var": false,
     "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-gaz-39D1",
+    "baslik": "ISS BRE test 39D1 · etilen brülör · %25 O₂ · 0.99 bar — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (ISS BRE, Dehghani ve ark. 2021, CNF 228:315). Deney: 25 mm gözenekli brülör, C₂H₄ (yakıt kesri 1), 2.54 g/m²s, %25.0 O₂, 0.99 bar; sonuç: 14 s'de söndü.\nOpenFOAM 14 (multicomponentFluid, 2B eksenel simetrik, tek adım etilen Westbrook–Dryer, P1 ışınım, soğurma ×0,15): model 21.1 s'd",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "iss-bre",
+     "gaz",
+     "deney-söndü",
+     "model-doğru"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:21:15",
+    "guncelleme": "2026-11-15T14:38:45",
+    "onayar": "ISS",
+    "malzeme": "ethylene",
+    "g": 0.0001,
+    "oksijen": 25,
+    "basinc": 99,
+    "akis": null,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.969,
+    "guvenlik_katsayisi": 0.59,
+    "guven": 35,
+    "guven_v1": 0,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-gaz-39G1",
+    "baslik": "ISS BRE test 39G1 · etilen brülör · %20 O₂ · 1.02 bar — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (ISS BRE, Dehghani ve ark. 2021, CNF 228:315). Deney: 25 mm gözenekli brülör, C₂H₄ (yakıt kesri 1), 5.13 g/m²s, %20.0 O₂, 1.02 bar; sonuç: 13 s'de söndü.\nOpenFOAM 14 (multicomponentFluid, 2B eksenel simetrik, tek adım etilen Westbrook–Dryer, P1 ışınım, soğurma ×0,15): model 12.8 s'd",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "iss-bre",
+     "gaz",
+     "deney-söndü",
+     "model-doğru"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:21:15",
+    "guncelleme": "2026-11-15T14:38:45",
+    "onayar": "ISS",
+    "malzeme": "ethylene",
+    "g": 0.0001,
+    "oksijen": 20,
+    "basinc": 102,
+    "akis": null,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.945,
+    "guvenlik_katsayisi": 0.6,
+    "guven": 37,
+    "guven_v1": 68,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-gaz-39H1",
+    "baslik": "ISS BRE test 39H1 · etilen brülör · %19 O₂ · 1.02 bar — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (ISS BRE, Dehghani ve ark. 2021, CNF 228:315). Deney: 25 mm gözenekli brülör, C₂H₄ (yakıt kesri 1), 3.06 g/m²s, %19.0 O₂, 1.02 bar; sonuç: 17 s'de söndü.\nOpenFOAM 14 (multicomponentFluid, 2B eksenel simetrik, tek adım etilen Westbrook–Dryer, P1 ışınım, soğurma ×0,15): model 12.1 s'd",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "iss-bre",
+     "gaz",
+     "deney-söndü",
+     "model-doğru"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:21:16",
+    "guncelleme": "2026-11-15T14:38:46",
+    "onayar": "ISS",
+    "malzeme": "ethylene",
+    "g": 0.0001,
+    "oksijen": 19,
+    "basinc": 102,
+    "akis": null,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.944,
+    "guvenlik_katsayisi": 0.632,
+    "guven": 37,
+    "guven_v1": 68,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-gaz-51A1",
+    "baslik": "ISS BRE test 51A1 · etilen brülör · %34 O₂ · 1.02 bar — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (ISS BRE, Dehghani ve ark. 2021, CNF 228:315). Deney: 25 mm gözenekli brülör, C₂H₄ (yakıt kesri 1), 2.55 g/m²s, %34.0 O₂, 1.02 bar; sonuç: yandı (alev sönmedi).\nOpenFOAM 14 (multicomponentFluid, 2B eksenel simetrik, tek adım etilen Westbrook–Dryer, P1 ışınım, soğurma ×0,15): model 4",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "iss-bre",
+     "gaz",
+     "deney-yandı",
+     "model-doğru"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:21:16",
+    "guncelleme": "2026-11-15T14:38:46",
+    "onayar": "ISS",
+    "malzeme": "ethylene",
+    "g": 0.0001,
+    "oksijen": 34,
+    "basinc": 102,
+    "akis": null,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.989,
+    "guvenlik_katsayisi": 0.353,
+    "guven": 41,
+    "guven_v1": 57,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-gaz-51K1",
+    "baslik": "ISS BRE test 51K1 · etilen brülör · %25 O₂ · 0.69 bar — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (ISS BRE, Dehghani ve ark. 2021, CNF 228:315). Deney: 25 mm gözenekli brülör, C₂H₄ (yakıt kesri 1), 3.83 g/m²s, %25.0 O₂, 0.69 bar; sonuç: 25 s'de söndü.\nOpenFOAM 14 (multicomponentFluid, 2B eksenel simetrik, tek adım etilen Westbrook–Dryer, P1 ışınım, soğurma ×0,15): model 20.9 s'd",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "iss-bre",
+     "gaz",
+     "deney-söndü",
+     "model-doğru"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:21:16",
+    "guncelleme": "2026-11-15T14:38:47",
+    "onayar": "ISS",
+    "malzeme": "ethylene",
+    "g": 0.0001,
+    "oksijen": 25,
+    "basinc": 69,
+    "akis": null,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.923,
+    "guvenlik_katsayisi": 0.69,
+    "guven": 35,
+    "guven_v1": 0,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-gaz-63D1",
+    "baslik": "ISS BRE test 63D1 · etilen brülör · %27 O₂ · 1.01 bar — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (ISS BRE, Dehghani ve ark. 2021, CNF 228:315). Deney: 25 mm gözenekli brülör, C₂H₄ (yakıt kesri 0.5), 6.03 g/m²s, %27.0 O₂, 1.01 bar; sonuç: 33 s'de söndü.\nOpenFOAM 14 (multicomponentFluid, 2B eksenel simetrik, tek adım etilen Westbrook–Dryer, P1 ışınım, soğurma ×0,15): model 24.2 s",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "iss-bre",
+     "gaz",
+     "deney-söndü",
+     "model-doğru"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:21:17",
+    "guncelleme": "2026-11-15T14:38:47",
+    "onayar": "ISS",
+    "malzeme": "ethylene",
+    "g": 0.0001,
+    "oksijen": 27,
+    "basinc": 101,
+    "akis": null,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.978,
+    "guvenlik_katsayisi": 0.546,
+    "guven": 35,
+    "guven_v1": 32,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-gaz-70L1",
+    "baslik": "ISS BRE test 70L1 · etilen brülör · %27 O₂ · 0.71 bar — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (ISS BRE, Dehghani ve ark. 2021, CNF 228:315). Deney: 25 mm gözenekli brülör, C₂H₄ (yakıt kesri 0.5), 1.74 g/m²s, %27.0 O₂, 0.71 bar; sonuç: yandı (alev sönmedi).\nOpenFOAM 14 (multicomponentFluid, 2B eksenel simetrik, tek adım etilen Westbrook–Dryer, P1 ışınım, soğurma ×0,15): model",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "iss-bre",
+     "gaz",
+     "deney-yandı",
+     "model-doğru"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:21:17",
+    "guncelleme": "2026-11-15T14:38:47",
+    "onayar": "ISS",
+    "malzeme": "ethylene",
+    "g": 0.0001,
+    "oksijen": 27,
+    "basinc": 71,
+    "akis": null,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.942,
+    "guvenlik_katsayisi": 0.63,
+    "guven": 35,
+    "guven_v1": 31,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-gaz-87D1",
+    "baslik": "ISS BRE test 87D1 · etilen brülör · %32 O₂ · 0.57 bar — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (ISS BRE, Dehghani ve ark. 2021, CNF 228:315). Deney: 25 mm gözenekli brülör, C₂H₄ (yakıt kesri 1), 1.18 g/m²s, %32.0 O₂, 0.57 bar; sonuç: yandı (alev sönmedi).\nOpenFOAM 14 (multicomponentFluid, 2B eksenel simetrik, tek adım etilen Westbrook–Dryer, P1 ışınım, soğurma ×0,15): model 4",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "iss-bre",
+     "gaz",
+     "deney-yandı",
+     "model-doğru"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:21:18",
+    "guncelleme": "2026-11-15T14:38:48",
+    "onayar": "ISS",
+    "malzeme": "ethylene",
+    "g": 0.0001,
+    "oksijen": 32,
+    "basinc": 57,
+    "akis": null,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.924,
+    "guvenlik_katsayisi": 0.539,
+    "guven": 40,
+    "guven_v1": 62,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-gaz-87H1",
+    "baslik": "ISS BRE test 87H1 · etilen brülör · %27 O₂ · 0.71 bar — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (ISS BRE, Dehghani ve ark. 2021, CNF 228:315). Deney: 25 mm gözenekli brülör, C₂H₄ (yakıt kesri 1), 1.48 g/m²s, %27.0 O₂, 0.71 bar; sonuç: yandı (alev sönmedi).\nOpenFOAM 14 (multicomponentFluid, 2B eksenel simetrik, tek adım etilen Westbrook–Dryer, P1 ışınım, soğurma ×0,15): model 3",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "iss-bre",
+     "gaz",
+     "deney-yandı",
+     "model-yanlış"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:21:20",
+    "guncelleme": "2026-11-15T14:38:49",
+    "onayar": "ISS",
+    "malzeme": "ethylene",
+    "g": 0.0001,
+    "oksijen": 27,
+    "basinc": 71,
+    "akis": null,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.942,
+    "guvenlik_katsayisi": 0.63,
+    "guven": 35,
+    "guven_v1": 31,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-gaz-87K1",
+    "baslik": "ISS BRE test 87K1 · etilen brülör · %25 O₂ · 0.71 bar — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (ISS BRE, Dehghani ve ark. 2021, CNF 228:315). Deney: 25 mm gözenekli brülör, C₂H₄ (yakıt kesri 1), 1.04 g/m²s, %25.0 O₂, 0.71 bar; sonuç: yandı (alev sönmedi).\nOpenFOAM 14 (multicomponentFluid, 2B eksenel simetrik, tek adım etilen Westbrook–Dryer, P1 ışınım, soğurma ×0,15): model 2",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "iss-bre",
+     "gaz",
+     "deney-yandı",
+     "model-yanlış"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:21:18",
+    "guncelleme": "2026-11-15T14:38:48",
+    "onayar": "ISS",
+    "malzeme": "ethylene",
+    "g": 0.0001,
+    "oksijen": 25,
+    "basinc": 71,
+    "akis": null,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.935,
+    "guvenlik_katsayisi": 0.68,
+    "guven": 35,
+    "guven_v1": 0,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-gaz-94A1",
+    "baslik": "ISS BRE test 94A1 · etilen brülör · %22 O₂ · 1.02 bar — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (ISS BRE, Dehghani ve ark. 2021, CNF 228:315). Deney: 25 mm gözenekli brülör, C₂H₄ (yakıt kesri 1), 1.86 g/m²s, %22.0 O₂, 1.02 bar; sonuç: 21 s'de söndü.\nOpenFOAM 14 (multicomponentFluid, 2B eksenel simetrik, tek adım etilen Westbrook–Dryer, P1 ışınım, soğurma ×0,15): model 17.1 s'd",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "iss-bre",
+     "gaz",
+     "deney-söndü",
+     "model-doğru"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:21:19",
+    "guncelleme": "2026-11-15T14:38:48",
+    "onayar": "ISS",
+    "malzeme": "ethylene",
+    "g": 0.0001,
+    "oksijen": 22,
+    "basinc": 102,
+    "akis": null,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.981,
+    "guvenlik_katsayisi": 0.545,
+    "guven": 35,
+    "guven_v1": 64,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-gaz-94G1",
+    "baslik": "ISS BRE test 94G1 · etilen brülör · %26 O₂ · 0.71 bar — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (ISS BRE, Dehghani ve ark. 2021, CNF 228:315). Deney: 25 mm gözenekli brülör, C₂H₄ (yakıt kesri 1), 1.17 g/m²s, %26.0 O₂, 0.71 bar; sonuç: yandı (alev sönmedi).\nOpenFOAM 14 (multicomponentFluid, 2B eksenel simetrik, tek adım etilen Westbrook–Dryer, P1 ışınım, soğurma ×0,15): model 3",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "iss-bre",
+     "gaz",
+     "deney-yandı",
+     "model-yanlış"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:21:19",
+    "guncelleme": "2026-11-15T14:38:49",
+    "onayar": "ISS",
+    "malzeme": "ethylene",
+    "g": 0.0001,
+    "oksijen": 26,
+    "basinc": 71,
+    "akis": null,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.942,
+    "guvenlik_katsayisi": 0.654,
+    "guven": 35,
+    "guven_v1": 0,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-kati-b12_u22",
+    "baslik": "BASS SIBAL (PSI-26_12) · akış 22 cm/s · %21.63 O₂ — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (BASS, ISS; PSI-26_12). SIBAL pamuk/cam elyaf kumaş, %21.63 O₂, 99.7 kPa, eşakışlı 22 cm/s; deney: yandı.\nOpenFOAM 14 + C++ piroliz modeli (libFlameInFreefallSolid, sibalPyrolysis; Saffire-III vakası): tutuşma 1.90 s, gaz T maks 2166 K, alev yanmaya devam etti → doğru (benzetim 10 s",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "bass",
+     "katı",
+     "deney-yandı",
+     "model-doğru"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:21:20",
+    "guncelleme": "2026-11-15T14:38:50",
+    "onayar": "ISS",
+    "malzeme": "sibal",
+    "g": 0.0001,
+    "oksijen": 21.63,
+    "basinc": 99.7,
+    "akis": 22,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.996,
+    "guvenlik_katsayisi": 0.393,
+    "guven": 85,
+    "guven_v1": 73,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-kati-b13_u11",
+    "baslik": "BASS SIBAL (PSI-26_13) · akış 11 cm/s · %21.63 O₂ — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (BASS, ISS; PSI-26_13). SIBAL pamuk/cam elyaf kumaş, %21.63 O₂, 99.7 kPa, eşakışlı 11 cm/s; deney: yandı.\nOpenFOAM 14 + C++ piroliz modeli (libFlameInFreefallSolid, sibalPyrolysis; Saffire-III vakası): tutuşma 2.13 s, gaz T maks 2165 K, alev yanmaya devam etti → doğru (benzetim kısm",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "bass",
+     "katı",
+     "deney-yandı",
+     "model-doğru"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:21:21",
+    "guncelleme": "2026-11-15T14:38:50",
+    "onayar": "ISS",
+    "malzeme": "sibal",
+    "g": 0.0001,
+    "oksijen": 21.63,
+    "basinc": 99.7,
+    "akis": 11,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.997,
+    "guvenlik_katsayisi": 0.428,
+    "guven": 85,
+    "guven_v1": 72,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-kati-b1_u10",
+    "baslik": "BASS SIBAL (PSI-26_1) · akış 10 cm/s · %22.1 O₂ — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (BASS, ISS; PSI-26_1). SIBAL pamuk/cam elyaf kumaş, %22.1 O₂, 98.3 kPa, eşakışlı 10 cm/s; deney: yandı.\nOpenFOAM 14 + C++ piroliz modeli (libFlameInFreefallSolid, sibalPyrolysis; Saffire-III vakası): tutuşma 2.16 s, gaz T maks 2191 K, alev yanmaya devam etti → doğru (benzetim 10 s).",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "bass",
+     "katı",
+     "deney-yandı",
+     "model-doğru"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:21:21",
+    "guncelleme": "2026-11-15T14:38:50",
+    "onayar": "ISS",
+    "malzeme": "sibal",
+    "g": 0.0001,
+    "oksijen": 22.1,
+    "basinc": 98.3,
+    "akis": 10,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.996,
+    "guvenlik_katsayisi": 0.543,
+    "guven": 86,
+    "guven_v1": 86,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-kati-b1_u5",
+    "baslik": "BASS SIBAL (PSI-26_1) · akış 5 cm/s · %22.1 O₂ — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (BASS, ISS; PSI-26_1). SIBAL pamuk/cam elyaf kumaş, %22.1 O₂, 98.3 kPa, eşakışlı 5 cm/s; deney: yandı.\nOpenFOAM 14 + C++ piroliz modeli (libFlameInFreefallSolid, sibalPyrolysis; Saffire-III vakası): tutuşma 2.52 s, gaz T maks 2189 K, alev yanmaya devam etti → doğru (benzetim 10 s).\n",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "bass",
+     "katı",
+     "deney-yandı",
+     "model-doğru"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:21:22",
+    "guncelleme": "2026-11-15T14:38:51",
+    "onayar": "ISS",
+    "malzeme": "sibal",
+    "g": 0.0001,
+    "oksijen": 22.1,
+    "basinc": 98.3,
+    "akis": 5,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.999,
+    "guvenlik_katsayisi": 0.294,
+    "guven": 86,
+    "guven_v1": 86,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-kati-b45_u9",
+    "baslik": "BASS SIBAL (PSI-26_45) · akış 9 cm/s · %22.22 O₂ — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (BASS, ISS; PSI-26_45). SIBAL pamuk/cam elyaf kumaş, %22.22 O₂, 100.1 kPa, eşakışlı 9 cm/s; deney: yandı.\nOpenFOAM 14 + C++ piroliz modeli (libFlameInFreefallSolid, sibalPyrolysis; Saffire-III vakası): tutuşma 2.18 s, gaz T maks 2203 K, alev yanmaya devam etti → doğru (benzetim 4.58",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "bass",
+     "katı",
+     "deney-yandı",
+     "model-doğru"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:21:22",
+    "guncelleme": "2026-11-15T14:38:52",
+    "onayar": "ISS",
+    "malzeme": "sibal",
+    "g": 0.0001,
+    "oksijen": 22.22,
+    "basinc": 100.1,
+    "akis": 9,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.999,
+    "guvenlik_katsayisi": 0.225,
+    "guven": 86,
+    "guven_v1": 86,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-kati-b54_u44",
+    "baslik": "BASS SIBAL (PSI-26_54) · akış 44 cm/s · %22.72 O₂ — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (BASS, ISS; PSI-26_54). SIBAL pamuk/cam elyaf kumaş, %22.72 O₂, 100.8 kPa, eşakışlı 44 cm/s; deney: yandı.\nOpenFOAM 14 + C++ piroliz modeli (libFlameInFreefallSolid, sibalPyrolysis; Saffire-III vakası): tutuşma 1.74 s, gaz T maks 2213 K, alev yanmaya devam etti → doğru (benzetim 3.0",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "bass",
+     "katı",
+     "deney-yandı",
+     "model-doğru"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:21:23",
+    "guncelleme": "2026-11-15T14:38:52",
+    "onayar": "ISS",
+    "malzeme": "sibal",
+    "g": 0.0001,
+    "oksijen": 22.72,
+    "basinc": 100.8,
+    "akis": 44,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.998,
+    "guvenlik_katsayisi": 0.22,
+    "guven": 86,
+    "guven_v1": 86,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-kati-b55_u20",
+    "baslik": "BASS SIBAL (PSI-26_55) · akış 20 cm/s · %22.67 O₂ — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (BASS, ISS; PSI-26_55). SIBAL pamuk/cam elyaf kumaş, %22.67 O₂, 101.7 kPa, eşakışlı 20 cm/s; deney: yandı.\nOpenFOAM 14 + C++ piroliz modeli (libFlameInFreefallSolid, sibalPyrolysis; Saffire-III vakası): tutuşma 1.87 s, gaz T maks 2227 K, alev yanmaya devam etti → doğru (benzetim 10 ",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "bass",
+     "katı",
+     "deney-yandı",
+     "model-doğru"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:21:22",
+    "guncelleme": "2026-11-15T14:38:51",
+    "onayar": "ISS",
+    "malzeme": "sibal",
+    "g": 0.0001,
+    "oksijen": 22.67,
+    "basinc": 101.7,
+    "akis": 20,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.999,
+    "guvenlik_katsayisi": 0.221,
+    "guven": 86,
+    "guven_v1": 86,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-sivi-102",
+    "baslik": "NASA FLEX test 102 · n-heptan damla 3.57 mm · %21 O₂ — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (NASA FLEX, ISS). Deney: damla d0 = 3.57 mm, %21 O₂, 71.2 kPa; FLEX sonucu: söndü (Extinction), K = 0.33 mm²/s.\nOpenFOAM (C++ damla buharlaşma modeli damlaBulutBuharlasma + OpenFOAM 14, tek adım heptan, ışınımsız): skor 1831 K (0,5 s ile t85 = 8.268 s arasında en düşük alev sıcaklığ",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "nasa-flex",
+     "sıvı",
+     "deney-söndü",
+     "model-yanlış"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:20:48",
+    "guncelleme": "2026-11-15T14:38:19",
+    "onayar": "ISS",
+    "malzeme": "n-heptane",
+    "g": 0.0001,
+    "oksijen": 21,
+    "basinc": 71.2,
+    "akis": null,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.994,
+    "guvenlik_katsayisi": 0.702,
+    "guven": 90,
+    "guven_v1": 85,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-sivi-156",
+    "baslik": "NASA FLEX test 156 · n-heptan damla 1.34 mm · %18 O₂ — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (NASA FLEX, ISS). Deney: damla d0 = 1.34 mm, %18 O₂, 102.1 kPa; FLEX sonucu: yandı (Completion), K = 0.48 mm²/s.\nOpenFOAM (C++ damla buharlaşma modeli damlaBulutBuharlasma + OpenFOAM 14, tek adım heptan, ışınımsız): skor 2243 K (0,5 s ile t85 = 0.824 s arasında en düşük alev sıcaklı",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "nasa-flex",
+     "sıvı",
+     "deney-yandı",
+     "model-doğru"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:20:50",
+    "guncelleme": "2026-11-15T14:38:21",
+    "onayar": "ISS",
+    "malzeme": "n-heptane",
+    "g": 0.0001,
+    "oksijen": 18,
+    "basinc": 102.1,
+    "akis": null,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.997,
+    "guvenlik_katsayisi": 0.361,
+    "guven": 91,
+    "guven_v1": 84,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-sivi-165",
+    "baslik": "NASA FLEX test 165 · n-heptan damla 1.96 mm · %18 O₂ — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (NASA FLEX, ISS). Deney: damla d0 = 1.96 mm, %18 O₂, 102 kPa; FLEX sonucu: yandı (Extinction), K = 0.54 mm²/s.\nOpenFOAM (C++ damla buharlaşma modeli damlaBulutBuharlasma + OpenFOAM 14, tek adım heptan, ışınımsız): skor 2246 K (0,5 s ile t85 = 1.746 s arasında en düşük alev sıcaklığı",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "nasa-flex",
+     "sıvı",
+     "deney-yandı",
+     "model-doğru"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:20:53",
+    "guncelleme": "2026-11-15T14:38:24",
+    "onayar": "ISS",
+    "malzeme": "n-heptane",
+    "g": 0.0001,
+    "oksijen": 18,
+    "basinc": 102,
+    "akis": null,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.994,
+    "guvenlik_katsayisi": 0.375,
+    "guven": 91,
+    "guven_v1": 84,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-sivi-172",
+    "baslik": "NASA FLEX test 172 · n-heptan damla 2.4 mm · %18 O₂ — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (NASA FLEX, ISS). Deney: damla d0 = 2.4 mm, %18 O₂, 101.6 kPa; FLEX sonucu: yandı (Extinction), K = 0.46 mm²/s.\nOpenFOAM (C++ damla buharlaşma modeli damlaBulutBuharlasma + OpenFOAM 14, tek adım heptan, ışınımsız): skor 2043 K (0,5 s ile t85 = 3.09 s arasında en düşük alev sıcaklığı",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "nasa-flex",
+     "sıvı",
+     "deney-yandı",
+     "model-doğru"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:20:55",
+    "guncelleme": "2026-11-15T14:38:26",
+    "onayar": "ISS",
+    "malzeme": "n-heptane",
+    "g": 0.0001,
+    "oksijen": 18,
+    "basinc": 101.6,
+    "akis": null,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.991,
+    "guvenlik_katsayisi": 0.431,
+    "guven": 91,
+    "guven_v1": 84,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-sivi-173",
+    "baslik": "NASA FLEX test 173 · n-heptan damla 1.35 mm · %18 O₂ — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (NASA FLEX, ISS). Deney: damla d0 = 1.35 mm, %18 O₂, 101.6 kPa; FLEX sonucu: yandı (Disruption), K = 0.5 mm²/s.\nOpenFOAM (C++ damla buharlaşma modeli damlaBulutBuharlasma + OpenFOAM 14, tek adım heptan, ışınımsız): skor 2245 K (0,5 s ile t85 = 0.834 s arasında en düşük alev sıcaklığ",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "nasa-flex",
+     "sıvı",
+     "deney-yandı",
+     "model-doğru"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:20:57",
+    "guncelleme": "2026-11-15T14:38:28",
+    "onayar": "ISS",
+    "malzeme": "n-heptane",
+    "g": 0.0001,
+    "oksijen": 18,
+    "basinc": 101.6,
+    "akis": null,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.991,
+    "guvenlik_katsayisi": 0.431,
+    "guven": 91,
+    "guven_v1": 84,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-sivi-211",
+    "baslik": "NASA FLEX test 211 · n-heptan damla 2.52 mm · %16 O₂ — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (NASA FLEX, ISS). Deney: damla d0 = 2.52 mm, %16 O₂, 101.3 kPa; FLEX sonucu: söndü (Extinction), K = 0.42 mm²/s.\nOpenFOAM (C++ damla buharlaşma modeli damlaBulutBuharlasma + OpenFOAM 14, tek adım heptan, ışınımsız): skor 1926 K (0,5 s ile t85 = 3.644 s arasında en düşük alev sıcaklı",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "nasa-flex",
+     "sıvı",
+     "deney-söndü",
+     "model-yanlış"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:21:00",
+    "guncelleme": "2026-11-15T14:38:31",
+    "onayar": "ISS",
+    "malzeme": "n-heptane",
+    "g": 0.0001,
+    "oksijen": 16,
+    "basinc": 101.3,
+    "akis": null,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.934,
+    "guvenlik_katsayisi": 0.656,
+    "guven": 83,
+    "guven_v1": 74,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-sivi-214",
+    "baslik": "NASA FLEX test 214 · n-heptan damla 1.83 mm · %14 O₂ — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (NASA FLEX, ISS). Deney: damla d0 = 1.83 mm, %14 O₂, 101.3 kPa; FLEX sonucu: yandı (Extinction), K = 0.39 mm²/s.\nOpenFOAM (C++ damla buharlaşma modeli damlaBulutBuharlasma + OpenFOAM 14, tek adım heptan, ışınımsız): skor 2040 K (0,5 s ile t85 = 1.616 s arasında en düşük alev sıcaklı",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "nasa-flex",
+     "sıvı",
+     "deney-yandı",
+     "model-doğru"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:21:02",
+    "guncelleme": "2026-11-15T14:38:33",
+    "onayar": "ISS",
+    "malzeme": "n-heptane",
+    "g": 0.0001,
+    "oksijen": 14,
+    "basinc": 101.3,
+    "akis": null,
+    "risk_seviyesi": "YÜKSEK",
+    "yanma_ihtimali": 0.633,
+    "guvenlik_katsayisi": 0.75,
+    "guven": 80,
+    "guven_v1": 72,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-sivi-35",
+    "baslik": "NASA FLEX test 35 · n-heptan damla 3.85 mm · %21 O₂ — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (NASA FLEX, ISS). Deney: damla d0 = 3.85 mm, %21 O₂, 102.4 kPa; FLEX sonucu: söndü (Extinction), K = 0.43 mm²/s.\nOpenFOAM (C++ damla buharlaşma modeli damlaBulutBuharlasma + OpenFOAM 14, tek adım heptan, ışınımsız): skor 1736 K (0,5 s ile t85 = 9.296 s arasında en düşük alev sıcaklı",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "nasa-flex",
+     "sıvı",
+     "deney-söndü",
+     "model-yanlış"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:21:05",
+    "guncelleme": "2026-11-15T14:38:35",
+    "onayar": "ISS",
+    "malzeme": "n-heptane",
+    "g": 0.0001,
+    "oksijen": 21,
+    "basinc": 102.4,
+    "akis": null,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.999,
+    "guvenlik_katsayisi": 0.321,
+    "guven": 88,
+    "guven_v1": 85,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-sivi-62",
+    "baslik": "NASA FLEX test 62 · n-heptan damla 3.43 mm · %18 O₂ — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (NASA FLEX, ISS). Deney: damla d0 = 3.43 mm, %18 O₂, 101.6 kPa; FLEX sonucu: söndü (Extinction), K = 0.39 mm²/s.\nOpenFOAM (C++ damla buharlaşma modeli damlaBulutBuharlasma + OpenFOAM 14, tek adım heptan, ışınımsız): skor 1783 K (0,5 s ile t85 = 7.73 s arasında en düşük alev sıcaklığ",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "nasa-flex",
+     "sıvı",
+     "deney-söndü",
+     "model-yanlış"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:21:07",
+    "guncelleme": "2026-11-15T14:38:38",
+    "onayar": "ISS",
+    "malzeme": "n-heptane",
+    "g": 0.0001,
+    "oksijen": 18,
+    "basinc": 101.6,
+    "akis": null,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.991,
+    "guvenlik_katsayisi": 0.431,
+    "guven": 86,
+    "guven_v1": 84,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-sivi-69",
+    "baslik": "NASA FLEX test 69 · n-heptan damla 1.1 mm · %14 O₂ — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (NASA FLEX, ISS). Deney: damla d0 = 1.1 mm, %14 O₂, 102.3 kPa; FLEX sonucu: yandı (Completion), K = 0.94 mm²/s.\nOpenFOAM (C++ damla buharlaşma modeli damlaBulutBuharlasma + OpenFOAM 14, tek adım heptan, ışınımsız): skor 2024 K (0,5 s ile t85 = 0.608 s arasında en düşük alev sıcaklığ",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "nasa-flex",
+     "sıvı",
+     "deney-yandı",
+     "model-doğru"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:21:10",
+    "guncelleme": "2026-11-15T14:38:40",
+    "onayar": "ISS",
+    "malzeme": "n-heptane",
+    "g": 0.0001,
+    "oksijen": 14,
+    "basinc": 102.3,
+    "akis": null,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.861,
+    "guvenlik_katsayisi": 0.482,
+    "guven": 81,
+    "guven_v1": 66,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-sivi-72",
+    "baslik": "NASA FLEX test 72 · n-heptan damla 1.13 mm · %15 O₂ — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (NASA FLEX, ISS). Deney: damla d0 = 1.13 mm, %15 O₂, 102 kPa; FLEX sonucu: yandı (Completion), K = 0.52 mm²/s.\nOpenFOAM (C++ damla buharlaşma modeli damlaBulutBuharlasma + OpenFOAM 14, tek adım heptan, ışınımsız): skor 2098 K (0,5 s ile t85 = 0.638 s arasında en düşük alev sıcaklığı",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "nasa-flex",
+     "sıvı",
+     "deney-yandı",
+     "model-doğru"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:21:12",
+    "guncelleme": "2026-11-15T14:38:42",
+    "onayar": "ISS",
+    "malzeme": "n-heptane",
+    "g": 0.0001,
+    "oksijen": 15,
+    "basinc": 102,
+    "akis": null,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.93,
+    "guvenlik_katsayisi": 0.45,
+    "guven": 82,
+    "guven_v1": 69,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
+   },
+   {
+    "id": "dgr-sivi-74",
+    "baslik": "NASA FLEX test 74 · n-heptan damla 1.33 mm · %15 O₂ — OpenFOAM doğrulaması",
+    "aciklama": "Doğrulama vakası (NASA FLEX, ISS). Deney: damla d0 = 1.33 mm, %15 O₂, 102.1 kPa; FLEX sonucu: yandı (Completion), K = 0.77 mm²/s.\nOpenFOAM (C++ damla buharlaşma modeli damlaBulutBuharlasma + OpenFOAM 14, tek adım heptan, ışınımsız): skor 2125 K (0,5 s ile t85 = 0.856 s arasında en düşük alev sıcaklı",
+    "etiketler": [
+     "doğrulama",
+     "openfoam",
+     "nasa-flex",
+     "sıvı",
+     "deney-yandı",
+     "model-doğru"
+    ],
+    "yazar": "",
+    "olusturma": "2026-11-15T14:21:14",
+    "guncelleme": "2026-11-15T14:38:45",
+    "onayar": "ISS",
+    "malzeme": "n-heptane",
+    "g": 0.0001,
+    "oksijen": 15,
+    "basinc": 102.1,
+    "akis": null,
+    "risk_seviyesi": "ÇOK YÜKSEK",
+    "yanma_ihtimali": 0.952,
+    "guvenlik_katsayisi": 0.45,
+    "guven": 82,
+    "guven_v1": 68,
+    "yorum_sayisi": 0,
+    "llm_var": false,
+    "kaynak": "ornek"
    }
   ],
   "hata": null,
@@ -2039,103 +2814,103 @@
  "mesajlar": [
   {
    "tur": "uyari",
-   "metin": "Güven düşük (v2 15/100): Bu koşulda NASA deneyi yok.",
-   "zaman": "06:19:50"
-  },
-  {
-   "tur": "uyari",
-   "metin": "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
-   "zaman": "06:19:50"
-  },
-  {
-   "tur": "uyari",
-   "metin": "zayıf eşleme: pmma",
-   "zaman": "06:19:50"
-  },
-  {
-   "tur": "uyari",
    "metin": "'Polikarbonat' motorda kalibre değil: motor ağırlığı 0 (benzer malzeme: pmma).",
-   "zaman": "06:19:50"
+   "zaman": "14:53:38"
   },
   {
    "tur": "uyari",
-   "metin": "'Lexan' kütüphanede: Polikarbonat (veri setinde 7 nokta var); risk modeli 'polycarbonate', motor “pmma”.",
-   "zaman": "06:19:50"
+   "metin": "'Lexan' kütüphanede: Polikarbonat (veri setinde 7 nokta var); risk modeli 'pmma', motor “pmma”.",
+   "zaman": "14:53:38"
   },
   {
    "tur": "bilgi",
-   "metin": "Çözüm tamamlandı: ÇOK YÜKSEK · güven 76/100",
-   "zaman": "06:19:40"
+   "metin": "Çözüm tamamlandı: ÇOK YÜKSEK · güven 36/100",
+   "zaman": "14:53:27"
   },
   {
    "tur": "uyari",
-   "metin": "Model ve motor çelişiyor: model 'yanar', motor 'söner' diyor.",
-   "zaman": "06:19:40"
-  },
-  {
-   "tur": "uyari",
-   "metin": "debi / akış verilmedi: varsayılan kullanıldı (küre 1 mg/s, düz 2.5 g/m²s, jet 30 cm/s)",
-   "zaman": "06:19:40"
+   "metin": "Güven düşük (36/100): kalibrasyon kapsamı dışı; fizik motoru kullanılmadı (ağırlık 0).",
+   "zaman": "14:53:27"
   },
   {
    "tur": "uyari",
    "metin": "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
-   "zaman": "06:19:40"
+   "zaman": "14:53:27"
+  },
+  {
+   "tur": "uyari",
+   "metin": "Numune tipi verilmedi: varsayılan sızıntı (küre). Debi bilinmiyor; gaz motoru kullanılmadı (motor ağırlığı 0, sonuç yalnız risk modeli).",
+   "zaman": "14:53:27"
+  },
+  {
+   "tur": "uyari",
+   "metin": "'ethylene' kütüphanede: Etilen (motorda kalibre); risk modeli 'ethylene', motor “ethylene”.",
+   "zaman": "14:53:27"
   },
   {
    "tur": "bilgi",
-   "metin": "Çözüm tamamlandı: ÇOK YÜKSEK · güven 76/100",
-   "zaman": "06:19:29"
+   "metin": "Çözüm tamamlandı: ÇOK YÜKSEK · güven 36/100",
+   "zaman": "14:53:17"
   },
   {
    "tur": "uyari",
-   "metin": "Model ve motor çelişiyor: model 'yanar', motor 'söner' diyor.",
-   "zaman": "06:19:29"
-  },
-  {
-   "tur": "uyari",
-   "metin": "debi / akış verilmedi: varsayılan kullanıldı (küre 1 mg/s, düz 2.5 g/m²s, jet 30 cm/s)",
-   "zaman": "06:19:29"
+   "metin": "Güven düşük (36/100): kalibrasyon kapsamı dışı; fizik motoru kullanılmadı (ağırlık 0).",
+   "zaman": "14:53:17"
   },
   {
    "tur": "uyari",
    "metin": "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
-   "zaman": "06:19:29"
+   "zaman": "14:53:17"
+  },
+  {
+   "tur": "uyari",
+   "metin": "Numune tipi verilmedi: varsayılan sızıntı (küre). Debi bilinmiyor; gaz motoru kullanılmadı (motor ağırlığı 0, sonuç yalnız risk modeli).",
+   "zaman": "14:53:17"
+  },
+  {
+   "tur": "uyari",
+   "metin": "'ethylene' kütüphanede: Etilen (motorda kalibre); risk modeli 'ethylene', motor “ethylene”.",
+   "zaman": "14:53:17"
   },
   {
    "tur": "bilgi",
    "metin": "Çözüm tamamlandı: ÇOK YÜKSEK · güven 87/100",
-   "zaman": "06:19:19"
+   "zaman": "14:53:07"
   },
   {
    "tur": "uyari",
    "metin": "Damla için zorlanmış akış: Ranz–Marshall taşınım düzeltmesi doğrulanamadı (FLEX'te akış yoktu; veri setinde µg/düşük g akışlı damla için koşulları tam bir ölçüm bulunamadı, Aşama 5c).",
-   "zaman": "06:19:19"
+   "zaman": "14:53:07"
   },
   {
    "tur": "uyari",
    "metin": "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
-   "zaman": "06:19:19"
+   "zaman": "14:53:07"
+  },
+  {
+   "tur": "bilgi",
+   "metin": "Render klasörü güncellendi: sibal_g1e-4_o22.67_p101.7_a20_dogrulama-bass-b55_u20.png",
+   "zaman": "14:52:56"
   },
   {
    "tur": "bilgi",
    "metin": "Çözüm tamamlandı: ÇOK YÜKSEK · güven 16/100",
-   "zaman": "06:18:53"
+   "zaman": "14:52:38"
   },
   {
    "tur": "uyari",
-   "metin": "Güven düşük (v2 16/100): Bu koşulda NASA deneyi yok.",
-   "zaman": "06:18:53"
+   "metin": "Güven düşük (16/100): bu koşula yakın NASA deneyi yok; kalibrasyon kapsamı dışı.",
+   "zaman": "14:52:38"
   },
   {
    "tur": "uyari",
    "metin": "Kısmi g için deney verisi az; uzay, gerçek g ve Dünya sonuçlarının en kötüsü alındı.",
-   "zaman": "06:18:53"
+   "zaman": "14:52:38"
   },
   {
    "tur": "uyari",
    "metin": "Hava akışı bilinmiyor; en kötü durum (akış var) varsayıldı.",
-   "zaman": "06:18:53"
+   "zaman": "14:52:38"
   }
  ]
 }
