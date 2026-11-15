@@ -34,9 +34,9 @@ Yanına iki çözümleme aracı daha:
 
 ## Kurulum (kullanıcı)
 
-`AHUT-FLARE-Kurulum.exe` → İleri → Kur. Windows 10/11 dışında bir şey gerekmez; Python, model ve veri programın içinde gelir.
+`AHUT-FLARE-Setup.exe` → İleri → Kur. Windows 10/11 dışında bir şey gerekmez; Python, model ve veri programın içinde gelir.
 
-Ayrıntı için [BENIOKU.txt](BENIOKU.txt).
+Ayrıntı için [README.txt](README.txt).
 
 ---
 
@@ -45,7 +45,7 @@ Ayrıntı için [BENIOKU.txt](BENIOKU.txt).
 ```bash
 conda create -n yangin python=3.12
 conda activate yangin
-pip install -r gereksinimler.txt
+pip install -r requirements.txt
 python ahut_flare.py
 ```
 
@@ -54,8 +54,8 @@ python ahut_flare.py
 **Linux (sudo gerekmez):**
 
 ```bash
-./calistir.sh              # ilk açılışta .venv kurar (--system-site-packages) ve pywebview'i pip ile yükler
-./calistir.sh --sinama     # pencere açmadan kendini sınar
+./run.sh              # ilk açılışta .venv kurar (--system-site-packages) ve pywebview'i pip ile yükler
+./run.sh --sinama     # pencere açmadan kendini sınar
 ```
 
 Linux'ta pencere GTK (WebKit2GTK 4.1) ile açılır; dağıtımdan `python3-gi` ve `gir1.2-webkit2-4.1` gerekir.
@@ -63,12 +63,12 @@ Arayüz ve `render/` aynı yerel kökenden (yalnız 127.0.0.1) sunulur, çünkü
 ve `file://` videolar yüklenmez. pywebview'in `eval`/`new Function` kullanımı sayfanın CSP'sine takıldığı için
 `ahut_flare.py::pywebview_hazirla` bunları eval'siz karşılıklarıyla değiştirir (CSP gevşetilmez). Windows'ta bu iki uyarlama uygulanmaz, eski davranış korunur.
 
-**Backend klasörü (`motor/`):** ana klasördeki güncel dosyalarla `python3 motor_esitle.py` eşitler (DASHBOARD.md §5).
-Backend'in yazdığı dosyalar (`malzeme_onbellek.json`, `topluluk/topluluk.sqlite`, `loglar/tahmin_kayit.jsonl`)
-`YANGIN_VERI_KLASORU`'na (= `veri/`) gider; `motor/` salt okunur olabilir. Yerel denemede EVREN anahtarı bir üst
+**Backend klasörü (`engine/`):** ana klasördeki güncel dosyalarla `python3 engine_sync.py` eşitler (DASHBOARD.md §5).
+Backend'in yazdığı dosyalar (`material_cache.json`, `topluluk/topluluk.sqlite`, `loglar/prediction_log.jsonl`)
+`YANGIN_VERI_KLASORU`'na (= `data/`) gider; `engine/` salt okunur olabilir. Yerel denemede EVREN anahtarı bir üst
 klasördeki `evren_anahtar.txt`'den okunur (kopyalanmaz; `EVREN_ANAHTAR_DOSYASI` ile değiştirilebilir).
 
-**Videolar:** `python3 render_esle.py` OpenFOAM videolarını `render_eslesme.csv`'ye göre `render/`'a adlandırarak kopyalar.
+**Videolar:** `python3 render_match.py` OpenFOAM videolarını `render_matching.csv`'ye göre `render/`'a adlandırarak kopyalar.
 
 Komut satırı seçenekleri:
 
@@ -87,33 +87,33 @@ Arayüzde değişiklik yaptıktan sonra pencereyi kapatıp açmak yeterlidir; `-
 
 ```
 ahut_flare.py          giriş noktası: pywebview penceresi, yollar, --sinama
-calistir.bat           geliştirme başlatıcısı (konsolsuz)
-sorun_gider.bat        açılmıyorsa: paket kontrolü + kendi kendini sınama + konsollu açılış
-cekirdek/
-  kopru.py              ekranın çağırdığı Python API'si (HTTP yok, port yok)
+run.bat           geliştirme başlatıcısı (konsolsuz)
+troubleshoot.bat        açılmıyorsa: paket kontrolü + kendi kendini sınama + konsollu açılış
+core/
+  bridge.py              ekranın çağırdığı Python API'si (HTTP yok, port yok)
   github.py             GitHub ile paylaşım (yalnızca stdlib urllib)
-  depo.py               profil, ayarlar, .ahut vaka kütüphanesi
-  sistem.py             işlemci ölçümü, render klasörü izleme
-motor/                  model ve fizik motoru — DIŞARIDAN GELİR, DEĞİŞTİRİLMEZ
-  tahmin.py             tek giriş noktası: tahmin(), oksijen_egrisi(), ...
-  risk_modeli.py, motor.py, hafif_motor.py, motor_kontrol.py, llm_analiz.py
-  modeller/risk.joblib  eğitilmiş risk modeli
+  store.py               profil, ayarlar, .ahut vaka kütüphanesi
+  system.py             işlemci ölçümü, render klasörü izleme
+engine/                  model ve fizik motoru — DIŞARIDAN GELİR, DEĞİŞTİRİLMEZ
+  predict.py             tek giriş noktası: tahmin(), oksijen_egrisi(), ...
+  risk_model.py, engine.py, light_engine.py, engine_check.py, llm_analysis.py
+  models/risk.joblib  eğitilmiş risk modeli
   *.csv                 deney verisi ve önbellekler
   BACKEND_API.md        motorun sözleşmesi (alanlar, birimler, hata durumları)
-arayuz/
+ui/
   index.html            kabuk iskeleti
-  stil/                 temel.css (marka) · kabuk.css (düzen) · icerik.css (ekranlar)
-  js/                   dil.js · kopru.js · grafik.js · kabuk.js · uygulama.js
+  stil/                 base.css (marka) · shell.css (düzen) · content.css (ekranlar)
+  js/                   lang.js · bridge.js · chart.js · shell.js · app.js
   marka/ yazi/ vendor/  logo, Montserrat, three.js
-veri/                   yazılabilir: ayarlar, profil, vakalar/, ornekler/, topluluk önbelleği
+data/                   yazılabilir: ayarlar, profil, vakalar/, ornekler/, topluluk önbelleği
 site/                   GitHub Pages sitesinin kaynağı (uygulama depoya yükler)
 render/                 OpenFOAM çıktıları buraya düşer
-paketleme/              PyInstaller tarifi + Inno Setup betiği
+packaging/              PyInstaller tarifi + Inno Setup betiği
 ```
 
-**Ekran ile Python arasında HTTP yoktur.** `cekirdek/kopru.py` içindeki her genel metot, arayüzde `pywebview.api.<ad>()` olarak çağrılır ve bir Promise döner. Yerel sunucu açılmaz, port dinlenmez.
+**Ekran ile Python arasında HTTP yoktur.** `core/bridge.py` içindeki her genel metot, arayüzde `pywebview.api.<ad>()` olarak çağrılır ve bir Promise döner. Yerel sunucu açılmaz, port dinlenmez.
 
-**`motor/` klasörüne dokunulmaz.** Model ekibi oradaki dosyaları güncellediğinde klasörü olduğu gibi değiştirmek yeterlidir; arayüz yalnızca `BACKEND_API.md`'de yazan alanlara bakar ve hepsinin `null` gelebileceğini varsayar.
+**`engine/` klasörüne dokunulmaz.** Model ekibi oradaki dosyaları güncellediğinde klasörü olduğu gibi değiştirmek yeterlidir; arayüz yalnızca `BACKEND_API.md`'de yazan alanlara bakar ve hepsinin `null` gelebileceğini varsayar.
 
 ---
 
@@ -157,7 +157,7 @@ Düz JSON. Kendi kendine yeterlidir — başka bir bilgisayarda açılır, bir d
   "baslik": "pmma · ISS · %21 O₂ · ÇOK YÜKSEK",
   "aciklama": "...", "etiketler": ["pmma", "mikro-g", "iss"],
   "yazar": { "ad": "...", "kurum": "...", "rol": "...", "baglanti": "..." },
-  "olusturma": "2026-11-12T20:49:46", "guncelleme": "...",
+  "olusturma": "2026-11-15T20:49:46", "guncelleme": "...",
   "uygulama": { "ad": "AHUT FLARE", "surum": "1.0.0" },
   "onayar": "ISS",
   "girdi":  { "malzeme": "pmma", "oksijen": 21, "basinc": 101.3, "g": 1e-4, ... },
@@ -180,7 +180,7 @@ aynı depoyu statik bir site olarak yayımlar.
 
 ```
 depo/
-  index.html  stil.css  temel.js  grafik.js  site.js   <- Pages sitesi (uygulama yükler)
+  index.html  style.css  base.js  chart.js  site.js   <- Pages sitesi (uygulama yükler)
   depo.json                                            <- sahip/depo bilgisi
   vakalar/2026-11-14-pmma-iss-a1b2.ahut                <- paylaşılan vakalar
 ```
@@ -198,7 +198,7 @@ adresi verilir. Aynı vaka tekrar paylaşılırsa üstüne yazılır.
 (önbellek) ve uygulamayla gelen örnekleri gösterir, başlıkta *çevrimdışı* yazar —
 demo sırasında bağlantı giderse ekran boş kalmaz.
 
-> Jeton yalnızca `veri/profil.json` içinde durur (`.gitignore`'da), ekrana hiç
+> Jeton yalnızca `data/profile.json` içinde durur (`.gitignore`'da), ekrana hiç
 > gönderilmez, paylaşılan vaka dosyasına yazılmaz ve kurulum paketine girmez.
 
 ---
@@ -206,11 +206,11 @@ demo sırasında bağlantı giderse ekran boş kalmaz.
 ## Paketleme
 
 ```bat
-paketleme\exe_olustur.bat
+paketleme\build_exe.bat
 ```
 
 1. PyInstaller ile `dist\AHUT FLARE\` üretilir (~250 MB, model ve veri dahil).
-2. [Inno Setup 6](https://jrsoftware.org/isdl.php) kuruluysa `paketleme\Cikti\AHUT-FLARE-Kurulum.exe` oluşur.
+2. [Inno Setup 6](https://jrsoftware.org/isdl.php) kuruluysa `paketleme\Output\AHUT-FLARE-Setup.exe` oluşur.
 3. Inno Setup yoksa taşınabilir `AHUT-FLARE-tasinabilir.zip` üretilir.
 
 Kurulu sürümde yazılabilir dosyalar `%LOCALAPPDATA%\AHUT FLARE\` altındadır (Program Files'a yazılamaz). Exe'nin yanında `tasinabilir.txt` varsa her şey exe'nin yanında tutulur.

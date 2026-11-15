@@ -6,26 +6,26 @@ of_kosular/
 evren_anahtar.txt
 __pycache__/
 # büyük CSV'ler (> 1 MB)
-veri_seti.csv
-veri_temiz.csv
-ham_gemma3.csv
-kullanilabilir.csv
-siniflandirma.csv
-motor_karsilastirma.csv
+data_set.csv
+data_clean.csv
+raw_gemma3.csv
+usable.csv
+classification.csv
+engine_comparison.csv
 # görüntüleyici önbellekleri ve çalışma klasörleri
-of_gorsel/_is/
-of_gorsel/*.npz
+of_visual/_is/
+of_visual/*.npz
 of_gorsel.html
 PSI_SFLAME/
 PSI_BRE/
 PSI_SLICE/
-# topluluk verisi deposu (kullanıcı verisi; paylaşım topluluk_veri.disa_aktar ile)
-topluluk/
+# topluluk verisi deposu (kullanıcı verisi; paylaşım community_data.export ile)
+community/
 ofm_kosular/
-ofm_gelen/
+ofm_incoming/
 
 # test ve uygulama çıktıları
-dashboard/veri/sinama_raporu.txt
-dashboard/veri/loglar/
-dashboard/veri/ofm/
-dashboard/veri/kosular.json
+dashboard/data/selftest_report.txt
+dashboard/data/logs/
+dashboard/data/ofm/
+dashboard/data/runs.json

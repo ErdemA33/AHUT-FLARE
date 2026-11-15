@@ -11,7 +11,7 @@ kullanmaz. Ekran ile Python arasındaki bağ doğrudan fonksiyon çağrısıdır
     python ahut_flare.py --ayikla     geliştirici araçları açık
 
 Exe olarak paketlenince: veri ve arayüz paketin içinde, yazılabilir dosyalar
-(veri/, render/, evren_anahtar.txt) exe'nin yanında durur.
+(data/, render/, evren_anahtar.txt) exe'nin yanında durur.
 """
 from __future__ import annotations
 
@@ -41,10 +41,10 @@ if PAKETLI:
 else:
     VERI_KOK = KOK = EXE_YANI = Path(__file__).resolve().parent
 
-ARAYUZ = VERI_KOK / "arayuz"
-MOTOR = VERI_KOK / "motor"
-VERI = KOK / "veri"
-ORNEKLER = VERI_KOK / "veri" / "ornekler"   # uygulamayla gelen örnek vakalar (salt okunur)
+ARAYUZ = VERI_KOK / "ui"
+MOTOR = VERI_KOK / "engine"
+VERI = KOK / "data"
+ORNEKLER = VERI_KOK / "data" / "examples"   # uygulamayla gelen örnek vakalar (salt okunur)
 SITE = VERI_KOK / "site"                    # GitHub Pages sitesinin kaynak dosyaları
 RENDER = KOK / "render"
 
@@ -57,10 +57,10 @@ if not PAKETLI:
     _adaylar.append(KOK.parent / "evren_anahtar.txt")
 ANAHTAR = next((a for a in _adaylar if a.exists()), _adaylar[0])
 
-# Backend'in yazılabilir dosyaları (malzeme_onbellek.json, topluluk/topluluk.sqlite, tahmin kaydı) veri/ altına gider.
+# Backend'in yazılabilir dosyaları (material_cache.json, topluluk/topluluk.sqlite, tahmin kaydı) data/ altına gider.
 # Backend import edilmeden ÖNCE ayarlanmalı (modüller yolu import anında okur).
 os.environ.setdefault("YANGIN_VERI_KLASORU", str(VERI))
-os.environ.setdefault("TAHMIN_KAYIT", str(VERI / "loglar" / "tahmin_kayit.jsonl"))
+os.environ.setdefault("TAHMIN_KAYIT", str(VERI / "logs" / "prediction_log.jsonl"))
 os.environ["EVREN_ANAHTAR_DOSYASI"] = str(ANAHTAR)
 
 sys.path.insert(0, str(VERI_KOK))  # cekirdek paketi
@@ -84,7 +84,7 @@ def pencere_adresi(gui: str | None):
     pywebview 5+ yerel dosyaları 127.0.0.1 üzerindeki kendi HTTP sunucusundan açar; sayfa http:// kökenli olunca
     render/ klasöründeki file:// videolar yüklenmez (CSP media-src 'self' ve tarayıcının yerel dosya engeli).
     Windows dışında arayüz ve render/ aynı kökenden, küçük bir WSGI uygulamasıyla sunulur (yalnız 127.0.0.1;
-    arayuz/ ve render/ dışında dosya verilmez). Windows (Edge WebView2) eskisi gibi dosya yoluyla açılır.
+    ui/ ve render/ dışında dosya verilmez). Windows (Edge WebView2) eskisi gibi dosya yoluyla açılır.
     """
     if gui == "edgechromium":
         return str(ARAYUZ / "index.html"), None
@@ -180,15 +180,15 @@ def kendini_sina(Kopru, mock: bool) -> int:
         satirlar.append(("[OK]   " if basarili else "[HATA] ") + satir)
         print(satirlar[-1], flush=True)
 
-    rapor = VERI / "sinama_raporu.txt"
+    rapor = VERI / "selftest_report.txt"
     yaz(f"{UYGULAMA_ADI} {SURUM} · paketli={PAKETLI} · python={sys.version.split()[0]}")
     yaz(f"kaynak kök : {VERI_KOK}")
     yaz(f"veri kök   : {KOK}")
     try:
         api = Kopru(surum=SURUM, arayuz=ARAYUZ, motor_yolu=MOTOR, veri=VERI,
                     render=RENDER, anahtar=ANAHTAR, mock=mock, ornekler=ORNEKLER, site=SITE)
-        for ad, yol in (("arayüz", ARAYUZ / "index.html"), ("motor", MOTOR / "tahmin.py"),
-                        ("model", MOTOR / "modeller" / "risk.joblib")):
+        for ad, yol in (("arayüz", ARAYUZ / "index.html"), ("motor", MOTOR / "predict.py"),
+                        ("model", MOTOR / "models" / "risk.joblib")):
             yaz(f"{ad} dosyası bulundu: {yol.name}", yol.exists())
 
         bas = time.perf_counter()
@@ -243,9 +243,9 @@ def main() -> int:
         import multiprocessing
         multiprocessing.freeze_support()
 
-    from cekirdek.kopru import Kopru
+    from core.bridge import Kopru
 
-    for klasor in (VERI, VERI / "vakalar", RENDER):
+    for klasor in (VERI, VERI / "cases", RENDER):
         klasor.mkdir(parents=True, exist_ok=True)
 
     if arg.sinama:

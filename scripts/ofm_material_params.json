@@ -1,0 +1,16 @@
+{
+ "_aciklama": "OpenFOAM katı piroliz vakası (sibalPyrolysis) için malzeme başına KÜTÜPHANEDE OLMAYAN parametreler. Her değer {deger, birim, kaynak, dogrulandi}. dogrulandi=false: kaynağı elde doğrulanmadı (tahmin ya da hafızadan). Kütüphanedeki değerler (yoğunluk, net ısıl değer) buraya kopyalanmaz; ofm_materials.py kütüphaneden okur.",
+ "referans_isil_deger_MJ_kg": {"deger": 50.0, "kaynak": "MOTOR_KILIT Y_F0=0.3215 ve bass2_pmma_B1/kur_pmma.py: Y_F0 = net ısıl değer / 50 MJ/kg yaklaşımı (kilitli gaz kinetiği CH4 tabanlı)", "dogrulandi": false},
+ "malzemeler": {
+  "pmma": {
+   "kappa":  {"deger": 0.209, "birim": "W/m/K", "kaynak": "NASA/TM-20210011385 (BASS-II özet raporu) s.64-65: PMMA lambda = 2.09e-3 W/cm/K", "dogrulandi": true},
+   "alpha":  {"deger": 1.2e-7, "birim": "m2/s", "kaynak": "NASA/TM-20210011385 s.64-65: alpha = 1.2e-3 cm2/s (cp = kappa/(rho alpha) olarak türetilir)", "dogrulandi": true},
+   "Lv":     {"deger": 1.7e6, "birim": "J/kg", "kaynak": "NASA/TM-20210011385 s.64-65: Lv = 1700 J/g", "dogrulandi": true},
+   "A1":     {"deger": 8.6e12, "birim": "1/s", "kaynak": "Stoliarov vd. 2009 (Combust. Flame 156) değeri olarak HAFIZADAN; makale açılamadı (bass2_pmma_B1/kur_pmma.py)", "dogrulandi": false},
+   "E1":     {"deger": 188000.0, "birim": "J/mol", "kaynak": "Stoliarov vd. 2009 değeri olarak HAFIZADAN; makale açılamadı (kur_pmma.py)", "dogrulandi": false},
+   "n1":     {"deger": 1.0, "birim": "-", "kaynak": "tek adımlı birinci derece varsayımı (kur_pmma.py)", "dogrulandi": false},
+   "rhoInert_orani": {"deger": 0.01, "birim": "-", "kaynak": "PMMA artık bırakmaz; yanan hücrede kütle sıfıra inmesin diye sayısal zorunluluk (kur_pmma.py)", "dogrulandi": false},
+   "cpF":    {"deger": 1380.0, "birim": "J/kg/K", "kaynak": "SIBAL değeri (MMA buharı için kaynak yok; kur_pmma.py)", "dogrulandi": false}
+  }
+ }
+}

@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="dashboard/arayuz/marka/logo-yuvarlak-128.png" width="104" alt="AHUT FLARE logosu">
+<img src="dashboard/ui/brand/logo-round-128.png" width="104" alt="AHUT FLARE logosu">
 
 # AHUT FLARE
 
@@ -20,7 +20,7 @@ gerçek **NASA mikro yerçekimi yanma deneyleriyle** karşılaştırır.
 
 [Ne yapar](#-ne-yapar) · [Ekranlar](#-ekranlar) · [Nasıl çalışır](#-nasıl-çalışır) · [Doğrulama](#-doğrulama) · [Kurulum](#-kurulum) · [Klasörler](#-klasör-yapısı) · [English](#-in-english)
 
-<img src="of_gorsel/ekran/sahne3b/05_sonuc_mars_izo_kesit.png" width="92%" alt="Mars koşulunda n-heptan alevinin 3B OpenFOAM sonucu: sıcaklık izo yüzeyleri ve kesit">
+<img src="of_visual/screen/scene3d/05_result_mars_izo_section.png" width="92%" alt="Mars koşulunda n-heptan alevinin 3B OpenFOAM sonucu: sıcaklık izo yüzeyleri ve kesit">
 
 <sub>Mars yerçekiminde (0,38 g) n-heptan: OpenFOAM alan sonucu uygulamanın içinde, sıcaklık izo yüzeyleri + kesit + zaman kaydırıcısıyla.</sub>
 
@@ -59,16 +59,16 @@ Yanında:
 
 <table>
 <tr>
-<td width="50%"><img src="of_gorsel/ekran/dashboard_04_sonuc_pmma_mars_ozet.png" alt="Risk özeti"><br><sub><b>Risk özeti</b> — Mars üssünde PMMA</sub></td>
-<td width="50%"><img src="of_gorsel/ekran/dashboard_04_sonuc_pmma_mars_harita.png" alt="Yanabilirlik haritası"><br><sub><b>Yanabilirlik haritası</b> — yerçekimi × oksijen</sub></td>
+<td width="50%"><img src="of_visual/screen/dashboard_04_result_pmma_mars_summary.png" alt="Risk özeti"><br><sub><b>Risk özeti</b> — Mars üssünde PMMA</sub></td>
+<td width="50%"><img src="of_visual/screen/dashboard_04_result_pmma_mars_map.png" alt="Yanabilirlik haritası"><br><sub><b>Yanabilirlik haritası</b> — yerçekimi × oksijen</sub></td>
 </tr>
 <tr>
-<td><img src="of_gorsel/ekran/sahne3b/01_pmma_iss_levha.png" alt="3B girdi sahnesi: PMMA levha"><br><sub><b>3B girdi sahnesi</b> — ISS'te ince PMMA levha, akış kanalı ve ateşleyici</sub></td>
-<td><img src="of_gorsel/ekran/sahne3b/04_sibal_vaka_ag.png" alt="OpenFOAM vaka ağı"><br><sub><b>OpenFOAM vakası</b> — Saffire SIBAL numunesi, gerçek boyutlar ve hücre ağı</sub></td>
+<td><img src="of_visual/screen/scene3d/01_pmma_iss_plate.png" alt="3B girdi sahnesi: PMMA levha"><br><sub><b>3B girdi sahnesi</b> — ISS'te ince PMMA levha, akış kanalı ve ateşleyici</sub></td>
+<td><img src="of_visual/screen/scene3d/04_sibal_case_mesh.png" alt="OpenFOAM vaka ağı"><br><sub><b>OpenFOAM vakası</b> — Saffire SIBAL numunesi, gerçek boyutlar ve hücre ağı</sub></td>
 </tr>
 <tr>
-<td><img src="of_gorsel/ekran/ofm/ofm_dugum.png" alt="Ayrıntılı motor"><br><sub><b>Ayrıntılı motor</b> — OpenFOAM koşusu ↔ hızlı motor ↔ deney</sub></td>
-<td><img src="of_gorsel/ekran/workbench/sohbet.png" alt="Yapay zeka sohbeti"><br><sub><b>Sohbet</b> — "ne olur eğer" soruları modeli yeniden çalıştırır</sub></td>
+<td><img src="of_visual/screen/ofm/ofm_node.png" alt="Ayrıntılı motor"><br><sub><b>Ayrıntılı motor</b> — OpenFOAM koşusu ↔ hızlı motor ↔ deney</sub></td>
+<td><img src="of_visual/screen/workbench/chat.png" alt="Yapay zeka sohbeti"><br><sub><b>Sohbet</b> — "ne olur eğer" soruları modeli yeniden çalıştırır</sub></td>
 </tr>
 </table>
 
@@ -76,28 +76,32 @@ Yanında:
 
 ## 🧠 Nasıl çalışır
 
-<img src="sunum/a_sistem_semasi_tr.png" alt="Sistem şeması">
+<img src="presentation/a_system_diagram_tr.png" alt="Sistem şeması">
 
 1. **Risk modeli (makine öğrenmesi)**
    - NASA PSI deney veritabanı ve literatürden derlenmiş etiketli deneylerle eğitildi.
-   - Yanma ihtimalini ve sönme sınırını verir (`risk_modeli.py`, `modeller/`).
-2. **Yönlendirici** (`motor.py`) yakıt türüne ve numune tipine göre bir fizik motoru seçer:
-   - **Katı:** hafif alev yayılma motoru (`hafif_motor.py`)
-   - **Sıvı:** yarı-durağan damla motoru, FLEX'e kalibre (`damla_motoru.py`)
-   - **Gaz:** küre / düz / jet alev motoru (`gaz_motoru.py`)
+   - Yanma ihtimalini ve sönme sınırını verir (`scripts/risk_model.py`, `models/`).
+2. **Yönlendirici** (`scripts/engine.py`) yakıt türüne ve numune tipine göre bir fizik motoru seçer:
+   - **Katı:** hafif alev yayılma motoru (`scripts/light_engine.py`)
+   - **Sıvı:** yarı-durağan damla motoru, FLEX'e kalibre (`scripts/droplet_engine.py`)
+   - **Gaz:** küre / düz / jet alev motoru (`scripts/gas_engine.py`)
 3. **Birleştirme**
    - Model ve motor, **dürüst test AUC'lerine** göre ağırlıklandırılır: `ağırlık = max(0, 2·(AUC − 0,5))`.
    - Kalibre olmayan bileşenin ağırlığı 0'dır.
 4. **Güven skoru:** `100 × (0,4·veri + 0,3·uyum + 0,3·motor)`.
 5. **Ayrıntılı çözüm (OpenFOAM)**
-   - Katı numuneler için çok bölgeli (gaz / katı / ateşleyici teli) piroliz ve alev çözücüsü: `ofm_motor/`.
-   - Damla ve gaz brülörü vakaları: `of_*.py`.
+   - Katı numuneler için çok bölgeli (gaz / katı / ateşleyici teli) piroliz ve alev çözücüsü: `openfoam_motor/`.
+   - Panelden kütüphane malzemesiyle kurulan vakalar (`dashboard/engine/ofm_case.py`):
+     - Katı: SIBAL (doğrulanmış) ve PMMA; parametreler `ofm_material_params.json` (kaynaklı, doğrulanmamış olanlar işaretli).
+     - Sıvı (damla): n-heptan, metanol, etanol, n-dekan; 1B küresel, küçülen çap, tek adım yanma (`ofm_droplet_case.py`). Yalnız n-heptan ve metanol FLEX'e kalibre.
+     - Gaz: metan, etan, propan, etilen, asetilen; gözenekli küre brülör, 1B küresel, mikroyerçekimi (`ofm_gas_case.py`). Kinetik ve taşınım sabitleri doğrulanmadı, ışınım modeli yok.
+   - Diğer damla ve gaz brülörü vakaları: `of_*.py`.
    - Sonuçlar içe aktarılır ve deneyle karşılaştırılır. Koşu ancak koşula yakın ve deneyle doğrulanmışsa birleşik sonuca katılır.
 6. **LLM**
    - Listede olmayan bir malzemeyi en yakın bilinen malzemeye eşler.
    - İsteğe bağlı yorum yazar. Karar satırını her zaman kod üretir.
 
-Denklemler ve varsayımlar: [`sunum/denklemler.md`](sunum/denklemler.md) · Ayrıntılı teknik belge: [`DASHBOARD.md`](DASHBOARD.md)
+Denklemler ve varsayımlar: [`presentation/equations.md`](presentation/equations.md) · Ayrıntılı teknik belge: [`docs/DASHBOARD.md`](docs/DASHBOARD.md)
 
 ---
 
@@ -105,7 +109,7 @@ Denklemler ve varsayımlar: [`sunum/denklemler.md`](sunum/denklemler.md) · Ayr�
 
 Her bileşen, **eğitimde görmediği deney aileleri** üzerinde sınandı: aileye göre gruplu çapraz doğrulama.
 
-<img src="sunum/b_durust_auc_tr.png" alt="Dürüst test AUC değerleri">
+<img src="presentation/b_honest_auc_tr.png" alt="Dürüst test AUC değerleri">
 
 | Bileşen | Veri | Dürüst test AUC |
 |---|---|---|
@@ -123,7 +127,7 @@ Her bileşen, **eğitimde görmediği deney aileleri** üzerinde sınandı: aile
 | ISS BRE | etilen brülör | Eksenel simetrik vakalar koşuluyor |
 | BASS | SIBAL kumaş | Koşuluyor |
 
-**Bilinen sınırlar** (ayrıntı: `sunum/sunum_ozet.md`):
+**Bilinen sınırlar** (ayrıntı: `presentation/presentation_summary.md`):
 
 - **Kısmi yerçekimi:** Ay ve Mars için doğrudan deney verisi yok; sonuçlar ISS ve Dünya verisinden ara değerlendirilir.
 - **Işınım:** damla CFD vakaları ışınımsız. Bu yüzden büyük damlalarda görülen ışınım kaynaklı sönmeyi yakalamazlar.
@@ -135,9 +139,9 @@ Her bileşen, **eğitimde görmediği deney aileleri** üzerinde sınandı: aile
 
 ### Windows
 
-`AHUT-FLARE-Kurulum.exe` → İleri → Kur.
+`AHUT-FLARE-Setup.exe` → İleri → Kur.
 
-Python, model ve veri programın içinde gelir. Kurulum paketi `dashboard/paketleme/` ile üretilir.
+Python, model ve veri programın içinde gelir. Kurulum paketi `dashboard/packaging/` ile üretilir.
 
 ### Linux (Ubuntu 24.04, Python 3.12)
 
@@ -150,10 +154,10 @@ sudo apt install python3-venv python3-gi gir1.2-webkit2-4.1
 
 # Python ortamı
 python3 -m venv --system-site-packages .venv
-.venv/bin/pip install -r gereksinimler.txt
+.venv/bin/pip install -r requirements.txt
 
-./calistir.sh --sinama     # pencere açmadan kendini sınar → "SONUÇ: BAŞARILI"
-./calistir.sh              # uygulamayı açar
+./run.sh --sinama     # pencere açmadan kendini sınar → "SONUÇ: BAŞARILI"
+./run.sh              # uygulamayı açar
 ```
 
 > **Python 3.12 gerekir.** Model `scikit-learn 1.4.1.post1` ile eğitildi ve aynı sürümle açılmalı.
@@ -164,7 +168,7 @@ python3 -m venv --system-site-packages .venv
 |---|---|
 | Ayrıntılı (OpenFOAM) çözüm | OpenFOAM 14 (`/opt/openfoam14`). Katı vaka paketinin yolu `AHUT_MOTOR_C` ortam değişkeniyle verilir. |
 | 3B alan dışa aktarma ve "ParaView'da aç" | ParaView (`pvpython`) |
-| Yapay zeka yorumu | EVREN API anahtarı (`evren_anahtar.txt`; örnek: `dashboard/evren_anahtar_ORNEK.txt`). Anahtar depoya **konmaz**. |
+| Yapay zeka yorumu | EVREN API anahtarı (`evren_anahtar.txt`; örnek: `dashboard/evren_key_EXAMPLE.txt`). Anahtar depoya **konmaz**. |
 
 Komut satırı seçenekleri:
 
@@ -180,30 +184,36 @@ python ahut_flare.py vaka.ahut   # kayıtlı bir vakayı açarak başla
 
 ```
 AHUT-FLARE/
-├── dashboard/              Masaüstü uygulaması (pywebview + HTML/JS arayüz)
-│   ├── ahut_flare.py         giriş noktası
-│   ├── cekirdek/             Python köprüsü, Çözüm İzleyici, 3B sahne verisi
-│   ├── arayuz/               arayüz (js/, stil/, vendor/three.min.js)
-│   ├── motor/                arka ucun uygulamaya paketlenen kopyası (motor_esitle.py)
-│   └── paketleme/            Windows kurulum paketi
-├── tahmin.py               Tek giriş: koşul → risk, ihtimal, sönme sınırı, güven
-├── risk_modeli.py          Makine öğrenmesi modeli (+ modeller/)
-├── motor.py                Yönlendirici ve birleştirme
-├── hafif_motor.py · damla_motoru.py · gaz_motoru.py     Hızlı fizik motorları
-├── ofm_*.py                OpenFOAM motoru: vaka hazırlama, içe aktarma, analiz, karşılaştırma
-├── ofm_motor/              Katı yanma çözücüsü (OpenFOAM, C++) ve kalibrasyon
-├── of_*.py                 OpenFOAM damla / gaz / sızıntı vakaları ve doğrulama
-├── psi_*.py · veri_cikar*.py   NASA PSI veri çıkarma ve etiketleme
-├── gaz_veri/ · deneyler/   Deney tabloları ve kalibrasyon denemeleri
-└── sunum/                  Sunum grafikleri (TR/EN) ve denklemler
+├── dashboard/                 Masaüstü uygulaması (pywebview + HTML/JS arayüz)
+│   ├── ahut_flare.py            giriş noktası · run.sh / run.bat başlatıcı
+│   ├── core/                    Python köprüsü, Çözüm İzleyici, 3B sahne verisi
+│   ├── ui/                      arayüz (js/, style/, brand/, fonts/, vendor/three.min.js)
+│   ├── engine/                  arka ucun uygulamaya paketlenen kopyası (engine_sync.py)
+│   ├── data/                    örnek vakalar (examples/), kullanıcı verisi (cases/, logs/)
+│   ├── site/                    GitHub Pages sitesi
+│   └── packaging/               Windows kurulum paketi
+├── scripts/                   Araştırma betikleri (tek klasör: birbirini içe aktarır)
+│   ├── predict.py                Tek giriş: koşul → risk, ihtimal, sönme sınırı, güven
+│   ├── risk_model.py             Makine öğrenmesi modeli (+ models/)
+│   ├── engine.py                 Yönlendirici ve birleştirme
+│   ├── light_engine.py · droplet_engine.py · gas_engine.py    Hızlı fizik motorları
+│   ├── ofm_*.py                  OpenFOAM motoru: vaka hazırlama, içe aktarma, analiz, karşılaştırma
+│   ├── of_*.py · of_*.sh         OpenFOAM damla / gaz / sızıntı vakaları, kuyruk ve doğrulama
+│   └── psi_*.py · data_extract*.py   NASA PSI veri çıkarma ve etiketleme
+├── data/ · figures/ · docs/ · logs/   Betiklerin ürettiği CSV/JSON, grafikler, raporlar, günlükler
+├── models/                    Eğitilmiş risk modeli
+├── openfoam_motor/ · openfoam_motor_v2/ · ofm_test/   Katı yanma çözücüsü (OpenFOAM, C++), kalibrasyon ve test vakası
+├── gas_data/ · experiments/ · gas_experiments/   Deney tabloları ve kalibrasyon denemeleri
+├── of_visual/                 Görsel/ekran çıktıları
+└── presentation/              Sunum grafikleri (TR/EN) ve denklemler
 ```
 
 **Testler:**
 
 ```bash
-python entegrasyon_test.py       # uçtan uca arka uç
-python ofm_test.py               # OpenFOAM motoru içe aktarma / analiz / yönlendirici
-cd dashboard && ./calistir.sh --sinama
+python scripts/integration_test.py       # uçtan uca arka uç
+python scripts/ofm_test.py               # OpenFOAM motoru içe aktarma / analiz / yönlendirici
+cd dashboard && ./run.sh --sinama
 ```
 
 ---
@@ -228,7 +238,7 @@ Bunlara ek olarak açık literatürdeki LOI / MLOC ölçümleri kullanıldı. He
 
 **AHUT** — Ankara Havacılık ve Uzay Teknolojileri Hackathon Takımı · NASA Space Apps Challenge 2026
 
-Katı yanma OpenFOAM çözücüsü (`ofm_motor/`) ve Saffire kalibrasyonu: **Bilge**.
+Katı yanma OpenFOAM çözücüsü (`openfoam_motor/`) ve Saffire kalibrasyonu: **OpenFOAM motoru**.
 
 ## 📄 Lisans
 
@@ -246,6 +256,6 @@ Katı yanma OpenFOAM çözücüsü (`ofm_motor/`) ve Saffire kalibrasyonu: **Bil
   - semi-empirical solid / droplet / gas physics engines;
   - optional OpenFOAM CFD runs that are queued, monitored and visualised in 3D inside the app.
 - **Honest validation:** every component is weighted by its out-of-family test AUC (risk model 0.878; solid 0.729; droplet 0.805; gas flat flame 0.946), and every result is compared against the nearest real NASA experiments (Saffire, BASS, FLEX, BRE, SFLAME).
-- **Run it:** see [Kurulum](#-kurulum). Linux: `cd dashboard && ./calistir.sh`; Windows: installer.
+- **Run it:** see [Kurulum](#-kurulum). Linux: `cd dashboard && ./run.sh`; Windows: installer.
 
 The UI is bilingual (Turkish / English). Built for the NASA Space Apps Challenge 2026.

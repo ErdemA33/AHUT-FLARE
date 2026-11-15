@@ -1,0 +1,19 @@
+{
+ "aciklama": "Tek adim Westbrook-Dryer hiz sabiti SI (kmol/m3/s) ve Ta; damla_motoru.py parametre kumesi (lnA=0, Ta=15098). Atesleme: DM:1164. Kaynak: Westbrook & Dryer 1981, damla_motoru.py",
+ "Ta": 15098.0,
+ "atesleme": {
+  "t": 0.06,
+  "T": 1500.0,
+  "r_r0": 2.5,
+  "w_r0": 0.8,
+  "tau": 0.005
+ },
+ "T_inf_hava": 298.0,
+ "A_SI": {
+  "NC7H16": 2867940758.4707804,
+  "CH3OH": 17994922406.09117,
+  "C2H5OH": 8435119877.85523,
+  "NC10H22": 2136897035.7233267,
+  "NC3H7OH": 8435119877.85523
+ }
+}

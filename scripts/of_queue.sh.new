@@ -1,0 +1,86 @@
+#!/bin/bash
+# OpenFOAM uzun koşu kuyruğu (internetsiz, gözetimsiz). Aynı anda tek OpenFOAM koşusu.
+# Sıra: [A ışınımsız bitti -> analiz] -> B sızıntı (uzay, Mars) -> B analiz -> P1 (ışınımsızın t=0.5 s'sinden) -> A analiz
+# Bekçi (arka planda, her dakika): Δt < 1e-9 s, Tmax > 4000 K (sızıntıda ateşleyici darbesi t<0.03 s hariç)
+#   ya da simülasyon zamanı/log 15 dk ilerlemezse koşuyu durdurur, "IRAKSADI" yazar; sürücü sıradakine geçer.
+# Canlı özet (dakikada bir satır): of_kosular/canli.log
+# Başlatma:  nohup setsid ./scripts/of_queue.sh >> of_kosular/kuyruk.log 2>&1 &
+cd "$(dirname "$0")" || exit 1
+K=of_kosular
+CANLI=$K/canli.log
+yaz() { echo "$(date '+%F %T') $*" | tee -a "$CANLI"; }
+
+bekci() {
+  local son_t="" son_deg=$(date +%s) onc_t="" onc_zaman=""
+  while true; do
+    sleep 60
+    local mp="" p
+    for p in $(pgrep -x mpirun); do [ -r "/proc/$p/cwd" ] && readlink "/proc/$p/fd/1" >/dev/null 2>&1 && mp=$p && break; done
+    if [ -z "$mp" ]; then echo "$(date '+%F %T') çalışan OpenFOAM koşusu yok (hazırlık/analiz/bekleme)" >> "$CANLI"; son_t=""; continue; fi
+    local vaka logf ad bit simdi
+    vaka=$(readlink "/proc/$mp/cwd"); logf=$(readlink "/proc/$mp/fd/1")
+    ad="$(basename "$(dirname "$vaka")")/$(basename "$vaka")"
+    bit=$(awk '/^endTime/{gsub(";","",$2);print $2}' "$vaka/system/controlDict")
+    simdi=$(date +%s)
+    local ozet t dt
+    ozet=$(tail -c 400000 "$logf" | awk '/^Time = /{t=$3} /^deltaT = /{d=$3} END{print t, d}')
+    t=${ozet% *}; t=${t%s}; dt=${ozet#* }
+    local dat Tm
+    dat=$(ls -d "$vaka"/postProcessing/cellMax\(T\)/* 2>/dev/null | sort -V | tail -1)
+    Tm=$(grep -v '^#' "$dat/volFieldValue.dat" 2>/dev/null | tail -1 | awk '{print $2}')
+    [ -z "$t" ] && t=0; [ -z "$dt" ] && dt=1; [ -z "$Tm" ] && Tm=0
+    # kalan süre: son dakikadaki ilerleme hızından
+    local kalan="?"
+    if [ -n "$onc_t" ] && [ "$onc_vaka" = "$vaka" ]; then
+      kalan=$(awk -v t="$t" -v o="$onc_t" -v s="$((simdi-onc_zaman))" -v b="$bit" \
+        'BEGIN{h=(t-o)/s; if(h>0) printf "%.2f sa", (b-t)/h/3600; else print "ilerlemiyor"}')
+    fi
+    onc_t=$t; onc_zaman=$simdi; onc_vaka=$vaka
+    echo "$(date '+%F %T') koşu $ad | t = $t s / $bit | Δt = $dt s | Tmax = $Tm K | kalan ~$kalan (üst sınıra göre)" >> "$CANLI"
+    # ilerleme takibi
+    if [ "$t" != "$son_t" ]; then son_t=$t; son_deg=$simdi; fi
+    local logyas=$((simdi - $(stat -c %Y "$logf")))
+    local neden=""
+    awk -v d="$dt" 'BEGIN{exit !(d<1e-9)}' && neden="zaman adımı $dt s < 1e-9 s"
+    if [ -z "$neden" ] && awk -v T="$Tm" -v t="$t" -v a="$ad" 'BEGIN{exit !(T>4000 && !(a ~ /^sizinti/ && t<0.03))}'; then
+      neden="Tmax $Tm K > 4000 K"; fi
+    [ -z "$neden" ] && [ $((simdi - son_deg)) -ge 900 ] && neden="simülasyon zamanı 15 dk ilerlemedi (t = $t s)"
+    [ -z "$neden" ] && [ "$logyas" -ge 900 ] && neden="log 15 dk yazılmadı"
+    if [ -n "$neden" ]; then
+      local msg="IRAKSADI: $ad durduruldu ($neden, t = $t s). Sıradakine geçiliyor."
+      yaz "$msg"
+      case "$ad" in sizinti/*) echo "$(date '+%F %T') $msg" >> $K/sizinti_ilerleme.log;;
+                    *) echo "$(date '+%F %T') $msg" >> $K/tek_damla_ilerleme.log;; esac
+      echo "$msg" > "$vaka/IRAKSADI"
+      kill "$mp"; sleep 30; kill -0 "$mp" 2>/dev/null && kill -9 "$mp"
+      pkill -9 -x foamRun 2>/dev/null
+      son_t=""; onc_t=""
+    fi
+  done
+}
+
+bekci &
+BEKCI=$!
+trap 'kill $BEKCI 2>/dev/null' EXIT
+echo $$ > $K/kuyruk.pid
+yaz "kuyruk (bekçili) başladı, PID $$, bekçi PID $BEKCI"
+
+# A ışınımsız bitti -> analiz
+python3 scripts/of_single_droplet.py --analiz >> $K/analiz.log 2>&1; yaz "A analiz (ışınımsız) çıkış $?  -> figures/of_single_droplet.png"
+
+# B: önceki kuyruktan devralınan sızıntı sürücüsü çalışıyorsa bitmesini bekle; yoksa başlat
+if pgrep -f "scripts/of_leak.py --kos" >/dev/null; then
+  yaz "B sızıntı (devralındı) sürüyor, bitmesi bekleniyor"
+  while pgrep -f "scripts/of_leak.py --kos" >/dev/null; do sleep 20; done
+elif ! grep -q "mars: bitti" $K/sizinti_ilerleme.log 2>/dev/null; then
+  yaz "B sızıntı başlıyor"
+  python3 scripts/of_leak.py --kos >> $K/sizinti_surucu.log 2>&1
+fi
+yaz "B (sızıntı) bitti"
+python3 scripts/of_leak.py --analiz >> $K/analiz.log 2>&1; yaz "B analiz çıkış $?  -> figures/of_leak.png"
+
+# P1: ışınımsızın t=0.5 s anından devam (maxCo 0.2, maxDeltaT 5e-4)
+yaz "P1 (devam, t=0.5 s'den) başlıyor"
+python3 scripts/of_single_droplet.py --p1-devam >> $K/tek_damla_surucu.log 2>&1; yaz "P1 bitti, çıkış $?"
+python3 scripts/of_single_droplet.py --analiz >> $K/analiz.log 2>&1; yaz "A analiz (ışınımsız + P1) çıkış $?  -> figures/of_single_droplet.png"
+yaz "kuyruk bitti"

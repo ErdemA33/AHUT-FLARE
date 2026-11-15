@@ -1,0 +1,248 @@
+{
+ "aciklama": "Aşama 2g: gaz_isinim geri emmesi tam benimseme denemesi (DAMLA_GERI_EMME=1 varsayılan; --kalibre-hizli, --dogrula-hizli, --kismi-g). Değerler [v2 geri emmesiz, geri emmeli].",
+ "tarih": "2026-11-15",
+ "tablo": [
+  {
+   "deney": "N2 ile kalibre",
+   "alt_kume": "eğitim N2 (içeride)",
+   "auc": [
+    0.93,
+    0.93
+   ],
+   "dogruluk": [
+    0.915,
+    0.915
+   ],
+   "K_medyan_hata_yuzde": [
+    8.301,
+    8.256
+   ],
+   "sonme_capi_medyan_hata_mm": [
+    0.277,
+    0.264
+   ],
+   "alev_oran_medyan_hata_yuzde": [
+    27.648,
+    27.682
+   ]
+  },
+  {
+   "deney": "N2 ile kalibre",
+   "alt_kume": "test CO2",
+   "auc": [
+    0.867,
+    0.871
+   ],
+   "dogruluk": [
+    0.842,
+    0.875
+   ],
+   "K_medyan_hata_yuzde": [
+    7.598,
+    7.269
+   ],
+   "sonme_capi_medyan_hata_mm": [
+    0.251,
+    0.252
+   ],
+   "alev_oran_medyan_hata_yuzde": [
+    24.963,
+    24.761
+   ]
+  },
+  {
+   "deney": "N2 ile kalibre",
+   "alt_kume": "test He",
+   "auc": [
+    0.804,
+    0.804
+   ],
+   "dogruluk": [
+    0.83,
+    0.83
+   ],
+   "K_medyan_hata_yuzde": [
+    26.824,
+    26.336
+   ],
+   "sonme_capi_medyan_hata_mm": [
+    0.704,
+    0.694
+   ],
+   "alev_oran_medyan_hata_yuzde": [
+    33.176,
+    33.492
+   ]
+  },
+  {
+   "deney": "N2 ile kalibre",
+   "alt_kume": "test CO2+He",
+   "auc": [
+    0.805,
+    0.808
+   ],
+   "dogruluk": [
+    0.838,
+    0.862
+   ],
+   "K_medyan_hata_yuzde": [
+    10.799,
+    11.054
+   ],
+   "sonme_capi_medyan_hata_mm": [
+    0.372,
+    0.379
+   ],
+   "alev_oran_medyan_hata_yuzde": [
+    26.606,
+    26.636
+   ]
+  },
+  {
+   "deney": "yakıt dışarıda",
+   "alt_kume": "test NC7H16",
+   "auc": [
+    0.883,
+    0.887
+   ],
+   "dogruluk": [
+    0.75,
+    0.75
+   ],
+   "K_medyan_hata_yuzde": [
+    15.962,
+    14.769
+   ],
+   "sonme_capi_medyan_hata_mm": [
+    0.633,
+    0.578
+   ],
+   "alev_oran_medyan_hata_yuzde": [
+    57.898,
+    60.526
+   ]
+  },
+  {
+   "deney": "yakıt dışarıda",
+   "alt_kume": "test CH3OH",
+   "auc": [
+    0.8,
+    0.801
+   ],
+   "dogruluk": [
+    0.876,
+    0.876
+   ],
+   "K_medyan_hata_yuzde": [
+    13.646,
+    12.94
+   ],
+   "sonme_capi_medyan_hata_mm": [
+    0.252,
+    1.039
+   ],
+   "alev_oran_medyan_hata_yuzde": [
+    49.123,
+    46.204
+   ]
+  },
+  {
+   "deney": "tüm veriyle kalibre (içeride)",
+   "alt_kume": "hepsi",
+   "auc": [
+    0.844,
+    0.847
+   ],
+   "dogruluk": [
+    0.877,
+    0.881
+   ],
+   "K_medyan_hata_yuzde": [
+    9.959,
+    9.624
+   ],
+   "sonme_capi_medyan_hata_mm": [
+    0.307,
+    0.334
+   ],
+   "alev_oran_medyan_hata_yuzde": [
+    27.349,
+    27.166
+   ]
+  },
+  {
+   "deney": "tüm veriyle kalibre (içeride)",
+   "alt_kume": "n2",
+   "auc": [
+    0.93,
+    0.93
+   ],
+   "dogruluk": [
+    0.915,
+    0.915
+   ],
+   "K_medyan_hata_yuzde": [
+    8.097,
+    8.476
+   ],
+   "sonme_capi_medyan_hata_mm": [
+    0.341,
+    0.336
+   ],
+   "alev_oran_medyan_hata_yuzde": [
+    28.651,
+    28.226
+   ]
+  },
+  {
+   "deney": "tüm veriyle kalibre (içeride)",
+   "alt_kume": "co2",
+   "auc": [
+    0.867,
+    0.872
+   ],
+   "dogruluk": [
+    0.867,
+    0.875
+   ],
+   "K_medyan_hata_yuzde": [
+    7.177,
+    7.48
+   ],
+   "sonme_capi_medyan_hata_mm": [
+    0.215,
+    0.21
+   ],
+   "alev_oran_medyan_hata_yuzde": [
+    24.958,
+    24.982
+   ]
+  },
+  {
+   "deney": "tüm veriyle kalibre (içeride)",
+   "alt_kume": "he",
+   "auc": [
+    0.808,
+    0.808
+   ],
+   "dogruluk": [
+    0.83,
+    0.83
+   ],
+   "K_medyan_hata_yuzde": [
+    26.596,
+    27.105
+   ],
+   "sonme_capi_medyan_hata_mm": [
+    0.613,
+    0.603
+   ],
+   "alev_oran_medyan_hata_yuzde": [
+    33.123,
+    33.289
+   ]
+  }
+ ],
+ "karar": "GERİ ALINDI. Dürüst testte metanol dışarıda sönme çapı medyan hatası 0,252 -> 1,039 mm (4 kat) kötüleşti; CO2+He K hatası 10,80 -> 11,05 %, sönme çapı 0,372 -> 0,379 mm hafif kötü. İyileşen: CO2+He doğruluk 0,838 -> 0,862, AUC 0,805 -> 0,808, heptan dışarıda K 16,0 -> 14,8 %. Bootstrap çalıştırılmadı (benimsenmediği için). Not: Aşama 2f deneyinde (stage2f_back_suction.json) aynı 1,04 mm sonucu vardı, ancak yalnız AUC/doğruluğa bakılıp \"kötüleşme yok\" denmişti — yanlış değerlendirme.",
+ "dosyalar": "experiments/stage2g_back_with_suction/ (geri emmeli çıktılar), experiments/stage2g_back_suction_adoption.log"
+}

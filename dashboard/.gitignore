@@ -3,18 +3,18 @@ evren_anahtar.txt
 *.anahtar
 
 # ---- yerel kullanıcı verisi ----
-veri/ayarlar.json
-veri/profil.json
-veri/vakalar/
-veri/sinama_raporu.txt
+data/settings.json
+data/profile.json
+data/cases/
+data/selftest_report.txt
 render/*
-!render/BURAYA_RENDER_KOY.txt
+!render/PUT_RENDERS_HERE.txt
 
 # ---- paketleme çıktıları ----
 build/
 dist/
 *.spec.bak
-paketleme/Cikti/
+packaging/Output/
 *.zip
 
 # ---- Python ----
@@ -31,12 +31,12 @@ Thumbs.db
 desktop.ini
 .DS_Store
 
-# ---- backend yazılabilir dosyaları (YANGIN_VERI_KLASORU = veri/) ----
-veri/loglar/
-veri/topluluk/
-veri/malzeme_onbellek.json
-veri/motor_karsilastirma.csv
-veri/motor_kontrol.png
-motor/topluluk/
-veri/malzemeler_kullanici.json
-veri/malzemeler_kullanici.tmp
+# ---- backend yazılabilir dosyaları (YANGIN_VERI_KLASORU = data/) ----
+data/logs/
+data/community/
+data/material_cache.json
+data/engine_comparison.csv
+data/engine_check.png
+engine/community/
+data/user_materials.json
+data/user_materials.tmp

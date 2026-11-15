@@ -1,0 +1,192 @@
+{
+ "surum": "MOTOR_KILIT 1",
+ "yazim": "2026-11-15 20:13:10",
+ "kaynak_kosu": "dalga_J4",
+ "kaynak_dizin": "/home/user/flame-in-freefall/vakalar/_kalibrasyon/kosular/dalga_J4",
+ "kural": "Bu dosyadan sonra motor parametresi DEGISMEZ (kullanici karari 15.11.2026). Butun vakalar parametreyi yalniz buradan okur.",
+ "kutuphane": {
+  "solid": {
+   "yol": "/home/user/OpenFOAM/user-14/platforms/linux64GccDPInt32Opt/lib/libFlameInFreefallSolid.so",
+   "derleme_zamani": "2026-11-15 00:05:11",
+   "boyut": 665872,
+   "md5": "ddea5b2b3f16717807ed823d318c4ac5"
+  },
+  "bcs": {
+   "yol": "/home/user/OpenFOAM/user-14/platforms/linux64GccDPInt32Opt/lib/libFlameInFreefallBCs.so",
+   "derleme_zamani": "2026-11-04 22:04:25",
+   "boyut": 557968,
+   "md5": "d3bc8e7e7e9c7dd60db56a503f11dd74"
+  },
+  "openfoam": "/opt/openfoam14",
+  "cozucu": "foamMultiRun (fluid multicomponentFluid; sibal solid; tel solid)"
+ },
+ "gaz_kinetik": {
+  "CH4ox": {
+   "reaksiyon": "CH4 + 1.5 O2 = CO + 2 H2O",
+   "A": 775116600000000.0,
+   "beta": 0.0,
+   "Ta": 24358.0
+  },
+  "COox": {
+   "reaksiyon": "CO + 0.5 O2 = CO2",
+   "A": 50000000000000.0,
+   "beta": 0.0,
+   "Ta": 20100.0
+  },
+  "ode": {
+   "cozucu": "Rosenbrock34",
+   "absTol": 1e-12,
+   "relTol": 1e-05
+  }
+ },
+ "Y_F0": 0.3215,
+ "piroliz": {
+  "A1": 162600000000.0,
+  "E1": 161440.0,
+  "n1": 1.035,
+  "rho01": 426.5625,
+  "A2": 21130000000000.0,
+  "E2": 245890.0,
+  "n2": 2.357,
+  "rho02": 76.209375,
+  "nu": 0.178659,
+  "rhoInert": 142.1875,
+  "cpInert": 700.0,
+  "cpComb": 1260.0,
+  "XL0": 753000.0,
+  "TL": 300.0,
+  "cpF": 1380.0
+ },
+ "sibal": {
+  "rho": 568.75,
+  "Cv": 1120.0,
+  "kappa": 0.06904,
+  "yarim_kalinlik_m": 0.00016
+ },
+ "isinim": {
+  "model": "fvDOM",
+  "nPhi": 4.0,
+  "nTheta": 0.0,
+  "tolerance": 0.001,
+  "maxIter": 4.0,
+  "solverFreq": 1.0,
+  "sogurma": "greyMean",
+  "EhrrCoeff": 0.0,
+  "Cf": 0.52,
+  "Cf_katsayi_orani_olculen": [
+   0.52
+  ],
+  "hiTcoeffs": {
+   "CO2": [
+    9.74532,
+    -63081.2,
+    142220000.0,
+    -100906000000.0,
+    29281200000000.0,
+    -3024788000000000.0
+   ],
+   "H2O": [
+    -0.1200836,
+    -584.428,
+    4895956.0,
+    -1559402000.0,
+    267186400000.0,
+    -9713600000.0
+   ]
+  },
+  "sacilma": "none",
+  "is_modeli": "none"
+ },
+ "yayicilik": {
+  "inlet": 1.0,
+  "outlet": 1.0,
+  "top": 0.6,
+  "base": 1.0,
+  "fluid_to_sibal": 0.8,
+  "fluid_to_tel": 0.7
+ },
+ "radyasyon_blogu": {
+  "Cf": 0.52,
+  "T_duvar": 294.32,
+  "eps_tavan": 0.6
+ },
+ "tutucu": {
+  "base_noslip_m": 0.058,
+  "base_yuz_sayisi": 66,
+  "kaymasiz_yuz_sayisi": 28,
+  "not_": "base yamasi partialSlip valueFraction: numune oncesi/sonrasi 0.058 m kaymasiz (Cui 2024 Tablo 1)"
+ },
+ "atesleyici": {
+  "guc_W_gercek": 183.0,
+  "guc_W_model": 2.2535,
+  "kapanma_s": 7.986,
+  "guc_W_per_m_genislik": 450.7389162561576,
+  "model_derinlik_m": 0.01,
+  "simetri_carpani": 0.5,
+  "karar": "183 W / 2.2535 W karari kapali (kullanici)",
+  "tel": {
+   "rho": 10076.37,
+   "Cv": 659.6,
+   "kappa": 19.1,
+   "r_esdeger_m": 0.00010076066000000001,
+   "gomulme_orani": 0.1,
+   "x_numune_on_kenarindan_m": 0.00625
+  }
+ },
+ "ortam": {
+  "U_in": 0.2453,
+  "p": 99451.0,
+  "T0": 294.32,
+  "Y_O2": 0.235494,
+  "Y_N2": 0.751269,
+  "Y_H2O": 0.0072,
+  "Y_CO2": 0.006037,
+  "g": "yok (0 g; constant/g dosyasi yok)"
+ },
+ "ag": {
+  "kaynak": "test_uzun_Nl7_Co05 (mesh_olustur.py)",
+  "Nl": 7,
+  "Nt": 5,
+  "ilk_halka_m": 2.6e-05,
+  "dy0_yuzey_m": 0.00010714285714285715,
+  "buyume": 1.15,
+  "blockMesh_nCells": 16494
+ },
+ "sayisal": {
+  "maxCo": 0.5,
+  "maxDi": 10.0,
+  "maxDeltaT": 2e-05,
+  "deltaT0": 1e-06,
+  "ddt": "Euler",
+  "nOuterCorrectors": 1,
+  "nCorrectors": 2,
+  "nNonOrthogonalCorrectors": 1,
+  "momentumPredictor": "no",
+  "tasinim": "sutherland + coefficientWilkeMulticomponentMixture, janaf, hePsiThermo, laminar"
+ },
+ "secim": {
+  "gerekce": "Birim testle kanitlanmis duzeltmeler (T1, fvDOM nPhi 4, tutucu 0.058 m, Y_F0 0.3215) sabit; olculmus kosular (N3, N4, J1-J4; ag Nl 7) arasinda yeni olcude (tau 0.37, TC8 haric) en dusuk J, delta 0.85-1.15 icinde, tum sensor / tau 0 satirinda da en dusuk J. Ongoru degil olculmus kosu.",
+  "olcu": {
+   "tau0.37_TC8haric": {
+    "D": 68.8713,
+    "D_zaman": 78.6581,
+    "D_genlik": 57.4535,
+    "J": 21.8478,
+    "delta": 1.0835,
+    "sigmaM": 0.3349,
+    "n": 13,
+    "t_ign": 1.90776
+   },
+   "tau0_tum": {
+    "D": 54.7474,
+    "D_zaman": 68.2025,
+    "D_genlik": 39.6105,
+    "J": 68.9089,
+    "delta": 1.3854,
+    "sigmaM": 0.6808,
+    "n": 17,
+    "t_ign": 1.90776
+   }
+  }
+ }
+}
