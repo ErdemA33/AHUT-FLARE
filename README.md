@@ -76,7 +76,7 @@ It also provides:
 
 ## 🧠 How it works
 
-<img src="presentation/a_system_diagram_en.png" alt="System diagram">
+<img src="presentation/system_diagram_en.png" alt="System diagram">
 
 1. **Risk model (machine learning)**
    - Trained on labelled experiments compiled from the NASA PSI experiment database and the literature.
