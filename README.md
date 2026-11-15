@@ -1,147 +1,147 @@
 <div align="center">
 
-<img src="dashboard/ui/brand/logo-round-128.png" width="104" alt="AHUT FLARE logosu">
+<img src="dashboard/ui/brand/logo-round-128.png" width="104" alt="AHUT FLARE logo">
 
 # AHUT FLARE
 
 **F**ire · **L**earning · **A**nalysis · **R**esearch · **E**ngine
 
-*Uzayda yangın güvenliği için masaüstü analiz ortamı*
+*A desktop analysis environment for fire safety in space*
 
-**ISS · Ay · Mars** koşullarında bir malzemenin yanıp yanmayacağını tahmin eder ve tahmini<br>
-gerçek **NASA mikro yerçekimi yanma deneyleriyle** karşılaştırır.
+Predicts whether a material will burn under **ISS · Moon · Mars** conditions and compares<br>
+the prediction with real **NASA microgravity combustion experiments**.
 
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
 ![OpenFOAM](https://img.shields.io/badge/OpenFOAM-14-0A5F8F)
 ![three.js](https://img.shields.io/badge/three.js-r160-000000?logo=threedotjs)
 ![Platform](https://img.shields.io/badge/platform-Linux%20%7C%20Windows-555)
-![Lisans](https://img.shields.io/badge/lisans-MIT-2ea44f)
+![License](https://img.shields.io/badge/license-MIT-2ea44f)
 ![NASA Space Apps 2026](https://img.shields.io/badge/NASA%20Space%20Apps-2026-0B3D91)
 
-[Ne yapar](#-ne-yapar) · [Ekranlar](#-ekranlar) · [Nasıl çalışır](#-nasıl-çalışır) · [Doğrulama](#-doğrulama) · [Kurulum](#-kurulum) · [Klasörler](#-klasör-yapısı) · [English](#-in-english)
+[What it does](#-what-it-does) · [Screens](#-screens) · [How it works](#-how-it-works) · [Validation](#-validation) · [Install](#-install) · [Layout](#-repository-layout) · [Data](#-data-sources)
 
-<img src="of_visual/screen/scene3d/05_result_mars_izo_section.png" width="92%" alt="Mars koşulunda n-heptan alevinin 3B OpenFOAM sonucu: sıcaklık izo yüzeyleri ve kesit">
+<img src="of_visual/screen/scene3d/05_result_mars_izo_section.png" width="92%" alt="3D OpenFOAM result of an n-heptane flame at Mars gravity: temperature iso-surfaces and a cut plane">
 
-<sub>Mars yerçekiminde (0,38 g) n-heptan: OpenFOAM alan sonucu uygulamanın içinde, sıcaklık izo yüzeyleri + kesit + zaman kaydırıcısıyla.</sub>
+<sub>n-heptane at Mars gravity (0.38 g): the OpenFOAM field result inside the app, with temperature iso-surfaces, a cut plane and a time slider.</sub>
 
 </div>
 
 ---
 
-## ✨ Ne yapar
+## ✨ What it does
 
-Bir **ortam** (yerçekimi, basınç, oksijen, seyreltici gaz, hava akışı) ve bir **malzeme** verirsiniz; AHUT FLARE şunları döndürür:
+You give it an **environment** (gravity, pressure, oxygen, diluent gas, airflow) and a **material**. AHUT FLARE returns:
 
-| Çıktı | Anlamı |
+| Output | Meaning |
 |---|---|
-| 🔥 **Risk seviyesi** | DÜŞÜK · ORTA · YÜKSEK · ÇOK YÜKSEK |
-| 📈 **Yanma ihtimali** | 0–1, belirsizlik aralığıyla |
-| 🧯 **Sönme sınırı** | Bu oksijen yüzdesinin altında alev söner |
-| 🛡️ **Güvenlik katsayısı** | `sönme sınırı / ortam oksijeni`; 1'in altı "yanabilir" demektir |
-| ✅ **Güven skoru** | 0–100; sonuca ne kadar güvenilebileceği (veri yakınlığı + model–motor uyumu + motor başarısı) |
-| ⚠️ **Uyarılar** | Eksik girdi, model–motor çelişkisi, kalibrasyon dışı bölge |
+| 🔥 **Risk level** | LOW · MEDIUM · HIGH · VERY HIGH |
+| 📈 **Burn probability** | 0–1, with an uncertainty range |
+| 🧯 **Extinction limit** | Below this oxygen percentage the flame goes out |
+| 🛡️ **Safety factor** | `extinction limit / ambient oxygen`; below 1 means "can burn" |
+| ✅ **Confidence score** | 0–100; how far the result can be trusted (data proximity + model–engine agreement + engine success) |
+| ⚠️ **Warnings** | Missing inputs, model–engine conflicts, out-of-calibration region |
 
-Yanında:
+It also provides:
 
-- **Grafikler:** oksijen eğrisi, yerçekimi × oksijen yanabilirlik haritası, akış eğrisi ve bu koşula **en yakın gerçek NASA deneyleri**.
-- **İki çözüm türü:**
-  - **Hızlı:** risk modeli + yarı-ampirik motorlar, saniyenin altında.
-  - **Ayrıntılı:** OpenFOAM CFD koşusu; uygulamanın içinden kuyruğa eklenir, canlı izlenir.
-- **3B görüntüleyici:** girdi düğümlerinde numune geometrisi, kabin, yerçekimi ve akış okları. Sonuç düğümünde OpenFOAM alanları: izo yüzey, kesit, zaman, "ParaView'da aç".
-- **Çözüm İzleyici:** canlı günlük, kalıntı grafikleri, işlemci/sıcaklık/disk paneli, koşu kuyruğu.
-- **Parametre süpürmesi:** bir girdiyi aralık boyunca değiştirip **güvenlik eşiğini** bulur. Örnek soru: "Bu malzeme için oksijeni en fazla kaça çıkarabilirim?"
-- **Yapay zeka yorumu ve sohbet (isteğe bağlı):** sayıları kod üretir; dil modeli yalnız gerekçeyi yazar ve "ya oksijen %25 olsa?" gibi soruları modeli yeniden çalıştırarak yanıtlar.
-- **İki dil ve iki tema:** Türkçe / İngilizce, açık / koyu tema.
+- **Plots:** oxygen curve, gravity × oxygen flammability map, flow curve, and the **nearest real NASA experiments** to the chosen condition.
+- **Two solution types:**
+  - **Fast:** risk model plus semi-empirical engines, under a second.
+  - **Detailed:** an OpenFOAM CFD run, queued from inside the app and monitored live.
+- **3D viewer:** on input nodes, the sample geometry, cabin, gravity and flow arrows. On the result node, OpenFOAM fields with iso-surfaces, cut planes, time control and "open in ParaView".
+- **Run monitor:** live log, residual plots, CPU / temperature / disk panel and the run queue.
+- **Parameter sweep:** varies one input over a range to find the **safety threshold**. Example question: "How far can I raise oxygen for this material?"
+- **AI commentary and chat (optional):** code produces every number; the language model only writes the rationale and answers "what if oxygen were 25%?" by re-running the model.
+- **Two languages and two themes:** Turkish / English, light / dark.
 
 ---
 
-## 🖼️ Ekranlar
+## 🖼️ Screens
 
 <table>
 <tr>
-<td width="50%"><img src="of_visual/screen/dashboard_04_result_pmma_mars_summary.png" alt="Risk özeti"><br><sub><b>Risk özeti</b> — Mars üssünde PMMA</sub></td>
-<td width="50%"><img src="of_visual/screen/dashboard_04_result_pmma_mars_map.png" alt="Yanabilirlik haritası"><br><sub><b>Yanabilirlik haritası</b> — yerçekimi × oksijen</sub></td>
+<td width="50%"><img src="of_visual/screen/dashboard_04_result_pmma_mars_summary.png" alt="Risk summary"><br><sub><b>Risk summary</b> — PMMA in a Mars base</sub></td>
+<td width="50%"><img src="of_visual/screen/dashboard_04_result_pmma_mars_map.png" alt="Flammability map"><br><sub><b>Flammability map</b> — gravity × oxygen</sub></td>
 </tr>
 <tr>
-<td><img src="of_visual/screen/scene3d/01_pmma_iss_plate.png" alt="3B girdi sahnesi: PMMA levha"><br><sub><b>3B girdi sahnesi</b> — ISS'te ince PMMA levha, akış kanalı ve ateşleyici</sub></td>
-<td><img src="of_visual/screen/scene3d/04_sibal_case_mesh.png" alt="OpenFOAM vaka ağı"><br><sub><b>OpenFOAM vakası</b> — Saffire SIBAL numunesi, gerçek boyutlar ve hücre ağı</sub></td>
+<td><img src="of_visual/screen/scene3d/01_pmma_iss_plate.png" alt="3D input scene: PMMA plate"><br><sub><b>3D input scene</b> — thin PMMA plate on the ISS, flow channel and igniter</sub></td>
+<td><img src="of_visual/screen/scene3d/04_sibal_case_mesh.png" alt="OpenFOAM case mesh"><br><sub><b>OpenFOAM case</b> — Saffire SIBAL sample, real dimensions and cell mesh</sub></td>
 </tr>
 <tr>
-<td><img src="of_visual/screen/ofm/ofm_node.png" alt="Ayrıntılı motor"><br><sub><b>Ayrıntılı motor</b> — OpenFOAM koşusu ↔ hızlı motor ↔ deney</sub></td>
-<td><img src="of_visual/screen/workbench/chat.png" alt="Yapay zeka sohbeti"><br><sub><b>Sohbet</b> — "ne olur eğer" soruları modeli yeniden çalıştırır</sub></td>
+<td><img src="of_visual/screen/ofm/ofm_node.png" alt="Detailed engine"><br><sub><b>Detailed engine</b> — OpenFOAM run ↔ fast engine ↔ experiment</sub></td>
+<td><img src="of_visual/screen/workbench/chat.png" alt="AI chat"><br><sub><b>Chat</b> — "what if" questions re-run the model</sub></td>
 </tr>
 </table>
 
 ---
 
-## 🧠 Nasıl çalışır
+## 🧠 How it works
 
-<img src="presentation/a_system_diagram_tr.png" alt="Sistem şeması">
+<img src="presentation/a_system_diagram_en.png" alt="System diagram">
 
-1. **Risk modeli (makine öğrenmesi)**
-   - NASA PSI deney veritabanı ve literatürden derlenmiş etiketli deneylerle eğitildi.
-   - Yanma ihtimalini ve sönme sınırını verir (`scripts/risk_model.py`, `models/`).
-2. **Yönlendirici** (`scripts/engine.py`) yakıt türüne ve numune tipine göre bir fizik motoru seçer:
-   - **Katı:** hafif alev yayılma motoru (`scripts/light_engine.py`)
-   - **Sıvı:** yarı-durağan damla motoru, FLEX'e kalibre (`scripts/droplet_engine.py`)
-   - **Gaz:** küre / düz / jet alev motoru (`scripts/gas_engine.py`)
-3. **Birleştirme**
-   - Model ve motor, **dürüst test AUC'lerine** göre ağırlıklandırılır: `ağırlık = max(0, 2·(AUC − 0,5))`.
-   - Kalibre olmayan bileşenin ağırlığı 0'dır.
-4. **Güven skoru:** `100 × (0,4·veri + 0,3·uyum + 0,3·motor)`.
-5. **Ayrıntılı çözüm (OpenFOAM)**
-   - Katı numuneler için çok bölgeli (gaz / katı / ateşleyici teli) piroliz ve alev çözücüsü: `openfoam_motor/`.
-   - Panelden kütüphane malzemesiyle kurulan vakalar (`dashboard/engine/ofm_case.py`):
-     - Katı: SIBAL (doğrulanmış) ve PMMA; parametreler `ofm_material_params.json` (kaynaklı, doğrulanmamış olanlar işaretli).
-     - Sıvı (damla): n-heptan, metanol, etanol, n-dekan; 1B küresel, küçülen çap, tek adım yanma (`ofm_droplet_case.py`). Yalnız n-heptan ve metanol FLEX'e kalibre.
-     - Gaz: metan, etan, propan, etilen, asetilen; gözenekli küre brülör, 1B küresel, mikroyerçekimi (`ofm_gas_case.py`). Kinetik ve taşınım sabitleri doğrulanmadı, ışınım modeli yok.
-   - Diğer damla ve gaz brülörü vakaları: `of_*.py`.
-   - Sonuçlar içe aktarılır ve deneyle karşılaştırılır. Koşu ancak koşula yakın ve deneyle doğrulanmışsa birleşik sonuca katılır.
+1. **Risk model (machine learning)**
+   - Trained on labelled experiments compiled from the NASA PSI experiment database and the literature.
+   - Gives the burn probability and the extinction limit (`scripts/risk_model.py`, model file `dashboard/engine/models/risk.joblib`).
+2. **Router** (`scripts/engine.py`) picks a physics engine by fuel type and sample type:
+   - **Solid:** light flame-spread engine (`scripts/light_engine.py`)
+   - **Liquid:** quasi-steady droplet engine calibrated to FLEX (`scripts/droplet_engine.py`)
+   - **Gas:** sphere / flat / jet flame engine (`scripts/gas_engine.py`)
+3. **Combination**
+   - Model and engine are weighted by their **honest test AUCs**: `weight = max(0, 2·(AUC − 0.5))`.
+   - A component that is not calibrated gets weight 0.
+4. **Confidence score:** `100 × (0.4·data + 0.3·agreement + 0.3·engine)`.
+5. **Detailed solution (OpenFOAM)**
+   - A multi-region (gas / solid / igniter wire) pyrolysis and flame solver for solid samples: `openfoam_motor/`. Its four parts are `kinetic`, `radiation`, `pyrolysis` and `damla_buharlasma` (droplet evaporation), all under `openfoam_motor/motor/`.
+   - Cases built from the panel with a library material (`dashboard/engine/ofm_case.py`):
+     - Solid: SIBAL (validated) and PMMA; parameters in `ofm_material_params.json` (sourced, unvalidated ones are flagged).
+     - Liquid (droplet): n-heptane, methanol, ethanol, n-decane; 1D spherical, shrinking diameter, one-step combustion (`ofm_droplet_case.py`). Only n-heptane and methanol are calibrated to FLEX.
+     - Gas: methane, ethane, propane, ethylene, acetylene; porous-sphere burner, 1D spherical, microgravity (`ofm_gas_case.py`). Kinetics and transport constants are not validated and there is no radiation model.
+   - Other droplet and gas burner cases: `of_*.py`.
+   - Results are imported and compared with the experiment. A run enters the combined result only if it is close to the condition and validated against an experiment.
 6. **LLM**
-   - Listede olmayan bir malzemeyi en yakın bilinen malzemeye eşler.
-   - İsteğe bağlı yorum yazar. Karar satırını her zaman kod üretir.
+   - Maps a material that is not in the list to the nearest known material.
+   - Optionally writes the commentary. The verdict line is always produced by code.
 
-Denklemler ve varsayımlar: [`presentation/equations.md`](presentation/equations.md) · Ayrıntılı teknik belge: [`docs/DASHBOARD.md`](docs/DASHBOARD.md)
-
----
-
-## 📊 Doğrulama
-
-Her bileşen, **eğitimde görmediği deney aileleri** üzerinde sınandı: aileye göre gruplu çapraz doğrulama.
-
-<img src="presentation/b_honest_auc_tr.png" alt="Dürüst test AUC değerleri">
-
-| Bileşen | Veri | Dürüst test AUC |
-|---|---|---|
-| Risk modeli | NASA PSI + literatür | **0,878** |
-| Hafif motor (katı) | Saffire, BASS ve diğerleri | 0,729 |
-| Damla motoru (sıvı) | FLEX / FLEX-2 | 0,805 |
-| Gaz motoru — düz alev | BRE | 0,946 |
-| Gaz motoru — jet alev | SFLAME | 0,816 *(kalibre değil → ağırlık 0)* |
-
-**OpenFOAM doğrulaması (sürüyor)**
-
-| Deney | Yakıt türü | Durum |
-|---|---|---|
-| NASA FLEX | n-heptan damla | Tek damla vakaları koşuluyor |
-| ISS BRE | etilen brülör | Eksenel simetrik vakalar koşuluyor |
-| BASS | SIBAL kumaş | Koşuluyor |
-
-**Bilinen sınırlar** (ayrıntı: `presentation/presentation_summary.md`):
-
-- **Kısmi yerçekimi:** Ay ve Mars için doğrudan deney verisi yok; sonuçlar ISS ve Dünya verisinden ara değerlendirilir.
-- **Işınım:** damla CFD vakaları ışınımsız. Bu yüzden büyük damlalarda görülen ışınım kaynaklı sönmeyi yakalamazlar.
-- **Gaz ışınımı:** gaz CFD'de gri gaz ışınımı, ölçülen ışınım kesrine göre ölçeklendi.
+Equations and assumptions: [`presentation/equations.md`](presentation/equations.md) · Detailed technical document: [`docs/DASHBOARD.md`](docs/DASHBOARD.md)
 
 ---
 
-## 🚀 Kurulum
+## 📊 Validation
+
+Every component was tested on **experiment families it did not see in training**, using family-grouped cross-validation.
+
+<img src="presentation/b_honest_auc_en.png" alt="Honest test AUC values">
+
+| Component | Data | Honest test AUC |
+|---|---|---|
+| Risk model | NASA PSI + literature | **0.878** |
+| Light engine (solid) | Saffire, BASS and others | 0.729 |
+| Droplet engine (liquid) | FLEX / FLEX-2 | 0.805 |
+| Gas engine — flat flame | BRE | 0.946 |
+| Gas engine — jet flame | SFLAME | 0.816 *(not calibrated → weight 0)* |
+
+**OpenFOAM validation (in progress)**
+
+| Experiment | Fuel type | Status |
+|---|---|---|
+| NASA FLEX | n-heptane droplet | Single-droplet cases are running |
+| ISS BRE | ethylene burner | Axisymmetric cases are running |
+| BASS | SIBAL fabric | Running |
+
+**Known limits** (details: `presentation/presentation_summary.md`):
+
+- **Partial gravity:** there is no direct experiment data for the Moon and Mars; results are interpolated from ISS and Earth data.
+- **Radiation:** the droplet CFD cases have no radiation, so they miss the radiative extinction seen for large droplets.
+- **Gas radiation:** in the gas CFD, grey-gas radiation was scaled to the measured radiant fraction.
+
+---
+
+## 🚀 Install
 
 ### Windows
 
-`AHUT-FLARE-Setup.exe` → İleri → Kur.
+`AHUT-FLARE-Setup.exe` → Next → Install.
 
-Python, model ve veri programın içinde gelir. Kurulum paketi `dashboard/packaging/` ile üretilir.
+Python, the model and the data are bundled in the program. The installer is built with `dashboard/packaging/`.
 
 ### Linux (Ubuntu 24.04, Python 3.12)
 
@@ -149,113 +149,103 @@ Python, model ve veri programın içinde gelir. Kurulum paketi `dashboard/packag
 git clone https://github.com/ErdemA33/AHUT-FLARE.git
 cd AHUT-FLARE/dashboard
 
-# sistem paketleri (pencere GTK/WebKit ile açılır)
+# system packages (the window opens with GTK/WebKit)
 sudo apt install python3-venv python3-gi gir1.2-webkit2-4.1
 
-# Python ortamı
+# Python environment
 python3 -m venv --system-site-packages .venv
 .venv/bin/pip install -r requirements.txt
 
-./run.sh --sinama     # pencere açmadan kendini sınar → "SONUÇ: BAŞARILI"
-./run.sh              # uygulamayı açar
+./run.sh --sinama     # self-test without opening a window → "SONUÇ: BAŞARILI" (success)
+./run.sh              # starts the app
 ```
 
-> **Python 3.12 gerekir.** Model `scikit-learn 1.4.1.post1` ile eğitildi ve aynı sürümle açılmalı.
+> **Python 3.12 is required.** The model was trained with `scikit-learn 1.4.1.post1` and must be loaded with the same version.
 
-**İsteğe bağlı:**
+**Optional:**
 
-| Özellik | Gerekenler |
+| Feature | Requirement |
 |---|---|
-| Ayrıntılı (OpenFOAM) çözüm | OpenFOAM 14 (`/opt/openfoam14`). Katı vaka paketinin yolu `AHUT_MOTOR_C` ortam değişkeniyle verilir. |
-| 3B alan dışa aktarma ve "ParaView'da aç" | ParaView (`pvpython`) |
-| Yapay zeka yorumu | EVREN API anahtarı (`evren_anahtar.txt`; örnek: `dashboard/evren_key_EXAMPLE.txt`). Anahtar depoya **konmaz**. |
+| Detailed (OpenFOAM) solution | OpenFOAM 14 (`/opt/openfoam14`). The solid case package defaults to `openfoam_motor/`; override it with the `AHUT_MOTOR_C` environment variable. |
+| 3D field export and "open in ParaView" | ParaView (`pvpython`) |
+| AI commentary | An EVREN API key (`evren_anahtar.txt`; example: `dashboard/evren_key_EXAMPLE.txt`). The key is **never** committed to the repository. |
 
-Komut satırı seçenekleri:
+Command-line options:
 
 ```bash
-python ahut_flare.py --mock      # modelsiz arayüz denemesi
-python ahut_flare.py --ayikla    # geliştirici araçları açık
-python ahut_flare.py vaka.ahut   # kayıtlı bir vakayı açarak başla
+python ahut_flare.py --mock      # try the interface without the model
+python ahut_flare.py --ayikla    # developer tools on (debug)
+python ahut_flare.py case.ahut   # start by opening a saved case
 ```
 
 ---
 
-## 🗂️ Klasör yapısı
+## 🗂️ Repository layout
 
 ```
 AHUT-FLARE/
-├── dashboard/                 Masaüstü uygulaması (pywebview + HTML/JS arayüz)
-│   ├── ahut_flare.py            giriş noktası · run.sh / run.bat başlatıcı
-│   ├── core/                    Python köprüsü, Çözüm İzleyici, 3B sahne verisi
-│   ├── ui/                      arayüz (js/, style/, brand/, fonts/, vendor/three.min.js)
-│   ├── engine/                  arka ucun uygulamaya paketlenen kopyası (engine_sync.py)
-│   ├── data/                    örnek vakalar (examples/), kullanıcı verisi (cases/, logs/)
-│   ├── site/                    GitHub Pages sitesi
-│   └── packaging/               Windows kurulum paketi
-├── scripts/                   Araştırma betikleri (tek klasör: birbirini içe aktarır)
-│   ├── predict.py                Tek giriş: koşul → risk, ihtimal, sönme sınırı, güven
-│   ├── risk_model.py             Makine öğrenmesi modeli (+ models/)
-│   ├── engine.py                 Yönlendirici ve birleştirme
-│   ├── light_engine.py · droplet_engine.py · gas_engine.py    Hızlı fizik motorları
-│   ├── ofm_*.py                  OpenFOAM motoru: vaka hazırlama, içe aktarma, analiz, karşılaştırma
-│   ├── of_*.py · of_*.sh         OpenFOAM damla / gaz / sızıntı vakaları, kuyruk ve doğrulama
-│   └── psi_*.py · data_extract*.py   NASA PSI veri çıkarma ve etiketleme
-├── data/ · figures/ · docs/ · logs/   Betiklerin ürettiği CSV/JSON, grafikler, raporlar, günlükler
-├── models/                    Eğitilmiş risk modeli
-├── openfoam_motor/ · openfoam_motor_v2/ · ofm_test/   Katı yanma çözücüsü (OpenFOAM, C++), kalibrasyon ve test vakası
-├── gas_data/ · experiments/ · gas_experiments/   Deney tabloları ve kalibrasyon denemeleri
-├── of_visual/                 Görsel/ekran çıktıları
-└── presentation/              Sunum grafikleri (TR/EN) ve denklemler
+├── dashboard/                 Desktop app (pywebview + HTML/JS interface)
+│   ├── ahut_flare.py            entry point · run.sh / run.bat launchers
+│   ├── core/                    Python bridge, run monitor, 3D scene data
+│   ├── ui/                      interface (js/, style/, brand/, fonts/, vendor/three.min.js)
+│   ├── engine/                  backend copy bundled into the app (engine_sync.py); also holds models/risk.joblib
+│   ├── data/                    example cases (examples/), user data (cases/)
+│   ├── site/                    GitHub Pages site
+│   └── packaging/               Windows installer
+├── scripts/                   Research scripts (one folder: they import each other)
+│   ├── predict.py                single entry: condition → risk, probability, extinction limit, confidence
+│   ├── risk_model.py             machine-learning model
+│   ├── engine.py                 router and combination
+│   ├── light_engine.py · droplet_engine.py · gas_engine.py    fast physics engines
+│   ├── ofm_*.py                  OpenFOAM engine: case setup, import, analysis, comparison
+│   ├── of_*.py · of_*.sh         OpenFOAM droplet / gas / leak cases, queue and validation
+│   └── psi_*.py · data_extract*.py   NASA PSI data extraction and labelling
+├── data/ · figures/ · docs/   CSV/JSON produced by the scripts, plots, reports
+├── openfoam_motor/            OpenFOAM engine: motor/{kinetik, radyasyon, piroliz, damla_buharlasma} + Saffire case (vaka/)
+├── ofm_test/                  OpenFOAM test case
+├── gas_data/ · experiments/ · gas_experiments/   Experiment tables and calibration trials
+├── of_visual/                 Visual / screenshot outputs
+└── presentation/              Presentation figures (TR/EN) and equations
 ```
 
-**Testler:**
+Run logs and run outputs (`*.log`, `logs/`, `ofm_results/`) are produced locally and are git-ignored.
+
+**Tests:**
 
 ```bash
-python scripts/integration_test.py       # uçtan uca arka uç
-python scripts/ofm_test.py               # OpenFOAM motoru içe aktarma / analiz / yönlendirici
+python scripts/integration_test.py       # end-to-end backend
+python scripts/ofm_test.py               # OpenFOAM engine import / analysis / router
 cd dashboard && ./run.sh --sinama
 ```
 
 ---
 
-## 🛰️ Veri kaynakları
+## 🛰️ Data sources
 
-NASA **Physical Sciences Informatics (PSI)** deneyleri:
+NASA **Physical Sciences Informatics (PSI)** experiments:
 
-| Deney | Konu |
+| Experiment | Topic |
 |---|---|
-| Saffire I–III | Büyük ölçekli katı yangınları |
-| BASS / BASS-II | Katılarda alev yayılması ve sönmesi |
-| FLEX / FLEX-2 | Damla yanması |
-| BRE | Gözenekli brülörde gaz alevleri |
-| SFLAME | Duman noktası alevleri |
+| Saffire I–III | Large-scale solid fires |
+| BASS / BASS-II | Flame spread and extinction in solids |
+| FLEX / FLEX-2 | Droplet combustion |
+| BRE | Gas flames on a porous burner |
+| SFLAME | Smoke-point flames |
 
-Bunlara ek olarak açık literatürdeki LOI / MLOC ölçümleri kullanıldı. Her deney satırının kaynağı veri dosyalarında `kaynak` sütununda tutulur.
+In addition, LOI / MLOC measurements from the open literature were used. The source of every experiment row is kept in the `kaynak` (source) column of the data files.
 
 ---
 
-## 👥 Takım
+## 👥 Team
 
-**AHUT** — Ankara Havacılık ve Uzay Teknolojileri Hackathon Takımı · NASA Space Apps Challenge 2026
+**AHUT** — Ankara Aviation and Space Technologies Hackathon Team · NASA Space Apps Challenge 2026
 
-Katı yanma OpenFOAM çözücüsü (`openfoam_motor/`) ve Saffire kalibrasyonu: **OpenFOAM motoru**.
+The solid-combustion OpenFOAM solver (`openfoam_motor/`) and the Saffire calibration make up the **OpenFOAM engine**.
 
-## 📄 Lisans
+## 📄 License
 
 [MIT](LICENSE) © 2026 AHUT
 
 ---
 
-## 🌍 In English
-
-**AHUT FLARE** is a desktop analysis environment for fire safety in space.
-
-- **What it predicts:** given an environment (gravity, pressure, oxygen, diluent, airflow) and a material, it predicts the risk level, ignition probability, extinction limit, safety factor and a 0–100 confidence score.
-- **How:**
-  - a machine-learning risk model trained on NASA PSI microgravity combustion data;
-  - semi-empirical solid / droplet / gas physics engines;
-  - optional OpenFOAM CFD runs that are queued, monitored and visualised in 3D inside the app.
-- **Honest validation:** every component is weighted by its out-of-family test AUC (risk model 0.878; solid 0.729; droplet 0.805; gas flat flame 0.946), and every result is compared against the nearest real NASA experiments (Saffire, BASS, FLEX, BRE, SFLAME).
-- **Run it:** see [Kurulum](#-kurulum). Linux: `cd dashboard && ./run.sh`; Windows: installer.
-
-The UI is bilingual (Turkish / English). Built for the NASA Space Apps Challenge 2026.
+The interface is bilingual (Turkish / English). Built for the NASA Space Apps Challenge 2026.

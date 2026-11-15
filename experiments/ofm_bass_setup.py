@@ -5,7 +5,7 @@ testine uygular: motorun Saffire dışındaki bir deneyde dürüst testi ("BASS 
 
     python3 experiments/ofm_bass_setup.py [--test 4] [--hedef ofm_kosular/bass_sibal_t4]
 
-openfoam_motor_v2/ SALT OKUNUR: kopyası hedef klasöre alınır, yalnız kopyada değişiklik yapılır.
+openfoam_motor/ SALT OKUNUR: kopyası hedef klasöre alınır, yalnız kopyada değişiklik yapılır.
 Değişen yalnız deney koşulları ve geometri (motor: kinetik, piroliz, ışınım, sayısal ayarlar AYNEN):
   - numune 10 cm uzun (BASS SIBAL 2.2 cm x 10 cm; NASA 20160000593), x = 0.10-0.20 m; alan 0-0.40 m (5 cm ön bölge blockMesh büyüme dizisine sığmadı)
   - kanal yarı yüksekliği H = 0.038 m  [VARSAYIM: SPICE kanal kesiti belgelerde yok]
@@ -28,7 +28,7 @@ import subprocess
 from pathlib import Path
 
 KOK = Path(__file__).resolve().parents[1]
-KAYNAK = KOK / "openfoam_motor_v2"
+KAYNAK = KOK / "openfoam_motor"
 LIB = KOK / "ofm_kosular" / "v2_10s" / "lib"       # kilitli kaynaktan derlenmiş kütüphane (md5 kilitle aynı)
 TESTLER = {   # BASS test matrix.xlsx 'as run matrix' (as run test no.): akış cm/s, O2 %hacim, p atm, CO2 mmHg, gözlem
     4: dict(akis=10.0, o2=21.9, p_atm=0.97, co2_mmhg=3.12, numune="SIBAL 2 cm", gozlem="~40 s burn"),
@@ -145,7 +145,7 @@ def main():
     shutil.copy2(LIB / "libFlameInFreefallSolid.so", hedef / "lib")
     bilgi = {"test": k.test, "bass": t, "ortam_Y": Y, "ortam_X": {kk: round(vv, 5) for kk, vv in X.items()},
              "p_Pa": p_pa, "U_m_s": U, "geometri_m": GEO, "tutucu_m": TUTUCU_M, "taban_yuz": len(vf),
-             "kaymasiz_yuz": sum(vf), "motor": "MOTOR_KILIT 1 (openfoam_motor_v2), parametreler değişmedi",
+             "kaymasiz_yuz": sum(vf), "motor": "MOTOR_KILIT 1 (openfoam_motor), parametreler değişmedi",
              "varsayimlar": ["kanal yarı yüksekliği 0.038 m", "tel konumu ön kenardan 6.25 mm",
                              "ateşleyici gücü/genişlik ve 7.986 s kapanma Saffire ile aynı",
                              "tutucu 0.01 m", "H2O mol kesri 0.0116", "T 294.32 K", "2B simetrik (iki yüzlü) numune"]}

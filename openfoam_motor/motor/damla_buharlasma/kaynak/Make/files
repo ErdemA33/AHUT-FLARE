@@ -1,0 +1,9 @@
+damlaBuharlasma/damlaBuharlasma.C
+coupledEvaporationSpecies/coupledEvaporationSpeciesFvPatchScalarField.C
+coupledEvaporationVelocity/coupledEvaporationVelocityFvPatchVectorField.C
+coupledEvaporationTemperature/coupledEvaporationTemperatureFvPatchScalarField.C
+damlaAtesleme/damlaAtesleme.C
+damlaIzgaraHareketi/damlaIzgaraHareketi.C
+damlaBulutBuharlasma/makeDamlaBulutBuharlasma.C
+
+LIB = $(FOAM_USER_LIBBIN)/libFlameInFreefallDroplet

@@ -133,6 +133,12 @@ def destek(kosul, yakit_turu=None, malzeme_kanonik=None, kutuphane=None):
     return {"destekli": True, "neden": None, "kalinlik_ag_mm": KALINLIK_AG_MM}
 
 
+def _motor(paket):
+    """Motor klasörü: openfoam_motor/motor (kinetik, radyasyon, piroliz, damla_buharlasma); eski düz düzende paketin kendisi."""
+    paket = Path(paket)
+    return paket / "motor" if (paket / "motor").is_dir() else paket
+
+
 def kilit_oku(paket):
     return json.loads((Path(paket) / "MOTOR_KILIT.json").read_text(encoding="utf-8"))
 
@@ -216,7 +222,7 @@ def damla_kutuphanesi_var():
 def hazirla_sivi(hedef, paket, kosul, yakit_id, cap_mm, bitis_s=SIVI_BITIS_S):
     """Damla (1B küresel, küçülen çap, tek adım yanma) vakasını üretir; seri koşar (50 hücre). Dönüş: {"notlar"}."""
     hedef, paket = Path(hedef), Path(paket)
-    tablo = paket / "damla_buharlasma" / "tablolar" / "damlaYakitlar"
+    tablo = _motor(paket) / "damla_buharlasma" / "tablolar" / "damlaYakitlar"
     if not tablo.is_file():
         raise FileNotFoundError(f"damlaYakitlar yok: {tablo}")
     if not damla_kutuphanesi_var():
@@ -261,7 +267,7 @@ def hazirla(hedef, paket, kosul, cekirdek, bitis_s=10.0, malzeme=None):
     shutil.copytree(paket / "vaka", hedef, ignore=lambda d, adlar: [a for a in adlar if _gecerli_kopya_yok(a) and Path(d) == paket / "vaka"])
     for klasor, dosyalar, hd in DOSYA_KOPYA:
         for f in dosyalar:
-            shutil.copy2(paket / klasor / f, hedef / hd / f)
+            shutil.copy2(_motor(paket) / klasor / f, hedef / hd / f)
     # --- kütüphane malzemesi (SIBAL dışı): katı özellikleri, piroliz, Y_F0 ve (gerekirse) ağ kalınlığı
     if malzeme:
         ps, kal = malzeme["parametreler"], float(malzeme["kalinlik_mm"])

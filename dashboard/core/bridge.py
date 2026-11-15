@@ -746,7 +746,7 @@ class Kopru:
         except Exception as e:  # noqa: BLE001
             return {"hata": f"{type(e).__name__}: {e}"}
 
-    OFM_PAKET = Path(os.environ.get("AHUT_MOTOR_C") or Path.home() / "Desktop" / "motor_c")
+    OFM_PAKET = Path(os.environ.get("AHUT_MOTOR_C") or Path(__file__).resolve().parents[2] / "openfoam_motor")
     OFM_SURE_4CEK_S10 = 6.5      # saat: 10 s benzetim, 4 çekirdek (yüklü makinede ölçüldü; ofm_engine_c_smoke_result.md)
 
     def _ofm_vaka(self):
@@ -802,8 +802,8 @@ class Kopru:
         if tur in ("sivi", "gaz"):
             n = 1
             s["cekirdek"] = n
-            if not (self.OFM_PAKET / "damla_buharlasma" / "tablolar" / "damlaYakitlar").is_file():
-                s["neden"] = f"Damla modülü paketi bulunamadı: {self.OFM_PAKET}/damla_buharlasma"
+            if not (self.OFM_PAKET / "motor" / "damla_buharlasma" / "tablolar" / "damlaYakitlar").is_file():
+                s["neden"] = f"Damla modülü paketi bulunamadı: {self.OFM_PAKET}/motor/damla_buharlasma"
                 return s
         elif not (self.OFM_PAKET / "vaka").is_dir():
             s["neden"] = f"OpenFOAM paketi bulunamadı: {self.OFM_PAKET}"

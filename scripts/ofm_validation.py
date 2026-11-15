@@ -9,7 +9,7 @@ Okuduğu (postProcessing; 2B ve 3B aynı yapı, bkz. scripts/ofm_analysis.py):
   fluid/gazMax, tel/telT, sibal/sibalYuzey (ofm_analysis.analiz ile), sibal/sibalKutle (kütle kaybı),
   fluid/sensGaz, sibal/sensYuzey (TC), fluid/sensRadMenba, fluid/sensRadAkis (radyometre vekili G/4) — Saffire.
 Deney:
-  saffire3 : openfoam_motor/flame_in_freefall/veri/islenmis/saffire3_sample1.csv (PSI-100 telemetri; igniter başlangıcı 59.994 s),
+  saffire3 : data/saffire3_sample1.csv (PSI-100 telemetri; igniter başlangıcı 59.994 s),
              yayılma 2.3 mm/s (NTRS 20180005168 Tablo 1), alev ucu x = 32 cm @ 100-125 s, 62 cm @ 210-250 s (kamera,
              ofm_engine DEVIR_NOTU §6), gaz tutuşması 3.1-5.1 s arası belirsiz.
              Sensör eşlemesi TC7-TC12 = A-F ve radyometre vekili G/4 ÇIKARIMDIR (OpenFOAM motorunun notları).
@@ -27,7 +27,7 @@ import numpy as np
 import ofm_analysis as ba
 
 KOK = Path(__file__).resolve().parent.parent
-SAFFIRE_CSV = KOK / "openfoam_motor/flame_in_freefall/veri/islenmis/saffire3_sample1.csv"
+SAFFIRE_CSV = KOK / "data" / "saffire3_sample1.csv"
 T_IGN_TELEMETRI = 59.994
 TABAN = (40.0, 59.0)
 PERS = 0.15

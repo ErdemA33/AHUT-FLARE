@@ -2,7 +2,7 @@
 """
 scripts/ofm_result_convert.py — OpenFOAM motorunun koşu sonuçlarını openfoam_sonuclar.csv biçimine çevirir.
 
-    python3 scripts/ofm_result_convert.py KOSU [KOSU ...] [--kilit openfoam_motor_v2/MOTOR_KILIT.json]
+    python3 scripts/ofm_result_convert.py KOSU [KOSU ...] [--kilit openfoam_motor/MOTOR_KILIT.json]
                                     [--cikti ofm_results/openfoam_results_ofm.csv]
 
 KOSU: koşu klasörü (içinde postProcessing/ olan; ofm_analysis.analiz ile okunur) ya da scripts/ofm_analysis.py'nin
@@ -31,7 +31,7 @@ import json
 from pathlib import Path
 
 KOK = Path(__file__).resolve().parent.parent
-VARSAYILAN_KILIT = KOK / "openfoam_motor_v2" / "MOTOR_KILIT.json"
+VARSAYILAN_KILIT = KOK / "openfoam_motor" / "MOTOR_KILIT.json"
 VARSAYILAN_CIKTI = KOK / "ofm_results" / "openfoam_results_ofm.csv"
 SUTUNLAR = ["g", "basinc", "akis", "kalinlik", "malzeme", "oksijen", "yandi", "yayilma_hizi", "min_oksijen",
             "sicaklik", "kaynak", "tutusma_zamani_s", "durum", "sim_suresi_s", "deney_farki_mm_s"]

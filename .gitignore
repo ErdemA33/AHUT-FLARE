@@ -29,3 +29,8 @@ dashboard/data/selftest_report.txt
 dashboard/data/logs/
 dashboard/data/ofm/
 dashboard/data/runs.json
+
+# günlükler ve koşu çıktıları
+*.log
+logs/
+ofm_results/

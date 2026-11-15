@@ -1,0 +1,141 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  damla_cpp_paketi — sıvı yakıt tablosu
+  Kaynak: damla_motoru.py YAKIT  (paket_uret.py, 2026-11-14)
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      damlaYakitlar;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+// M [kg/kmol], Tb Tc [K], Lb [J/kg] (Tb'de), rhoL [kg/m3], cL [J/(kg K)] (hızlı modda KULLANILMAZ), Q [J/kg] (alt ısıl değer)
+// Westbrook & Dryer (1981) tek adım: A [cgs: mol, cm3, s], Ea [kcal/mol], a (yakıt üssü), b (O2 üssü)
+// nu = nO2 * 31.999 / M  [kg O2 / kg yakıt];  T_a hesapta parametre tablosundan (15098 K), Ea'dan DEĞİL
+
+yakitlar (NC7H16 CH3OH C2H5OH NC10H22 NC3H7OH);
+
+NC7H16
+{
+    ad              "n-heptan";
+    M               100.2;
+    Tb              371.6;
+    Tc              540.2;
+    Lb              317000.0;
+    rhoL            640.0;
+    cL              2240.0;
+    Q               44560000.0;
+    nC              7.0;
+    nH              16.0;
+    nO2             11.0;
+    nu              3.5128642714570857;
+    A               510000000000.0;
+    Ea              30.0;
+    a               0.25;
+    b               1.5;
+    suEmer          false;
+    flexKalibre     true;
+    sogukAlevKurali true;
+}
+
+CH3OH
+{
+    ad              "metanol";
+    M               32.04;
+    Tb              337.8;
+    Tc              512.6;
+    Lb              1100000.0;
+    rhoL            750.0;
+    cL              2530.0;
+    Q               19920000.0;
+    nC              1.0;
+    nH              4.0;
+    nO2             1.5;
+    nu              1.4980805243445694;
+    A               3200000000000.0;
+    Ea              30.0;
+    a               0.25;
+    b               1.5;
+    suEmer          true;
+    flexKalibre     true;
+    sogukAlevKurali false;
+}
+
+C2H5OH
+{
+    ad              "etanol";
+    M               46.07;
+    Tb              351.4;
+    Tc              514.0;
+    Lb              838000.0;
+    rhoL            740.0;
+    cL              2440.0;
+    Q               26810000.0;
+    nC              2.0;
+    nH              6.0;
+    nO2             3.0;
+    nu              2.0837204254395485;
+    A               1500000000000.0;
+    Ea              30.0;
+    a               0.15;
+    b               1.6;
+    suEmer          true;
+    flexKalibre     false;
+    sogukAlevKurali false;
+}
+
+NC10H22
+{
+    ad              "n-dekan";
+    M               142.28;
+    Tb              447.3;
+    Tc              617.7;
+    Lb              272000.0;
+    rhoL            650.0;
+    cL              2210.0;
+    Q               44240000.0;
+    nC              10.0;
+    nH              22.0;
+    nO2             15.5;
+    nu              3.4859748383469213;
+    A               380000000000.0;
+    Ea              30.0;
+    a               0.25;
+    b               1.5;
+    suEmer          false;
+    flexKalibre     false;
+    sogukAlevKurali true;
+}
+
+NC3H7OH
+{
+    ad              "1-propanol";
+    M               60.1;
+    Tb              370.3;
+    Tc              536.8;
+    Lb              689000.0;
+    rhoL            740.0;
+    cL              2390.0;
+    Q               30680000.0;
+    nC              3.0;
+    nH              8.0;
+    nO2             4.5;
+    nu              2.3959317803660563;
+    A               1500000000000.0;
+    Ea              30.0;
+    a               0.15;
+    b               1.6;
+    suEmer          true;
+    flexKalibre     false;
+    sogukAlevKurali false;
+}
+
+su
+{
+    M  18.015;
+    Tb 373.15;
+    Tc 647.1;
+    Lb 2257000.0;
+}

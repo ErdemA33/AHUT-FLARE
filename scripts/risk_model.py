@@ -34,7 +34,7 @@ from sklearn.model_selection import GroupKFold
 # ============================== AYARLAR ==============================
 _KOK = Path(__file__).resolve().parent.parent   # yollar çalışma klasörüne değil bu dosyanın klasörüne bağlı
 VERI = _KOK / "data_clean.csv"
-MODEL_DOSYASI = _KOK / "models" / "risk.joblib"
+MODEL_DOSYASI = _KOK / "dashboard" / "engine" / "models" / "risk.joblib"   # tek kopya: uygulamanın kullandığı model
 MODEL_SAYISI = 15             # belirsizlik için kaç model birlikte eğitilsin
 SINIR_PAYLARI = [1.0, 3.0]    # sönme sınırının kaç % O2 üstü "yanar", altı "söner" sayılsın
 GEMMA3_DOSYASI = _KOK / "data/labeled_gemma3.csv"   # scripts/data_extract3.py çıktısı; varsa eski Gemma verisi yerine kullanılır

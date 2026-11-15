@@ -1,5 +1,0 @@
-sibalPyrolysis/sibalPyrolysis.C
-coupledPyrolysisVelocity/coupledPyrolysisVelocityFvPatchVectorField.C
-coupledPyrolysisSpecies/coupledPyrolysisSpeciesFvPatchScalarField.C
-
-LIB = $(FOAM_USER_LIBBIN)/libFlameInFreefallSolid

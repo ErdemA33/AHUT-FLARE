@@ -22,7 +22,7 @@ Birden çok <t0> klasörü (yeniden başlatılmış koşu) varsa zamanca sırala
     Yüzey alanları tek dosyada (ust.xy) ya da alan başına ayrı dosyada (ust_T.xy, ust_rhoV.xy ...) olabilir; ikisi de
     okunur. Dosya adı "ust" değilse zaman klasöründeki ilk .xy / .raw dosyası alınır.
   - OpenFOAM yalnız postProcessing/ gönderirse constant/ olmayabilir: rho01 / rhoInert ve ateşleyici kapanışı sırayla
-    <koşu>/../engine/piroliz/fvModels, MOTOR_KILIT.json (koşu klasörü, üstü, openfoam_motor_v2/) içinden alınır;
+    <koşu>/../engine/piroliz/fvModels, MOTOR_KILIT.json (koşu klasörü, üstü, openfoam_motor/) içinden alınır;
     kaynağı "olcutler.kaynaklar" alanında yazılır.
 
 Ölçütler:
@@ -156,9 +156,9 @@ def yuzey_oku(case):
 
 
 def kilit_bul(case):
-    """MOTOR_KILIT.json: koşu klasörü, üstü ya da openfoam_motor_v2/ içinde."""
+    """MOTOR_KILIT.json: koşu klasörü, üstü ya da openfoam_motor/ içinde."""
     case = Path(case)
-    for f in (case / "MOTOR_KILIT.json", case.parent / "MOTOR_KILIT.json", KOK / "openfoam_motor_v2" / "MOTOR_KILIT.json"):
+    for f in (case / "MOTOR_KILIT.json", case.parent / "MOTOR_KILIT.json", KOK / "openfoam_motor" / "MOTOR_KILIT.json"):
         if f.exists():
             try:
                 return json.loads(f.read_text(encoding="utf-8")), str(f)

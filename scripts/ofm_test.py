@@ -145,7 +145,7 @@ def main():
     kontrol("yönlendirici: ağırlık 0 iken birleşik ihtimal değişmedi", "ofm" not in t2["agirliklar"])
     # --- Ayrıntılı çözüm: destek denetimi, vaka hazırlama (kopya), ağırlık tavanı yalnız Hızlı modda
     import ofm_case as bv
-    paket = Path(os.environ.get("AHUT_MOTOR_C") or Path.home() / "Desktop" / "motor_c")
+    paket = Path(os.environ.get("AHUT_MOTOR_C") or Path(__file__).resolve().parents[1] / "openfoam_motor")
     kontrol("destek: PMMA desteklenmiyor (yalnız katı/SIBAL)", not bv.destek({"malzeme": "pmma", "kalinlik": 0.2}, malzeme_kanonik="pmma")["destekli"])
     kontrol("destek: SIBAL (kalınlık 0,33 mm ağ 0,32 mm'ye ±%5 içinde) destekleniyor", bv.destek({"malzeme": "sibal", "kalinlik": 0.33, "basinc": 101.3}, malzeme_kanonik="sibal")["destekli"])
     kontrol("destek: SIBAL ama kalınlık 0,6 mm → ağ uymuyor, desteklenmiyor", not bv.destek({"malzeme": "sibal", "kalinlik": 0.6, "basinc": 101.3}, malzeme_kanonik="sibal")["destekli"])

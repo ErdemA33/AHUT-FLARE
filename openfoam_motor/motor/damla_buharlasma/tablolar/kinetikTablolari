@@ -1,0 +1,69 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  damla_cpp_paketi — kinetik tablolar (gaz motoru + damla motoru tek adım)
+  Kaynak: gaz_motoru.py YAKIT, damla_motoru.py YAKIT  (paket_uret.py, 2026-11-14)
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      kinetikTablolari;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+gazMotoru
+{
+    CH4
+    {
+        nC 1;
+        nH 4;
+        SLref 0.37;   // m/s, stokiyometrik yakıt-hava, 1 atm
+        Tkr 1300.0;   // K, kritik (sönme) alev sıcaklığı
+        Ta 15098.0;   // K
+    }
+    C2H4
+    {
+        nC 2;
+        nH 4;
+        SLref 0.68;   // m/s, stokiyometrik yakıt-hava, 1 atm
+        Tkr 1100.0;   // K, kritik (sönme) alev sıcaklığı
+        Ta 15098.0;   // K
+    }
+    C2H6
+    {
+        nC 2;
+        nH 6;
+        SLref 0.41;   // m/s, stokiyometrik yakıt-hava, 1 atm
+        Tkr 1200.0;   // K, kritik (sönme) alev sıcaklığı
+        Ta 15098.0;   // K
+    }
+    C3H8
+    {
+        nC 3;
+        nH 8;
+        SLref 0.43;   // m/s, stokiyometrik yakıt-hava, 1 atm
+        Tkr 1200.0;   // K, kritik (sönme) alev sıcaklığı
+        Ta 15098.0;   // K
+    }
+    H2
+    {
+        nC 0;
+        nH 2;
+        SLref 2.1;   // m/s, stokiyometrik yakıt-hava, 1 atm
+        Tkr 1070.0;   // K, kritik (sönme) alev sıcaklığı
+        Ta 15098.0;   // K
+    }
+    aqCH4 380.0;          // 1/s
+    SLbasincUssu -0.4;
+    lnDaq 2.7896202142988513;
+}
+
+damlaMotoru
+{
+    NC7H16 { A 510000000000.0; Ea 30.0; a 0.25; b 1.5; }
+    CH3OH { A 3200000000000.0; Ea 30.0; a 0.25; b 1.5; }
+    C2H5OH { A 1500000000000.0; Ea 30.0; a 0.15; b 1.6; }
+    NC10H22 { A 380000000000.0; Ea 30.0; a 0.25; b 1.5; }
+    NC3H7OH { A 1500000000000.0; Ea 30.0; a 0.15; b 1.6; }
+    Ta 15098.0;   // K, bütün yakıtlar (30 kcal/mol)
+}

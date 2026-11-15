@@ -2,7 +2,7 @@
 
 **Karar:**
 - Saffire koşusu bizim tarafta yapılmıyor (OpenFOAM 3B'yi kendi bilgisayarında koşuyor). Bekleyen 10 s Saffire başlatıcısı
-  iptal edildi; koşu hiç başlamadı (`experiments/ofm_v2.log`).
+  iptal edildi; koşu hiç başlamadı (`experiments/ofm_run.log`).
 - BASS'te (PSI-26) SIBAL testi **var**: 12 ISS testi, 16 koşul satırı, hepsi "yandı" (`data/psi_labeled_bass1.csv`,
   BASS test matrix.xlsx "as run"). Bu yüzden BASS planı uygulandı.
 
